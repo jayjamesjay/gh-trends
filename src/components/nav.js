@@ -27,10 +27,10 @@ export default class Nav extends Component {
     return (
       <StyledNav hide={this.props.hide}>
         <Menu>
-          {this.props.links.map((link, id) => (
+          {this.props.links.map(link => (
             <ListItemLink
               click={this.props.linkClick}
-              key={id}
+              key={link[0]}
               title={link[0]}
               link={link[1]}
             />

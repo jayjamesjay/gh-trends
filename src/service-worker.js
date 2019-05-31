@@ -37,16 +37,19 @@
 
   self.addEventListener("fetch", event => {
     event.respondWith(
-      caches.match(event.request).then(
-        data =>
-          data ||
-          fetch(event.request).then(res =>
-            caches.open(dynamicCache).then(cache => {
-              cache.put(event.request.url, res.clone());
-              return res;
-            })
-          )
-      )
+      caches
+        .match(event.request)
+        .then(
+          data =>
+            data ||
+            fetch(event.request).then(res =>
+              caches.open(dynamicCache).then(cache => {
+                cache.put(event.request.url, res.clone());
+                return res;
+              })
+            )
+        )
+        .catch(() => caches.match("./index.html"))
     );
   });
 })();

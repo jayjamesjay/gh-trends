@@ -1,9 +1,13 @@
 export const light = {
   color: "#000",
-  bg: "#fff"
+  colorAdd: "#707070",
+  bg: "#fafafa",
+  bgAdd: "#fff"
 };
 
 export const dark = {
   color: "#fff",
-  bg: "#000"
+  colorAdd: "#8d8d8d",
+  bg: "#102027",
+  bgAdd: "#000"
 };

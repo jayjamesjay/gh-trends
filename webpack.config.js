@@ -1,6 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -37,13 +37,13 @@ module.exports = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
-    }),
     new CopyPlugin([
       { from: "./src/manifest.json", to: "./" },
-      { from: "./src/assets", to: "./assets" }
-    ])
+      { from: "./src/assets", to: "./assets" },
+      { from: "./src/index.html", to: "./" }
+    ]),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
   ]
 };
