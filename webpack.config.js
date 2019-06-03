@@ -39,8 +39,7 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       { from: "./src/manifest.json", to: "./" },
-      { from: "./src/assets", to: "./assets" },
-      { from: "./src/index.html", to: "./" }
+      { from: "./src/assets", to: "./assets" }
     ]),
     new HtmlWebpackPlugin({
       template: "./src/index.html"

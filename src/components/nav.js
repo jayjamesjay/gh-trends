@@ -3,7 +3,7 @@ import {
   Menu,
   Link,
   Nav as StyledNav,
-  MenuToggle as StyledToggle,
+  MenuToggle as StyledToggle
 } from "./styles";
 
 export class MenuToggle extends Component {

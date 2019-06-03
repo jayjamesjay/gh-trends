@@ -20,18 +20,13 @@ export const Header = styled.header`
   background: ${props => props.theme.bgAdd};
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
     0 2px 6px 2px rgba(60, 64, 67, 0.15);
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0
+    env(safe-area-inset-left);
 `;
 
 Header.defaultProps = {
   theme: light
 };
-
-export const HeaderTitle = styled.h1`
-  font-size: 2rem;
-  margin: 0.5rem;
-`;
 
 export const Link = styled(RouterLink)`
   color: ${props => props.theme.color};
@@ -46,6 +41,12 @@ Link.defaultProps = {
   fontSize: "1.3rem"
 };
 
+export const HeaderLink = styled(Link)`
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem;
+`;
+
 export const Nav = styled.nav`
   transition: opacity 0.2s ease-in-out;
   opacity: ${props => (props.hide ? "0" : "1.0")};
@@ -59,7 +60,7 @@ export const Nav = styled.nav`
   padding: 0.7rem 0;
 
   @media screen and (min-width: 40rem) {
-    top: 0.4rem;
+    top: 1rem;
     left: 47%;
     width: 50%;
     opacity: 1;
@@ -86,13 +87,25 @@ export const Menu = styled.ul`
   }
 `;
 
-export const MenuToggle = styled.button`
-  overflow: hidden;
+export const Button = styled.button`
   cursor: pointer;
+  border: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: ${props => props.theme.bgAdd};
+`;
+
+export const ButtonMain = styled(Button)`
+  padding: 1rem;
+  margin: auto;
+  box-shadow: ${props => props.theme.shadow};
+`;
+
+export const MenuToggle = styled(Button)`
+  padding: 0;
+  overflow: hidden;
   background: transparent;
   margin: 0 1rem;
-  padding: 0;
-  border: 0;
 
   @media screen and (min-width: 40rem) {
     display: none;
@@ -127,51 +140,92 @@ MenuToggle.defaultProps = {
   open: true
 };
 
+export const MainHeader = styled.header`
+  padding: 1rem;
+`;
+
 export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
   background: ${props => props.theme.bg};
   color: ${props => props.theme.color};
-
-  @media screen and (min-width: 40rem) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-  }
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
 `;
 
 Main.defaultProps = {
   theme: light
 };
 
+export const LinkA = styled.a`
+  cursor: pointer;
+  display: block;
+  color: ${props => props.theme.color};
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Noto Sans HK", sans-serif;
+`;
+
+LinkA.defaultProps = {
+  theme: light
+};
+
+export const H1 = styled.h1`
+  margin: 2.5rem 0 1rem 0;
+`;
+
+export const Content = styled.div`
+  background: transparent;
+
+  @media screen and (min-width: 40rem) {
+    margin: 0 1.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+`;
+
 export const Article = styled.article`
-  background: ${props => props.theme.bgAdd};
+  display: flex;
+  flex-flow: column nowrap;
   background: linear-gradient(
-    139deg,
+    135deg,
     ${props => props.theme.bgAdd} 0%,
     ${props => props.theme.bgAdd} 57%,
     ${props => props.bg} 57%
   );
+  box-shadow: ${props => props.theme.shadow};
+  word-break: break-word;
   color: ${props => props.theme.color};
-  padding: 0.7rem 1.2rem;
-  margin: 1rem;
-  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+  padding: 0.3rem 1.2rem;
+  margin: 2rem 1rem;
   min-height: 21rem;
+  text-align: left;
 
   @media screen and (min-width: 40rem) {
-    margin: 2rem;
+    background: linear-gradient(
+      145deg,
+      ${props => props.theme.bgAdd} 0%,
+      ${props => props.theme.bgAdd} 57%,
+      ${props => props.bg} 57%
+    );
+    margin: ${props => props.margin};
     min-height: 10rem;
-    flex: 1 1 30%;
+    min-width: 16.5rem;
+    flex: 1 1 25%;
   }
 `;
 
 Article.defaultProps = {
   theme: light,
-  bg: "#aaa"
+  bg: "#fff",
+  margin: "2.5rem 1.5rem"
 };
 
 export const H2 = styled.h2`
   font-size: 1.7rem;
+  margin: 1rem 0 0.2rem 0;
 `;
 
 export const Span = styled.span`
@@ -202,11 +256,14 @@ export const P = styled.p`
   width: 65%;
 `;
 
-export const Pr = styled.p`
+export const Pr = styled.div`
   text-align: right;
+  margin: auto 0 0 auto;
+  color: #000;
 `;
 
 export const Footer = styled.footer`
+  margin: 1rem;
   padding: 0.5rem;
   text-align: center;
   background: ${props => props.theme.bg};

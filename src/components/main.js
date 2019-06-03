@@ -1,5 +1,19 @@
 import React, { Component } from "react";
-import { Article, Span, H2, List, ListItem, P, Pr } from "./styles";
+import {
+  Article,
+  Span,
+  H1,
+  H2,
+  List,
+  ListItem,
+  P,
+  Pr,
+  Content,
+  ButtonMain,
+  LinkA,
+  MainHeader
+} from "./styles";
+import getData, { query, queryAfter } from "../components/fetch";
 
 export class InfoBlock extends Component {
   render() {
@@ -10,19 +24,98 @@ export class InfoBlock extends Component {
     ));
     const topicList = topics.length !== 0 ? <List>{topics}</List> : "";
     const starsCount = info.stargazers.totalCount;
-    const language = info.languages.nodes[0].name;
-    const bgColor = info.languages.nodes[0].color;
+    let language = "";
+    let bgColor = "#fff";
+
+    if (info.languages.nodes.length > 0) {
+      language = info.languages.nodes[0].name;
+      bgColor = info.languages.nodes[0].color;
+    }
 
     return (
-      <Article bg={bgColor} row={this.props.row} column={this.props.column}>
+      <Article bg={bgColor}>
         <H2>
-          <Span>{author}</Span> / {name}
+          <LinkA href={info.url}>
+            <Span>{author}</Span> / {name}
+          </LinkA>
         </H2>
         <P>{info.description}</P>
         {topicList}
-        <Pr>Stars: {starsCount}</Pr>
-        <Pr>{language}</Pr>
+        <Pr>
+          <p>Stars: {starsCount}</p>
+          <p>{language}</p>
+        </Pr>
       </Article>
+    );
+  }
+}
+
+const fill = {
+  nameWithOwner: "",
+  url: "",
+  description: "",
+  stargazers: {
+    totalCount: 0
+  },
+  repositoryTopics: {
+    nodes: []
+  },
+  languages: {
+    nodes: []
+  }
+};
+
+const initData = new Array(24);
+initData.fill(fill, 0, 24);
+
+export default class View extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: initData,
+      cursor: ""
+    };
+  }
+
+  componentDidMount() {
+    this._asyncRequest = getData(this.props.query, query).then(result => {
+      this._asyncRequest = null;
+      this.setState({
+        data: result.data.search.nodes,
+        cursor: result.data.search.pageInfo.endCursor
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._asyncRequest) {
+      this._asyncRequest.cancel();
+    }
+  }
+
+  loadData = () => {
+    getData(this.props.query, queryAfter, this.state.cursor).then(result => {
+      this.setState({
+        data: this.state.data.slice().concat(result.data.search.nodes),
+        cursor: result.data.search.pageInfo.endCursor
+      });
+    });
+  };
+
+  render() {
+    return (
+      <>
+        <MainHeader>
+          <H1>{this.props.title}</H1>
+          <p>{this.props.description}</p>
+        </MainHeader>
+        <Content>
+          {this.state.data.map((node, id) => (
+            <InfoBlock key={id} info={node} />
+          ))}
+        </Content>
+        <ButtonMain onClick={this.loadData}>Show more</ButtonMain>
+      </>
     );
   }
 }
