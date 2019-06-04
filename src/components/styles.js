@@ -17,6 +17,7 @@ export const Header = styled.header`
   text-transform: uppercase;
   position: sticky;
   top: 0;
+  z-index: 200;
   background: ${props => props.theme.bgAdd};
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
     0 2px 6px 2px rgba(60, 64, 67, 0.15);
@@ -53,7 +54,7 @@ export const Nav = styled.nav`
   position: fixed;
   top: 3.9rem;
   left: 0;
-  z-index: 100;
+  z-index: 200;
   width: 100%;
   background: ${props => props.theme.bgAdd};
   box-shadow: 0 3px 6px 0 rgba(104, 104, 104, 0.5);
@@ -93,6 +94,23 @@ export const Button = styled.button`
   font-size: 1.2rem;
   text-transform: uppercase;
   background: ${props => props.theme.bgAdd};
+  color: ${props => props.theme.color};
+`;
+
+export const ButtonTheme = styled(Button)`
+  background: transparent;
+  margin: 1rem auto 0 42%;
+  width: 4rem;
+  height: 4rem;
+
+  @media screen and (min-width: 40rem) {
+    margin: 1rem;
+  }
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 export const ButtonMain = styled(Button)`
@@ -172,7 +190,11 @@ LinkA.defaultProps = {
 };
 
 export const H1 = styled.h1`
-  margin: 2.5rem 0 1rem 0;
+  margin: 0 0 1rem 0;
+
+  @media screen and (min-width: 40rem) {
+    margin: -4rem 0 1rem 0;
+  }
 `;
 
 export const Content = styled.div`
