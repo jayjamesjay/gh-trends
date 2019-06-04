@@ -49,7 +49,8 @@ export const queryAfter = (query, cursor) =>
         "cursor": "${cursor}"\
     },\
     "query": "query($name: String!, $type: SearchType!, $count: Int!, $topics: Int!, $langs: Int!, $cursor: String!) {\
-      search(query: $name, type: $type, first: $count, after: $cursor) {` + queryContent;
+      search(query: $name, type: $type, first: $count, after: $cursor) {` +
+  queryContent;
 
 const init = {
   method: "POST",

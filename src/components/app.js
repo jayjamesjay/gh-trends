@@ -7,19 +7,20 @@ import Nav from "./nav";
 
 import Home from "../routes/home";
 import AllTime from "../routes/all-time";
-import Explore from "../routes/explore";
+import Month from "../routes/month";
 
-import { Main, GlobalStyle } from "./styles";
+import { Main, GlobalStyle, ButtonTheme, Img } from "./styles";
 import { dark, light } from "./theme";
 import { ThemeProvider } from "styled-components";
 
-const links = [["All Time", "/all-time"], ["Explore", "/explore"]];
+const links = [["All Time", "/all-time"], ["This Month", "/month"]];
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideMenu: true
+      hideMenu: true,
+      theme: light
     };
   }
 
@@ -29,10 +30,16 @@ export default class App extends Component {
     });
   };
 
+  switchTheme = () => {
+    this.setState({
+      theme: this.state.theme === light ? dark : light
+    });
+  };
+
   render() {
     return (
       <Router>
-        <ThemeProvider theme={light}>
+        <ThemeProvider theme={this.state.theme}>
           <>
             <Header
               link="/"
@@ -45,9 +52,15 @@ export default class App extends Component {
               hide={this.state.hideMenu}
               linkClick={this.toggleMenu}
             />
+            <ButtonTheme onClick={this.switchTheme}>
+              <Img
+                src="./assets/img/dark-mode.svg"
+                alt="Switch between dark and light mode"
+              />
+            </ButtonTheme>
             <Main>
               <Route path="/all-time" component={AllTime} />
-              <Route path="/explore" component={Explore} />
+              <Route path="/month" component={Month} />
               <Route exact path="/" component={Home} />
             </Main>
             <Footer />

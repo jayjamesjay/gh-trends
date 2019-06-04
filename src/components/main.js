@@ -51,22 +51,38 @@ export class InfoBlock extends Component {
 }
 
 const fill = {
-  nameWithOwner: "",
+  nameWithOwner: "jayjamesjay/gh-trends",
   url: "",
-  description: "",
+  description: "Loading content for this website...",
   stargazers: {
-    totalCount: 0
+    totalCount: 123
   },
   repositoryTopics: {
-    nodes: []
+    nodes: [
+      {
+        topic: {
+          name: "Just"
+        }
+      },
+      {
+        topic: {
+          name: "a"
+        }
+      },
+      {
+        topic: {
+          name: "moment"
+        }
+      }
+    ]
   },
   languages: {
     nodes: []
   }
 };
 
-const initData = new Array(24);
-initData.fill(fill, 0, 24);
+const initData = new Array(9);
+initData.fill(fill, 0, 9);
 
 export default class View extends Component {
   constructor(props) {
