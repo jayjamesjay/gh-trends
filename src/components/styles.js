@@ -1,5 +1,5 @@
 import { Link as RouterLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import { light } from "./theme";
 
@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
      margin: 0;
      font-family: "Noto Sans HK", sans-serif;
      background: ${props => props.theme.bg};
+     color: ${props => props.theme.color};
    }
 `;
 
@@ -74,20 +75,6 @@ Nav.defaultProps = {
   hide: true
 };
 
-export const Menu = styled.ul`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  text-transform: uppercase;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  @media screen and (min-width: 40rem) {
-    justify-content: flex-end;
-  }
-`;
-
 export const Button = styled.button`
   cursor: pointer;
   border: 0;
@@ -139,16 +126,16 @@ export const MenuToggle = styled(Button)`
 
     &:first-child {
       transform: ${props =>
-        props.open ? "rotate(-45deg) translate(-0.35rem, 0.35rem)" : ""};
+        props.open ? "translateY(0.45rem) rotate(-45deg)" : ""};
     }
 
     &:nth-child(2) {
-      transform: ${props => (props.open ? "translateX(15rem)" : "")};
+      transform: ${props => (props.open ? "translateX(5rem)" : "")};
     }
 
     &:last-child {
       transform: ${props =>
-        props.open ? "rotate(45deg) translate(-0.35rem, -0.35rem)" : ""};
+        props.open ? "translateY(-0.45rem) rotate(45deg)" : ""};
     }
   }
 `;
@@ -165,16 +152,10 @@ export const MainHeader = styled.header`
 export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right)
     env(safe-area-inset-bottom) env(safe-area-inset-left);
-  background: ${props => props.theme.bg};
-  color: ${props => props.theme.color};
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
 `;
-
-Main.defaultProps = {
-  theme: light
-};
 
 export const LinkA = styled.a`
   cursor: pointer;
@@ -190,16 +171,15 @@ LinkA.defaultProps = {
 };
 
 export const H1 = styled.h1`
-  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
 
   @media screen and (min-width: 40rem) {
-    margin: -4rem 0 1rem 0;
+    margin: -4rem 0 2rem 0;
   }
 `;
 
-export const Content = styled.div`
-  background: transparent;
-
+export const Content = styled.section`
   @media screen and (min-width: 40rem) {
     margin: 0 1.5rem;
     display: flex;
@@ -219,7 +199,6 @@ export const Article = styled.article`
   );
   box-shadow: ${props => props.theme.shadow};
   word-break: break-word;
-  color: ${props => props.theme.color};
   padding: 0.3rem 1.2rem;
   margin: 2rem 1rem;
   min-height: 21rem;
@@ -274,6 +253,38 @@ export const ListItem = styled.li`
   padding: 0.5rem 1rem 0 0;
 `;
 
+export const Menu = styled(List)`
+  justify-content: space-around;
+  text-transform: uppercase;
+  width: 100%;
+
+  @media screen and (min-width: 40rem) {
+    justify-content: flex-end;
+  }
+`;
+
+export const CategoryMenu = styled.div`
+  display: flex;
+  text-transform: uppercase;
+  width: 100%;
+  justify-content: center;
+`;
+
+export const InputRadio = styled.input`
+  opacity: 0;
+`;
+
+export const LabelTab = styled.label`
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 1rem;
+  background: ${props => (props.active ? props.theme.bgAdd : props.theme.bg)};
+`;
+
+LabelTab.defaultProps = {
+  theme: light
+};
+
 export const P = styled.p`
   width: 65%;
 `;
@@ -288,10 +299,5 @@ export const Footer = styled.footer`
   margin: 1rem;
   padding: 0.5rem;
   text-align: center;
-  background: ${props => props.theme.bg};
-  color: ${props => props.theme.color};
 `;
 
-Footer.defaultProps = {
-  theme: light
-};

@@ -26,7 +26,7 @@ nodes { ... on Repository {\
 } \
 }}}"}`;
 
-export const query = query =>
+export const constructQuery = query =>
   `{ \
   "variables": { \
       "name": "${query}",\
@@ -38,7 +38,7 @@ export const query = query =>
   "query": "query($name: String!, $type: SearchType!, $count: Int!, $topics: Int!, $langs: Int!) {\
     search(query: $name, type: $type, first: $count) {` + queryContent;
 
-export const queryAfter = (query, cursor) =>
+export const constructQueryAfter = (query, cursor) =>
   `{ \
     "variables": { \
         "name": "${query}",\
@@ -56,7 +56,7 @@ const init = {
   method: "POST",
   headers: myHeaders,
   cache: "default",
-  body: query("stars:>1000 sort:stars-desc")
+  body: constructQuery("stars:>1000 sort:stars-desc")
 };
 
 export default function getData(search, fn, ...cursor) {

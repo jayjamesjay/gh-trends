@@ -6,14 +6,14 @@ import Header from "./header";
 import Nav from "./nav";
 
 import Home from "../routes/home";
-import AllTime from "../routes/all-time";
-import Month from "../routes/month";
+import Search from "../routes/search";
+import Saved from "../routes/saved";
 
 import { Main, GlobalStyle, ButtonTheme, Img } from "./styles";
 import { dark, light } from "./theme";
 import { ThemeProvider } from "styled-components";
 
-const links = [["All Time", "/all-time"], ["This Month", "/month"]];
+const links = [["Search", "/search"], ["Saved", "/saved"]];
 
 export default class App extends Component {
   constructor(props) {
@@ -59,9 +59,10 @@ export default class App extends Component {
               />
             </ButtonTheme>
             <Main>
-              <Route path="/all-time" component={AllTime} />
-              <Route path="/month" component={Month} />
+              <Route path="/search" component={Search} />
+              <Route path="/saved" component={Saved} />
               <Route exact path="/" component={Home} />
+              <Route path="/home" component={Home} />
             </Main>
             <Footer />
             <GlobalStyle />
