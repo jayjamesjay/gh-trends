@@ -1,7 +1,7 @@
 import formatDate from "../components/date";
 
 const weekAgo = new Date();
-weekAgo.setDate(weekAgo.getDate() - 8);
+weekAgo.setDate(weekAgo.getDate() - 7);
 const queryWeek = `sort:stars-desc created:>${formatDate(weekAgo)}`;
 
 const monthAgo = new Date();

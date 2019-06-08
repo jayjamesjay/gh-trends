@@ -146,7 +146,7 @@ MenuToggle.defaultProps = {
 };
 
 export const MainHeader = styled.header`
-  padding: 1rem;
+  padding: 1rem 0.5rem 0 0.5rem;
 `;
 
 export const Main = styled.main`
@@ -175,7 +175,7 @@ export const H1 = styled.h1`
   margin: 0 0 2rem 0;
 
   @media screen and (min-width: 40rem) {
-    margin: -4rem 0 2rem 0;
+    margin: -4rem 4rem 2rem 4rem;
   }
 `;
 
@@ -275,6 +275,7 @@ export const InputRadio = styled.input`
 `;
 
 export const LabelTab = styled.label`
+  display: inherit;
   cursor: pointer;
   font-size: 1.3rem;
   padding: 1rem;

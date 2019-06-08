@@ -111,7 +111,7 @@ export class Tab extends Component {
         <LabelTab active={checked} htmlFor={label}>
           {label}
         </LabelTab>
-        <InputRadio name={label} type="radio" value={label} checked={checked} onChange={onClick} />
+        <InputRadio id={label} type="radio" value={label} checked={checked} onChange={onClick} />
       </div>
     );
   }

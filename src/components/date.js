@@ -3,7 +3,7 @@ const addLeadingZero = val => {
 };
 
 export default function formatDate(date) {
-  const month = addLeadingZero(date.getMonth());
+  const month = addLeadingZero(date.getMonth() + 1);
   const day = addLeadingZero(date.getDate());
 
   return `${date.getFullYear()}-${month}-${day}`;
