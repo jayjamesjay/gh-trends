@@ -1,27 +1,28 @@
 (function() {
-  "use strict";
+  'use strict';
 
-  const staticCache = "s-cache-v0.1.0";
-  const dynamicCache = "d-cache-v0.1.0";
+  const staticCache = 's-cache-v0.1.0';
+  const dynamicCache = 'd-cache-v0.1.0';
   const cacheStorage = [
-    "/",
-    "./main.js",
-    "./worker.js",
-    "./vendors~main.js",
-    "./assets/img/gh-icon.png",
-    "./assets/img/gh-icon-512.png",
-    "./index.html",
-    "./manifest.json",
-    "https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap"
+    '/',
+    './main.js',
+    './worker.js',
+    './vendors~main.js',
+    './assets/img/gh-icon.png',
+    './assets/img/gh-icon-512.png',
+    './assets/img/dark-mode.svg',
+    './index.html',
+    './manifest.json',
+    'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap',
   ];
 
-  self.addEventListener("install", event => {
+  self.addEventListener('install', event => {
     event.waitUntil(
       caches.open(staticCache).then(cache => cache.addAll(cacheStorage))
     );
   });
 
-  self.addEventListener("activate", event => {
+  self.addEventListener('activate', event => {
     event.waitUntil(
       caches
         .keys()
@@ -35,7 +36,7 @@
     );
   });
 
-  self.addEventListener("fetch", event => {
+  self.addEventListener('fetch', event => {
     event.respondWith(
       caches
         .match(event.request)
@@ -49,7 +50,7 @@
               })
             )
         )
-        .catch(() => caches.match("./index.html"))
+        .catch(() => caches.match('./index.html'))
     );
   });
 })();

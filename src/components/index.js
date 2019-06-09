@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-import App from "./app";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import App from './app';
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("worker.js");
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('worker.js');
 }
 
-render(<App />, document.getElementById("app"));
+render(<App />, document.getElementById('app'));

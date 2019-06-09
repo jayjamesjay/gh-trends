@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { MenuToggle } from "./nav";
-import { Header as StyledHeader, HeaderLink } from "./styles";
+import React, { Component } from 'react';
+import { MenuToggle } from './nav';
+import { Header as StyledHeader, HeaderLink } from './styles';
 
 export default class Header extends Component {
   render() {

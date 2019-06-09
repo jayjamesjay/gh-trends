@@ -1,46 +1,45 @@
-import React, { Component } from "react";
-import getData, {
-  constructQuery,
-  constructQueryAfter
-} from "../components/fetch";
-import { InfoBlock, Tabs } from "../components/main";
-import { Content, ButtonMain } from "../components/styles";
+import React, { Component } from 'react';
+import getJSON, {
+  requestUrl,
+  api,
+  order,
+  sort,
+  perPage,
+  query,
+} from '../components/fetch';
+import { InfoBlock, Tabs } from '../components/main';
+import { Content, ButtonMain } from '../components/styles';
 
-import Data, { queryList, initData } from "../components/data";
+import Data, { queryList, initData } from '../components/data';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [
-        new Data("Week", initData, ""),
-        new Data("Month", initData, ""),
-        new Data("All Time", initData, "")
-      ]
+        new Data('Week', initData, 1),
+        new Data('Month', initData, 1),
+        new Data('All Time', initData, 1),
+      ],
     };
   }
 
   componentDidMount() {
     const newData = this.state.data.slice();
-    const idList = ["Week", "Month", "All Time"];
+    const idList = ['Week', 'Month', 'All Time'];
 
     for (let i = 0; i < newData.length; i++) {
-      this._asyncRequest = getData(queryList[i], constructQuery).then(
-        result => {
-          this._asyncRequest = null;
-          const resultData = result.data.search;
+      const url = requestUrl(api, query(queryList[i]), sort, order, perPage);
 
-          newData[i] = new Data(
-            idList[i],
-            resultData.nodes,
-            resultData.pageInfo.endCursor
-          );
+      this._asyncRequest = getJSON(url).then(result => {
+        this._asyncRequest = null;
 
-          this.setState({
-            data: newData
-          });
-        }
-      );
+        newData[i] = new Data(idList[i], Data.fromGithubRes(result.items), 1);
+
+        this.setState({
+          data: newData,
+        });
+      });
     }
   }
 
@@ -50,18 +49,26 @@ export default class Home extends Component {
     }
   }
 
-  loadData = (id, cursor) => {
+  loadData = id => {
     const currData = this.state.data;
     const idx = currData.findIndex(elem => elem.id === id);
+    const url = requestUrl(
+      api,
+      query(queryList[idx]),
+      sort,
+      order,
+      perPage,
+      'page=' + (currData[idx].page + 1)
+    );
 
-    getData(queryList[idx], constructQueryAfter, cursor).then(result => {
-      const resultData = result.data.search;
-
-      currData[idx].data = currData[idx].data.concat(resultData.nodes);
-      currData[idx].cursor = resultData.pageInfo.endCursor;
+    getJSON(url).then(result => {
+      currData[idx].data = currData[idx].data.concat(
+        Data.fromGithubRes(result.items)
+      );
+      currData[idx].page += 1;
 
       this.setState({
-        data: currData
+        data: currData,
       });
     });
   };
@@ -72,12 +79,7 @@ export default class Home extends Component {
         {this.state.data.map(elem => {
           return (
             <div key={elem.id} label={elem.id}>
-              <View
-                id={elem.id}
-                data={elem.data}
-                cursor={elem.cursor}
-                loadData={this.loadData}
-              />
+              <View id={elem.id} data={elem.data} loadData={this.loadData} />
             </div>
           );
         })}
@@ -88,7 +90,7 @@ export default class Home extends Component {
 
 export class View extends Component {
   onClick = () => {
-    this.props.loadData(this.props.id, this.props.cursor);
+    this.props.loadData(this.props.id);
   };
 
   render() {

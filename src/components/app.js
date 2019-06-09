@@ -1,38 +1,38 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import Footer from "./footer";
-import Header from "./header";
-import Nav from "./nav";
+import Footer from './footer';
+import Header from './header';
+import Nav from './nav';
 
-import Home from "../routes/home";
-import Search from "../routes/search";
-import Saved from "../routes/saved";
+import Home from '../routes/home';
+import Search from '../routes/search';
+import Saved from '../routes/saved';
 
-import { Main, GlobalStyle, ButtonTheme, Img } from "./styles";
-import { dark, light } from "./theme";
-import { ThemeProvider } from "styled-components";
+import { Main, GlobalStyle, ButtonTheme, Img } from './styles';
+import { dark, light } from './theme';
+import { ThemeProvider } from 'styled-components';
 
-const links = [["Search", "/search"], ["Saved", "/saved"]];
+const links = [['Search', '/search'], ['Saved', '/saved']];
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       hideMenu: true,
-      theme: light
+      theme: light,
     };
   }
 
   toggleMenu = () => {
     this.setState({
-      hideMenu: !this.state.hideMenu
+      hideMenu: !this.state.hideMenu,
     });
   };
 
   switchTheme = () => {
     this.setState({
-      theme: this.state.theme === light ? dark : light
+      theme: this.state.theme === light ? dark : light,
     });
   };
 

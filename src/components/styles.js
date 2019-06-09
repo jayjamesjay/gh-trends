@@ -1,7 +1,7 @@
-import { Link as RouterLink } from "react-router-dom";
-import styled, {keyframes} from "styled-components";
-import { createGlobalStyle } from "styled-components";
-import { light } from "./theme";
+import { Link as RouterLink } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import { light } from './theme';
 
 export const GlobalStyle = createGlobalStyle`
    body {
@@ -27,20 +27,20 @@ export const Header = styled.header`
 `;
 
 Header.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const Link = styled(RouterLink)`
   color: ${props => props.theme.color};
   text-decoration: none;
   font-size: ${props => props.fontSize};
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: 'Noto Sans HK', sans-serif;
   padding: 0.5rem;
 `;
 
 Link.defaultProps = {
   theme: light,
-  fontSize: "1.3rem"
+  fontSize: '1.3rem',
 };
 
 export const HeaderLink = styled(Link)`
@@ -51,7 +51,7 @@ export const HeaderLink = styled(Link)`
 
 export const Nav = styled.nav`
   transition: opacity 0.2s ease-in-out;
-  opacity: ${props => (props.hide ? "0" : "1.0")};
+  opacity: ${props => (props.hide ? '0' : '1.0')};
   position: fixed;
   top: 3.9rem;
   left: 0;
@@ -72,7 +72,7 @@ export const Nav = styled.nav`
 
 Nav.defaultProps = {
   theme: light,
-  hide: true
+  hide: true,
 };
 
 export const Button = styled.button`
@@ -126,23 +126,23 @@ export const MenuToggle = styled(Button)`
 
     &:first-child {
       transform: ${props =>
-        props.open ? "translateY(0.45rem) rotate(-45deg)" : ""};
+        props.open ? 'translateY(0.45rem) rotate(-45deg)' : ''};
     }
 
     &:nth-child(2) {
-      transform: ${props => (props.open ? "translateX(5rem)" : "")};
+      transform: ${props => (props.open ? 'translateX(5rem)' : '')};
     }
 
     &:last-child {
       transform: ${props =>
-        props.open ? "translateY(-0.45rem) rotate(45deg)" : ""};
+        props.open ? 'translateY(-0.45rem) rotate(45deg)' : ''};
     }
   }
 `;
 
 MenuToggle.defaultProps = {
   theme: light,
-  open: true
+  open: true,
 };
 
 export const MainHeader = styled.header`
@@ -163,11 +163,11 @@ export const LinkA = styled.a`
   color: ${props => props.theme.color};
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: "Noto Sans HK", sans-serif;
+  font-family: 'Noto Sans HK', sans-serif;
 `;
 
 LinkA.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const H1 = styled.h1`
@@ -220,8 +220,8 @@ export const Article = styled.article`
 
 Article.defaultProps = {
   theme: light,
-  bg: "#fff",
-  margin: "2.5rem 1.5rem"
+  bg: '#fff',
+  margin: '2.5rem 1.5rem',
 };
 
 export const H2 = styled.h2`
@@ -236,7 +236,7 @@ export const Span = styled.span`
 `;
 
 Span.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const List = styled.ul`
@@ -283,7 +283,7 @@ export const LabelTab = styled.label`
 `;
 
 LabelTab.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const P = styled.p`
@@ -301,4 +301,3 @@ export const Footer = styled.footer`
   padding: 0.5rem;
   text-align: center;
 `;
-

@@ -1,39 +1,36 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { colors } from './data';
 import {
   Article,
   Span,
   H1,
   H2,
-  List,
-  ListItem,
   P,
   Pr,
   LinkA,
   CategoryMenu,
   InputRadio,
   LabelTab,
-  MainHeader
-} from "./styles";
+  MainHeader,
+} from './styles';
 
 export class InfoBlock extends Component {
   render() {
     const info = this.props.info;
-    const [author, name] = info.nameWithOwner.split("/");
-    const topics = info.repositoryTopics.nodes.map((elem, id) => (
-      <ListItem key={id}>{elem.topic.name}</ListItem>
-    ));
-    const topicList = topics.length !== 0 ? <List>{topics}</List> : "";
-    const starsCount = info.stargazers.totalCount;
-    let language = "";
-    let bgColor = "#fff";
+    const [author, name] = info.nameWithOwner.split('/');
+    const topicList = '';
+    const starsCount = info.stargazersCount;
+    const language = info.language;
+    let color;
 
-    if (info.languages.nodes.length > 0) {
-      language = info.languages.nodes[0].name;
-      bgColor = info.languages.nodes[0].color;
+    if (colors.hasOwnProperty(language)) {
+      color = colors[language];
+    } else {
+      color = '#fff';
     }
 
     return (
-      <Article bg={bgColor}>
+      <Article bg={color}>
         <H2>
           <LinkA href={info.url}>
             <Span>{author}</Span> / {name}
@@ -54,7 +51,7 @@ export class Tabs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: this.props.children[0].props.label
+      activeTab: this.props.children[0].props.label,
     };
   }
 
@@ -66,7 +63,7 @@ export class Tabs extends Component {
     const {
       onClickTabItem,
       props: { children },
-      state: { activeTab }
+      state: { activeTab },
     } = this;
 
     return (
@@ -103,15 +100,27 @@ export class Tab extends Component {
   render() {
     const {
       onClick,
-      props: { checked, label }
+      props: { checked, label },
     } = this;
 
     return (
       <div onClick={onClick}>
-        <LabelTab active={checked} htmlFor={label}>
+        <LabelTab
+          active={checked}
+          htmlFor={label}
+          tabIndex="0"
+          onKeyPress={onClick}
+        >
           {label}
         </LabelTab>
-        <InputRadio id={label} type="radio" value={label} checked={checked} onChange={onClick} />
+        <InputRadio
+          id={label}
+          type="radio"
+          value={label}
+          checked={checked}
+          onChange={onClick}
+          tabIndex="-1"
+        />
       </div>
     );
   }

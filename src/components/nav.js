@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   Menu,
   Link,
   Nav as StyledNav,
-  MenuToggle as StyledToggle
-} from "./styles";
+  MenuToggle as StyledToggle,
+} from './styles';
 
 export class MenuToggle extends Component {
   render() {
