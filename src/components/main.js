@@ -12,6 +12,8 @@ import {
   InputRadio,
   LabelTab,
   MainHeader,
+  Content,
+  ButtonMain,
 } from './styles';
 
 export class InfoBlock extends Component {
@@ -122,6 +124,40 @@ export class Tab extends Component {
           tabIndex="-1"
         />
       </div>
+    );
+  }
+}
+
+export class View extends Component {
+  onClick = () => {
+    this.props.loadData(this.props.id);
+  };
+
+  render() {
+    return (
+      <>
+        <Content>
+          {this.props.data.map((node, id) => (
+            <InfoBlock key={id} info={node} />
+          ))}
+        </Content>
+        <footer>
+          <ButtonMain
+            visible={this.props.data.length > 0}
+            onClick={this.onClick}
+          >
+            Show more
+          </ButtonMain>
+        </footer>
+      </>
+    );
+  }
+}
+
+export class SearchView extends Component {
+  render() {
+    return (
+      <View id="search" data={this.props.data} loadData={this.props.loadData} />
     );
   }
 }

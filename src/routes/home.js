@@ -7,9 +7,7 @@ import getJSON, {
   perPage,
   query,
 } from '../components/fetch';
-import { InfoBlock, Tabs } from '../components/main';
-import { Content, ButtonMain } from '../components/styles';
-
+import { Tabs, View } from '../components/main';
 import Data, { queryList, initData } from '../components/data';
 
 export default class Home extends Component {
@@ -50,7 +48,7 @@ export default class Home extends Component {
   }
 
   loadData = id => {
-    const currData = this.state.data;
+    const currData = this.state.data.slice();
     const idx = currData.findIndex(elem => elem.id === id);
     const url = requestUrl(
       api,
@@ -84,27 +82,6 @@ export default class Home extends Component {
           );
         })}
       </Tabs>
-    );
-  }
-}
-
-export class View extends Component {
-  onClick = () => {
-    this.props.loadData(this.props.id);
-  };
-
-  render() {
-    return (
-      <>
-        <Content>
-          {this.props.data.map((node, id) => (
-            <InfoBlock key={id} info={node} />
-          ))}
-        </Content>
-        <footer>
-          <ButtonMain onClick={this.onClick}>Show more</ButtonMain>
-        </footer>
-      </>
     );
   }
 }

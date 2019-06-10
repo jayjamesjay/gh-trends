@@ -9,7 +9,7 @@ import Home from '../routes/home';
 import Search from '../routes/search';
 import Saved from '../routes/saved';
 
-import { Main, GlobalStyle, ButtonTheme, Img } from './styles';
+import { Main, GlobalStyle } from './styles';
 import { dark, light } from './theme';
 import { ThemeProvider } from 'styled-components';
 
@@ -46,18 +46,13 @@ export default class App extends Component {
               title="GH Trends"
               toggle={this.toggleMenu}
               hide={this.state.hideMenu}
+              switchTheme={this.switchTheme}
             />
             <Nav
               links={links}
               hide={this.state.hideMenu}
               linkClick={this.toggleMenu}
             />
-            <ButtonTheme onClick={this.switchTheme}>
-              <Img
-                src="./assets/img/dark-mode.svg"
-                alt="Switch between dark and light mode"
-              />
-            </ButtonTheme>
             <Main>
               <Route path="/search" component={Search} />
               <Route path="/saved" component={Saved} />

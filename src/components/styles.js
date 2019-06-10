@@ -1,5 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { light } from './theme';
 
@@ -16,6 +16,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -24,6 +25,10 @@ export const Header = styled.header`
     0 2px 6px 2px rgba(60, 64, 67, 0.15);
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0
     env(safe-area-inset-left);
+
+  @media screen and (min-width: 40rem) {
+    justify-content: flex-start;
+  }
 `;
 
 Header.defaultProps = {
@@ -53,7 +58,7 @@ export const Nav = styled.nav`
   transition: opacity 0.2s ease-in-out;
   opacity: ${props => (props.hide ? '0' : '1.0')};
   position: fixed;
-  top: 3.9rem;
+  top: 4.8rem;
   left: 0;
   z-index: 200;
   width: 100%;
@@ -86,24 +91,27 @@ export const Button = styled.button`
 
 export const ButtonTheme = styled(Button)`
   background: transparent;
-  margin: 1rem auto 0 42%;
   width: 4rem;
   height: 4rem;
-
-  @media screen and (min-width: 40rem) {
-    margin: 1rem;
-  }
-`;
-
-export const Img = styled.img`
-  width: 100%;
-  height: auto;
+  margin: 0 1rem;
 `;
 
 export const ButtonMain = styled(Button)`
   padding: 1rem;
   margin: auto;
   box-shadow: ${props => props.theme.shadow};
+  visibility: ${props => (!props.visible ? 'hidden' : 'visible')};
+`;
+
+export const ButtonSearch = styled(Button)`
+  padding: 0.8rem;
+  margin: 1rem;
+  box-shadow: ${props => props.theme.shadow};
+`;
+
+export const Img = styled.img`
+  width: 100%;
+  height: auto;
 `;
 
 export const MenuToggle = styled(Button)`
@@ -175,7 +183,7 @@ export const H1 = styled.h1`
   margin: 0 0 2rem 0;
 
   @media screen and (min-width: 40rem) {
-    margin: -4rem 4rem 2rem 4rem;
+    margin: 2rem;
   }
 `;
 
@@ -296,8 +304,27 @@ export const Pr = styled.div`
   color: #000;
 `;
 
+export const TextInput = styled.input`
+  background: ${props => props.theme.bgAdd};
+  color: ${props => props.theme.color};
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border: solid ${props => props.theme.color};
+  border-width: 0 0 0.15rem 0;
+  min-width: 50%;
+
+  &:focus {
+    border-width: 0.15rem;
+  }
+`;
+
 export const Footer = styled.footer`
   margin: 1rem;
   padding: 0.5rem;
   text-align: center;
+`;
+
+export const Form = styled.form`
+  padding: 0.5rem;
 `;
