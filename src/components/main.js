@@ -14,15 +14,16 @@ import {
   MainHeader,
   Content,
   ButtonMain,
+  PAlt,
 } from './styles';
 
 export class InfoBlock extends Component {
   render() {
     const info = this.props.info;
     const [author, name] = info.nameWithOwner.split('/');
-    const topicList = '';
     const starsCount = info.stargazersCount;
     const language = info.language;
+    const license = info.license ? `License: ${info.license}` : '';
     let color;
 
     if (colors.hasOwnProperty(language)) {
@@ -39,10 +40,11 @@ export class InfoBlock extends Component {
           </LinkA>
         </H2>
         <P>{info.description}</P>
-        {topicList}
+        <PAlt>Forks: {info.forks}</PAlt>
+        <PAlt>{license}</PAlt>
         <Pr>
-          <p>Stars: {starsCount}</p>
-          <p>{language}</p>
+          <PAlt>Stars: {starsCount}</PAlt>
+          <PAlt>{language}</PAlt>
         </Pr>
       </Article>
     );

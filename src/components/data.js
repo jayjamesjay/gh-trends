@@ -17,6 +17,8 @@ const fill = {
   description: 'Loading content for this website...',
   stargazersCount: 123,
   language: 'JavaScript',
+  license: 'MIT',
+  forks: 321,
 };
 
 export const colors = {
@@ -265,6 +267,8 @@ export default class Data {
         description: item.description,
         stargazersCount: item.stargazers_count,
         language: item.language,
+        forks: item.forks,
+        license: item.license ? item.license.spdx_id : null,
       };
     });
 

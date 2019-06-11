@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { SearchView } from '../components/main';
-import getJSON, {
-  requestUrl,
-  api,
-  order,
-  sort,
-  perPage,
-  query,
-} from '../components/fetch';
+import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
 import Data from '../components/data';
 import { ButtonSearch, TextInput, Form } from '../components/styles';
 
@@ -30,7 +23,7 @@ export default class Search extends Component {
   };
 
   makeRequest = (currData, page) => {
-    let argsList = [api, query(this.state.search), sort, order, perPage];
+    let argsList = [api, query(this.state.search), perPage];
     if (page > 1) {
       argsList.push('page=' + (page + 1));
     }

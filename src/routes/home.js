@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import getJSON, {
   requestUrl,
   api,
-  order,
   sort,
   perPage,
   query,
@@ -23,19 +22,19 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    const newData = this.state.data.slice();
+    const currData = this.state.data.slice();
     const idList = ['Week', 'Month', 'All Time'];
 
-    for (let i = 0; i < newData.length; i++) {
-      const url = requestUrl(api, query(queryList[i]), sort, order, perPage);
+    for (let i = 0; i < currData.length; i++) {
+      const url = requestUrl(api, query(queryList[i]), sort, perPage);
 
       this._asyncRequest = getJSON(url).then(result => {
         this._asyncRequest = null;
 
-        newData[i] = new Data(idList[i], Data.fromGithubRes(result.items), 1);
+        currData[i] = new Data(idList[i], Data.fromGithubRes(result.items), 1);
 
         this.setState({
-          data: newData,
+          data: currData,
         });
       });
     }
@@ -54,7 +53,6 @@ export default class Home extends Component {
       api,
       query(queryList[idx]),
       sort,
-      order,
       perPage,
       'page=' + (currData[idx].page + 1)
     );

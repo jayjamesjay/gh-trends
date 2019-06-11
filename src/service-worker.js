@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  const staticCache = 's-cache-v0.1.0';
-  const dynamicCache = 'd-cache-v0.1.0';
+  const staticCache = 's-cache-v0.1.1';
+  const dynamicCache = 'd-cache-v0.1.1';
   const cacheStorage = [
     '/',
     './main.js',

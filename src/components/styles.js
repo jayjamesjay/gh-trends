@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 import { light } from './theme';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`  
    body {
      margin: 0;
      font-family: "Noto Sans HK", sans-serif;
@@ -93,7 +93,11 @@ export const ButtonTheme = styled(Button)`
   background: transparent;
   width: 4rem;
   height: 4rem;
-  margin: 0 1rem;
+  margin: 0 auto;
+
+  @media screen and (min-width: 40rem) {
+    margin: 0 1rem;
+  }
 `;
 
 export const ButtonMain = styled(Button)`
@@ -180,11 +184,7 @@ LinkA.defaultProps = {
 
 export const H1 = styled.h1`
   font-size: 2rem;
-  margin: 0 0 2rem 0;
-
-  @media screen and (min-width: 40rem) {
-    margin: 2rem;
-  }
+  margin: 2rem;
 `;
 
 export const Content = styled.section`
@@ -207,7 +207,7 @@ export const Article = styled.article`
   );
   box-shadow: ${props => props.theme.shadow};
   word-break: break-word;
-  padding: 0.3rem 1.2rem;
+  padding: 1.2rem;
   margin: 2rem 1rem;
   min-height: 21rem;
   text-align: left;
@@ -234,7 +234,7 @@ Article.defaultProps = {
 
 export const H2 = styled.h2`
   font-size: 1.7rem;
-  margin: 1rem 0 0.2rem 0;
+  margin: 0.2rem 0;
 `;
 
 export const Span = styled.span`
@@ -298,6 +298,11 @@ export const P = styled.p`
   width: 65%;
 `;
 
+export const PAlt = styled.p`
+  margin: 0;
+  padding: 0;
+`;
+
 export const Pr = styled.div`
   text-align: right;
   margin: auto 0 0 auto;
@@ -305,7 +310,7 @@ export const Pr = styled.div`
 `;
 
 export const TextInput = styled.input`
-  background: ${props => props.theme.bgAdd};
+  background: ${props => props.theme.bg};
   color: ${props => props.theme.color};
   padding: 0.5rem;
   font-size: 1.2rem;
@@ -326,5 +331,5 @@ export const Footer = styled.footer`
 `;
 
 export const Form = styled.form`
-  padding: 0.5rem;
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
 `;
