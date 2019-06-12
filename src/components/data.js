@@ -1,4 +1,6 @@
+import React, { Component } from 'react';
 import formatDate from '../components/date';
+import { LinkA } from '../components/styles';
 
 const weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
@@ -274,4 +276,15 @@ export default class Data {
 
     return newData;
   }
+}
+
+export function createLink(filename, content, dataType, display) {
+  const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(
+    content
+  )}`;
+  return (
+    <LinkA href={link} download={filename}>
+      {display}
+    </LinkA>
+  );
 }

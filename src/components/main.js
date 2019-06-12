@@ -6,7 +6,7 @@ import {
   H1,
   H2,
   P,
-  Pr,
+  TextBlock,
   LinkA,
   CategoryMenu,
   InputRadio,
@@ -15,9 +15,18 @@ import {
   Content,
   ButtonMain,
   PAlt,
+  PClean,
+  Img,
+  ImgInline,
+  ButtonAdd,
 } from './styles';
 
 export class InfoBlock extends Component {
+  save = () => {
+    const { info, save } = this.props;
+    save(info);
+  };
+
   render() {
     const info = this.props.info;
     const [author, name] = info.nameWithOwner.split('/');
@@ -40,12 +49,22 @@ export class InfoBlock extends Component {
           </LinkA>
         </H2>
         <P>{info.description}</P>
-        <PAlt>Forks: {info.forks}</PAlt>
-        <PAlt>{license}</PAlt>
-        <Pr>
-          <PAlt>Stars: {starsCount}</PAlt>
+        <PClean>Forks: {info.forks}</PClean>
+        <PClean>{license}</PClean>
+        <ButtonAdd onClick={this.save}>
+          <Img
+            src="./assets/img/add-saved.svg"
+            alt="Add to saved"
+            title="Add to saved"
+          />
+        </ButtonAdd>
+        <TextBlock>
+          <PAlt>
+            {starsCount}
+            <ImgInline src="./assets/img/stars.svg" alt="Stars" />
+          </PAlt>
           <PAlt>{language}</PAlt>
-        </Pr>
+        </TextBlock>
       </Article>
     );
   }
@@ -131,22 +150,26 @@ export class Tab extends Component {
 }
 
 export class View extends Component {
-  onClick = () => {
-    this.props.loadData(this.props.id);
-  };
+  render() {
+    return (
+      <Content>
+        {this.props.data.map((node, id) => (
+          <InfoBlock key={id} info={node} save={this.props.save} />
+        ))}
+      </Content>
+    );
+  }
+}
 
+export class ViewSingle extends Component {
   render() {
     return (
       <>
-        <Content>
-          {this.props.data.map((node, id) => (
-            <InfoBlock key={id} info={node} />
-          ))}
-        </Content>
+        <View data={this.props.data} save={this.props.save} />
         <footer>
           <ButtonMain
             visible={this.props.data.length > 0}
-            onClick={this.onClick}
+            onClick={this.props.loadData}
           >
             Show more
           </ButtonMain>
@@ -156,10 +179,18 @@ export class View extends Component {
   }
 }
 
-export class SearchView extends Component {
+export class ViewId extends Component {
+  loadData = () => {
+    this.props.loadData(this.props.id);
+  };
+
   render() {
     return (
-      <View id="search" data={this.props.data} loadData={this.props.loadData} />
+      <ViewSingle
+        data={this.props.data}
+        loadData={this.loadData}
+        save={this.props.save}
+      />
     );
   }
 }

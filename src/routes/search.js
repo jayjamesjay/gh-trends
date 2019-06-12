@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { SearchView } from '../components/main';
+import { ViewSingle } from '../components/main';
 import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
 import Data from '../components/data';
-import { ButtonSearch, TextInput, Form } from '../components/styles';
+import { ButtonIcon, TextInput, Form, Img } from '../components/styles';
 
 export default class Search extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export default class Search extends Component {
     };
   }
 
-  loadData = _id => {
+  loadData = () => {
     this.makeRequest(this.state.data, this.state.page);
   };
 
@@ -71,9 +71,15 @@ export default class Search extends Component {
             value={this.state.search}
             onKeyPress={this.onKeyPress}
           />
-          <ButtonSearch onClick={this.reloadData}>Search</ButtonSearch>
+          <ButtonIcon onClick={this.reloadData}>
+            <Img src="./assets/img/search.svg" alt="Search" />
+          </ButtonIcon>
         </Form>
-        <SearchView data={this.state.data} loadData={this.loadData} />
+        <ViewSingle
+          data={this.state.data}
+          loadData={this.loadData}
+          save={this.props.save}
+        />
       </>
     );
   }

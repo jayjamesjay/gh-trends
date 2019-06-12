@@ -1,8 +1,8 @@
 (function() {
   'use strict';
 
-  const staticCache = 's-cache-v0.1.1';
-  const dynamicCache = 'd-cache-v0.1.1';
+  const staticCache = 's-cache-v0.1.2';
+  const dynamicCache = 'd-cache-v0.1.2';
   const cacheStorage = [
     '/',
     './main.js',
@@ -11,6 +11,10 @@
     './assets/img/gh-icon.png',
     './assets/img/gh-icon-512.png',
     './assets/img/dark-mode.svg',
+    './assets/img/add-saved.svg',
+    './assets/img/download.svg',
+    './assets/img/search.svg',
+    './assets/img/stars.svg',
     './index.html',
     './manifest.json',
     'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap',

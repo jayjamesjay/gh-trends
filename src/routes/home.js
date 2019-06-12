@@ -6,7 +6,7 @@ import getJSON, {
   perPage,
   query,
 } from '../components/fetch';
-import { Tabs, View } from '../components/main';
+import { Tabs, ViewId } from '../components/main';
 import Data, { queryList, initData } from '../components/data';
 
 export default class Home extends Component {
@@ -75,7 +75,12 @@ export default class Home extends Component {
         {this.state.data.map(elem => {
           return (
             <div key={elem.id} label={elem.id}>
-              <View id={elem.id} data={elem.data} loadData={this.loadData} />
+              <ViewId
+                id={elem.id}
+                data={elem.data}
+                loadData={this.loadData}
+                save={this.props.save}
+              />
             </div>
           );
         })}

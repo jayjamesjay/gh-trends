@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
-import { light } from './theme';
+import { light, dark } from './theme';
 
 export const GlobalStyle = createGlobalStyle`  
    body {
@@ -107,15 +107,33 @@ export const ButtonMain = styled(Button)`
   visibility: ${props => (!props.visible ? 'hidden' : 'visible')};
 `;
 
-export const ButtonSearch = styled(Button)`
-  padding: 0.8rem;
-  margin: 1rem;
-  box-shadow: ${props => props.theme.shadow};
+export const ButtonIcon = styled.button`
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  width: 2.5rem;
+  height: auto;
+`;
+
+export const ButtonAdd = styled(ButtonIcon)`
+  margin: 0.5rem auto 0 -0.5rem;
 `;
 
 export const Img = styled.img`
   width: 100%;
   height: auto;
+  filter: ${props =>
+    props.theme.bg == dark.bg ? 'invert(100%)' : 'invert(0%)'};
+`;
+
+export const ImgIcon = styled(Img)`
+  width: 3rem;
+`;
+
+export const ImgInline = styled.img`
+  height: 2rem;
+  width: auto;
+  display: inline-block;
 `;
 
 export const MenuToggle = styled(Button)`
@@ -185,6 +203,11 @@ LinkA.defaultProps = {
 export const H1 = styled.h1`
   font-size: 2rem;
   margin: 2rem;
+`;
+
+export const H1Alt = styled.h1`
+  margin: 3rem auto 1rem auto;
+  font-size: 2rem;
 `;
 
 export const Content = styled.section`
@@ -298,12 +321,18 @@ export const P = styled.p`
   width: 65%;
 `;
 
-export const PAlt = styled.p`
+export const PClean = styled.p`
   margin: 0;
   padding: 0;
 `;
 
-export const Pr = styled.div`
+export const PAlt = styled(PClean)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+export const TextBlock = styled.div`
   text-align: right;
   margin: auto 0 0 auto;
   color: #000;
@@ -332,4 +361,7 @@ export const Footer = styled.footer`
 
 export const Form = styled.form`
   padding: 2rem 0.5rem 0.5rem 0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 `;

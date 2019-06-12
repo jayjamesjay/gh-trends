@@ -21,6 +21,7 @@ export default class App extends Component {
     this.state = {
       hideMenu: true,
       theme: light,
+      saved: [],
     };
   }
 
@@ -34,6 +35,19 @@ export default class App extends Component {
     this.setState({
       theme: this.state.theme === light ? dark : light,
     });
+  };
+
+  save = elem => {
+    const currSaved = this.state.saved.slice();
+    const shouldBeAdded = currSaved.indexOf(elem) < 0 ? true : false;
+
+    if (shouldBeAdded) {
+      currSaved.push(elem);
+
+      this.setState({
+        saved: currSaved,
+      });
+    }
   };
 
   render() {
@@ -54,10 +68,18 @@ export default class App extends Component {
               linkClick={this.toggleMenu}
             />
             <Main>
-              <Route path="/search" component={Search} />
-              <Route path="/saved" component={Saved} />
-              <Route exact path="/" component={Home} />
-              <Route path="/home" component={Home} />
+              <Route
+                path="/search"
+                render={() => <Search save={this.save} />}
+              />
+              <Route
+                path="/saved"
+                render={() => (
+                  <Saved data={this.state.saved} save={this.save} />
+                )}
+              />
+              <Route exact path="/" render={() => <Home save={this.save} />} />
+              <Route path="/home" render={() => <Home save={this.save} />} />
             </Main>
             <Footer />
             <GlobalStyle />
