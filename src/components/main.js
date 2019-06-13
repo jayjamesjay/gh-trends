@@ -75,6 +75,29 @@ export class InfoBlock extends Component {
   }
 }
 
+export class Categories extends Component {
+  render() {
+    const {
+      props: { labels, active, onClick },
+    } = this;
+
+    return (
+      <CategoryMenu>
+        {labels.map(label => {
+          return (
+            <Tab
+              checked={active === label}
+              key={label}
+              label={label}
+              onClick={onClick}
+            />
+          );
+        })}
+      </CategoryMenu>
+    );
+  }
+}
+
 export class Tabs extends Component {
   constructor(props) {
     super(props);
@@ -104,7 +127,7 @@ export class Tabs extends Component {
 
               return (
                 <Tab
-                  checked={activeTab === label ? true : false}
+                  checked={activeTab === label}
                   key={label}
                   label={label}
                   onClick={onClickTabItem}

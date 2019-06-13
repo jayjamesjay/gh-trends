@@ -278,6 +278,7 @@ export default class Data {
   }
 }
 
+//Creates link to donwload a file
 export function createLink(filename, content, dataType, display) {
   const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(
     content
@@ -287,4 +288,20 @@ export function createLink(filename, content, dataType, display) {
       {display}
     </LinkA>
   );
+}
+
+//Converts JSON to Markdown
+export function jsonToMarkdown(json) {
+  return json
+    .map(elem => {
+      let result = Object.entries(elem);
+      let first = result.shift();
+      result =
+        `# ${first[1]} \r\n` +
+        result.map(([key, val]) => `${key}: ${val} \r\n\r\n`).join('') +
+        '\r\n';
+
+      return result;
+    })
+    .join('');
 }
