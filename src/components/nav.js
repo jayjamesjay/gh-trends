@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import {
-  Menu,
-  Link,
-  Nav as StyledNav,
-  MenuToggle as StyledToggle,
-} from './styles';
+import { MenuToggle as StyledToggle } from '../styles/button';
+import { Menu } from '../styles/list';
+import { Link } from '../styles/link';
+import { Nav as StyledNav } from '../styles/nav';
 
 export class MenuToggle extends Component {
   render() {

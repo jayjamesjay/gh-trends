@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import formatDate from '../components/date';
-import { LinkA } from '../components/styles';
+import { LinkA } from '../styles/link';
 
 const weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);

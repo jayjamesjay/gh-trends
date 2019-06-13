@@ -3,25 +3,22 @@ import { colors } from './data';
 import {
   Article,
   Span,
-  H1,
-  H2,
-  P,
   TextBlock,
-  LinkA,
   CategoryMenu,
-  InputRadio,
-  LabelTab,
-  MainHeader,
   Content,
-  ButtonMain,
-  PAlt,
-  PClean,
-  Img,
-  ImgInline,
-  ButtonAdd,
-} from './styles';
+} from '../styles/main';
+import { H1, H2, MainHeader } from '../styles/headers';
+import { Img, ImgInline } from '../styles/img';
+import { P, PAlt, PClean } from '../styles/paragraph';
+import { ButtonMain, ButtonAdd } from '../styles/button';
+import { InputRadio, LabelTab } from '../styles/input';
+import { LinkA } from '../styles/link';
 
 export class InfoBlock extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   save = () => {
     const { info, save } = this.props;
     save(info);
@@ -52,11 +49,19 @@ export class InfoBlock extends Component {
         <PClean>Forks: {info.forks}</PClean>
         <PClean>{license}</PClean>
         <ButtonAdd onClick={this.save}>
-          <Img
-            src="./assets/img/add-saved.svg"
-            alt="Add to saved"
-            title="Add to saved"
-          />
+          {this.props.saved ? (
+            <Img
+              src="./assets/img/delete.svg"
+              alt="Remove from saved"
+              title="Remove from saved"
+            />
+          ) : (
+            <Img
+              src="./assets/img/add-saved.svg"
+              alt="Add to saved"
+              title="Add to saved"
+            />
+          )}
         </ButtonAdd>
         <TextBlock>
           <PAlt>
@@ -153,9 +158,20 @@ export class View extends Component {
   render() {
     return (
       <Content>
-        {this.props.data.map((node, id) => (
-          <InfoBlock key={id} info={node} save={this.props.save} />
-        ))}
+        {this.props.data.map((node, id) => {
+          const saved =
+            this.props.saved.findIndex(
+              item => item.nameWithOwner == node.nameWithOwner
+            ) > -1;
+          return (
+            <InfoBlock
+              key={id}
+              info={node}
+              save={this.props.save}
+              saved={saved}
+            />
+          );
+        })}
       </Content>
     );
   }
@@ -165,7 +181,11 @@ export class ViewSingle extends Component {
   render() {
     return (
       <>
-        <View data={this.props.data} save={this.props.save} />
+        <View
+          data={this.props.data}
+          save={this.props.save}
+          saved={this.props.saved}
+        />
         <footer>
           <ButtonMain
             visible={this.props.data.length > 0}
@@ -190,6 +210,7 @@ export class ViewId extends Component {
         data={this.props.data}
         loadData={this.loadData}
         save={this.props.save}
+        saved={this.props.saved}
       />
     );
   }

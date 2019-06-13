@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { ViewSingle } from '../components/main';
 import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
 import Data from '../components/data';
-import { ButtonIcon, TextInput, Form, Img } from '../components/styles';
+import { ButtonIcon } from '../styles/button';
+import { TextInput, Form } from '../styles/input';
+import { Img } from '../styles/img';
 
 export default class Search extends Component {
   constructor(props) {
@@ -79,6 +81,7 @@ export default class Search extends Component {
           data={this.state.data}
           loadData={this.loadData}
           save={this.props.save}
+          saved={this.props.saved}
         />
       </>
     );

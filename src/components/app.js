@@ -9,8 +9,9 @@ import Home from '../routes/home';
 import Search from '../routes/search';
 import Saved from '../routes/saved';
 
-import { Main, GlobalStyle } from './styles';
-import { dark, light } from './theme';
+import { GlobalStyle } from '../styles/global';
+import { Main } from '../styles/main';
+import { dark, light } from '../styles/theme';
 import { ThemeProvider } from 'styled-components';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
@@ -38,11 +39,20 @@ export default class App extends Component {
   };
 
   save = elem => {
-    const currSaved = this.state.saved.slice();
-    const shouldBeAdded = currSaved.indexOf(elem) < 0 ? true : false;
+    let currSaved = this.state.saved.slice();
 
-    if (shouldBeAdded) {
+    if (
+      currSaved.findIndex(item => item.nameWithOwner == elem.nameWithOwner) < 0
+    ) {
       currSaved.push(elem);
+
+      this.setState({
+        saved: currSaved,
+      });
+    } else {
+      currSaved = currSaved.filter(
+        item => item.nameWithOwner != elem.nameWithOwner
+      );
 
       this.setState({
         saved: currSaved,
@@ -70,7 +80,9 @@ export default class App extends Component {
             <Main>
               <Route
                 path="/search"
-                render={() => <Search save={this.save} />}
+                render={() => (
+                  <Search save={this.save} saved={this.state.saved} />
+                )}
               />
               <Route
                 path="/saved"
@@ -78,8 +90,19 @@ export default class App extends Component {
                   <Saved data={this.state.saved} save={this.save} />
                 )}
               />
-              <Route exact path="/" render={() => <Home save={this.save} />} />
-              <Route path="/home" render={() => <Home save={this.save} />} />
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <Home save={this.save} saved={this.state.saved} />
+                )}
+              />
+              <Route
+                path="/home"
+                render={() => (
+                  <Home save={this.save} saved={this.state.saved} />
+                )}
+              />
             </Main>
             <Footer />
             <GlobalStyle />

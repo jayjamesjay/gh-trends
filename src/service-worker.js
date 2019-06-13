@@ -13,6 +13,7 @@
     './assets/img/dark-mode.svg',
     './assets/img/add-saved.svg',
     './assets/img/download.svg',
+    './assets/img/delete.svg',
     './assets/img/search.svg',
     './assets/img/stars.svg',
     './index.html',

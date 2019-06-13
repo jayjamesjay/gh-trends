@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { MenuToggle } from './nav';
-import { Header as StyledHeader, HeaderLink, Img, ButtonTheme } from './styles';
+import { Header as StyledHeader } from '../styles/headers';
+import { HeaderLink } from '../styles/link';
+import { Img } from '../styles/img';
+import { ButtonTheme } from '../styles/button';
 
 export default class Header extends Component {
   render() {

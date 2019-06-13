@@ -80,6 +80,7 @@ export default class Home extends Component {
                 data={elem.data}
                 loadData={this.loadData}
                 save={this.props.save}
+                saved={this.props.saved}
               />
             </div>
           );

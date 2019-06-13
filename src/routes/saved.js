@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View } from '../components/main';
-import { H1Alt, ImgIcon } from '../components/styles';
+import { H1Alt } from '../styles/headers';
+import { ImgIcon } from '../styles/img';
 import { createLink } from '../components/data';
 
 export default class Saved extends Component {
@@ -17,7 +18,7 @@ export default class Saved extends Component {
         <>
           <H1Alt>Saved repos</H1Alt>
           {createLink('saved.json', JSON.stringify(data), 'json', imgDownload)}
-          <View data={data} save={this.props.save} />
+          <View data={data} save={this.props.save} saved={data} />
         </>
       );
     } else {
