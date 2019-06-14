@@ -59,8 +59,7 @@ export const MenuToggle = styled(Button)`
     margin: 0.3rem 0;
 
     &:first-child {
-      transform: ${props =>
-        props.open ? 'translateY(0.45rem) rotate(-45deg)' : ''};
+      transform: ${props => (props.open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
     }
 
     &:nth-child(2) {
@@ -68,13 +67,12 @@ export const MenuToggle = styled(Button)`
     }
 
     &:last-child {
-      transform: ${props =>
-        props.open ? 'translateY(-0.45rem) rotate(45deg)' : ''};
+      transform: ${props => (props.open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
     }
   }
 `;
 
 MenuToggle.defaultProps = {
   theme: light,
-  open: true,
+  open: true
 };

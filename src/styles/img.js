@@ -4,8 +4,7 @@ import { dark } from './theme';
 export const Img = styled.img`
   width: 100%;
   height: auto;
-  filter: ${props =>
-    props.theme.bg == dark.bg ? 'invert(100%)' : 'invert(0%)'};
+  filter: ${props => (props.theme.bg === dark.bg ? 'invert(100%)' : 'invert(0%)')};
 `;
 
 export const ImgIcon = styled(Img)`

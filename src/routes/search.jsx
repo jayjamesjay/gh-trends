@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { ViewSingle } from '../components/main';
+import PropTypes from 'prop-types';
+import { ViewSingle } from '../components/view';
 import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
 import Data from '../components/data';
 import { ButtonIcon } from '../styles/button';
@@ -12,22 +13,25 @@ export default class Search extends Component {
     this.state = {
       search: '',
       data: [],
-      page: 1,
+      page: 1
     };
   }
 
   loadData = () => {
-    this.makeRequest(this.state.data, this.state.page);
+    const { data, page } = this.state;
+    this.makeRequest(data, page);
   };
 
   reloadData = () => {
     this.makeRequest([], 1);
   };
 
-  makeRequest = (currData, page) => {
-    let argsList = [api, query(this.state.search), perPage];
+  makeRequest = (data, page) => {
+    let currData = data;
+    const { search } = this.state;
+    const argsList = [api, query(search), perPage];
     if (page > 1) {
-      argsList.push('page=' + (page + 1));
+      argsList.push(`page=${page + 1}`);
     }
 
     const url = requestUrl(...argsList);
@@ -38,16 +42,16 @@ export default class Search extends Component {
 
       this.setState({
         data: currData,
-        page: currPage,
+        page: currPage
       });
     });
   };
 
-  onInput = e => {
-    const inputVal = e.target.value;
+  onInput = event => {
+    const inputVal = event.target.value;
 
     this.setState({
-      search: inputVal,
+      search: inputVal
     });
   };
 
@@ -56,34 +60,44 @@ export default class Search extends Component {
   };
 
   onKeyPress = event => {
-    if (event.key == 'Enter') {
+    if (event.key === 'Enter') {
       this.reloadData();
     }
   };
 
   render() {
+    const {
+      onInput,
+      onSubmit,
+      onKeyPress,
+      loadData,
+      reloadData,
+      state: { search, data },
+      props: { save, saved }
+    } = this;
+
     return (
       <>
-        <Form onSubmit={this.onSubmit} noValidate>
+        <Form onSubmit={onSubmit} noValidate>
           <TextInput
             aria-label="Search for repositories"
             required
             type="text"
-            onChange={this.onInput}
-            value={this.state.search}
-            onKeyPress={this.onKeyPress}
+            onChange={onInput}
+            value={search}
+            onKeyPress={onKeyPress}
           />
-          <ButtonIcon onClick={this.reloadData}>
+          <ButtonIcon onClick={reloadData}>
             <Img src="./assets/img/search.svg" alt="Search" />
           </ButtonIcon>
         </Form>
-        <ViewSingle
-          data={this.state.data}
-          loadData={this.loadData}
-          save={this.props.save}
-          saved={this.props.saved}
-        />
+        <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
       </>
     );
   }
 }
+
+Search.propTypes = {
+  save: PropTypes.func.isRequired,
+  saved: PropTypes.array.isRequired
+};

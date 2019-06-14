@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import formatDate from '../components/date';
+import formatDate from './date';
 import { LinkA } from '../styles/link';
 
 const weekAgo = new Date();
@@ -20,7 +20,7 @@ const fill = {
   stargazersCount: 123,
   language: 'JavaScript',
   license: 'MIT',
-  forks: 321,
+  forks: 321
 };
 
 export const colors = {
@@ -248,7 +248,7 @@ export const colors = {
   ooc: '#b0b77e',
   wdl: '#42f1f4',
   wisp: '#7582D1',
-  xBase: '#403a40',
+  xBase: '#403a40'
 };
 
 export const initData = new Array(9);
@@ -262,27 +262,23 @@ export default class Data {
   }
 
   static fromGithubRes(data) {
-    const newData = data.map(item => {
-      return {
-        nameWithOwner: item.full_name,
-        url: item.html_url,
-        description: item.description,
-        stargazersCount: item.stargazers_count,
-        language: item.language,
-        forks: item.forks,
-        license: item.license ? item.license.spdx_id : null,
-      };
-    });
+    const newData = data.map(item => ({
+      nameWithOwner: item.full_name,
+      url: item.html_url,
+      description: item.description,
+      stargazersCount: item.stargazers_count,
+      language: item.language,
+      forks: item.forks,
+      license: item.license ? item.license.spdx_id : null
+    }));
 
     return newData;
   }
 }
 
-//Creates link to donwload a file
+// Creates link to donwload a file
 export function createLink(filename, content, dataType, display) {
-  const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(
-    content
-  )}`;
+  const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(content)}`;
   return (
     <LinkA href={link} download={filename}>
       {display}
@@ -290,16 +286,15 @@ export function createLink(filename, content, dataType, display) {
   );
 }
 
-//Converts JSON to Markdown
+// Converts JSON to Markdown
 export function jsonToMarkdown(json) {
   return json
     .map(elem => {
       let result = Object.entries(elem);
-      let first = result.shift();
-      result =
-        `# ${first[1]} \r\n` +
-        result.map(([key, val]) => `${key}: ${val} \r\n\r\n`).join('') +
-        '\r\n';
+      const first = result.shift();
+      result = `# ${first[1]} \r\n${result
+        .map(([key, val]) => `${key}: ${val} \r\n\r\n`)
+        .join('')}\r\n`;
 
       return result;
     })

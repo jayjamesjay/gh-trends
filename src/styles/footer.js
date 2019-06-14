@@ -5,3 +5,5 @@ export const Footer = styled.footer`
   padding: 0.5rem;
   text-align: center;
 `;
+
+export default Footer;

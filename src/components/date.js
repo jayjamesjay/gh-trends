@@ -1,6 +1,4 @@
-const addLeadingZero = val => {
-  return val.toString().length === 1 ? '0' + val : val;
-};
+const addLeadingZero = val => (val.toString().length === 1 ? `0${val}` : val);
 
 export default function formatDate(date) {
   const month = addLeadingZero(date.getMonth() + 1);

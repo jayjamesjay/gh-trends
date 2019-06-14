@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { light } from './theme';
 
 export const Main = styled.main`
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
@@ -51,7 +51,7 @@ export const Article = styled.article`
 Article.defaultProps = {
   theme: light,
   bg: '#fff',
-  margin: '2.5rem 1.5rem',
+  margin: '2.5rem 1.5rem'
 };
 
 export const Span = styled.span`
@@ -61,7 +61,7 @@ export const Span = styled.span`
 `;
 
 Span.defaultProps = {
-  theme: light,
+  theme: light
 };
 
 export const CategoryMenu = styled.div`

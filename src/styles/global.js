@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`  
+const GlobalStyle = createGlobalStyle`  
    body {
      margin: 0;
      font-family: "Noto Sans HK", sans-serif;
@@ -8,3 +8,5 @@ export const GlobalStyle = createGlobalStyle`
      color: ${props => props.theme.color};
    }
 `;
+
+export default GlobalStyle;

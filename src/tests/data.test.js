@@ -4,7 +4,7 @@ test('JSON to Markdown', () => {
   const json = [
     { name: 'Dog', length: 1 },
     { name: 'Sharp', length: 22 },
-    { name: 'Cat', length: 2 },
+    { name: 'Cat', length: 2 }
   ];
 
   expect(jsonToMarkdown(json)).toBe(

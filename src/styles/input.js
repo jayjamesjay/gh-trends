@@ -36,5 +36,5 @@ export const LabelTab = styled.label`
 `;
 
 LabelTab.defaultProps = {
-  theme: light,
+  theme: light
 };

@@ -3,12 +3,12 @@ export const sort = 'sort=stars';
 export const perPage = 'per_page=6';
 
 export function query(params) {
-  const query = params
+  const search = params
     .split(' ')
     .map(elem => elem.trim())
     .filter(elem => elem !== '')
     .join('+');
-  return `?q=${query}`;
+  return `?q=${search}`;
 }
 
 export function requestUrl(apiUrl, ...params) {

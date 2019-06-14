@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { light } from './theme';
 
-export const Nav = styled.nav`
+const Nav = styled.nav`
   transition: opacity 0.2s ease-in-out;
   opacity: ${props => (props.hide ? '0' : '1.0')};
   position: fixed;
@@ -24,5 +24,7 @@ export const Nav = styled.nav`
 
 Nav.defaultProps = {
   theme: light,
-  hide: true,
+  hide: true
 };
+
+export default Nav;

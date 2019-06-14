@@ -4,18 +4,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/components/index.js',
-    worker: './src/service-worker.js',
+    main: './src/components/index.jsx',
+    worker: './src/service-worker.js'
   },
   output: {
     filename: '[name].js',
-    path: __dirname + '/dist',
+    path: __dirname + '/dist'
   },
   optimization: {
     minimizer: [new UglifyJsPlugin()],
     splitChunks: {
-      chunks: 'all',
-    },
+      chunks: 'all'
+    }
   },
   module: {
     rules: [
@@ -23,26 +23,29 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         },
+        resolve: {
+          extensions: ['.js', '.jsx']
+        }
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader',
-          },
-        ],
-      },
-    ],
+            loader: 'html-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new CopyPlugin([
       { from: './src/manifest.json', to: './' },
-      { from: './src/assets', to: './assets' },
+      { from: './src/assets', to: './assets' }
     ]),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-    }),
-  ],
+      template: './src/index.html'
+    })
+  ]
 };

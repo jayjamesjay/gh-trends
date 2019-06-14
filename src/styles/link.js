@@ -12,7 +12,7 @@ export const Link = styled(RouterLink)`
 
 Link.defaultProps = {
   theme: light,
-  fontSize: '1.3rem',
+  fontSize: '1.3rem'
 };
 
 export const HeaderLink = styled(Link)`
@@ -31,5 +31,5 @@ export const LinkA = styled.a`
 `;
 
 LinkA.defaultProps = {
-  theme: light,
+  theme: light
 };

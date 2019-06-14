@@ -1,6 +1,4 @@
 (function() {
-  'use strict';
-
   const staticCache = 's-cache-v0.1.2';
   const dynamicCache = 'd-cache-v0.1.2';
   const cacheStorage = [
@@ -18,13 +16,11 @@
     './assets/img/stars.svg',
     './index.html',
     './manifest.json',
-    'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap',
+    'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap'
   ];
 
   self.addEventListener('install', event => {
-    event.waitUntil(
-      caches.open(staticCache).then(cache => cache.addAll(cacheStorage))
-    );
+    event.waitUntil(caches.open(staticCache).then(cache => cache.addAll(cacheStorage)));
   });
 
   self.addEventListener('activate', event => {
