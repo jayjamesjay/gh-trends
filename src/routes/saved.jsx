@@ -43,7 +43,7 @@ export default class Saved extends Component {
         </>
       );
     } else {
-      content = <H1Alt>You haven't saved any repos...</H1Alt>
+      content = <H1Alt>You haven&apos;t saved any repos...</H1Alt>;
     }
 
     return content;

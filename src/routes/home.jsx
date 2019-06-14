@@ -44,8 +44,8 @@ export default class Home extends Component {
 
   loadData = id => {
     const { data } = this.state;
-    const currData = data.slice();
-    const idx = data.findIndex(elem => elem.id === id);
+    const currData = data;
+    const idx = currData.findIndex(elem => elem.id === id);
     const url = requestUrl(
       api,
       query(queryList[idx]),

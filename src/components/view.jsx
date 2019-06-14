@@ -48,8 +48,8 @@ export class ViewId extends Component {
   };
 
   render() {
-    const { loadData } = this;
-    return <ViewSingle loadData={loadData} {...this.props} />;
+    const { props, loadData } = this;
+    return <ViewSingle {...props} loadData={loadData} />;
   }
 }
 
