@@ -35,8 +35,8 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "format": "prettier --config .prettierrc --write \"src/**/*.js\" \"src/**/*.jsx\"",
-    "test": "jest",
+    "format": "prettier --config .prettierrc --write \"src/**/*.js\" \"src/**/*.jsx\" && yarn lintfix",
+    "test": "jest && yarn lint",
     "lint": "eslint \"src/**/*.jsx\"",
     "lintfix": "eslint --fix \"src/**/*.jsx\""
   },

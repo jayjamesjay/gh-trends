@@ -47,7 +47,7 @@ MenuToggle.propTypes = {
 
 Nav.propTypes = {
   hide: PropTypes.bool.isRequired,
-  links: PropTypes.array.isRequired,
+  links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
   linkClick: PropTypes.func.isRequired
 };
 

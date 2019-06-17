@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Content } from '../styles/main';
 import { ButtonMain } from '../styles/button';
 import InfoBlock from './infoblock';
+import { RepoInfo } from './data';
 
 export default function View(props) {
   const { data, saved, save } = props;
@@ -10,7 +11,7 @@ export default function View(props) {
     <Content>
       {data.map((node, id) => {
         const saving = saved.findIndex(item => item.nameWithOwner === node.nameWithOwner) > -1;
-        return <InfoBlock key={node.nameWithOwner + id} info={node} save={save} saved={saving} />;
+        return <InfoBlock key={node.nameWithOwner} info={node} save={save} saved={saving} />;
       })}
     </Content>
   );
@@ -18,8 +19,8 @@ export default function View(props) {
 
 View.propTypes = {
   save: PropTypes.func.isRequired,
-  saved: PropTypes.array.isRequired,
-  data: PropTypes.array.isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
+  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
 export function ViewSingle(props) {
@@ -38,7 +39,7 @@ export function ViewSingle(props) {
 
 ViewSingle.propTypes = {
   loadData: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired
+  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
 export class ViewId extends Component {

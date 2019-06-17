@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/view';
 import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
-import Data from '../components/data';
+import RepoInfoList, { RepoInfo } from '../components/data';
 import { ButtonIcon } from '../styles/button';
 import { TextInput, Form } from '../styles/input';
 import { Img } from '../styles/img';
@@ -37,7 +37,7 @@ export default class Search extends Component {
     const url = requestUrl(...argsList);
 
     getJSON(url).then(result => {
-      currData = currData.concat(Data.fromGithubRes(result.items));
+      currData = currData.concat(RepoInfoList.fromGithubRes(result.items));
       const currPage = page + 1;
 
       this.setState({
@@ -99,5 +99,5 @@ export default class Search extends Component {
 
 Search.propTypes = {
   save: PropTypes.func.isRequired,
-  saved: PropTypes.array.isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };

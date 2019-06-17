@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { colors } from './data';
+import { colors, RepoInfo } from './data';
 import { Article, Span, TextBlock } from '../styles/main';
 import { H2 } from '../styles/headers';
 import { Img, ImgInline } from '../styles/img';
@@ -68,5 +68,5 @@ export default class InfoBlock extends Component {
 InfoBlock.propTypes = {
   saved: PropTypes.bool.isRequired,
   save: PropTypes.func.isRequired,
-  info: PropTypes.object.isRequired
+  info: PropTypes.instanceOf(RepoInfo).isRequired
 };

@@ -17,7 +17,7 @@ export function Categories(props) {
 }
 
 Categories.propTypes = {
-  labels: PropTypes.array.isRequired,
+  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
   active: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired
 };
@@ -57,5 +57,5 @@ export default class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-  children: PropTypes.array.isRequired
+  children: PropTypes.arrayOf(PropTypes.element).isRequired
 };

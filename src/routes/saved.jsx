@@ -4,7 +4,7 @@ import View from '../components/view';
 import { Categories } from '../components/tabs';
 import { H1Alt } from '../styles/headers';
 import { ImgIcon } from '../styles/img';
-import { createLink, jsonToMarkdown } from '../components/data';
+import { createLink, jsonToMarkdown, RepoInfo } from '../components/data';
 
 export default class Saved extends Component {
   constructor(props) {
@@ -52,5 +52,5 @@ export default class Saved extends Component {
 
 Saved.propTypes = {
   save: PropTypes.func.isRequired,
-  data: PropTypes.array.isRequired
+  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };

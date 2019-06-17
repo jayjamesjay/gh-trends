@@ -13,16 +13,6 @@ const queryMonth = `created:>${formatDate(monthAgo)}`;
 const queryAllTime = 'stars:>1000';
 export const queryList = [queryWeek, queryMonth, queryAllTime];
 
-const fill = {
-  nameWithOwner: 'jayjamesjay/gh-trends',
-  url: '',
-  description: 'Loading content for this website...',
-  stargazersCount: 123,
-  language: 'JavaScript',
-  license: 'MIT',
-  forks: 321
-};
-
 export const colors = {
   '1C Enterprise': '#814CCC',
   ABAP: '#E8274B',
@@ -251,10 +241,50 @@ export const colors = {
   xBase: '#403a40'
 };
 
-export const initData = new Array(9);
-initData.fill(fill, 0, 9);
+export class RepoInfo {
+  constructor(nameWithOwner, url, description, stargazersCount, language, forks, license) {
+    this.nameWithOwner = nameWithOwner;
+    this.url = url;
+    this.description = description;
+    this.stargazersCount = stargazersCount;
+    this.language = language;
+    this.forks = forks;
+    this.license = license;
+  }
 
-export default class Data {
+  static fromGithubRes(item) {
+    const { description, language, forks } = item;
+    const license = item.license ? item.license.spdx_id : null;
+
+    return new RepoInfo(
+      item.full_name,
+      item.html_url,
+      description,
+      item.stargazers_count,
+      language,
+      forks,
+      license
+    );
+  }
+}
+
+export const initData = new Array(9);
+
+for (let i = 0; i < initData.length; i += 1) {
+  const curr = new RepoInfo(
+    'jayjamesjay/gh-trends',
+    '',
+    'Loading content for this website...',
+    123,
+    'JavaScript',
+    321,
+    'MIT'
+  );
+  curr.nameWithOwner += i;
+  initData[i] = curr;
+}
+
+export default class RepoInfoList {
   constructor(id, data, page) {
     this.id = id;
     this.data = data;
@@ -262,17 +292,7 @@ export default class Data {
   }
 
   static fromGithubRes(data) {
-    const newData = data.map(item => ({
-      nameWithOwner: item.full_name,
-      url: item.html_url,
-      description: item.description,
-      stargazersCount: item.stargazers_count,
-      language: item.language,
-      forks: item.forks,
-      license: item.license ? item.license.spdx_id : null
-    }));
-
-    return newData;
+    return data.map(item => RepoInfo.fromGithubRes(item));
   }
 }
 

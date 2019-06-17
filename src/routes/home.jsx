@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import getJSON, { requestUrl, api, sort, perPage, query } from '../components/fetch';
 import Tabs from '../components/tabs';
 import { ViewId } from '../components/view';
-import Data, { queryList, initData } from '../components/data';
+import RepoInfoList, { queryList, initData, RepoInfo } from '../components/data';
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: [
-        new Data('Week', initData, 1),
-        new Data('Month', initData, 1),
-        new Data('All Time', initData, 1)
+        new RepoInfoList('Week', initData, 1),
+        new RepoInfoList('Month', initData, 1),
+        new RepoInfoList('All Time', initData, 1)
       ]
     };
   }
@@ -27,7 +27,7 @@ export default class Home extends Component {
       this.asyncRequest = getJSON(url).then(result => {
         this.asyncRequest = null;
 
-        data[i] = new Data(idList[i], Data.fromGithubRes(result.items), 1);
+        data[i] = new RepoInfoList(idList[i], RepoInfoList.fromGithubRes(result.items), 1);
 
         this.setState({
           data
@@ -55,7 +55,7 @@ export default class Home extends Component {
     );
 
     getJSON(url).then(result => {
-      currData[idx].data = currData[idx].data.concat(Data.fromGithubRes(result.items));
+      currData[idx].data = currData[idx].data.concat(RepoInfoList.fromGithubRes(result.items));
       currData[idx].page += 1;
 
       this.setState({
@@ -84,5 +84,5 @@ export default class Home extends Component {
 
 Home.propTypes = {
   save: PropTypes.func.isRequired,
-  saved: PropTypes.array.isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
