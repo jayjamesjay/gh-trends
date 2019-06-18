@@ -42,7 +42,7 @@ export default class App extends Component {
 
   save = elem => {
     const { saved } = this.state;
-    let currSaved = saved;
+    const currSaved = saved.slice();
 
     if (currSaved.findIndex(item => item.nameWithOwner === elem.nameWithOwner) < 0) {
       currSaved.push(elem);
@@ -51,10 +51,10 @@ export default class App extends Component {
         saved: currSaved
       });
     } else {
-      currSaved = currSaved.filter(item => item.nameWithOwner !== elem.nameWithOwner);
+      const newSaved = currSaved.filter(item => item.nameWithOwner !== elem.nameWithOwner);
 
       this.setState({
-        saved: currSaved
+        saved: newSaved
       });
     }
   };

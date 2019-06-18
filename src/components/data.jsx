@@ -268,7 +268,7 @@ export class RepoInfo {
   }
 }
 
-export const initData = new Array(9);
+export const initData = new Array(6);
 
 for (let i = 0; i < initData.length; i += 1) {
   const curr = new RepoInfo(
