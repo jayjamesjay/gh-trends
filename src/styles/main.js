@@ -5,7 +5,8 @@ export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+  justify-content: center;
   text-align: center;
 `;
 
@@ -64,7 +65,7 @@ Span.defaultProps = {
   theme: light
 };
 
-export const CategoryMenu = styled.div`
+export const CategoryMenu = styled.section`
   display: flex;
   text-transform: uppercase;
   width: 100%;

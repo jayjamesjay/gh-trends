@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { colors, RepoInfo } from './data';
+import { languages as colors, RepoInfo } from './data';
 import { Article, Span, TextBlock } from '../styles/main';
 import { H2 } from '../styles/headers';
 import { Img, ImgInline } from '../styles/img';

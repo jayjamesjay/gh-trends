@@ -3,6 +3,7 @@ import { light } from './theme';
 
 export const MainHeader = styled.header`
   padding: 1rem 0.5rem 0 0.5rem;
+  flex: 1 1 100%;
 `;
 
 const Header = styled.header`
@@ -28,7 +29,7 @@ Header.defaultProps = {
 
 export const H1 = styled.h1`
   font-size: 2rem;
-  margin: 2rem;
+  margin: 2rem 0 0 0;
 `;
 
 export const H1Alt = styled.h1`

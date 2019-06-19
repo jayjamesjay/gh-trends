@@ -36,15 +36,19 @@ export default class Search extends Component {
 
     const url = requestUrl(...argsList);
 
-    getJSON(url).then(result => {
-      currData = currData.concat(RepoInfoList.fromGithubRes(result.items));
-      const currPage = page + 1;
+    getJSON(url)
+      .then(result => {
+        currData = currData.concat(RepoInfoList.fromGithubRes(result.items));
+        const currPage = page + 1;
 
-      this.setState({
-        data: currData,
-        page: currPage
+        this.setState({
+          data: currData,
+          page: currPage
+        });
+      })
+      .catch(_ => {
+        this.asyncRequest = null;
       });
-    });
   };
 
   onInput = event => {

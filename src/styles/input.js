@@ -21,6 +21,7 @@ export const Form = styled.form`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  flex: 1 1 100%;
 `;
 
 export const InputRadio = styled.input`
@@ -33,8 +34,34 @@ export const LabelTab = styled.label`
   font-size: 1.3rem;
   padding: 1rem;
   background: ${props => (props.active ? props.theme.bgAdd : props.theme.bg)};
+  box-shadow: ${props => (props.active ? props.theme.shadow : '')};
 `;
 
 LabelTab.defaultProps = {
   theme: light
 };
+
+export const LabelSelect = styled(LabelTab)`
+  text-transform: uppercase;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  align-items: center;
+  margin: 2rem auto;
+`;
+
+export const Select = styled.select`
+  background: ${props => props.theme.bgAdd};
+  color: ${props => props.theme.color};
+  margin: 0.15rem 0 0 1rem;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 1.3rem;
+  appearance: none;
+  text-transform: uppercase;
+`;
+
+export const Option = styled.option`
+  font-size: 1.2rem;
+  text-transform: uppercase;
+`;

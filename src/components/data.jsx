@@ -10,10 +10,10 @@ const monthAgo = new Date();
 monthAgo.setMonth(monthAgo.getMonth() - 1);
 const queryMonth = `created:>${formatDate(monthAgo)}`;
 
-const queryAllTime = 'stars:>1000';
+const queryAllTime = 'stars:>10';
 export const queryList = [queryWeek, queryMonth, queryAllTime];
 
-export const colors = {
+export const languages = {
   '1C Enterprise': '#814CCC',
   ABAP: '#E8274B',
   'AGS Script': '#B9D9FF',
@@ -40,7 +40,7 @@ export const colors = {
   Boo: '#d4bec1',
   Brainfuck: '#2F2530',
   C: '#555555',
-  'C Sharp': '#178600',
+  'C#': '#178600',
   CSS: '#563d7c',
   Ceylon: '#dfa535',
   Chapel: '#8dc63f',

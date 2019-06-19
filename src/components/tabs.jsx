@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CategoryMenu } from '../styles/main';
-import { H1, MainHeader } from '../styles/headers';
 import Tab from './tab';
 
 export function Categories(props) {
@@ -45,13 +44,10 @@ export default class Tabs extends Component {
     const labels = children.map(child => child.props.label);
 
     return (
-      <article>
-        <MainHeader>
-          <H1>Trending repos</H1>
-          <Categories labels={labels} onClick={onClickTabItem} active={activeTab} />
-        </MainHeader>
+      <>
+        <Categories labels={labels} onClick={onClickTabItem} active={activeTab} />
         {children.find(child => child.props.label === activeTab).props.children}
-      </article>
+      </>
     );
   }
 }

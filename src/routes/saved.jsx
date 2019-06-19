@@ -36,9 +36,13 @@ export default class Saved extends Component {
 
       content = (
         <>
-          <H1Alt>Saved repos</H1Alt>
-          {link}
-          <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
+          <header>
+            <H1Alt>Saved repos</H1Alt>
+          </header>
+          <section>
+            {link}
+            <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
+          </section>
           <View data={data} save={save} saved={data} />
         </>
       );
