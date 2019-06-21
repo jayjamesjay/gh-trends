@@ -5,8 +5,7 @@ import { ButtonMain } from '../styles/button';
 import InfoBlock from './infoblock';
 import { RepoInfo } from './data';
 
-export default function View(props) {
-  const { data, saved, save } = props;
+export default function View({ data, saved, save }) {
   return (
     <Content>
       {data.map((node, id) => {

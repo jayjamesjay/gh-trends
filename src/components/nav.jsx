@@ -5,8 +5,7 @@ import { Menu } from '../styles/list';
 import { Link } from '../styles/link';
 import StyledNav from '../styles/nav';
 
-export function MenuToggle(props) {
-  const { toggle, open } = props;
+export function MenuToggle({ toggle, open }) {
   return (
     <StyledToggle aria-label="Open menu" onClick={toggle} open={open}>
       <span />
@@ -16,8 +15,12 @@ export function MenuToggle(props) {
   );
 }
 
-export default function Nav(props) {
-  const { hide, links, linkClick } = props;
+MenuToggle.propTypes = {
+  open: PropTypes.bool.isRequired,
+  toggle: PropTypes.func.isRequired
+};
+
+export default function Nav({ hide, links, linkClick }) {
   return (
     <StyledNav hide={hide}>
       <Menu>
@@ -29,8 +32,13 @@ export default function Nav(props) {
   );
 }
 
-export function ListItemLink(props) {
-  const { click, link, title } = props;
+Nav.propTypes = {
+  hide: PropTypes.bool.isRequired,
+  links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+  linkClick: PropTypes.func.isRequired
+};
+
+export function ListItemLink({ click, link, title }) {
   return (
     <li>
       <Link onClick={click} to={link}>
@@ -39,17 +47,6 @@ export function ListItemLink(props) {
     </li>
   );
 }
-
-MenuToggle.propTypes = {
-  open: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired
-};
-
-Nav.propTypes = {
-  hide: PropTypes.bool.isRequired,
-  links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-  linkClick: PropTypes.func.isRequired
-};
 
 ListItemLink.propTypes = {
   click: PropTypes.func.isRequired,

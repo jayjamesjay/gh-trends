@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { CategoryMenu } from '../styles/main';
 import Tab from './tab';
 
-export function Categories(props) {
-  const { labels, active, onClick } = props;
-
+export function Categories({ labels, active, onClick }) {
   return (
     <CategoryMenu>
       {labels.map(label => (

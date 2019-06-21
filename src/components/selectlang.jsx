@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { LabelSelect, Select, Option, LabelSpan } from '../styles/form';
 
-export default function SelectLang(props) {
-  const { curr, onSelect, languages } = props;
-
+export default function SelectLang({ curr, onSelect, languages }) {
   return (
     <LabelSelect htmlFor="languages" active>
       <LabelSpan>

@@ -6,9 +6,7 @@ import { HeaderLink } from '../styles/link';
 import { Img } from '../styles/img';
 import { ButtonTheme } from '../styles/button';
 
-export default function Header(props) {
-  const { link, title, switchTheme, hide, toggle } = props;
-
+export default function Header({ link, title, switchTheme, hide, toggle }) {
   return (
     <StyledHeader>
       <HeaderLink to={link}>{title}</HeaderLink>
