@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { InputRadio, LabelTab } from '../styles/input';
+import { InputRadio, LabelTab, LabelSpan } from '../styles/form';
 
 export default class Tab extends Component {
   onClick = () => {
@@ -17,7 +17,7 @@ export default class Tab extends Component {
     return (
       <div onClick={onClick} role="radio" aria-checked={checked} onKeyPress={onClick} tabIndex="0">
         <LabelTab active={checked} htmlFor={label}>
-          {label}
+          <LabelSpan>{label}</LabelSpan>
         </LabelTab>
         <InputRadio
           id={label}

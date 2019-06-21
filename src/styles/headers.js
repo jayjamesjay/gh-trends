@@ -3,7 +3,6 @@ import { light } from './theme';
 
 export const MainHeader = styled.header`
   padding: 1rem 0.5rem 0 0.5rem;
-  flex: 1 1 100%;
 `;
 
 const Header = styled.header`

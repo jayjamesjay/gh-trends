@@ -4,8 +4,6 @@ import { light } from './theme';
 export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
-  display: flex;
-  flex-flow: row wrap;
   justify-content: center;
   text-align: center;
 `;
@@ -67,6 +65,7 @@ Span.defaultProps = {
 
 export const CategoryMenu = styled.section`
   display: flex;
+  flex-flow: row wrap;
   text-transform: uppercase;
   width: 100%;
   justify-content: center;

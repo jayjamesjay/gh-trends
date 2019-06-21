@@ -5,7 +5,7 @@ import Tabs from '../components/tabs';
 import { ViewId } from '../components/view';
 import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/data';
 import { MainHeader, H1 } from '../styles/headers';
-import { LabelSelect, Select, Option } from '../styles/input';
+import SelectLang from '../components/selectlang';
 
 export default class Home extends Component {
   constructor(props) {
@@ -95,27 +95,16 @@ export default class Home extends Component {
   render() {
     const {
       loadData,
+      onSelect,
       props: { save, saved },
       state: { data, lang }
     } = this;
     return (
       <>
         <MainHeader>
-          <H1>Trending repos</H1>
+          <H1>Trending repositories</H1>
         </MainHeader>
-        <LabelSelect htmlFor="languages" active>
-          Language
-          <Select id="languages" value={lang} onChange={this.onSelect}>
-            <Option value="all" defaultValue>
-              All
-            </Option>
-            {Object.keys(languages).map(name => (
-              <Option key={name} value={name}>
-                {name}
-              </Option>
-            ))}
-          </Select>
-        </LabelSelect>
+        <SelectLang curr={lang} onSelect={onSelect} languages={Object.keys(languages)} />
         <Tabs>
           {data.map(elem => (
             <div key={elem.id} label={elem.id}>

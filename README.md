@@ -7,8 +7,9 @@ Unofficial website showing trends at Github.
 ## Features:
 
 - Shows most popular repositories of all-time, created this month or this week which are gaining popularity.
-- Search for repositories
-- Save repositories and download informations about them in JSON or Markdown format
+- Filter trending repositories by language.
+- Search for repositories.
+- Save repositories and download informations about them in JSON or Markdown format.
 
 ## Run via Webpack Dev Server
 

@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/view';
 import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
-import RepoInfoList, { RepoInfo } from '../components/data';
+import RepoInfoList, { RepoInfo, languages } from '../components/data';
 import { ButtonIcon } from '../styles/button';
-import { TextInput, Form } from '../styles/input';
+import { TextInput, Form, FormGroup } from '../styles/form';
 import { Img } from '../styles/img';
+import SelectLang from '../components/selectlang';
 
 export default class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
       search: '',
+      lang: 'all',
       data: [],
       page: 1
     };
@@ -27,8 +29,8 @@ export default class Search extends Component {
   };
 
   makeRequest = (data, page) => {
-    let currData = data;
     const { search } = this.state;
+    let currData = data;
     const argsList = [api, query(search), perPage];
     if (page > 1) {
       argsList.push(`page=${page + 1}`);
@@ -52,11 +54,8 @@ export default class Search extends Component {
   };
 
   onInput = event => {
-    const inputVal = event.target.value;
-
-    this.setState({
-      search: inputVal
-    });
+    const search = event.target.value;
+    this.setState({ search });
   };
 
   onSubmit = event => {
@@ -69,31 +68,47 @@ export default class Search extends Component {
     }
   };
 
+  onSelect = event => {
+    const lang = event.target.value;
+    const { search } = this.state;
+
+    let newSearch = search.slice();
+    if (lang !== 'all') {
+      newSearch += ` language:"${lang}"`;
+    }
+
+    this.setState({ lang, search: newSearch });
+  };
+
   render() {
     const {
       onInput,
       onSubmit,
       onKeyPress,
+      onSelect,
       loadData,
       reloadData,
-      state: { search, data },
+      state: { search, data, lang },
       props: { save, saved }
     } = this;
 
     return (
       <>
         <Form onSubmit={onSubmit} noValidate>
-          <TextInput
-            aria-label="Search for repositories"
-            required
-            type="text"
-            onChange={onInput}
-            value={search}
-            onKeyPress={onKeyPress}
-          />
-          <ButtonIcon onClick={reloadData}>
-            <Img src="./assets/img/search.svg" alt="Search" />
-          </ButtonIcon>
+          <SelectLang curr={lang} onSelect={onSelect} languages={Object.keys(languages)} />
+          <FormGroup>
+            <TextInput
+              aria-label="Search for repositories"
+              required
+              type="text"
+              onChange={onInput}
+              value={search}
+              onKeyPress={onKeyPress}
+            />
+            <ButtonIcon onClick={reloadData}>
+              <Img src="./assets/img/search.svg" alt="Search" />
+            </ButtonIcon>
+          </FormGroup>
         </Form>
         <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
       </>
