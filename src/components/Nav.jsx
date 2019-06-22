@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MenuToggle as StyledToggle } from '../styles/button';
-import { Menu } from '../styles/list';
-import { Link } from '../styles/link';
-import StyledNav from '../styles/nav';
+import { MenuToggle as StyledToggle } from '../styles/Button';
+import { Menu } from '../styles/List';
+import { Link } from '../styles/Link';
+import StyledNav from '../styles/Nav';
 
 export function MenuToggle({ toggle, open }) {
   return (

@@ -1,6 +1,6 @@
 import { Link as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 export const Link = styled(RouterLink)`
   color: ${props => props.theme.color};

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { languages as colors, RepoInfo } from './data';
-import { Article, Span, TextBlock } from '../styles/main';
-import { H2 } from '../styles/headers';
-import { Img, ImgInline } from '../styles/img';
-import { P, PAlt, PClean } from '../styles/paragraph';
-import { ButtonAdd } from '../styles/button';
-import { LinkA } from '../styles/link';
+import { languages as colors, RepoInfo } from './Data';
+import { Article, Span, TextBlock } from '../styles/Main';
+import { H2 } from '../styles/Headers';
+import { Img, ImgInline } from '../styles/Img';
+import { P, PAlt, PClean } from '../styles/Paragraph';
+import { ButtonAdd } from '../styles/Button';
+import { LinkA } from '../styles/Link';
 
 export default class InfoBlock extends Component {
   save = () => {

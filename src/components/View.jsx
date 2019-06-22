@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Content } from '../styles/main';
-import { ButtonMain } from '../styles/button';
-import InfoBlock from './infoblock';
-import { RepoInfo } from './data';
+import { Content } from '../styles/Main';
+import { ButtonMain } from '../styles/Button';
+import InfoBlock from './InfoBlock';
+import { RepoInfo } from './Data';
 
 export default function View({ data, saved, save }) {
   return (

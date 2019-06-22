@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import formatDate from './date';
-import { LinkA } from '../styles/link';
+import formatDate from './Date';
+import { LinkA } from '../styles/Link';
 
 const weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
@@ -319,4 +319,17 @@ export function jsonToMarkdown(json) {
       return result;
     })
     .join('');
+}
+
+// Adds language to query
+export function addLang(query, lang) {
+  let queryStr = query;
+
+  if (lang === 'C++') {
+    queryStr += ` language:"cpp"`;
+  } else if (lang !== 'all') {
+    queryStr += ` language:"${lang}"`;
+  }
+
+  return queryStr;
 }

@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import Footer from './footer';
-import Header from './header';
-import Nav from './nav';
+import Footer from './Footer';
+import Header from './Header';
+import Nav from './Nav';
 
-import Home from '../routes/home';
-import Search from '../routes/search';
-import Saved from '../routes/saved';
+import Home from '../routes/Home';
+import Search from '../routes/Search';
+import Saved from '../routes/Saved';
 
-import GlobalStyle from '../styles/global';
-import { Main } from '../styles/main';
-import { dark, light } from '../styles/theme';
+import GlobalStyle from '../styles/Global';
+import { Main } from '../styles/Main';
+import { dark, light } from '../styles/Theme';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
 

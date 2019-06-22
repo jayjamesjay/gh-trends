@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 export const Button = styled.button`
   cursor: pointer;

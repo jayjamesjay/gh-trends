@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 export const TextInput = styled.input`
   background: ${props => props.theme.bg};
@@ -76,7 +76,7 @@ export const LabelSelect = styled(LabelTab)`
   text-transform: uppercase;
 
   @media screen and (min-width: 30rem) {
-    max-width: 25rem;
+    max-width: 28rem;
     flex: 1 1 100%;
   }
 `;

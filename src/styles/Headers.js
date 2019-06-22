@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 export const MainHeader = styled.header`
   padding: 1rem 0.5rem 0 0.5rem;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 const Nav = styled.nav`
   transition: opacity 0.2s ease-in-out;

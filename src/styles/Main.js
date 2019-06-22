@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { light } from './theme';
+import { light } from './Theme';
 
 export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)

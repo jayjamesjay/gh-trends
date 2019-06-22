@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { LabelSelect, Select, Option, LabelSpan } from '../styles/form';
+import { LabelSelect, Select, Option, LabelSpan } from '../styles/Form';
 
-export default function SelectLang({ curr, onSelect, languages }) {
+export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
     <LabelSelect htmlFor="languages" active>
       <LabelSpan>
-        Language
+        {label}
         <Select id="languages" value={curr} onChange={onSelect}>
           <Option value="all" defaultValue>
             All
@@ -24,6 +24,7 @@ export default function SelectLang({ curr, onSelect, languages }) {
 
 SelectLang.propTypes = {
   curr: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
   languages: PropTypes.arrayOf(PropTypes.string).isRequired
 };

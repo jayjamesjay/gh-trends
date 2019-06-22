@@ -1,4 +1,4 @@
-import { query, requestUrl } from '../components/fetch';
+import { query, requestUrl } from '../components/Fetch';
 
 test('transforms search input into query', () => {
   expect(query('react language:JavaScript')).toBe('?q=react+language:JavaScript');

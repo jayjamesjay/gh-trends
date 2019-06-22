@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CategoryMenu } from '../styles/main';
-import Tab from './tab';
+import { CategoryMenu } from '../styles/Main';
+import Tab from './Tab';
 
 export function Categories({ labels, active, onClick }) {
   return (

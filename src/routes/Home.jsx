@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import getJSON, { requestUrl, api, sort, perPage, query } from '../components/fetch';
-import Tabs from '../components/tabs';
-import { ViewId } from '../components/view';
-import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/data';
-import { MainHeader, H1 } from '../styles/headers';
-import SelectLang from '../components/selectlang';
+import getJSON, { requestUrl, api, sort, perPage, query } from '../components/Fetch';
+import Tabs from '../components/Tabs';
+import { ViewId } from '../components/View';
+import RepoInfoList, {
+  queryList,
+  initData,
+  RepoInfo,
+  languages,
+  addLang
+} from '../components/Data';
+import { MainHeader, H1 } from '../styles/Headers';
+import SelectLang from '../components/SelectLang';
 
 export default class Home extends Component {
   constructor(props) {
@@ -45,11 +51,7 @@ export default class Home extends Component {
     }
 
     idxList.forEach(i => {
-      let search = query(queryList[i]);
-      if (lang !== 'all') {
-        search += `+language:"${lang}"`;
-      }
-
+      const search = addLang(query(queryList[i]), lang);
       const url = requestUrl(api, search, sort, perPage, `page=${currData[i].page + 1}`);
 
       this.asyncRequest = getJSON(url)
@@ -104,7 +106,12 @@ export default class Home extends Component {
         <MainHeader>
           <H1>Trending repositories</H1>
         </MainHeader>
-        <SelectLang curr={lang} onSelect={onSelect} languages={Object.keys(languages)} />
+        <SelectLang
+          curr={lang}
+          onSelect={onSelect}
+          languages={Object.keys(languages)}
+          label="Language"
+        />
         <Tabs>
           {data.map(elem => (
             <div key={elem.id} label={elem.id}>

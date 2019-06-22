@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import View from '../components/view';
-import { Categories } from '../components/tabs';
-import { H1Alt } from '../styles/headers';
-import { ImgIcon } from '../styles/img';
-import { createLink, jsonToMarkdown, RepoInfo } from '../components/data';
+import View from '../components/View';
+import { Categories } from '../components/Tabs';
+import { H1Alt } from '../styles/Headers';
+import { ImgIcon } from '../styles/Img';
+import { createLink, jsonToMarkdown, RepoInfo } from '../components/Data';
 
 export default class Saved extends Component {
   constructor(props) {

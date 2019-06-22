@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ViewSingle } from '../components/view';
-import getJSON, { requestUrl, api, perPage, query } from '../components/fetch';
-import RepoInfoList, { RepoInfo, languages } from '../components/data';
-import { ButtonIcon } from '../styles/button';
-import { TextInput, Form, FormGroup } from '../styles/form';
-import { Img } from '../styles/img';
-import SelectLang from '../components/selectlang';
+import { ViewSingle } from '../components/View';
+import getJSON, { requestUrl, api, perPage, query } from '../components/Fetch';
+import RepoInfoList, { RepoInfo, languages, addLang } from '../components/Data';
+import { ButtonIcon } from '../styles/Button';
+import { TextInput, Form, FormGroup } from '../styles/Form';
+import { Img } from '../styles/Img';
+import SelectLang from '../components/SelectLang';
 
 export default class Search extends Component {
   constructor(props) {
@@ -71,11 +71,7 @@ export default class Search extends Component {
   onSelect = event => {
     const lang = event.target.value;
     const { search } = this.state;
-
-    let newSearch = search.slice();
-    if (lang !== 'all') {
-      newSearch += ` language:"${lang}"`;
-    }
+    const newSearch = addLang(search.slice(), lang);
 
     this.setState({ lang, search: newSearch });
   };
@@ -95,7 +91,12 @@ export default class Search extends Component {
     return (
       <>
         <Form onSubmit={onSubmit} noValidate>
-          <SelectLang curr={lang} onSelect={onSelect} languages={Object.keys(languages)} />
+          <SelectLang
+            curr={lang}
+            onSelect={onSelect}
+            languages={Object.keys(languages)}
+            label="Add language"
+          />
           <FormGroup>
             <TextInput
               aria-label="Search for repositories"

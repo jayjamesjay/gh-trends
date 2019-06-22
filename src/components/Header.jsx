@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MenuToggle } from './nav';
-import StyledHeader from '../styles/headers';
-import { HeaderLink } from '../styles/link';
-import { Img } from '../styles/img';
-import { ButtonTheme } from '../styles/button';
+import { MenuToggle } from './Nav';
+import StyledHeader from '../styles/Headers';
+import { HeaderLink } from '../styles/Link';
+import { Img } from '../styles/Img';
+import { ButtonTheme } from '../styles/Button';
 
 export default function Header({ link, title, switchTheme, hide, toggle }) {
   return (

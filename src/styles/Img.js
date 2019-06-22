@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { dark } from './theme';
+import { dark } from './Theme';
 
 export const Img = styled.img`
   width: 100%;

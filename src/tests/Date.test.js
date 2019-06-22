@@ -1,4 +1,4 @@
-import formatDate from '../components/date';
+import formatDate from '../components/Date';
 
 test('formats date', () => {
   const date = new Date(2019, 5, 2);
