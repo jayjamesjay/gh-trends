@@ -4,7 +4,8 @@ import { ViewSingle } from '../components/View';
 import getJSON, { requestUrl, api, perPage, query } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, addLang } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
-import { TextInput, Form, FormGroup } from '../styles/Form';
+import { TextInput, Form, Fieldset } from '../styles/Form';
+import { H1 } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import SelectLang from '../components/SelectLang';
 
@@ -90,14 +91,19 @@ export default class Search extends Component {
 
     return (
       <>
+        <header>
+          <H1>Search for repositories</H1>
+        </header>
         <Form onSubmit={onSubmit} noValidate>
-          <SelectLang
-            curr={lang}
-            onSelect={onSelect}
-            languages={Object.keys(languages)}
-            label="Add language"
-          />
-          <FormGroup>
+          <Fieldset>
+            <SelectLang
+              curr={lang}
+              onSelect={onSelect}
+              languages={Object.keys(languages)}
+              label="Add language"
+            />
+          </Fieldset>
+          <Fieldset>
             <TextInput
               aria-label="Search for repositories"
               required
@@ -109,7 +115,7 @@ export default class Search extends Component {
             <ButtonIcon onClick={reloadData}>
               <Img src="./assets/img/search.svg" alt="Search" />
             </ButtonIcon>
-          </FormGroup>
+          </Fieldset>
         </Form>
         <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
       </>

@@ -29,11 +29,11 @@ Header.defaultProps = {
 export const H1 = styled.h1`
   font-size: 2rem;
   margin: 2rem 0 0 0;
+  text-transform: uppercase;
 `;
 
-export const H1Alt = styled.h1`
+export const H1Alt = styled(H1)`
   margin: 3rem auto 1rem auto;
-  font-size: 2rem;
 `;
 
 export const H2 = styled.h2`

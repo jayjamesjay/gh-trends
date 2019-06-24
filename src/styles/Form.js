@@ -17,14 +17,30 @@ export const TextInput = styled.input`
 `;
 
 export const Form = styled.form`
-  padding: 2rem 0.5rem 0.5rem 0.5rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 `;
 
-export const FormGroup = styled.div`
+export const FormAlt = styled(Form)`
+  padding: 1rem;
+`;
+
+export const Fieldset = styled.fieldset`
+  padding: 1rem;
   flex: 1 1 100%;
+  border: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+`;
+
+export const CategoryMenu = styled.form`
+  display: flex;
+  flex-flow: row wrap;
+  text-transform: uppercase;
+  width: 100%;
+  justify-content: center;
 `;
 
 export const InputRadio = styled.input`
@@ -41,7 +57,7 @@ export const LabelTab = styled.label`
   overflow: hidden;
 
   &::before {
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.15s ease-in-out;
     position: absolute;
     z-index: 20;
     top: 5%;
@@ -84,9 +100,10 @@ export const LabelSelect = styled(LabelTab)`
 export const Select = styled.select`
   background: ${props => props.theme.bgAdd};
   color: ${props => props.theme.color};
+  box-shadow: ${props => props.theme.shadow};
   border: none;
   padding: 0.5rem 0;
-  max-width: 16rem;
+  margin: 0.5rem;
   font-size: 1.3rem;
   appearance: none;
   text-transform: uppercase;
@@ -98,7 +115,6 @@ export const Select = styled.select`
 `;
 
 export const Option = styled.option`
-  max-width: 16rem;
   font-size: 1.2rem;
   text-transform: uppercase;
   line-break: loose;

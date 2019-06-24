@@ -37,7 +37,7 @@ export default class Saved extends Component {
       content = (
         <>
           <header>
-            <H1Alt>Saved repos</H1Alt>
+            <H1Alt>Saved repositories</H1Alt>
           </header>
           <section>
             {link}

@@ -27,7 +27,7 @@ export default class InfoBlock extends Component {
     if (Object.prototype.hasOwnProperty.call(colors, language)) {
       color = colors[language];
     } else {
-      color = '#fff';
+      color = null;
     }
 
     return (

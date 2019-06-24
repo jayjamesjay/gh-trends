@@ -1,14 +1,17 @@
 import styled from 'styled-components';
-import { light } from './Theme';
+import { light, dark } from './Theme';
 
 export const Main = styled.main`
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
     env(safe-area-inset-left);
-  justify-content: center;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
   text-align: center;
 `;
 
-export const Content = styled.section`
+export const Content = styled.div`
   @media screen and (min-width: 40rem) {
     margin: 0 1.5rem;
     display: flex;
@@ -21,10 +24,11 @@ export const Article = styled.article`
   display: flex;
   flex-flow: column nowrap;
   background: linear-gradient(
-    135deg,
     ${props => props.theme.bgAdd} 0%,
-    ${props => props.theme.bgAdd} 57%,
-    ${props => props.bg} 57%
+    ${props => props.theme.bgAdd} 0.3rem,
+    ${props => (props.bg ? props.bg : props.theme.bg === light.bg ? dark.bg : light.bg)} 0.3rem,
+    ${props => (props.bg ? props.bg : props.theme.bg === light.bg ? dark.bg : light.bg)} 0.6rem,
+    ${props => props.theme.bgAdd} 0.6rem
   );
   box-shadow: ${props => props.theme.shadow};
   word-break: break-word;
@@ -34,12 +38,6 @@ export const Article = styled.article`
   text-align: left;
 
   @media screen and (min-width: 40rem) {
-    background: linear-gradient(
-      145deg,
-      ${props => props.theme.bgAdd} 0%,
-      ${props => props.theme.bgAdd} 57%,
-      ${props => props.bg} 57%
-    );
     margin: ${props => props.margin};
     min-height: 10rem;
     min-width: 16.5rem;
@@ -49,7 +47,6 @@ export const Article = styled.article`
 
 Article.defaultProps = {
   theme: light,
-  bg: '#fff',
   margin: '2.5rem 1.5rem'
 };
 
@@ -63,16 +60,7 @@ Span.defaultProps = {
   theme: light
 };
 
-export const CategoryMenu = styled.section`
-  display: flex;
-  flex-flow: row wrap;
-  text-transform: uppercase;
-  width: 100%;
-  justify-content: center;
-`;
-
 export const TextBlock = styled.div`
   text-align: right;
   margin: auto 0 0 auto;
-  color: #000;
 `;

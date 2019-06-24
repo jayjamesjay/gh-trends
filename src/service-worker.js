@@ -1,6 +1,6 @@
 (function() {
-  const staticCache = 's-cache-v0.1.2';
-  const dynamicCache = 'd-cache-v0.1.2';
+  const staticCache = 's-cache-v0.1.3';
+  const dynamicCache = 'd-cache-v0.1.3';
   const cacheStorage = [
     '/',
     './main.js',
@@ -9,6 +9,7 @@
     './assets/img/gh-icon.png',
     './assets/img/gh-icon-512.png',
     './assets/img/dark-mode.svg',
+    './assets/img/filter-list.svg',
     './assets/img/add-saved.svg',
     './assets/img/download.svg',
     './assets/img/delete.svg',

@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { LabelSelect, Select, Option, LabelSpan } from '../styles/Form';
+import { Select, Option } from '../styles/Form';
+import { ImgIcon } from '../styles/Img';
 
 export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
-    <LabelSelect htmlFor="languages" active>
-      <LabelSpan>
-        {label}
-        <Select id="languages" value={curr} onChange={onSelect}>
-          <Option value="all" defaultValue>
-            All
+    <>
+      <ImgIcon src="./assets/img/filter-list.svg" alt={label} title={label} />
+      <Select value={curr} aria-label="languages" onChange={onSelect}>
+        <Option value="all" defaultValue>
+          All
+        </Option>
+        {languages.map(name => (
+          <Option key={name} value={name}>
+            {name}
           </Option>
-          {languages.map(name => (
-            <Option key={name} value={name}>
-              {name}
-            </Option>
-          ))}
-        </Select>
-      </LabelSpan>
-    </LabelSelect>
+        ))}
+      </Select>
+    </>
   );
 }
 

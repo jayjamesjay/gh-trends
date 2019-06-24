@@ -15,4 +15,5 @@ export const ImgInline = styled.img`
   height: 2rem;
   width: auto;
   display: inline-block;
+  filter: ${props => (props.theme.bg === dark.bg ? 'invert(100%)' : 'invert(0%)')};
 `;

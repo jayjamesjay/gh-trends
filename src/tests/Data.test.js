@@ -54,5 +54,5 @@ test('Add language', () => {
   const query = 'react';
   const lang = 'JavaScript';
 
-  expect(addLang(query, lang)).toBe("react language:\"JavaScript\"");
+  expect(addLang(query, lang)).toBe('react language:"JavaScript"');
 });

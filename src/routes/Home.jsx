@@ -11,6 +11,7 @@ import RepoInfoList, {
   addLang
 } from '../components/Data';
 import { MainHeader, H1 } from '../styles/Headers';
+import { FormAlt } from '../styles/Form';
 import SelectLang from '../components/SelectLang';
 
 export default class Home extends Component {
@@ -106,12 +107,14 @@ export default class Home extends Component {
         <MainHeader>
           <H1>Trending repositories</H1>
         </MainHeader>
-        <SelectLang
-          curr={lang}
-          onSelect={onSelect}
-          languages={Object.keys(languages)}
-          label="Language"
-        />
+        <FormAlt>
+          <SelectLang
+            curr={lang}
+            onSelect={onSelect}
+            languages={Object.keys(languages)}
+            label="Language"
+          />
+        </FormAlt>
         <Tabs>
           {data.map(elem => (
             <div key={elem.id} label={elem.id}>
