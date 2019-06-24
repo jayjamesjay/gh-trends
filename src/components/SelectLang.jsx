@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Select, Option } from '../styles/Form';
+import Select from '../styles/Select';
+import Option from '../styles/Option';
 import { ImgIcon } from '../styles/Img';
 
 export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
     <>
       <ImgIcon src="./assets/img/filter-list.svg" alt={label} title={label} />
-      <Select value={curr} aria-label="languages" onChange={onSelect}>
+      <Select value={curr} onChange={onSelect}>
         <Option value="all" defaultValue>
           All
         </Option>

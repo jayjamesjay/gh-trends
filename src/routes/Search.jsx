@@ -4,8 +4,9 @@ import { ViewSingle } from '../components/View';
 import getJSON, { requestUrl, api, perPage, query } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, addLang } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
-import { TextInput, Form, Fieldset } from '../styles/Form';
-import { H1 } from '../styles/Headers';
+import Form from '../styles/Form';
+import TextInput from '../styles/Input';
+import { H1Alt } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import SelectLang from '../components/SelectLang';
 
@@ -92,30 +93,26 @@ export default class Search extends Component {
     return (
       <>
         <header>
-          <H1>Search for repositories</H1>
+          <H1Alt>Search for repositories</H1Alt>
         </header>
         <Form onSubmit={onSubmit} noValidate>
-          <Fieldset>
-            <SelectLang
-              curr={lang}
-              onSelect={onSelect}
-              languages={Object.keys(languages)}
-              label="Add language"
-            />
-          </Fieldset>
-          <Fieldset>
-            <TextInput
-              aria-label="Search for repositories"
-              required
-              type="text"
-              onChange={onInput}
-              value={search}
-              onKeyPress={onKeyPress}
-            />
-            <ButtonIcon onClick={reloadData}>
-              <Img src="./assets/img/search.svg" alt="Search" />
-            </ButtonIcon>
-          </Fieldset>
+          <SelectLang
+            curr={lang}
+            onSelect={onSelect}
+            languages={Object.keys(languages)}
+            label="Add language"
+          />
+          <TextInput
+            aria-label="Search for repositories"
+            required
+            type="text"
+            onChange={onInput}
+            value={search}
+            onKeyPress={onKeyPress}
+          />
+          <ButtonIcon onClick={reloadData}>
+            <Img src="./assets/img/search.svg" alt="Search" />
+          </ButtonIcon>
         </Form>
         <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
       </>

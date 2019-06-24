@@ -1,6 +1,6 @@
 (function() {
-  const staticCache = 's-cache-v0.1.3';
-  const dynamicCache = 'd-cache-v0.1.3';
+  const staticCache = 's-cache-v0.1.4';
+  const dynamicCache = 'd-cache-v0.1.4';
   const cacheStorage = [
     '/',
     './main.js',

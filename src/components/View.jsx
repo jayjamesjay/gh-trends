@@ -24,6 +24,7 @@ View.propTypes = {
 
 export function ViewSingle(props) {
   const { data, loadData } = props;
+
   return (
     <>
       <View {...props} />

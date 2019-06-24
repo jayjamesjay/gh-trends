@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { InputRadio, LabelTab, LabelSpan } from '../styles/Form';
+import { LabelSpan } from '../styles/Span';
+import { InputRadio } from '../styles/Input';
+import LabelTab from '../styles/Label';
 
 export default class Tab extends Component {
   onClick = () => {

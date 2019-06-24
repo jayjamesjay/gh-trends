@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { languages as colors, RepoInfo } from './Data';
-import { Article, Span, TextBlock } from '../styles/Main';
+import { TextBlock } from '../styles/Main';
+import Article from '../styles/Article';
+import Span from '../styles/Span';
 import { H2 } from '../styles/Headers';
 import { Img, ImgInline } from '../styles/Img';
 import { P, PAlt, PClean } from '../styles/Paragraph';
