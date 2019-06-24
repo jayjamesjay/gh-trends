@@ -24,6 +24,7 @@ export const Form = styled.form`
 
 export const FormAlt = styled(Form)`
   padding: 1rem;
+  max-width: 90%;
 `;
 
 export const Fieldset = styled.fieldset`
@@ -102,8 +103,9 @@ export const Select = styled.select`
   color: ${props => props.theme.color};
   box-shadow: ${props => props.theme.shadow};
   border: none;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
   margin: 0.5rem;
+  max-width: 80%;
   font-size: 1.3rem;
   appearance: none;
   text-transform: uppercase;
