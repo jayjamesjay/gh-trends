@@ -321,15 +321,3 @@ export function jsonToMarkdown(json) {
     .join('');
 }
 
-// Adds language to query
-export function addLang(query, lang) {
-  let queryStr = query;
-
-  if (lang === 'C++') {
-    queryStr += ` language:"cpp"`;
-  } else if (lang !== 'all') {
-    queryStr += ` language:"${lang}"`;
-  }
-
-  return queryStr;
-}

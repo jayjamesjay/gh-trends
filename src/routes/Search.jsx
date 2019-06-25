@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import getJSON, { requestUrl, api, perPage, query } from '../components/Fetch';
-import RepoInfoList, { RepoInfo, languages, addLang } from '../components/Data';
+import getJSON, { Url, addLang, api, perPage } from '../components/Fetch';
+import RepoInfoList, { RepoInfo, languages } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import Form from '../styles/Form';
 import TextInput from '../styles/Input';
@@ -33,12 +33,13 @@ export default class Search extends Component {
   makeRequest = (data, page) => {
     const { search } = this.state;
     let currData = data;
-    const argsList = [api, query(search), perPage];
+    
+    const preUrl = new Url(api).query(search).parts(perPage);
     if (page > 1) {
-      argsList.push(`page=${page + 1}`);
+      preUrl.parts(`page=${page + 1}`);
     }
 
-    const url = requestUrl(...argsList);
+    const url = preUrl.toString();
 
     getJSON(url)
       .then(result => {

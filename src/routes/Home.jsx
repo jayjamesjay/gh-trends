@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import getJSON, { requestUrl, api, sort, perPage, query } from '../components/Fetch';
+import getJSON, { Url, api, sort, perPage } from '../components/Fetch';
 import Tabs from '../components/Tabs';
 import { ViewId } from '../components/View';
-import RepoInfoList, {
-  queryList,
-  initData,
-  RepoInfo,
-  languages,
-  addLang
-} from '../components/Data';
+import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/Data';
 import { MainHeader, H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
 import SelectLang from '../components/SelectLang';
@@ -52,8 +46,11 @@ export default class Home extends Component {
     }
 
     idxList.forEach(i => {
-      const search = addLang(query(queryList[i]), lang);
-      const url = requestUrl(api, search, sort, perPage, `page=${currData[i].page + 1}`);
+      const url = new Url(api)
+        .query(queryList[i])
+        .lang(lang)
+        .parts(sort, perPage, `page=${currData[i].page + 1}`)
+        .toString();
 
       this.asyncRequest = getJSON(url)
         .then(result => {

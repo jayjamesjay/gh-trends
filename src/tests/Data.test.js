@@ -1,4 +1,4 @@
-import { jsonToMarkdown, RepoInfo, addLang } from '../components/Data';
+import { jsonToMarkdown, RepoInfo } from '../components/Data';
 
 test('JSON to Markdown', () => {
   const json = [
@@ -48,11 +48,4 @@ test('RepoInfo from Github Reest API reponse', () => {
   );
 
   expect(RepoInfo.fromGithubRes(reponse)).toEqual(expected);
-});
-
-test('Add language', () => {
-  const query = 'react';
-  const lang = 'JavaScript';
-
-  expect(addLang(query, lang)).toBe('react language:"JavaScript"');
 });

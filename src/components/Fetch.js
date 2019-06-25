@@ -2,19 +2,50 @@ export const api = 'https://api.github.com/search/repositories';
 export const sort = 'sort=stars';
 export const perPage = 'per_page=6';
 
-//Creates query string for Github API
-export function query(params) {
-  const search = params
-    .split(' ')
-    .map(elem => elem.trim())
-    .filter(elem => elem !== '')
-    .join('+');
-  return `?q=${search}`;
+//Adds language to query
+export function addLang(base, lang) {
+  if (lang === 'C++') {
+    return `${base} language:"cpp"`;
+  } else if (lang !== 'all') {
+    return `${base} language:"${lang}"`;
+  } else {
+    return base;
+  }
 }
 
-//Creates url for request to Github API
-export function requestUrl(apiUrl, ...params) {
-  return apiUrl + [...params].join('&');
+//Representaion of request url to Github API
+export class Url {
+  constructor(api) {
+    this.api = api;
+    this.q = '';
+    this.params = [];
+  }
+
+  //Adds more parameters to this Url
+  parts(...elem) {
+    this.params = this.params.concat(...elem);
+    return this;
+  }
+
+  //Adds query string to this Url
+  query(params) {
+    this.q = params
+      .split(' ')
+      .map(elem => elem.trim())
+      .filter(elem => elem !== '')
+      .join('+');
+    return this;
+  }
+
+  //Adds language to query
+  lang(lang) {
+    return this.query(addLang(this.q, lang));
+  }
+
+  toString() {
+    const query = `?q=${this.q}`;
+    return this.api + [query, ...this.params].join('&');
+  }
 }
 
 //Fetches data and returns JSON response
