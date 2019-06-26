@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import { dark } from './Theme';
 
+const inverColor = props => (props.theme.bg === dark.bg ? 'invert(100%)' : 'invert(0%)');
+
 export const Img = styled.img`
   width: 100%;
   height: auto;
-  filter: ${props => (props.theme.bg === dark.bg ? 'invert(100%)' : 'invert(0%)')};
+  filter: ${props => inverColor(props)};
 `;
 
 export const ImgIcon = styled(Img)`
@@ -12,8 +14,8 @@ export const ImgIcon = styled(Img)`
 `;
 
 export const ImgInline = styled.img`
-  height: 2rem;
-  width: auto;
   display: inline-block;
-  filter: ${props => (props.theme.bg === dark.bg ? 'invert(100%)' : 'invert(0%)')};
+  width: auto;
+  height: 2rem;
+  filter: ${props => inverColor(props)};
 `;

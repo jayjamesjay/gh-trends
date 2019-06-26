@@ -8,14 +8,14 @@ export const MainHeader = styled.header`
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
-  text-transform: uppercase;
   align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
   position: sticky;
   top: 0;
   z-index: 200;
   background: ${props => props.theme.bgAdd};
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 2px 6px 2px rgba(60, 64, 67, 0.15);
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  text-transform: uppercase;
 
   @media screen and (min-width: 40rem) {
     justify-content: flex-start;
@@ -27,8 +27,8 @@ Header.defaultProps = {
 };
 
 export const H1 = styled.h1`
-  font-size: 2rem;
   margin: 2rem 0 0 0;
+  font-size: 2rem;
   text-transform: uppercase;
 `;
 
@@ -37,8 +37,8 @@ export const H1Alt = styled(H1)`
 `;
 
 export const H2 = styled.h2`
-  font-size: 1.7rem;
   margin: 0.2rem 0;
+  font-size: 1.7rem;
 `;
 
 export default Header;

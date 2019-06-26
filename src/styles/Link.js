@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { light } from './Theme';
 
 export const Link = styled(RouterLink)`
-  color: ${props => props.theme.color};
-  text-decoration: none;
+  padding: 0.5rem;
   font-size: ${props => props.fontSize};
   font-family: 'Noto Sans HK', sans-serif;
-  padding: 0.5rem;
+  color: ${props => props.theme.color};
+  text-decoration: none;
 `;
 
 Link.defaultProps = {
@@ -16,18 +16,18 @@ Link.defaultProps = {
 };
 
 export const HeaderLink = styled(Link)`
-  font-size: 2rem;
-  font-weight: 700;
   margin: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
 `;
 
 export const LinkA = styled.a`
-  cursor: pointer;
   display: block;
-  color: ${props => props.theme.color};
-  text-decoration: none;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK', sans-serif;
+  color: ${props => props.theme.color};
+  text-decoration: none;
+  cursor: pointer;
 `;
 
 LinkA.defaultProps = {

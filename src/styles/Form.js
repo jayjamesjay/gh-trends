@@ -14,9 +14,9 @@ export const FormAlt = styled(Form)`
 export const CategoryMenu = styled.form`
   display: flex;
   flex-flow: row wrap;
-  text-transform: uppercase;
-  width: 100%;
   justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
 `;
 
 export default Form;

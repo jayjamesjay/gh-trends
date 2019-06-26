@@ -3,18 +3,18 @@ import { light } from './Theme';
 
 export const Button = styled.button`
   cursor: pointer;
+  background: ${props => props.theme.bgAdd};
   border: 0;
   font-size: 1.2rem;
-  text-transform: uppercase;
-  background: ${props => props.theme.bgAdd};
   color: ${props => props.theme.color};
+  text-transform: uppercase;
 `;
 
 export const ButtonTheme = styled(Button)`
-  background: transparent;
   width: 4rem;
   height: 4rem;
   margin: 0 auto;
+  background: transparent;
 
   @media screen and (min-width: 40rem) {
     margin: 0 1rem;
@@ -22,18 +22,18 @@ export const ButtonTheme = styled(Button)`
 `;
 
 export const ButtonMain = styled(Button)`
-  padding: 1rem;
   margin: auto;
+  padding: 1rem;
   box-shadow: ${props => props.theme.shadow};
   visibility: ${props => (!props.visible ? 'hidden' : 'visible')};
 `;
 
 export const ButtonIcon = styled.button`
   cursor: pointer;
-  border: 0;
-  background: transparent;
   width: 2.5rem;
   height: auto;
+  background: transparent;
+  border: 0;
 `;
 
 export const ButtonAdd = styled(ButtonIcon)`
@@ -41,22 +41,22 @@ export const ButtonAdd = styled(ButtonIcon)`
 `;
 
 export const MenuToggle = styled(Button)`
-  padding: 0;
-  overflow: hidden;
-  background: transparent;
   margin: 0 1rem;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
 
   @media screen and (min-width: 40rem) {
     display: none;
   }
 
   & > span {
-    transition: transform 0.2s linear;
     display: block;
-    background: ${props => props.theme.color};
     width: 1.8rem;
     height: 0.2rem;
     margin: 0.3rem 0;
+    background: ${props => props.theme.color};
+    transition: transform 0.2s linear;
 
     &:first-child {
       transform: ${props => (props.open ? 'translateY(0.45rem) rotate(-45deg)' : '')};

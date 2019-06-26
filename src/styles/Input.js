@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 
 const TextInput = styled.input`
-  background: ${props => props.theme.bg};
-  color: ${props => props.theme.color};
+  min-width: 50%;
   padding: 0.5rem;
-  font-size: 1.2rem;
-  border: none;
+  background: ${props => props.theme.bg};
   border: solid ${props => props.theme.color};
   border-width: 0 0 0.15rem 0;
-  min-width: 50%;
+  font-size: 1.2rem;
+  color: ${props => props.theme.color};
 
   &:focus {
     border-width: 0.15rem;

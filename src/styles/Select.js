@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 const Select = styled.select`
-  background: ${props => props.theme.bgAdd};
-  color: ${props => props.theme.color};
-  box-shadow: ${props => props.theme.shadow};
-  border: none;
-  padding: 0.5rem;
-  margin: 0.5rem;
   max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: ${props => props.theme.bgAdd};
+  border: none;
+  box-shadow: ${props => props.theme.shadow};
   font-size: 1.3rem;
-  appearance: none;
-  text-transform: uppercase;
+  color: ${props => props.theme.color};
   text-align: center;
+  text-transform: uppercase;
+  appearance: none;
 `;
 
 export default Select;
