@@ -17,6 +17,8 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^5.0.3",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.3.0",
@@ -27,6 +29,7 @@
     "html-webpack-plugin": "^4.0.0-beta.5",
     "jest": "^24.8.0",
     "prettier": "1.18.2",
+    "react-test-renderer": "^16.8.6",
     "uglifyjs-webpack-plugin": "^2.1.3",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
@@ -41,10 +44,13 @@
     "lintfix": "eslint --fix \"src/**/*.jsx\""
   },
   "dependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "styled-components": "^4.2.0",
-    "prop-types": "^15.7.2"
+    "styled-components": "^4.2.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/src/setupEnzyme.js"]
   }
 }

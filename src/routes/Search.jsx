@@ -33,7 +33,7 @@ export default class Search extends Component {
   makeRequest = (data, page) => {
     const { search } = this.state;
     let currData = data;
-    
+
     const preUrl = new Url(api).query(search).parts(perPage);
     if (page > 1) {
       preUrl.parts(`page=${page + 1}`);

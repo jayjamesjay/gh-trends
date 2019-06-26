@@ -8,7 +8,7 @@ import { RepoInfo } from './Data';
 export default function View({ data, saved, save }) {
   return (
     <Content>
-      {data.map((node, id) => {
+      {data.map(node => {
         const saving = saved.findIndex(item => item.nameWithOwner === node.nameWithOwner) > -1;
         return <InfoBlock key={node.nameWithOwner} info={node} save={save} saved={saving} />;
       })}

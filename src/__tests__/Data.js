@@ -1,6 +1,6 @@
 import { jsonToMarkdown, RepoInfo } from '../components/Data';
 
-test('JSON to Markdown', () => {
+it('JSON to Markdown', () => {
   const json = [
     { name: 'Dog', length: 1 },
     { name: 'Sharp', length: 22 },
@@ -24,7 +24,7 @@ length: 2 \r\n\
   );
 });
 
-test('RepoInfo from Github Reest API reponse', () => {
+it('RepoInfo from Github Reest API reponse', () => {
   const reponse = {
     full_name: 'jayjamesjay/gh-trends',
     html_url: '',
