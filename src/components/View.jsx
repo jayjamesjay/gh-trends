@@ -5,6 +5,7 @@ import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
 import { RepoInfo } from './Data';
 
+// Group of InfoBlocks
 export default function View({ data, saved, save }) {
   return (
     <Content>
@@ -22,6 +23,7 @@ View.propTypes = {
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
+// View with button firing loadData function without any id
 export function ViewSingle(props) {
   const { data, loadData } = props;
 
@@ -42,6 +44,7 @@ ViewSingle.propTypes = {
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
+// View with button firing loadData function with specified id
 export class ViewId extends Component {
   loadData = () => {
     const { loadData, id } = this.props;

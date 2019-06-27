@@ -4,6 +4,7 @@ import { LabelSpan } from '../styles/Span';
 import { InputRadio } from '../styles/Input';
 import LabelTab from '../styles/Label';
 
+// Single select of tab
 export default class Tab extends Component {
   onClick = () => {
     const { label, onClick } = this.props;

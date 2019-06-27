@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { CategoryMenu } from '../styles/Form';
 import Tab from './Tab';
 
+// Menu to hadle tab selection
 export function Categories({ labels, active, onClick }) {
   return (
     <CategoryMenu>
@@ -19,6 +20,7 @@ Categories.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
+// Tab selection and display currently selected tab
 export default class Tabs extends Component {
   constructor(props) {
     super(props);

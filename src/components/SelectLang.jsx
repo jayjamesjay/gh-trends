@@ -4,6 +4,7 @@ import Select from '../styles/Select';
 import Option from '../styles/Option';
 import { ImgIcon } from '../styles/Img';
 
+// Language selection
 export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
     <>

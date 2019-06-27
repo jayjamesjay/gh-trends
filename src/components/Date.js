@@ -1,5 +1,5 @@
 //Adds zero to digits
-const addLeadingZero = val => (val.toString().length === 1 ? `0${val}` : val);
+export const addLeadingZero = val => (val.toString().length === 1 ? `0${val}` : `${val}`);
 
 //Formats date according to Github Search API standards
 export default function formatDate(date) {

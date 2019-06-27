@@ -1,5 +1,12 @@
 import { Url, addLang } from '../components/Fetch';
 
+it('Adds language', () => {
+  const query = 'react';
+  const lang = 'JavaScript';
+
+  expect(addLang(query, lang)).toBe('react language:"JavaScript"');
+});
+
 it('adds search to Url', () => {
   const expected = 'react+language:JavaScript';
   const url = new Url('').query('react language:JavaScript');
@@ -34,11 +41,4 @@ it('creates Url for request', () => {
   expect(url).toBe(
     'https://api.github.com/search/repositories?q=react+language:"JavaScript"&sort=stars'
   );
-});
-
-it('Adds language', () => {
-  const query = 'react';
-  const lang = 'JavaScript';
-
-  expect(addLang(query, lang)).toBe('react language:"JavaScript"');
 });

@@ -6,6 +6,7 @@ import { HeaderLink } from '../styles/Link';
 import { Img } from '../styles/Img';
 import { ButtonTheme } from '../styles/Button';
 
+// Header of the website
 export default function Header({ link, title, switchTheme, hide, toggle }) {
   return (
     <StyledHeader>

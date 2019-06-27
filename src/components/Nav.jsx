@@ -5,6 +5,7 @@ import { Menu } from '../styles/List';
 import { Link } from '../styles/Link';
 import StyledNav from '../styles/Nav';
 
+// Hamburger displayed on mobile devies to open/close menu
 export function MenuToggle({ toggle, open }) {
   return (
     <StyledToggle aria-label="Open menu" onClick={toggle} open={open}>
@@ -20,6 +21,7 @@ MenuToggle.propTypes = {
   toggle: PropTypes.func.isRequired
 };
 
+// Main navigation of website
 export default function Nav({ hide, links, linkClick }) {
   return (
     <StyledNav hide={hide}>
@@ -38,6 +40,7 @@ Nav.propTypes = {
   linkClick: PropTypes.func.isRequired
 };
 
+// List item with link inside
 export function ListItemLink({ click, link, title }) {
   return (
     <li>

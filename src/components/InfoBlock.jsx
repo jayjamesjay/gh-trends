@@ -10,6 +10,7 @@ import { P, PAlt, PClean } from '../styles/Paragraph';
 import { ButtonAdd } from '../styles/Button';
 import { LinkA } from '../styles/Link';
 
+// Block of information about repository with an indicator if it was saved
 export default class InfoBlock extends Component {
   save = () => {
     const { info, save } = this.props;
@@ -21,7 +22,6 @@ export default class InfoBlock extends Component {
       props: { info, saved },
       save
     } = this;
-    const [author, name] = info.nameWithOwner.split('/');
     const { language, stargazersCount } = info;
     const license = info.license ? `License: ${info.license}` : '';
     let color;
@@ -35,12 +35,7 @@ export default class InfoBlock extends Component {
     return (
       <Article bg={color}>
         <H2>
-          <LinkA href={info.url}>
-            <Span>{author}</Span>
-            {' '}
-/
-            {name}
-          </LinkA>
+          <RepoLink url={info.url} nameWithOwner={info.nameWithOwner} />
         </H2>
         <P>{info.description}</P>
         <PClean>
@@ -48,13 +43,7 @@ export default class InfoBlock extends Component {
           {info.forks}
         </PClean>
         <PClean>{license}</PClean>
-        <ButtonAdd onClick={save}>
-          {saved ? (
-            <Img src="./assets/img/delete.svg" alt="Remove from saved" title="Remove from saved" />
-          ) : (
-            <Img src="./assets/img/add-saved.svg" alt="Add to saved" title="Add to saved" />
-          )}
-        </ButtonAdd>
+        <SaveRepo save={save} saved={saved} />
         <TextBlock>
           <PAlt>
             {stargazersCount}
@@ -71,4 +60,40 @@ InfoBlock.propTypes = {
   saved: PropTypes.bool.isRequired,
   save: PropTypes.func.isRequired,
   info: PropTypes.instanceOf(RepoInfo).isRequired
+};
+
+// Llink to repository
+export function RepoLink({ url, nameWithOwner }) {
+  const [author, name] = nameWithOwner.split('/');
+
+  return (
+    <LinkA href={url}>
+      <Span>{author}</Span>
+      {' /'}
+      {name}
+    </LinkA>
+  );
+}
+
+RepoLink.propTypes = {
+  url: PropTypes.string.isRequired,
+  nameWithOwner: PropTypes.string.isRequired
+};
+
+// Button to add/remove repository from saved
+export function SaveRepo({ save, saved }) {
+  return (
+    <ButtonAdd onClick={save}>
+      {saved ? (
+        <Img src="./assets/img/delete.svg" alt="Remove from saved" title="Remove from saved" />
+      ) : (
+        <Img src="./assets/img/add-saved.svg" alt="Add to saved" title="Add to saved" />
+      )}
+    </ButtonAdd>
+  );
+}
+
+SaveRepo.propTypes = {
+  saved: PropTypes.bool.isRequired,
+  save: PropTypes.func.isRequired
 };
