@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import formatDate from './Date';
 import { LinkA } from '../styles/Link';
 

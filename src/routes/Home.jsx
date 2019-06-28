@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import getJSON, { Url, api, sort, perPage } from '../components/Fetch';
+import getJSON, { Url, defApi, sort, perPage } from '../components/Fetch';
 import Tabs from '../components/Tabs';
 import { ViewId } from '../components/View';
 import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/Data';
@@ -46,7 +46,7 @@ export default class Home extends Component {
     }
 
     idxList.forEach(i => {
-      const url = new Url(api)
+      const url = new Url(defApi)
         .query(queryList[i])
         .lang(lang)
         .parts(sort, perPage, `page=${currData[i].page + 1}`)
@@ -63,7 +63,7 @@ export default class Home extends Component {
             data: currData
           });
         })
-        .catch(_ => {
+        .catch(() => {
           this.asyncRequest = null;
         });
     });

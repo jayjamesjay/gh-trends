@@ -1,7 +1,7 @@
-//Adds zero to digits
+// Adds zero to digits
 export const addLeadingZero = val => (val.toString().length === 1 ? `0${val}` : `${val}`);
 
-//Formats date according to Github Search API standards
+// Formats date according to Github Search API standards
 export default function formatDate(date) {
   const month = addLeadingZero(date.getMonth() + 1);
   const day = addLeadingZero(date.getDate());

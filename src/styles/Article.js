@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 import { light, dark } from './Theme';
 
-const oppositeBg = props =>
-  props.bg ? props.bg : props.theme.bg === light.bg ? dark.bg : light.bg;
+const oppositeBg = props => {
+  if (props.bg) {
+    return props.bg;
+  }
+  if (props.theme.bg === light.bg) {
+    return dark.bg;
+  }
+  return light.bg;
+};
 
 const Article = styled.article`
   display: flex;

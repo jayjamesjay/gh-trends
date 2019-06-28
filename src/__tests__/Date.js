@@ -1,6 +1,6 @@
 import formatDate, { addLeadingZero } from '../components/Date';
 
-it('formats date', () => {
+it('adds leading zero', () => {
   expect(addLeadingZero(9)).toBe('09');
   expect(addLeadingZero(12)).toBe('12');
 });

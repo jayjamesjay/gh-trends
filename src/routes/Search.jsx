@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import getJSON, { Url, addLang, api, perPage } from '../components/Fetch';
+import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import Form from '../styles/Form';
@@ -34,7 +34,7 @@ export default class Search extends Component {
     const { search } = this.state;
     let currData = data;
 
-    const preUrl = new Url(api).query(search).parts(perPage);
+    const preUrl = new Url(defApi).query(search).parts(perPage);
     if (page > 1) {
       preUrl.parts(`page=${page + 1}`);
     }
@@ -51,7 +51,7 @@ export default class Search extends Component {
           page: currPage
         });
       })
-      .catch(_ => {
+      .catch(() => {
         this.asyncRequest = null;
       });
   };
