@@ -40,8 +40,6 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "format": "prettier --config .prettierrc --write \"src/**\"",
-    "prepush": "yarn test && yarn lint",
-    "precommit": "yarn test && yarn lint",
     "test": "jest --verbose",
     "lint": "eslint \"src/**/*.jsx\" \"src/**/*.js\"",
     "lintfix": "yarn lint --fix"
@@ -57,5 +55,11 @@
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupEnzyme.js"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn lint",
+      "pre-push": "yarn test && yarn lint"
+    }
   }
 }
