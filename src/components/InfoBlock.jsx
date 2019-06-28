@@ -24,6 +24,7 @@ export default class InfoBlock extends Component {
     } = this;
     const { language, stargazersCount } = info;
     const license = info.license ? `License: ${info.license}` : '';
+    const forks = `Forks: ${info.forks}`;
     let color;
 
     if (Object.prototype.hasOwnProperty.call(colors, language)) {
@@ -38,10 +39,7 @@ export default class InfoBlock extends Component {
           <RepoLink url={info.url} nameWithOwner={info.nameWithOwner} />
         </H2>
         <P>{info.description}</P>
-        <PClean>
-          Forks:
-          {info.forks}
-        </PClean>
+        <PClean>{forks}</PClean>
         <PClean>{license}</PClean>
         <SaveRepo save={save} saved={saved} />
         <TextBlock>

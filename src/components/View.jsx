@@ -5,7 +5,7 @@ import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
 import { RepoInfo } from './Data';
 
-// Group of InfoBlocks
+// Group of InfoBlocks wrapped in Content
 export default function View({ data, saved, save }) {
   return (
     <Content>
