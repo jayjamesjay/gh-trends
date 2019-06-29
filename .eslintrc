@@ -5,10 +5,10 @@
     "node": true
   },
   "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "rules": {
     "no-unused-vars": 1,
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["src/setupEnzyme.js"]}]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["src/setupEnzyme.js"] }]
   },
   "globals": {
     "window": true,

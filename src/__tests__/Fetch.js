@@ -1,10 +1,22 @@
 import { Url, addLang } from '../components/Fetch';
 
-it('Adds language', () => {
+describe('addLang', () => {
   const query = 'react';
-  const lang = 'JavaScript';
 
-  expect(addLang(query, lang)).toBe('react language:"JavaScript"');
+  it('Any', () => {
+    const lang = 'JavaScript';
+    expect(addLang(query, lang)).toBe('react language:"JavaScript"');
+  });
+
+  it('C++', () => {
+    const lang = 'C++';
+    expect(addLang(query, lang)).toBe('react language:"cpp"');
+  });
+
+  it('all languages', () => {
+    const lang = 'all';
+    expect(addLang(query, lang)).toBe('react');
+  });
 });
 
 it('adds search to Url', () => {

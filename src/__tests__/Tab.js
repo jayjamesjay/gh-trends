@@ -5,9 +5,19 @@ describe('<Tab />', () => {
   const label = 'Year';
   const func = () => {};
 
-  const tab = shallow(<Tab checked={checked} label={label} onClick={func} />);
-
   it(`contains text of label`, () => {
+    const tab = shallow(<Tab checked={checked} label={label} onClick={func} />);
     expect(tab.text()).toEqual(label);
+  });
+
+  it('fires function onClick', () => {
+    let temp;
+    const onClick = label => {
+      temp = label;
+    };
+    const tab = shallow(<Tab checked={checked} label={label} onClick={onClick} />);
+
+    tab.simulate('click');
+    expect(temp).toEqual(label);
   });
 });

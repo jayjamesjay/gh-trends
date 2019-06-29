@@ -15,6 +15,11 @@ describe('<View />', () => {
     const view = shallow(<View data={initData} saved={[]} save={func} />);
     expect(view.find(InfoBlock).exists()).toEqual(true);
   });
+
+  it('renders with saved', () => {
+    const view = shallow(<View data={initData} saved={initData.slice(0, 3)} save={func} />);
+    expect(view.find(InfoBlock).exists()).toEqual(true);
+  });
 });
 
 describe('<ViewSingle />', () => {

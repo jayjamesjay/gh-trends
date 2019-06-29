@@ -4,7 +4,7 @@ import View from '../components/View';
 import { Categories } from '../components/Tabs';
 import { H1Alt } from '../styles/Headers';
 import { ImgIcon } from '../styles/Img';
-import { createLink, jsonToMarkdown, RepoInfo } from '../components/Data';
+import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
 
 export default class Saved extends Component {
   constructor(props) {
@@ -30,9 +30,16 @@ export default class Saved extends Component {
       const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
 
       const link =
-        active === 'JSON'
-          ? createLink('saved.json', JSON.stringify(data), 'json', imgDownload)
-          : createLink('saved.md', jsonToMarkdown(data), 'plain', imgDownload);
+        active === 'JSON' ? (
+          <DownloadLink
+            filename="saved.json"
+            content={JSON.stringify(data)}
+            dataType="json"
+            display={imgDownload}
+          />
+        ) : (
+          <DownloadLink filename="saved.md" content={jsonToMarkdown(data)} display={imgDownload} />
+        );
 
       content = (
         <>

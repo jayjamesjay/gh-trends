@@ -1,4 +1,4 @@
-import RepoInfoList, { jsonToMarkdown, RepoInfo } from '../components/Data';
+import RepoInfoList, { jsonToMarkdown, RepoInfo, DownloadLink } from '../components/Data';
 
 it('creates RepoInfo from one element of Github Reest API reponse array', () => {
   const response = {
@@ -26,22 +26,7 @@ it('creates RepoInfo from one element of Github Reest API reponse array', () => 
   expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
 });
 
-it('creates RepoInfoList from Github Reest API reponse', () => {
-  const respElem = {
-    full_name: 'jayjamesjay/gh-trends',
-    html_url: '',
-    description: 'Loading content for this website...',
-    stargazers_count: 100,
-    language: 'JavaScript',
-    forks: 321,
-    license: {
-      spdx_id: 'MIT'
-    }
-  };
-
-  const response = new Array(3);
-  response.fill(respElem);
-
+describe('<RepoInfoList />', () => {
   const expectedElem = new RepoInfo(
     'jayjamesjay/gh-trends',
     '',
@@ -52,10 +37,56 @@ it('creates RepoInfoList from Github Reest API reponse', () => {
     'MIT'
   );
 
-  const expected = new Array(3);
-  expected.fill(expectedElem);
+  const expectedData = new Array(3);
+  expectedData.fill(expectedElem);
 
-  expect(RepoInfoList.fromGithubRes(response)).toEqual(expected);
+  it('from Github Reest API reponse', () => {
+    const respElem = {
+      full_name: 'jayjamesjay/gh-trends',
+      html_url: '',
+      description: 'Loading content for this website...',
+      stargazers_count: 100,
+      language: 'JavaScript',
+      forks: 321,
+      license: {
+        spdx_id: 'MIT'
+      }
+    };
+
+    const response = new Array(3);
+    response.fill(respElem);
+
+    expect(RepoInfoList.fromGithubRes(response)).toEqual(expectedData);
+  });
+
+  it('constructs full with id', () => {
+    const id = 'Week';
+    const page = 1;
+    const infoList = new RepoInfoList(id, expectedData, page);
+    const expectedList = {
+      id: id,
+      data: expectedData,
+      page: page
+    };
+
+    expect(infoList).toEqual(expectedList);
+  });
+});
+
+describe('<DownloadLink />', () => {
+  const name = 'msg.txt';
+  const text = `You've just downloaded this text ;)`;
+  const title = 'Download message';
+  const link = shallow(<DownloadLink filename={name} content={text} display={title} />);
+
+  it('displays node', () => {
+    expect(link.text()).toEqual(title);
+  });
+
+  it('points to content', () => {
+    const data = `data:plain/plain;charset=utf-8,${encodeURIComponent(text)}`;
+    expect(link.prop('href')).toEqual(data);
+  });
 });
 
 it('converts JSON to Markdown', () => {

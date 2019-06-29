@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import formatDate from './Date';
 import { LinkA } from '../styles/Link';
 
@@ -297,7 +298,7 @@ export default class RepoInfoList {
 }
 
 // Creates link to donwload a file
-export function createLink(filename, content, dataType, display) {
+export function DownloadLink({ filename, content, dataType, display }) {
   const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(content)}`;
   return (
     <LinkA href={link} download={filename}>
@@ -305,6 +306,17 @@ export function createLink(filename, content, dataType, display) {
     </LinkA>
   );
 }
+
+DownloadLink.defaultProps = {
+  dataType: 'plain'
+};
+
+DownloadLink.propTypes = {
+  filename: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  dataType: PropTypes.string,
+  display: PropTypes.node.isRequired
+};
 
 // Converts JSON to Markdown
 export function jsonToMarkdown(json) {
