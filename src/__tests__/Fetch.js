@@ -28,29 +28,53 @@ it('adds search to Url', () => {
   expect(url2.q).toBe(expected);
 });
 
-it('adds parameters to Url', () => {
-  const query = 'react';
+describe('<Url />', () => {
   const api = 'https://api.github.com/search/repositories';
-  const params = ['sort=stars', 'perper_page=10'];
 
-  const url = new Url(api).query(query).parts(params);
+  it('creates new', () => {
+    const url = new Url(api);
 
-  expect(url.params).toEqual(params);
-});
+    expect(url.api).toEqual(api);
+    expect(url.params).toEqual([]);
+    expect(url.q).toEqual('');
+  });
 
-it('creates Url for request', () => {
-  const query = 'react';
-  const lang = 'JavaScript';
-  const api = 'https://api.github.com/search/repositories';
-  const sort = 'sort=stars';
+  it('adds parts', () => {
+    const params = ['sort=stars', 'perper_page=10'];
+    const url = new Url(api).parts(params);
 
-  const url = new Url(api)
-    .query(query)
-    .lang(lang)
-    .parts(sort)
-    .toString();
+    expect(url.params).toEqual(params);
+  });
 
-  expect(url).toBe(
-    'https://api.github.com/search/repositories?q=react+language:"JavaScript"&sort=stars'
-  );
+  it('adds query', () => {
+    const query = 'react';
+    const url = new Url(api).query(query);
+
+    expect(url.q).toEqual(query);
+  });
+
+  it('adds language to query', () => {
+    const query = 'react';
+    const lang = 'JavaScript';
+    const expected = `${query}+language:"${lang}"`;
+    const url = new Url(api).query(query).lang(lang);
+
+    expect(url.q).toEqual(expected);
+  });
+
+  it('full toString', () => {
+    const query = 'react';
+    const lang = 'JavaScript';
+    const sort = 'sort=stars';
+
+    const url = new Url(api)
+      .query(query)
+      .lang(lang)
+      .parts(sort)
+      .toString();
+
+    expect(url).toBe(
+      'https://api.github.com/search/repositories?q=react+language:"JavaScript"&sort=stars'
+    );
+  });
 });

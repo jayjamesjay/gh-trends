@@ -12,7 +12,10 @@ describe('<InfoBlock />', () => {
     'MIT'
   );
   const saved = false;
-  const save = () => {};
+  let temp;
+  const save = info => {
+    temp = info;
+  };
 
   it('renders with default background color', () => {
     const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
@@ -23,6 +26,13 @@ describe('<InfoBlock />', () => {
     info.license = null;
     const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
     expect(infoBlock.text()).not.toContain('License');
+  });
+
+  it('saves info', () => {
+    const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+    infoBlock.instance().save();
+
+    expect(temp).toEqual(info);
   });
 });
 

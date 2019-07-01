@@ -9,7 +9,7 @@ export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
     <>
       <ImgIcon src="./assets/img/filter-list.svg" alt={label} title={label} />
-      <Select value={curr} onChange={onSelect}>
+      <Select value={curr} onChange={onSelect} aria-label="Languages">
         <Option value="all" defaultValue>
           All
         </Option>

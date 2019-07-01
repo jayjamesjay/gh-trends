@@ -1,29 +1,55 @@
 import RepoInfoList, { jsonToMarkdown, RepoInfo, DownloadLink } from '../components/Data';
 
-it('creates RepoInfo from one element of Github Reest API reponse array', () => {
-  const response = {
-    full_name: 'jayjamesjay/gh-trends',
-    html_url: '',
-    description: 'Loading content for this website...',
-    stargazers_count: 100,
-    language: 'JavaScript',
-    forks: 321,
-    license: {
-      spdx_id: 'MIT'
-    }
-  };
+describe('RepoInfo', () => {
+  it('from one element of Github Reest API reponse array', () => {
+    const response = {
+      full_name: 'jayjamesjay/gh-trends',
+      html_url: '',
+      description: 'Loading content for this website...',
+      stargazers_count: 100,
+      language: 'JavaScript',
+      forks: 321,
+      license: {
+        spdx_id: 'MIT'
+      }
+    };
 
-  const expected = new RepoInfo(
-    'jayjamesjay/gh-trends',
-    '',
-    'Loading content for this website...',
-    100,
-    'JavaScript',
-    321,
-    'MIT'
-  );
+    const expected = new RepoInfo(
+      'jayjamesjay/gh-trends',
+      '',
+      'Loading content for this website...',
+      100,
+      'JavaScript',
+      321,
+      'MIT'
+    );
 
-  expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
+    expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
+  });
+
+  it('from one element of Github Reest API reponse array without license', () => {
+    const response = {
+      full_name: 'jayjamesjay/gh-trends',
+      html_url: '',
+      description: 'Loading content for this website...',
+      stargazers_count: 100,
+      language: 'JavaScript',
+      forks: 321,
+      license: null
+    };
+
+    const expected = new RepoInfo(
+      'jayjamesjay/gh-trends',
+      '',
+      'Loading content for this website...',
+      100,
+      'JavaScript',
+      321,
+      null
+    );
+
+    expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
+  });
 });
 
 describe('<RepoInfoList />', () => {

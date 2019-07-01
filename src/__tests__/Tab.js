@@ -10,7 +10,7 @@ describe('<Tab />', () => {
     expect(tab.text()).toEqual(label);
   });
 
-  it('fires function onClick', () => {
+  it('fires onClick func', () => {
     let temp;
     const onClick = label => {
       temp = label;

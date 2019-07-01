@@ -37,7 +37,7 @@ export class Url {
     return this;
   }
 
-  // Adds language to query
+  // Adds programming language to query
   lang(lang) {
     return this.query(addLang(this.q, lang));
   }
