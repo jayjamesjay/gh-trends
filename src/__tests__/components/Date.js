@@ -1,4 +1,4 @@
-import formatDate, { addLeadingZero } from '../components/Date';
+import formatDate, { addLeadingZero } from '../../components/Date';
 
 it('adds leading zero', () => {
   expect(addLeadingZero(9)).toBe('09');

@@ -1,4 +1,4 @@
-import { Url, addLang } from '../components/Fetch';
+import { Url, addLang } from '../../components/Fetch';
 
 describe('addLang', () => {
   const query = 'react';

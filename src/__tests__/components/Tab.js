@@ -1,4 +1,4 @@
-import Tab from '../components/Tab';
+import Tab from '../../components/Tab';
 
 describe('<Tab />', () => {
   const checked = false;

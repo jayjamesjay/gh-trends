@@ -1,4 +1,4 @@
-import SelectLang from '../components/SelectLang';
+import SelectLang from '../../components/SelectLang';
 
 describe('<SelectLang />', () => {
   const languages = ['JavaScript', 'CSS'];

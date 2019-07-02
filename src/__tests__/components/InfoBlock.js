@@ -1,5 +1,5 @@
-import InfoBlock, { RepoLink, SaveRepo } from '../components/InfoBlock';
-import { RepoInfo } from '../components/Data';
+import InfoBlock, { RepoLink, SaveRepo } from '../../components/InfoBlock';
+import { RepoInfo } from '../../components/Data';
 
 describe('<InfoBlock />', () => {
   const info = new RepoInfo(

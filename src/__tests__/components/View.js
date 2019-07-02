@@ -1,7 +1,7 @@
-import View, { ViewId, ViewSingle } from '../components/View';
-import { initData } from '../components/Data';
-import InfoBlock from '../components/InfoBlock';
-import { ButtonMain } from '../styles/Button';
+import View, { ViewId, ViewSingle } from '../../components/View';
+import { initData } from '../../components/Data';
+import InfoBlock from '../../components/InfoBlock';
+import { ButtonMain } from '../../styles/Button';
 
 describe('<View />', () => {
   const func = () => {};

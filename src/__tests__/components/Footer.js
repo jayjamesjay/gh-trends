@@ -1,4 +1,4 @@
-import Footer from '../components/Footer';
+import Footer from '../../components/Footer';
 
 const text = 'Copyright © 2019 jayjamesjay. All Rights Reserved.';
 

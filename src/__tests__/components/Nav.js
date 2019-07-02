@@ -1,4 +1,4 @@
-import Nav, { ListItemLink, MenuToggle } from '../components/Nav';
+import Nav, { ListItemLink, MenuToggle } from '../../components/Nav';
 
 const func = () => {};
 

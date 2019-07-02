@@ -1,4 +1,4 @@
-import RepoInfoList, { jsonToMarkdown, RepoInfo, DownloadLink } from '../components/Data';
+import RepoInfoList, { jsonToMarkdown, RepoInfo, DownloadLink } from '../../components/Data';
 
 describe('RepoInfo', () => {
   it('from one element of Github Reest API reponse array', () => {

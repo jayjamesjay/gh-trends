@@ -1,4 +1,4 @@
-import Header from '../components/Header';
+import Header from '../../components/Header';
 
 it('renders <Header /> with specified title', () => {
   const title = 'GH Trends';

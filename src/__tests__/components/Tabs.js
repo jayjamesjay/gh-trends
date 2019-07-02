@@ -1,5 +1,5 @@
-import Tabs, { Categories } from '../components/Tabs';
-import Tab from '../components/Tab';
+import Tabs, { Categories } from '../../components/Tabs';
+import Tab from '../../components/Tab';
 
 describe('<Tabs />', () => {
   const label1 = 'Year';

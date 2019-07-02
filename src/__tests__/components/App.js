@@ -1,6 +1,6 @@
-import App from '../components/App';
-import { light, dark } from '../styles/Theme';
-import { initData } from '../components/Data';
+import App from '../../components/App';
+import { light, dark } from '../../styles/Theme';
+import { initData } from '../../components/Data';
 
 describe('<App />', () => {
   const app = shallow(<App />);
