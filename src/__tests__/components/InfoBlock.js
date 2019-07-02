@@ -25,6 +25,7 @@ describe('<InfoBlock />', () => {
   it('renders without license', () => {
     info.license = null;
     const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+
     expect(infoBlock.text()).not.toContain('License');
   });
 
