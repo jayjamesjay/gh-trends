@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { MenuToggle as StyledToggle } from '../styles/Button';
+import { MenuToggle as StyledToggle, ToggleSpan } from '../styles/Button';
 import { Menu } from '../styles/List';
 import { Link } from '../styles/Link';
 import StyledNav from '../styles/Nav';
@@ -9,9 +9,9 @@ import StyledNav from '../styles/Nav';
 export function MenuToggle({ toggle, open }) {
   return (
     <StyledToggle aria-label="Open menu" onClick={toggle} open={open}>
-      <span />
-      <span />
-      <span />
+      <ToggleSpan />
+      <ToggleSpan />
+      <ToggleSpan />
     </StyledToggle>
   );
 }
