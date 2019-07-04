@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> renders default 1`] = `
+.c0 {
+  max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-size: 1.3rem;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+<Select
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Select-sc-1gv2f95-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "max-width:80%;margin:0.5rem;padding:0.5rem;background:",
+            [Function],
+            ";border:none;box-shadow:",
+            [Function],
+            ";font-size:1.3rem;color:",
+            [Function],
+            ";text-align:center;text-transform:uppercase;appearance:none;",
+          ],
+        },
+        "displayName": "Select",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Select-sc-1gv2f95-0",
+        "target": "select",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#707070",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    <select
+      className="c0"
+    />
+  </StyledComponent>
+</Select>
+`;
+
+exports[`<Select /> renders with theme 1`] = `
+.c0 {
+  max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #202124;
+  border: none;
+  box-shadow: none;
+  font-size: 1.3rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+<Select
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Select-sc-1gv2f95-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "max-width:80%;margin:0.5rem;padding:0.5rem;background:",
+            [Function],
+            ";border:none;box-shadow:",
+            [Function],
+            ";font-size:1.3rem;color:",
+            [Function],
+            ";text-align:center;text-transform:uppercase;appearance:none;",
+          ],
+        },
+        "displayName": "Select",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Select-sc-1gv2f95-0",
+        "target": "select",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#000",
+        "bgAdd": "#202124",
+        "color": "#fff",
+        "colorAdd": "#8d8d8d",
+        "shadow": "none",
+      }
+    }
+  >
+    <select
+      className="c0"
+    />
+  </StyledComponent>
+</Select>
+`;

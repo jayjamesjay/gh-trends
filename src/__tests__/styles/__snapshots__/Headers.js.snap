@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders default 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Headers__Header-sc-1tudo8a-1",
+        "isStatic": false,
+        "rules": Array [
+          "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
+          [Function],
+          ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
+        ],
+      },
+      "displayName": "Headers__Header",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+      "target": "header",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;
+
+exports[`<Header /> renders with theme 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Headers__Header-sc-1tudo8a-1",
+        "isStatic": false,
+        "rules": Array [
+          "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
+          [Function],
+          ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
+        ],
+      },
+      "displayName": "Headers__Header",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+      "target": "header",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+/>
+`;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { light } from './Theme';
 
 const Select = styled.select`
   max-width: 80%;
@@ -13,5 +14,9 @@ const Select = styled.select`
   text-transform: uppercase;
   appearance: none;
 `;
+
+Select.defaultProps = {
+  theme: light
+};
 
 export default Select;

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default <Option/> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Option-sc-1is677r-0",
+        "isStatic": true,
+        "rules": Array [
+          "font-size:1.2rem;line-break:loose;text-align:center;text-transform:uppercase;",
+        ],
+      },
+      "displayName": "Option",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Option-sc-1is677r-0",
+      "target": "option",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

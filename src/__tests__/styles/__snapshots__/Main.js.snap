@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default <Content /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Main__Content-sc-1yl8y0q-1",
+        "isStatic": true,
+        "rules": Array [
+          "@media screen and (min-width:40rem){display:flex;flex-flow:row wrap;justify-content:space-around;margin:0 1.5rem;}",
+        ],
+      },
+      "displayName": "Main__Content",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Main__Content-sc-1yl8y0q-1",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`renders default <Main /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Main-sc-1yl8y0q-0",
+        "isStatic": true,
+        "rules": Array [
+          "display:flex;flex-flow:column;align-content:center;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);text-align:center;",
+        ],
+      },
+      "displayName": "Main",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Main-sc-1yl8y0q-0",
+      "target": "main",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`renders default <TextBlock /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Main__TextBlock-sc-1yl8y0q-2",
+        "isStatic": true,
+        "rules": Array [
+          "margin:auto 0 0 auto;text-align:right;",
+        ],
+      },
+      "displayName": "Main__TextBlock",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Main__TextBlock-sc-1yl8y0q-2",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
