@@ -4,13 +4,15 @@ export const perPage = 'per_page=6';
 
 // Adds language to query
 export function addLang(base, lang) {
+  let result = base;
+
   if (lang === 'C++') {
-    return `${base} language:"cpp"`;
+    result += ' language:"cpp"';
+  } else if (lang !== 'all') {
+    result += ` language:"${lang}"`;
   }
-  if (lang !== 'all') {
-    return `${base} language:"${lang}"`;
-  }
-  return base;
+
+  return result;
 }
 
 // Representaion of request url to Github API

@@ -6,6 +6,12 @@ it('adds leading zero', () => {
 });
 
 it('formats date', () => {
-  const date = new Date(2019, 5, 2);
-  expect(formatDate(date)).toBe('2019-06-02');
+  {
+    const date = new Date(2019, 5, 2);
+    expect(formatDate(date)).toBe('2019-06-02');
+  }
+  {
+    const date = new Date(2019, 11, 1);
+    expect(formatDate(date)).toBe('2019-12-01');
+  }
 });

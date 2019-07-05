@@ -17,4 +17,13 @@ describe('<SelectLang />', () => {
         .exists()
     ).toEqual(true);
   });
+
+  it(`contains options`, () => {
+    expect(
+      selectLang
+        .find('Option')
+        .children()
+        .exists()
+    ).toEqual(true);
+  });
 });

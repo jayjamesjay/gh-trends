@@ -19,15 +19,6 @@ describe('addLang', () => {
   });
 });
 
-it('adds search to Url', () => {
-  const expected = 'react+language:JavaScript';
-  const url = new Url('').query('react language:JavaScript');
-  const url2 = new Url('').query('react     language:JavaScript   ');
-
-  expect(url.q).toBe(expected);
-  expect(url2.q).toBe(expected);
-});
-
 describe('<Url />', () => {
   const api = 'https://api.github.com/search/repositories';
 
@@ -47,10 +38,16 @@ describe('<Url />', () => {
   });
 
   it('adds query', () => {
-    const query = 'react';
-    const url = new Url(api).query(query);
+    const expected = 'react+language:JavaScript';
 
-    expect(url.q).toEqual(query);
+    {
+      const url = new Url(api).query('react     language:JavaScript   ');
+      expect(url.q).toEqual(expected);
+    }
+    {
+      const url = new Url(api).query('react language:JavaScript');
+      expect(url.q).toEqual(expected);
+    }
   });
 
   it('adds language to query', () => {

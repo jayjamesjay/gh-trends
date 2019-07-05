@@ -1,6 +1,23 @@
 import Tabs, { Categories } from '../../components/Tabs';
 import Tab from '../../components/Tab';
 
+describe('<Categories />', () => {
+  const labels = ['Year', 'Month'];
+  const active = 'Year';
+  const func = () => {};
+  const categories = shallow(<Categories labels={labels} active={active} onClick={func} />);
+  const tabs = categories.find(Tab);
+
+  it(`displays with labels`, () => {
+    expect(tabs.at(0).prop('label')).toEqual(labels[0]);
+    expect(tabs.at(1).prop('label')).toEqual(labels[1]);
+  });
+
+  it(`checks active tab`, () => {
+    expect(tabs.at(0).prop('checked')).toEqual(true);
+  });
+});
+
 describe('<Tabs />', () => {
   const label1 = 'Year';
   const label2 = 'Month';
@@ -36,22 +53,5 @@ describe('<Tabs />', () => {
       .at(1)
       .simulate('click');
     expect(tabsAlt.state('activeTab')).toEqual(label2);
-  });
-});
-
-describe('<Categories />', () => {
-  const labels = ['Year', 'Month'];
-  const active = 'Year';
-  const func = () => {};
-  const categories = shallow(<Categories labels={labels} active={active} onClick={func} />);
-  const tabs = categories.find(Tab);
-
-  it(`displays with labels`, () => {
-    expect(tabs.at(0).prop('label')).toEqual(labels[0]);
-    expect(tabs.at(1).prop('label')).toEqual(labels[1]);
-  });
-
-  it(`checks active tab`, () => {
-    expect(tabs.at(0).prop('checked')).toEqual(true);
   });
 });

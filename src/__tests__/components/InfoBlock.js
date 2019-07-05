@@ -18,8 +18,21 @@ describe('<InfoBlock />', () => {
   };
 
   it('renders with default background color', () => {
+    {
+      const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+      expect(infoBlock.prop('bg')).toEqual(null);
+    }
+    {
+      info.language = 'JavaScript';
+      const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+
+      expect(infoBlock.prop('bg')).toEqual('#f1e05a');
+    }
+  });
+
+  it('renders with license', () => {
     const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-    expect(infoBlock.prop('bg')).toEqual(null);
+    expect(infoBlock.text()).toContain('License');
   });
 
   it('renders without license', () => {
@@ -44,8 +57,11 @@ describe('<RepoLink />', () => {
   const url = 'https://github.com/jayjamesjay/gh-trends';
   const repoLink = shallow(<RepoLink nameWithOwner={title} url={url} />);
 
-  it('displays name and owner', () => {
+  it('displays owner', () => {
     expect(repoLink.text()).toContain(author);
+  });
+
+  it('displays name', () => {
     expect(repoLink.text()).toContain(name);
   });
 });
