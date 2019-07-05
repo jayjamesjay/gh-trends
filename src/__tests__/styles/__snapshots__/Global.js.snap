@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`constructs global styles 1`] = `
+<GlobalStyleComponent
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;

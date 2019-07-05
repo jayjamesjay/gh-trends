@@ -210,6 +210,91 @@ exports[`<ButtonMain /> renders with theme 1`] = `
 />
 `;
 
+exports[`<ToggleSpan /> open/close 1`] = `
+.c0 {
+  display: block;
+  width: 1.8rem;
+  height: 0.2rem;
+  margin: 0.3rem 0;
+  background: #000;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+<Button__ToggleSpan
+  open={false}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "open": true,
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Button__ToggleSpan-iu7iy2-6",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:block;width:1.8rem;height:0.2rem;margin:0.3rem 0;background:",
+            [Function],
+            ";transition:transform 0.2s linear;&:first-child{transform:",
+            [Function],
+            ";}&:nth-child(2){transform:",
+            [Function],
+            ";}&:last-child{transform:",
+            [Function],
+            ";}",
+          ],
+        },
+        "displayName": "Button__ToggleSpan",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Button__ToggleSpan-iu7iy2-6",
+        "target": "span",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    open={false}
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#707070",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    <span
+      className="c0"
+      open={false}
+    />
+  </StyledComponent>
+</Button__ToggleSpan>
+`;
+
 exports[`<ToggleSpan /> renders default 1`] = `
 .c0 {
   display: block;

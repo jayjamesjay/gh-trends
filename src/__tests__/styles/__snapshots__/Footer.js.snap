@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default <Footer /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Footer-px5sec-0",
+        "isStatic": true,
+        "rules": Array [
+          "margin:1rem;padding:0.5rem;text-align:center;",
+        ],
+      },
+      "displayName": "Footer",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Footer-px5sec-0",
+      "target": "footer",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

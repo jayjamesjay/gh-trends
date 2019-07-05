@@ -1,32 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Nav /> renders default 1`] = `
+exports[`<LabelTab /> renders default 1`] = `
 .c0 {
-  width: 100%;
-  padding: 0.7rem 0;
-  position: fixed;
-  top: 4.8rem;
-  left: 0;
-  z-index: 200;
+  display: inherit;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.c0::before {
+  content: '';
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
   background: #fff;
-  box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 
-@media screen and (min-width:40rem) {
-  .c0 {
-    width: 50%;
-    top: 1rem;
-    left: 47%;
-    box-shadow: none;
-    opacity: 1;
-  }
-}
-
-<Nav
-  hide={true}
+<Label__LabelTab
   theme={
     Object {
       "bg": "#fafafa",
@@ -42,7 +45,6 @@ exports[`<Nav /> renders default 1`] = `
       Object {
         "$$typeof": Symbol(react.forward_ref),
         "_foldedDefaultProps": Object {
-          "hide": true,
           "theme": Object {
             "bg": "#fafafa",
             "bgAdd": "#fff",
@@ -53,29 +55,30 @@ exports[`<Nav /> renders default 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Nav-sc-1rdz8lw-0",
+          "componentId": "Label__LabelTab-icvmzg-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "width:100%;padding:0.7rem 0;position:fixed;top:4.8rem;left:0;z-index:200;background:",
+            "display:inherit;padding:1rem 1.5rem;position:relative;background:transparent;overflow:hidden;font-size:1.3rem;cursor:pointer;&::before{content:'';width:90%;height:90%;position:absolute;top:5%;left:5%;z-index:20;background:",
             [Function],
-            ";box-shadow:0 3px 6px 0 rgba(104,104,104,0.5);opacity:",
+            ";box-shadow:",
             [Function],
-            ";transition:opacity 0.2s linear;@media screen and (min-width:40rem){width:50%;top:1rem;left:47%;box-shadow:none;opacity:1;}",
+            ";transition:transform 0.15s ease-in-out;transform:translateX(",
+            [Function],
+            ");}",
           ],
         },
-        "displayName": "Nav",
+        "displayName": "Label__LabelTab",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Nav-sc-1rdz8lw-0",
-        "target": "nav",
+        "styledComponentId": "Label__LabelTab-icvmzg-0",
+        "target": "label",
         "toString": [Function],
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
       }
     }
     forwardedRef={null}
-    hide={true}
     theme={
       Object {
         "bg": "#fafafa",
@@ -86,40 +89,43 @@ exports[`<Nav /> renders default 1`] = `
       }
     }
   >
-    <nav
+    <label
       className="c0"
     />
   </StyledComponent>
-</Nav>
+</Label__LabelTab>
 `;
 
-exports[`<Nav /> renders with theme 1`] = `
+exports[`<LabelTab /> renders with theme 1`] = `
 .c0 {
-  width: 100%;
-  padding: 0.7rem 0;
-  position: fixed;
-  top: 4.8rem;
-  left: 0;
-  z-index: 200;
+  display: inherit;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.c0::before {
+  content: '';
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
   background: #202124;
-  box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
-  opacity: 0;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
+  box-shadow: none;
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 
-@media screen and (min-width:40rem) {
-  .c0 {
-    width: 50%;
-    top: 1rem;
-    left: 47%;
-    box-shadow: none;
-    opacity: 1;
-  }
-}
-
-<Nav
-  hide={true}
+<Label__LabelTab
   theme={
     Object {
       "bg": "#000",
@@ -135,7 +141,6 @@ exports[`<Nav /> renders with theme 1`] = `
       Object {
         "$$typeof": Symbol(react.forward_ref),
         "_foldedDefaultProps": Object {
-          "hide": true,
           "theme": Object {
             "bg": "#fafafa",
             "bgAdd": "#fff",
@@ -146,29 +151,30 @@ exports[`<Nav /> renders with theme 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Nav-sc-1rdz8lw-0",
+          "componentId": "Label__LabelTab-icvmzg-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "width:100%;padding:0.7rem 0;position:fixed;top:4.8rem;left:0;z-index:200;background:",
+            "display:inherit;padding:1rem 1.5rem;position:relative;background:transparent;overflow:hidden;font-size:1.3rem;cursor:pointer;&::before{content:'';width:90%;height:90%;position:absolute;top:5%;left:5%;z-index:20;background:",
             [Function],
-            ";box-shadow:0 3px 6px 0 rgba(104,104,104,0.5);opacity:",
+            ";box-shadow:",
             [Function],
-            ";transition:opacity 0.2s linear;@media screen and (min-width:40rem){width:50%;top:1rem;left:47%;box-shadow:none;opacity:1;}",
+            ";transition:transform 0.15s ease-in-out;transform:translateX(",
+            [Function],
+            ");}",
           ],
         },
-        "displayName": "Nav",
+        "displayName": "Label__LabelTab",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Nav-sc-1rdz8lw-0",
-        "target": "nav",
+        "styledComponentId": "Label__LabelTab-icvmzg-0",
+        "target": "label",
         "toString": [Function],
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
       }
     }
     forwardedRef={null}
-    hide={true}
     theme={
       Object {
         "bg": "#000",
@@ -179,9 +185,9 @@ exports[`<Nav /> renders with theme 1`] = `
       }
     }
   >
-    <nav
+    <label
       className="c0"
     />
   </StyledComponent>
-</Nav>
+</Label__LabelTab>
 `;

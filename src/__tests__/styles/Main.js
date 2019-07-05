@@ -1,5 +1,6 @@
 import { Main, Content, TextBlock } from '../../styles/Main';
 import 'jest-styled-components';
+
 it('renders default <Main />', () => {
   const wrapper = shallow(<Main />);
   expect(wrapper).toMatchSnapshot();

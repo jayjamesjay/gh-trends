@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { light } from './Theme';
 
 const TextInput = styled.input`
   min-width: 50%;
@@ -13,6 +14,10 @@ const TextInput = styled.input`
     border-width: 0.15rem;
   }
 `;
+
+TextInput.defaultProps = {
+  theme: light
+};
 
 export const InputRadio = styled.input`
   opacity: 0;

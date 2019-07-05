@@ -1,8 +1,8 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable func-names */
 (function() {
-  const staticCache = 's-cache-v0.1.5';
-  const dynamicCache = 'd-cache-v0.1.5';
+  const staticCache = 's-cache-v0.1.6';
+  const dynamicCache = 'd-cache-v0.1.6';
   const cacheStorage = [
     '/',
     './main.js',

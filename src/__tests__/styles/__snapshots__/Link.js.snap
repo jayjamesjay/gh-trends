@@ -1,0 +1,407 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> renders default 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Link
+      fontSize="1.3rem"
+      theme={
+        Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        }
+      }
+    >
+      <StyledComponent
+        fontSize="1.3rem"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "_foldedDefaultProps": Object {
+              "fontSize": "1.3rem",
+              "theme": Object {
+                "bg": "#fafafa",
+                "bgAdd": "#fff",
+                "color": "#000",
+                "colorAdd": "#707070",
+                "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+              },
+            },
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "Link-sc-1ikxq-0",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "padding:0.5rem;font-size:",
+                [Function],
+                ";font-family:'Noto Sans HK',sans-serif;color:",
+                [Function],
+                ";text-decoration:none;",
+              ],
+            },
+            "displayName": "Link",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "Link-sc-1ikxq-0",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        theme={
+          Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          }
+        }
+      >
+        <Link
+          className="c0"
+          fontSize="1.3rem"
+          theme={
+            Object {
+              "bg": "#fafafa",
+              "bgAdd": "#fff",
+              "color": "#000",
+              "colorAdd": "#707070",
+              "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+            }
+          }
+        >
+          <a
+            className="c0"
+            fontSize="1.3rem"
+            href=""
+            onClick={[Function]}
+            theme={
+              Object {
+                "bg": "#fafafa",
+                "bgAdd": "#fff",
+                "color": "#000",
+                "colorAdd": "#707070",
+                "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+              }
+            }
+          />
+        </Link>
+      </StyledComponent>
+    </Link>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`<Link /> renders with theme 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Link
+      fontSize="1.3rem"
+      theme={
+        Object {
+          "bg": "#000",
+          "bgAdd": "#202124",
+          "color": "#fff",
+          "colorAdd": "#8d8d8d",
+          "shadow": "none",
+        }
+      }
+    >
+      <StyledComponent
+        fontSize="1.3rem"
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "_foldedDefaultProps": Object {
+              "fontSize": "1.3rem",
+              "theme": Object {
+                "bg": "#fafafa",
+                "bgAdd": "#fff",
+                "color": "#000",
+                "colorAdd": "#707070",
+                "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+              },
+            },
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "Link-sc-1ikxq-0",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                "padding:0.5rem;font-size:",
+                [Function],
+                ";font-family:'Noto Sans HK',sans-serif;color:",
+                [Function],
+                ";text-decoration:none;",
+              ],
+            },
+            "displayName": "Link",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "Link-sc-1ikxq-0",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        theme={
+          Object {
+            "bg": "#000",
+            "bgAdd": "#202124",
+            "color": "#fff",
+            "colorAdd": "#8d8d8d",
+            "shadow": "none",
+          }
+        }
+      >
+        <Link
+          className="c0"
+          fontSize="1.3rem"
+          theme={
+            Object {
+              "bg": "#000",
+              "bgAdd": "#202124",
+              "color": "#fff",
+              "colorAdd": "#8d8d8d",
+              "shadow": "none",
+            }
+          }
+        >
+          <a
+            className="c0"
+            fontSize="1.3rem"
+            href=""
+            onClick={[Function]}
+            theme={
+              Object {
+                "bg": "#000",
+                "bgAdd": "#202124",
+                "color": "#fff",
+                "colorAdd": "#8d8d8d",
+                "shadow": "none",
+              }
+            }
+          />
+        </Link>
+      </StyledComponent>
+    </Link>
+  </Router>
+</BrowserRouter>
+`;
+
+exports[`<LinkA /> renders default 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Link__LinkA-sc-1ikxq-2",
+        "isStatic": false,
+        "rules": Array [
+          "display:block;font-size:1.2rem;font-family:'Noto Sans HK',sans-serif;color:",
+          [Function],
+          ";text-decoration:none;cursor:pointer;",
+        ],
+      },
+      "displayName": "Link__LinkA",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Link__LinkA-sc-1ikxq-2",
+      "target": "a",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;
+
+exports[`<LinkA /> renders with theme 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Link__LinkA-sc-1ikxq-2",
+        "isStatic": false,
+        "rules": Array [
+          "display:block;font-size:1.2rem;font-family:'Noto Sans HK',sans-serif;color:",
+          [Function],
+          ";text-decoration:none;cursor:pointer;",
+        ],
+      },
+      "displayName": "Link__LinkA",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Link__LinkA-sc-1ikxq-2",
+      "target": "a",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+/>
+`;
+
+exports[`renders default <HeaderLink /> 1`] = `
+<StyledComponent
+  fontSize="1.3rem"
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "fontSize": "1.3rem",
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Link__HeaderLink-sc-1ikxq-1",
+        "isStatic": false,
+        "rules": Array [
+          "padding:0.5rem;font-size:",
+          [Function],
+          ";font-family:'Noto Sans HK',sans-serif;color:",
+          [Function],
+          ";text-decoration:none;",
+          "margin:0.5rem;font-weight:700;font-size:2rem;",
+        ],
+      },
+      "displayName": "Link__HeaderLink",
+      "foldedComponentIds": Array [
+        "Link-sc-1ikxq-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "Link__HeaderLink-sc-1ikxq-1",
+      "target": [Function],
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;

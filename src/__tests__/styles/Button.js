@@ -42,6 +42,11 @@ describe('<ToggleSpan />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('open/close', () => {
+    const wrapper = mount(<ToggleSpan open={false} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('renders with theme', () => {
     const wrapper = mount(<ToggleSpan theme={dark} />);
     expect(wrapper).toMatchSnapshot();

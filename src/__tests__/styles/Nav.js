@@ -4,12 +4,12 @@ import 'jest-styled-components';
 
 describe('<Nav />', () => {
   it('renders default', () => {
-    const wrapper = shallow(<Nav />);
+    const wrapper = mount(<Nav />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = shallow(<Nav theme={dark} />);
+    const wrapper = mount(<Nav theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
 

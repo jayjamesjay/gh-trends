@@ -1,40 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#707070",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Headers__Header-sc-1tudo8a-1",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
-          [Function],
-          ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
-        ],
-      },
-      "displayName": "Headers__Header",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Headers__Header-sc-1tudo8a-1",
-      "target": "header",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
-  forwardedRef={null}
+}
+
+<Headers__Header
   theme={
     Object {
       "bg": "#fafafa",
@@ -44,44 +43,93 @@ exports[`<Header /> renders default 1`] = `
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
-/>
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Headers__Header-sc-1tudo8a-1",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
+            [Function],
+            ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
+          ],
+        },
+        "displayName": "Headers__Header",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+        "target": "header",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#707070",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    <header
+      className="c0"
+    />
+  </StyledComponent>
+</Headers__Header>
 `;
 
 exports[`<Header /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#707070",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Headers__Header-sc-1tudo8a-1",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
-          [Function],
-          ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
-        ],
-      },
-      "displayName": "Headers__Header",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Headers__Header-sc-1tudo8a-1",
-      "target": "header",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #202124;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
-  forwardedRef={null}
+}
+
+<Headers__Header
   theme={
     Object {
       "bg": "#000",
@@ -91,5 +139,55 @@ exports[`<Header /> renders with theme 1`] = `
       "shadow": "none",
     }
   }
-/>
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Headers__Header-sc-1tudo8a-1",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;justify-content:space-between;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);position:sticky;top:0;z-index:200;background:",
+            [Function],
+            ";box-shadow:0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);text-transform:uppercase;@media screen and (min-width:40rem){justify-content:flex-start;}",
+          ],
+        },
+        "displayName": "Headers__Header",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+        "target": "header",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#000",
+        "bgAdd": "#202124",
+        "color": "#fff",
+        "colorAdd": "#8d8d8d",
+        "shadow": "none",
+      }
+    }
+  >
+    <header
+      className="c0"
+    />
+  </StyledComponent>
+</Headers__Header>
 `;

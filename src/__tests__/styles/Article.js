@@ -34,12 +34,12 @@ describe('oppositeBg', () => {
 
 describe('<Article />', () => {
   it('renders default', () => {
-    const wrapper = shallow(<Article />);
+    const wrapper = mount(<Article />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = shallow(<Article theme={dark} />);
+    const wrapper = mount(<Article theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

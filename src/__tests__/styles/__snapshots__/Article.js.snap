@@ -1,53 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Article /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "margin": "2.5rem 1.5rem",
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#707070",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Article-yap135-0",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;min-height:21rem;margin:2rem 1rem;padding:1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
-          [Function],
-          " 0%,",
-          [Function],
-          " 0.3rem,",
-          [Function],
-          " 0.3rem,",
-          [Function],
-          " 0.6rem,",
-          [Function],
-          " 0.6rem );box-shadow:",
-          [Function],
-          ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-height:10rem;min-width:16.5rem;margin:",
-          [Function],
-          ";flex:1 1 27%;}",
-        ],
-      },
-      "displayName": "Article",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Article-yap135-0",
-      "target": "article",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 21rem;
+  margin: 2rem 1rem;
+  padding: 1.2rem;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  background: linear-gradient( #fff 0%,#fff 0.3rem,#000 0.3rem,#000 0.6rem,#fff 0.6rem );
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  text-align: left;
+  word-break: break-word;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    min-height: 10rem;
+    min-width: 16.5rem;
+    margin: 2.5rem 1.5rem;
+    -webkit-flex: 1 1 27%;
+    -ms-flex: 1 1 27%;
+    flex: 1 1 27%;
   }
-  forwardedRef={null}
+}
+
+<Article
   margin="2.5rem 1.5rem"
   theme={
     Object {
@@ -58,57 +40,103 @@ exports[`<Article /> renders default 1`] = `
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
-/>
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "margin": "2.5rem 1.5rem",
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Article-yap135-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;min-height:21rem;margin:2rem 1rem;padding:1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
+            [Function],
+            " 0%,",
+            [Function],
+            " 0.3rem,",
+            [Function],
+            " 0.3rem,",
+            [Function],
+            " 0.6rem,",
+            [Function],
+            " 0.6rem );box-shadow:",
+            [Function],
+            ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-height:10rem;min-width:16.5rem;margin:",
+            [Function],
+            ";flex:1 1 27%;}",
+          ],
+        },
+        "displayName": "Article",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Article-yap135-0",
+        "target": "article",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    margin="2.5rem 1.5rem"
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#707070",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    <article
+      className="c0"
+    />
+  </StyledComponent>
+</Article>
 `;
 
 exports[`<Article /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "margin": "2.5rem 1.5rem",
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#707070",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Article-yap135-0",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;min-height:21rem;margin:2rem 1rem;padding:1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
-          [Function],
-          " 0%,",
-          [Function],
-          " 0.3rem,",
-          [Function],
-          " 0.3rem,",
-          [Function],
-          " 0.6rem,",
-          [Function],
-          " 0.6rem );box-shadow:",
-          [Function],
-          ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-height:10rem;min-width:16.5rem;margin:",
-          [Function],
-          ";flex:1 1 27%;}",
-        ],
-      },
-      "displayName": "Article",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Article-yap135-0",
-      "target": "article",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 21rem;
+  margin: 2rem 1rem;
+  padding: 1.2rem;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  background: linear-gradient( #202124 0%,#202124 0.3rem,#fff 0.3rem,#fff 0.6rem,#202124 0.6rem );
+  box-shadow: none;
+  text-align: left;
+  word-break: break-word;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    min-height: 10rem;
+    min-width: 16.5rem;
+    margin: 2.5rem 1.5rem;
+    -webkit-flex: 1 1 27%;
+    -ms-flex: 1 1 27%;
+    flex: 1 1 27%;
   }
-  forwardedRef={null}
+}
+
+<Article
   margin="2.5rem 1.5rem"
   theme={
     Object {
@@ -119,5 +147,69 @@ exports[`<Article /> renders with theme 1`] = `
       "shadow": "none",
     }
   }
-/>
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "margin": "2.5rem 1.5rem",
+          "theme": Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#707070",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Article-yap135-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;min-height:21rem;margin:2rem 1rem;padding:1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
+            [Function],
+            " 0%,",
+            [Function],
+            " 0.3rem,",
+            [Function],
+            " 0.3rem,",
+            [Function],
+            " 0.6rem,",
+            [Function],
+            " 0.6rem );box-shadow:",
+            [Function],
+            ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-height:10rem;min-width:16.5rem;margin:",
+            [Function],
+            ";flex:1 1 27%;}",
+          ],
+        },
+        "displayName": "Article",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Article-yap135-0",
+        "target": "article",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    margin="2.5rem 1.5rem"
+    theme={
+      Object {
+        "bg": "#000",
+        "bgAdd": "#202124",
+        "color": "#fff",
+        "colorAdd": "#8d8d8d",
+        "shadow": "none",
+      }
+    }
+  >
+    <article
+      className="c0"
+    />
+  </StyledComponent>
+</Article>
 `;

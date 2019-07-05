@@ -1,0 +1,245 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Img /> renders default 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+<Img>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Img-rkj2yv-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "width:100%;height:auto;filter:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "Img",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Img-rkj2yv-0",
+        "target": "img",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <img
+      className="c0"
+    />
+  </StyledComponent>
+</Img>
+`;
+
+exports[`<Img /> renders with theme 1`] = `
+.c0 {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+<Img
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Img-rkj2yv-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "width:100%;height:auto;filter:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "Img",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Img-rkj2yv-0",
+        "target": "img",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#000",
+        "bgAdd": "#202124",
+        "color": "#fff",
+        "colorAdd": "#8d8d8d",
+        "shadow": "none",
+      }
+    }
+  >
+    <img
+      className="c0"
+    />
+  </StyledComponent>
+</Img>
+`;
+
+exports[`<ImgInline /> renders default 1`] = `
+.c0 {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+<Img__ImgInline>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Img__ImgInline-rkj2yv-2",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:inline-block;width:auto;height:2rem;filter:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "Img__ImgInline",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Img__ImgInline-rkj2yv-2",
+        "target": "img",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <img
+      className="c0"
+    />
+  </StyledComponent>
+</Img__ImgInline>
+`;
+
+exports[`<ImgInline /> renders with theme 1`] = `
+.c0 {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+<Img__ImgInline
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Img__ImgInline-rkj2yv-2",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:inline-block;width:auto;height:2rem;filter:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "Img__ImgInline",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Img__ImgInline-rkj2yv-2",
+        "target": "img",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "bg": "#000",
+        "bgAdd": "#202124",
+        "color": "#fff",
+        "colorAdd": "#8d8d8d",
+        "shadow": "none",
+      }
+    }
+  >
+    <img
+      className="c0"
+    />
+  </StyledComponent>
+</Img__ImgInline>
+`;
+
+exports[`renders default <ImgIcon /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Img__ImgIcon-rkj2yv-1",
+        "isStatic": false,
+        "rules": Array [
+          "width:100%;height:auto;filter:",
+          [Function],
+          ";",
+          "width:3rem;",
+        ],
+      },
+      "displayName": "Img__ImgIcon",
+      "foldedComponentIds": Array [
+        "Img-rkj2yv-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "Img__ImgIcon-rkj2yv-1",
+      "target": "img",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
