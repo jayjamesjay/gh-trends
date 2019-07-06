@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { languages as colors, RepoInfo } from './Data';
-import { TextBlock } from '../styles/Main';
+import { BottomBar } from '../styles/Main';
 import Article from '../styles/Article';
 import Span from '../styles/Span';
 import { H2 } from '../styles/Headers';
 import { Img, ImgInline } from '../styles/Img';
-import { P, PAlt, PClean } from '../styles/Paragraph';
+import { PFlex, PClean } from '../styles/Paragraph';
 import { ButtonAdd } from '../styles/Button';
 import { LinkA } from '../styles/Link';
 
@@ -23,6 +23,7 @@ export default class InfoBlock extends Component {
       save
     } = this;
     const { language, stargazersCount } = info;
+    const langStr = language ? `Language: ${language}` : '';
     const license = info.license ? `License: ${info.license}` : '';
     const forks = `Forks: ${info.forks}`;
     let color;
@@ -38,17 +39,17 @@ export default class InfoBlock extends Component {
         <H2>
           <RepoLink url={info.url} nameWithOwner={info.nameWithOwner} />
         </H2>
-        <P>{info.description}</P>
-        <PClean>{forks}</PClean>
-        <PClean>{license}</PClean>
-        <SaveRepo save={save} saved={saved} />
-        <TextBlock>
-          <PAlt>
+        <p>{info.description}</p>
+        <BottomBar>
+          <SaveRepo save={save} saved={saved} />
+          <PClean>{forks}</PClean>
+          <PClean>{license}</PClean>
+          <PFlex>
             {stargazersCount}
             <ImgInline src="./assets/img/stars.svg" alt="Stars" />
-          </PAlt>
-          <PAlt>{language}</PAlt>
-        </TextBlock>
+          </PFlex>
+          <PClean>{langStr}</PClean>
+        </BottomBar>
       </Article>
     );
   }

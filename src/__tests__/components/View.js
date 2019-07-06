@@ -36,7 +36,7 @@ describe('<ViewSingle />', () => {
   });
 
   it('renders with items and displays Button', () => {
-    const view = shallow(<ViewSingle data={initData} saved={[]} save={func} />);
+    const view = shallow(<ViewSingle data={initData} saved={[]} save={func} loadData={func} />);
     expect(view.find(ButtonMain).prop('visible')).toEqual(true);
   });
 

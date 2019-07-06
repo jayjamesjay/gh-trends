@@ -5,9 +5,9 @@ export const oppositeBg = props => (props.bg ? props.bg : props.theme.color);
 
 const Article = styled.article`
   display: flex;
-  min-height: 21rem;
   margin: 2rem 1rem;
-  padding: 1.2rem;
+  min-height: 13rem;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
   flex-flow: column nowrap;
   background: linear-gradient(
     ${props => props.theme.bgAdd} 0%,
@@ -21,10 +21,9 @@ const Article = styled.article`
   word-break: break-word;
 
   @media screen and (min-width: 40rem) {
-    min-height: 10rem;
     min-width: 16.5rem;
     margin: ${props => props.margin};
-    flex: 1 1 27%;
+    flex: 1 0 27%;
   }
 `;
 

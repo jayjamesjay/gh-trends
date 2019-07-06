@@ -7,7 +7,7 @@ describe('<Link />', () => {
   it('renders default', () => {
     const wrapper = mount(
       <Router>
-        <Link />
+        <Link to="/" />
       </Router>
     );
     expect(wrapper).toMatchSnapshot();
@@ -16,7 +16,7 @@ describe('<Link />', () => {
   it('renders with theme', () => {
     const wrapper = mount(
       <Router>
-        <Link theme={dark} />
+        <Link theme={dark} to="/" />
       </Router>
     );
     expect(wrapper).toMatchSnapshot();

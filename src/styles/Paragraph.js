@@ -1,16 +1,14 @@
 import styled from 'styled-components';
 
-export const P = styled.p`
-  width: 65%;
-`;
-
 export const PClean = styled.p`
-  margin: 0;
+  margin: 0 0.5rem;
   padding: 0;
 `;
 
-export const PAlt = styled(PClean)`
+export const PFlex = styled.p`
   display: flex;
+  align-content: center;
   align-items: center;
-  justify-content: flex-end;
+  margin: 0 0.5rem;
+  padding: 0;
 `;

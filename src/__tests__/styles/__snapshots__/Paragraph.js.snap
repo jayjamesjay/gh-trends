@@ -1,62 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<P/> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Paragraph__P-sc-1weuljs-0",
-        "isStatic": true,
-        "rules": Array [
-          "width:65%;",
-        ],
-      },
-      "displayName": "Paragraph__P",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Paragraph__P-sc-1weuljs-0",
-      "target": "p",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-/>
-`;
-
-exports[`<PAlt /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Paragraph__PAlt-sc-1weuljs-2",
-        "isStatic": true,
-        "rules": Array [
-          "margin:0;padding:0;",
-          "display:flex;align-items:center;justify-content:flex-end;",
-        ],
-      },
-      "displayName": "Paragraph__PAlt",
-      "foldedComponentIds": Array [
-        "Paragraph__PClean-sc-1weuljs-1",
-      ],
-      "render": [Function],
-      "styledComponentId": "Paragraph__PAlt-sc-1weuljs-2",
-      "target": "p",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-/>
-`;
-
 exports[`<PClean /> renders default 1`] = `
 <StyledComponent
   forwardedComponent={
@@ -64,16 +7,43 @@ exports[`<PClean /> renders default 1`] = `
       "$$typeof": Symbol(react.forward_ref),
       "attrs": Array [],
       "componentStyle": ComponentStyle {
-        "componentId": "Paragraph__PClean-sc-1weuljs-1",
+        "componentId": "Paragraph__PClean-sc-1weuljs-0",
         "isStatic": true,
         "rules": Array [
-          "margin:0;padding:0;",
+          "margin:0 0.5rem;padding:0;",
         ],
       },
       "displayName": "Paragraph__PClean",
       "foldedComponentIds": Array [],
       "render": [Function],
-      "styledComponentId": "Paragraph__PClean-sc-1weuljs-1",
+      "styledComponentId": "Paragraph__PClean-sc-1weuljs-0",
+      "target": "p",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`<PFlex /> renders default 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Paragraph__PFlex-sc-1weuljs-1",
+        "isStatic": true,
+        "rules": Array [
+          "display:flex;align-content:center;align-items:center;margin:0 0.5rem;padding:0;",
+        ],
+      },
+      "displayName": "Paragraph__PFlex",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Paragraph__PFlex-sc-1weuljs-1",
       "target": "p",
       "toString": [Function],
       "warnTooManyClasses": [Function],

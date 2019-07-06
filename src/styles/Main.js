@@ -19,7 +19,11 @@ export const Content = styled.div`
   }
 `;
 
-export const TextBlock = styled.div`
-  margin: auto 0 0 auto;
-  text-align: right;
+export const BottomBar = styled.div`
+  margin: auto 0 0 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 `;

@@ -45,7 +45,7 @@ export const ButtonIcon = styled.button`
 `;
 
 export const ButtonAdd = styled(ButtonIcon)`
-  margin: 0.5rem auto 0 -0.5rem;
+  margin: 0.5rem 0 0 0;
 `;
 
 export const MenuToggle = styled(Button)`

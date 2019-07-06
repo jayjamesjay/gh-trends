@@ -8,10 +8,10 @@ import StyledNav from '../styles/Nav';
 // Hamburger displayed on mobile devies to open/close menu
 export function MenuToggle({ toggle, open }) {
   return (
-    <StyledToggle aria-label="Open menu" onClick={toggle} open={open}>
-      <ToggleSpan />
-      <ToggleSpan />
-      <ToggleSpan />
+    <StyledToggle aria-label="Open menu" onClick={toggle}>
+      <ToggleSpan open={open} />
+      <ToggleSpan open={open} />
+      <ToggleSpan open={open} />
     </StyledToggle>
   );
 }

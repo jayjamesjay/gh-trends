@@ -1,12 +1,5 @@
-import { P, PClean, PAlt } from '../../styles/Paragraph';
+import { PClean, PFlex } from '../../styles/Paragraph';
 import 'jest-styled-components';
-
-describe('<P/>', () => {
-  it('renders default', () => {
-    const wrapper = shallow(<P />);
-    expect(wrapper).toMatchSnapshot();
-  });
-});
 
 describe('<PClean />', () => {
   it('renders default', () => {
@@ -15,9 +8,9 @@ describe('<PClean />', () => {
   });
 });
 
-describe('<PAlt />', () => {
+describe('<PFlex />', () => {
   it('renders default', () => {
-    const wrapper = shallow(<PAlt />);
+    const wrapper = shallow(<PFlex />);
     expect(wrapper).toMatchSnapshot();
   });
 });

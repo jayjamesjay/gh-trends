@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders default <BottomBar /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Main__BottomBar-sc-1yl8y0q-2",
+        "isStatic": true,
+        "rules": Array [
+          "margin:auto 0 0 0;display:flex;flex-flow:row wrap;justify-content:center;align-content:center;align-items:center;",
+        ],
+      },
+      "displayName": "Main__BottomBar",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Main__BottomBar-sc-1yl8y0q-2",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
 exports[`renders default <Content /> 1`] = `
 <StyledComponent
   forwardedComponent={
@@ -45,33 +72,6 @@ exports[`renders default <Main /> 1`] = `
       "render": [Function],
       "styledComponentId": "Main-sc-1yl8y0q-0",
       "target": "main",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-/>
-`;
-
-exports[`renders default <TextBlock /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Main__TextBlock-sc-1yl8y0q-2",
-        "isStatic": true,
-        "rules": Array [
-          "margin:auto 0 0 auto;text-align:right;",
-        ],
-      },
-      "displayName": "Main__TextBlock",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Main__TextBlock-sc-1yl8y0q-2",
-      "target": "div",
       "toString": [Function],
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
