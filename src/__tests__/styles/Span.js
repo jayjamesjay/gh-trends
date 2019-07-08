@@ -1,4 +1,4 @@
-import Span from '../../styles/Span';
+import Span, { LabelSpan } from '../../styles/Span';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 
@@ -12,4 +12,9 @@ describe('<Span />', () => {
     const wrapper = shallow(<Span theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+it('renders default <LabelSpan />', () => {
+  const wrapper = shallow(<LabelSpan />);
+  expect(wrapper).toMatchSnapshot();
 });

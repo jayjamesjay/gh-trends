@@ -35,4 +35,11 @@ describe('<App />', () => {
     instance.save(initData[0]);
     expect(app.state('saved')).toEqual([]);
   });
+
+  it('removes all elements from saved', () => {
+    const instance = app.instance();
+    instance.setState({ saved: [initData[0]] });
+    instance.removeAll();
+    expect(app.state('saved')).toEqual([]);
+  });
 });

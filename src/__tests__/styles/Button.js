@@ -1,4 +1,13 @@
-import { Button, ButtonMain, ToggleSpan } from '../../styles/Button';
+import {
+  Button,
+  ButtonMain,
+  ButtonIcon,
+  ButtonRemove,
+  ButtonTheme,
+  ButtonAdd,
+  MenuToggle,
+  ToggleSpan
+} from '../../styles/Button';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 
@@ -51,4 +60,29 @@ describe('<ToggleSpan />', () => {
     const wrapper = mount(<ToggleSpan theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+it('renders default <MenuToggle />', () => {
+  const wrapper = shallow(<MenuToggle />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <ButtonTheme />', () => {
+  const wrapper = shallow(<ButtonTheme />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <ButtonIcon />', () => {
+  const wrapper = shallow(<ButtonIcon />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <ButtonRemove />', () => {
+  const wrapper = shallow(<ButtonRemove />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <ButtonAdd />', () => {
+  const wrapper = shallow(<ButtonAdd />);
+  expect(wrapper).toMatchSnapshot();
 });

@@ -191,3 +191,126 @@ exports[`<Header /> renders with theme 1`] = `
   </StyledComponent>
 </Headers__Header>
 `;
+
+exports[`renders default <H1 /> 1`] = `
+.c0 {
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+<Headers__H1>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Headers__H1-sc-1tudo8a-2",
+          "isStatic": true,
+          "lastClassName": "c0",
+          "rules": Array [
+            "margin:2rem 0 0 0;font-size:2rem;text-transform:uppercase;",
+          ],
+        },
+        "displayName": "Headers__H1",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Headers__H1-sc-1tudo8a-2",
+        "target": "h1",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <h1
+      className="c0"
+    />
+  </StyledComponent>
+</Headers__H1>
+`;
+
+exports[`renders default <H1Alt /> 1`] = `
+.c0 {
+  margin: 2rem 0 0 0;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 3rem auto 1rem auto;
+}
+
+<Headers__H1Alt>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Headers__H1Alt-sc-1tudo8a-3",
+          "isStatic": true,
+          "lastClassName": "c0",
+          "rules": Array [
+            "margin:2rem 0 0 0;font-size:2rem;text-transform:uppercase;",
+            "margin:3rem auto 1rem auto;",
+          ],
+        },
+        "displayName": "Headers__H1Alt",
+        "foldedComponentIds": Array [
+          "Headers__H1-sc-1tudo8a-2",
+        ],
+        "render": [Function],
+        "styledComponentId": "Headers__H1Alt-sc-1tudo8a-3",
+        "target": "h1",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <h1
+      className="c0"
+    />
+  </StyledComponent>
+</Headers__H1Alt>
+`;
+
+exports[`renders default <H2 /> 1`] = `
+.c0 {
+  margin: 0.2rem 0;
+  font-size: 1.7rem;
+}
+
+<Headers__H2>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Headers__H2-sc-1tudo8a-4",
+          "isStatic": true,
+          "lastClassName": "c0",
+          "rules": Array [
+            "margin:0.2rem 0;font-size:1.7rem;",
+          ],
+        },
+        "displayName": "Headers__H2",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Headers__H2-sc-1tudo8a-4",
+        "target": "h2",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <h2
+      className="c0"
+    />
+  </StyledComponent>
+</Headers__H2>
+`;

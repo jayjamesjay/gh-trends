@@ -250,7 +250,7 @@ exports[`<ToggleSpan /> open/close 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-6",
+          "componentId": "Button__ToggleSpan-iu7iy2-7",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -268,7 +268,7 @@ exports[`<ToggleSpan /> open/close 1`] = `
         "displayName": "Button__ToggleSpan",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-6",
+        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
         "target": "span",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -353,7 +353,7 @@ exports[`<ToggleSpan /> renders default 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-6",
+          "componentId": "Button__ToggleSpan-iu7iy2-7",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -371,7 +371,7 @@ exports[`<ToggleSpan /> renders default 1`] = `
         "displayName": "Button__ToggleSpan",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-6",
+        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
         "target": "span",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -456,7 +456,7 @@ exports[`<ToggleSpan /> renders with theme 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-6",
+          "componentId": "Button__ToggleSpan-iu7iy2-7",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -474,7 +474,7 @@ exports[`<ToggleSpan /> renders with theme 1`] = `
         "displayName": "Button__ToggleSpan",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-6",
+        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
         "target": "span",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -499,4 +499,195 @@ exports[`<ToggleSpan /> renders with theme 1`] = `
     />
   </StyledComponent>
 </Button__ToggleSpan>
+`;
+
+exports[`renders default <ButtonAdd /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Button__ButtonAdd-iu7iy2-5",
+        "isStatic": true,
+        "rules": Array [
+          "cursor:pointer;height:auto;background:transparent;border:0;",
+          "margin:0.5rem 0 0 0;",
+        ],
+      },
+      "displayName": "Button__ButtonAdd",
+      "foldedComponentIds": Array [
+        "Button__ButtonIcon-iu7iy2-3",
+      ],
+      "render": [Function],
+      "styledComponentId": "Button__ButtonAdd-iu7iy2-5",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`renders default <ButtonIcon /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Button__ButtonIcon-iu7iy2-3",
+        "isStatic": true,
+        "rules": Array [
+          "cursor:pointer;height:auto;background:transparent;border:0;",
+        ],
+      },
+      "displayName": "Button__ButtonIcon",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Button__ButtonIcon-iu7iy2-3",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`renders default <ButtonRemove /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Button__ButtonRemove-iu7iy2-4",
+        "isStatic": true,
+        "rules": Array [
+          "cursor:pointer;height:auto;background:transparent;border:0;",
+          "margin-top:-0.6rem;",
+        ],
+      },
+      "displayName": "Button__ButtonRemove",
+      "foldedComponentIds": Array [
+        "Button__ButtonIcon-iu7iy2-3",
+      ],
+      "render": [Function],
+      "styledComponentId": "Button__ButtonRemove-iu7iy2-4",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`renders default <ButtonTheme /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Button__ButtonTheme-iu7iy2-1",
+        "isStatic": false,
+        "rules": Array [
+          "cursor:pointer;background:",
+          [Function],
+          ";border:0;font-size:1.2rem;color:",
+          [Function],
+          ";text-transform:uppercase;",
+          "width:4rem;height:4rem;margin:0 auto;background:transparent;@media screen and (min-width:40rem){margin:0 1rem;}",
+        ],
+      },
+      "displayName": "Button__ButtonTheme",
+      "foldedComponentIds": Array [
+        "Button-iu7iy2-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "Button__ButtonTheme-iu7iy2-1",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;
+
+exports[`renders default <MenuToggle /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "_foldedDefaultProps": Object {
+        "theme": Object {
+          "bg": "#fafafa",
+          "bgAdd": "#fff",
+          "color": "#000",
+          "colorAdd": "#707070",
+          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+        },
+      },
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Button__MenuToggle-iu7iy2-6",
+        "isStatic": false,
+        "rules": Array [
+          "cursor:pointer;background:",
+          [Function],
+          ";border:0;font-size:1.2rem;color:",
+          [Function],
+          ";text-transform:uppercase;",
+          "margin:0 1rem;padding:0;background:transparent;overflow:hidden;@media screen and (min-width:40rem){display:none;}",
+        ],
+      },
+      "displayName": "Button__MenuToggle",
+      "foldedComponentIds": Array [
+        "Button-iu7iy2-0",
+      ],
+      "render": [Function],
+      "styledComponentId": "Button__MenuToggle-iu7iy2-6",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#707070",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
 `;

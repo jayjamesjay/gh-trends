@@ -93,3 +93,30 @@ exports[`<Span /> renders with theme 1`] = `
   }
 />
 `;
+
+exports[`renders default <LabelSpan /> 1`] = `
+<StyledComponent
+  forwardedComponent={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "Span__LabelSpan-sc-1jc552j-1",
+        "isStatic": true,
+        "rules": Array [
+          "position:relative;z-index:100;",
+        ],
+      },
+      "displayName": "Span__LabelSpan",
+      "foldedComponentIds": Array [],
+      "render": [Function],
+      "styledComponentId": "Span__LabelSpan-sc-1jc552j-1",
+      "target": "span",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;

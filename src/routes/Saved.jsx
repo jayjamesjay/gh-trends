@@ -4,7 +4,9 @@ import View from '../components/View';
 import { Categories } from '../components/Tabs';
 import { H1Alt } from '../styles/Headers';
 import { ImgIcon } from '../styles/Img';
+import { Bar } from '../styles/Main';
 import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
+import { ButtonRemove } from '../styles/Button';
 
 export default class Saved extends Component {
   constructor(props) {
@@ -20,7 +22,7 @@ export default class Saved extends Component {
 
   render() {
     const {
-      props: { data, save },
+      props: { data, save, removeAll },
       onClick,
       state: { active }
     } = this;
@@ -47,10 +49,15 @@ export default class Saved extends Component {
             <H1Alt>Saved repositories</H1Alt>
           </header>
           <section>
-            {link}
+            <Bar>
+              {link}
+              <ButtonRemove onClick={removeAll}>
+                <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
+              </ButtonRemove>
+            </Bar>
             <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
+            <View data={data} save={save} saved={data} />
           </section>
-          <View data={data} save={save} saved={data} />
         </>
       );
     } else {
@@ -63,5 +70,6 @@ export default class Saved extends Component {
 
 Saved.propTypes = {
   save: PropTypes.func.isRequired,
+  removeAll: PropTypes.func.isRequired,
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };

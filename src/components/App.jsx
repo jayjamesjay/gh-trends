@@ -55,12 +55,19 @@ export default class App extends Component {
     });
   };
 
+  removeAll = () => {
+    this.setState({
+      saved: []
+    });
+  };
+
   render() {
     const {
       state: { hideMenu, theme, saved },
       toggleMenu,
       switchTheme,
-      save
+      save,
+      removeAll
     } = this;
 
     return (
@@ -77,7 +84,10 @@ export default class App extends Component {
             <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
             <Main>
               <Route path="/search" render={() => <Search save={save} saved={saved} />} />
-              <Route path="/saved" render={() => <Saved data={saved} save={save} />} />
+              <Route
+                path="/saved"
+                render={() => <Saved data={saved} save={save} removeAll={removeAll} />}
+              />
               <Route exact path="/" render={() => <Home save={save} saved={saved} />} />
               <Route path="/home" render={() => <Home save={save} saved={saved} />} />
             </Main>

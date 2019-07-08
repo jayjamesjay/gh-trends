@@ -10,6 +10,8 @@ import { H1Alt } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import SelectLang from '../components/SelectLang';
 
+const langs = Object.keys(languages);
+
 export default class Search extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +21,12 @@ export default class Search extends Component {
       data: [],
       page: 1
     };
+  }
+
+  componentWillUnmount() {
+    if (this.asyncRequest) {
+      this.asyncRequest.cancel();
+    }
   }
 
   loadData = () => {
@@ -41,8 +49,9 @@ export default class Search extends Component {
 
     const url = preUrl.toString();
 
-    getJSON(url)
+    this.asyncRequest = getJSON(url)
       .then(result => {
+        this.asyncRequest = null;
         currData = currData.concat(RepoInfoList.fromGithubRes(result.items));
         const currPage = page + 1;
 
@@ -97,12 +106,7 @@ export default class Search extends Component {
           <H1Alt>Search for repositories</H1Alt>
         </header>
         <Form onSubmit={onSubmit} noValidate>
-          <SelectLang
-            curr={lang}
-            onSelect={onSelect}
-            languages={Object.keys(languages)}
-            label="Add language"
-          />
+          <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Add language" />
           <TextInput
             aria-label="Search for repositories"
             required

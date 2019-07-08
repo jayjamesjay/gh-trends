@@ -38,10 +38,13 @@ ButtonMain.defaultProps = {
 
 export const ButtonIcon = styled.button`
   cursor: pointer;
-  width: 2.5rem;
   height: auto;
   background: transparent;
   border: 0;
+`;
+
+export const ButtonRemove = styled(ButtonIcon)`
+  margin-top: -0.6rem;
 `;
 
 export const ButtonAdd = styled(ButtonIcon)`

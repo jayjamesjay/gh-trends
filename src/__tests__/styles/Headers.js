@@ -1,4 +1,4 @@
-import Header from '../../styles/Headers';
+import Header, { H1, H1Alt, H2 } from '../../styles/Headers';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 
@@ -12,4 +12,19 @@ describe('<Header />', () => {
     const wrapper = mount(<Header theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
+});
+
+it('renders default <H1 />', () => {
+  const wrapper = mount(<H1 />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <H1Alt />', () => {
+  const wrapper = mount(<H1Alt />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <H2 />', () => {
+  const wrapper = mount(<H2 />);
+  expect(wrapper).toMatchSnapshot();
 });

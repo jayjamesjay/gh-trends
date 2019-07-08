@@ -1,4 +1,4 @@
-import { Main, Content, BottomBar } from '../../styles/Main';
+import { Main, Content, Bar, BottomBar } from '../../styles/Main';
 import 'jest-styled-components';
 
 it('renders default <Main />', () => {
@@ -8,6 +8,11 @@ it('renders default <Main />', () => {
 
 it('renders default <Content />', () => {
   const wrapper = shallow(<Content />);
+  expect(wrapper).toMatchSnapshot();
+});
+
+it('renders default <Bar />', () => {
+  const wrapper = shallow(<Bar />);
   expect(wrapper).toMatchSnapshot();
 });
 

@@ -19,11 +19,14 @@ export const Content = styled.div`
   }
 `;
 
-export const BottomBar = styled.div`
-  margin: auto 0 0 0;
+export const Bar = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
+`;
+
+export const BottomBar = styled(Bar)`
+  margin: auto 0 0 0;
 `;

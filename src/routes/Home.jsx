@@ -8,6 +8,8 @@ import { MainHeader, H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
 import SelectLang from '../components/SelectLang';
 
+const langs = Object.keys(languages);
+
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -99,18 +101,14 @@ export default class Home extends Component {
       props: { save, saved },
       state: { data, lang }
     } = this;
+
     return (
       <>
         <MainHeader>
           <H1>Trending repositories</H1>
         </MainHeader>
         <FormAlt>
-          <SelectLang
-            curr={lang}
-            onSelect={onSelect}
-            languages={Object.keys(languages)}
-            label="Language"
-          />
+          <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Language" />
         </FormAlt>
         <Tabs>
           {data.map(elem => (
