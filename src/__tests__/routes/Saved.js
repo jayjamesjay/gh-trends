@@ -4,10 +4,10 @@ import Tab from '../../components/Tab';
 
 describe('<Saved />', () => {
   const func = () => {};
-  const saved = shallow(<Saved save={func} data={initData} />);
+  const saved = shallow(<Saved save={func} removeAll={func} data={initData} />);
 
   it('renders with title - no repos', () => {
-    const saved = shallow(<Saved save={func} data={[]} />);
+    const saved = shallow(<Saved save={func} removeAll={func} data={[]} />);
     const title = `You haven't saved any repos...`;
 
     expect(saved.text()).toContain(title);
@@ -38,7 +38,7 @@ describe('<Saved />', () => {
   });
 
   it('fires onClick', () => {
-    const saved = mount(<Saved save={func} data={initData} />);
+    const saved = mount(<Saved save={func} removeAll={func} data={initData} />);
     saved
       .find(Tab)
       .at(1)
