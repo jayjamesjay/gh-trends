@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
 import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
@@ -12,117 +12,80 @@ import SelectLang from '../components/SelectLang';
 
 const langs = Object.keys(languages);
 
-export default class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      search: '',
-      lang: 'all',
-      data: [],
-      page: 1
+export default function Search({ save, saved }) {
+  const [lang, setLang] = React.useState('all');
+  const [search, setSearch] = React.useState('');
+  const [data, setData] = React.useState([]);
+  const [page, setPage] = React.useState(1);
+  const abortController = new AbortController();
+  const { signal } = abortController;
+
+  useEffect(() => {
+    return () => {
+      abortController.abort();
     };
-  }
+  });
 
-  componentWillUnmount() {
-    if (this.asyncRequest) {
-      this.asyncRequest.cancel();
-    }
-  }
-
-  loadData = () => {
-    const { data, page } = this.state;
-    this.makeRequest(data, page);
-  };
-
-  reloadData = () => {
-    this.makeRequest([], 1);
-  };
-
-  makeRequest = (data, page) => {
-    const { search } = this.state;
-    let currData = data;
-
+  const makeRequest = (currData, currPage) => {
+    let newData = currData;
     const preUrl = new Url(defApi).query(search).parts(perPage);
-    if (page > 1) {
-      preUrl.parts(`page=${page + 1}`);
+    if (currPage > 1) {
+      preUrl.parts(`page=${currPage + 1}`);
     }
 
     const url = preUrl.toString();
 
-    this.asyncRequest = getJSON(url)
+    getJSON(url, signal)
       .then(result => {
-        this.asyncRequest = null;
-        currData = currData.concat(RepoInfoList.fromGithubRes(result.items));
-        const currPage = page + 1;
+        newData = newData.concat(RepoInfoList.fromGithubRes(result.items));
+        const newPage = currPage + 1;
 
-        this.setState({
-          data: currData,
-          page: currPage
-        });
+        setData(newData);
+        setPage(newPage);
       })
-      .catch(() => {
-        this.asyncRequest = null;
-      });
+      .catch(() => {});
   };
 
-  onInput = event => {
-    const search = event.target.value;
-    this.setState({ search });
+  const loadData = () => makeRequest(data, page);
+  const reloadData = () => makeRequest([], 1);
+  const onSubmit = event => event.preventDefault();
+  const onKeyPress = event => (event.key === 'Enter' ? reloadData() : {});
+
+  const onInput = event => {
+    const newSearch = event.target.value;
+    setSearch(newSearch);
   };
 
-  onSubmit = event => {
-    event.preventDefault();
+  const onSelect = event => {
+    const newLang = event.target.value;
+    const newSearch = addLang(search.slice(), newLang);
+
+    setLang(newLang);
+    setSearch(newSearch);
   };
 
-  onKeyPress = event => {
-    if (event.key === 'Enter') {
-      this.reloadData();
-    }
-  };
-
-  onSelect = event => {
-    const lang = event.target.value;
-    const { search } = this.state;
-    const newSearch = addLang(search.slice(), lang);
-
-    this.setState({ lang, search: newSearch });
-  };
-
-  render() {
-    const {
-      onInput,
-      onSubmit,
-      onKeyPress,
-      onSelect,
-      loadData,
-      reloadData,
-      state: { search, data, lang },
-      props: { save, saved }
-    } = this;
-
-    return (
-      <>
-        <header>
-          <H1Alt>Search for repositories</H1Alt>
-        </header>
-        <Form onSubmit={onSubmit} noValidate>
-          <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Add language" />
-          <TextInput
-            aria-label="Search for repositories"
-            required
-            type="text"
-            onChange={onInput}
-            value={search}
-            onKeyPress={onKeyPress}
-          />
-          <ButtonIcon onClick={reloadData}>
-            <Img src="./assets/img/search.svg" alt="Search" />
-          </ButtonIcon>
-        </Form>
-        <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
-      </>
-    );
-  }
+  return (
+    <>
+      <header>
+        <H1Alt>Search for repositories</H1Alt>
+      </header>
+      <Form onSubmit={onSubmit} noValidate>
+        <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Add language" />
+        <TextInput
+          aria-label="Search for repositories"
+          required
+          type="text"
+          onChange={onInput}
+          value={search}
+          onKeyPress={onKeyPress}
+        />
+        <ButtonIcon onClick={reloadData}>
+          <Img src="./assets/img/search.svg" alt="Search" />
+        </ButtonIcon>
+      </Form>
+      <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
+    </>
+  );
 }
 
 Search.propTypes = {

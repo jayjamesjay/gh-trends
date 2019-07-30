@@ -1,9 +1,22 @@
 import Search from '../../routes/Search';
+import TextInput from '../../styles/Input';
+import SelectLang from '../../components/SelectLang';
 
 describe('<Search />', () => {
   const func = () => {};
   const query = 'react';
-  const search = shallow(<Search save={func} saved={[]} />);
+  let wrapper;
+  const setState = jest.fn();
+  const useStateSpy = jest.spyOn(React, 'useState')
+  useStateSpy.mockImplementation((init) => [init, setState]);
+
+  beforeEach(() => {
+    wrapper = shallow(<Search save={func} saved={[]} />);
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
 
   it('onInput', () => {
     const e = {
@@ -11,23 +24,20 @@ describe('<Search />', () => {
         value: query
       }
     };
-    search.instance().onInput(e);
 
-    expect(search.state('search')).toEqual(query);
+    wrapper.find(TextInput).props().onChange(e);
+    expect(setState).toHaveBeenCalledWith(query);
   });
 
   it('onSelect', () => {
     const lang = 'JavaScript';
-    search.setState({ search: query });
     const e = {
       target: {
         value: lang
       }
     };
-    search.instance().onSelect(e);
-    const state = search.state();
 
-    expect(state.search).toEqual(`${query} language:"${lang}"`);
-    expect(state.lang).toEqual(lang);
+    wrapper.find(SelectLang).props().onSelect(e);
+    expect(setState).toHaveBeenCalledWith(lang);
   });
 });

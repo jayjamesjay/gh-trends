@@ -51,6 +51,6 @@ export class Url {
 }
 
 // Fetches data and returns JSON response
-export default function getJSON(url) {
-  return fetch(url).then(res => res.json());
+export default function getJSON(url, signal) {
+  return fetch(url, { signal }).then(res => res.json());
 }
