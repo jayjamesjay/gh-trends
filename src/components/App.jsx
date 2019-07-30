@@ -16,32 +16,20 @@ import { dark, light } from '../styles/Theme';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hideMenu: true,
-      theme: light,
-      saved: []
-    };
+export default function App() {
+  const [hideMenu, setMenu] = React.useState(true);
+  const [theme, setTheme] = React.useState(light);
+  const [saved, setSaved] = React.useState([]);
+
+  function toggleMenu() {
+    setMenu(!hideMenu);
   }
 
-  toggleMenu = () => {
-    const { hideMenu } = this.state;
-    this.setState({
-      hideMenu: !hideMenu
-    });
-  };
+  function switchTheme() {
+    setTheme(theme => (theme === light ? dark : light));
+  }
 
-  switchTheme = () => {
-    const { theme } = this.state;
-    this.setState({
-      theme: theme === light ? dark : light
-    });
-  };
-
-  save = elem => {
-    const { saved } = this.state;
+  function save(elem) {
     let currSaved = saved.slice();
 
     if (currSaved.findIndex(item => item.nameWithOwner === elem.nameWithOwner) < 0) {
@@ -50,52 +38,38 @@ export default class App extends Component {
       currSaved = currSaved.filter(item => item.nameWithOwner !== elem.nameWithOwner);
     }
 
-    this.setState({
-      saved: currSaved
-    });
-  };
-
-  removeAll = () => {
-    this.setState({
-      saved: []
-    });
-  };
-
-  render() {
-    const {
-      state: { hideMenu, theme, saved },
-      toggleMenu,
-      switchTheme,
-      save,
-      removeAll
-    } = this;
-
-    return (
-      <Router>
-        <ThemeProvider theme={theme}>
-          <>
-            <Header
-              link="/"
-              title="GH Trends"
-              toggle={toggleMenu}
-              hide={hideMenu}
-              switchTheme={switchTheme}
-            />
-            <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
-            <Main>
-              <Route path="/search" render={() => <Search save={save} saved={saved} />} />
-              <Route
-                path="/saved"
-                render={() => <Saved data={saved} save={save} removeAll={removeAll} />}
-              />
-              <Route exact path="/" render={() => <Home save={save} saved={saved} />} />
-              <Route path="/home" render={() => <Home save={save} saved={saved} />} />
-            </Main>
-            <Footer />
-            <GlobalStyle />
-          </>
-        </ThemeProvider>
-      </Router>
-    );
+    setSaved(currSaved);
   }
+
+  function removeAll() {
+    setSaved([]);
+  }
+
+  return (
+    <Router>
+      <ThemeProvider theme={theme}>
+        <>
+          <Header
+            link="/"
+            title="GH Trends"
+            toggle={toggleMenu}
+            hide={hideMenu}
+            switchTheme={switchTheme}
+          />
+          <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
+          <Main>
+            <Route path="/search" render={() => <Search save={save} saved={saved} />} />
+            <Route
+              path="/saved"
+              render={() => <Saved data={saved} save={save} removeAll={removeAll} />}
+            />
+            <Route exact path="/" render={() => <Home save={save} saved={saved} />} />
+            <Route path="/home" render={() => <Home save={save} saved={saved} />} />
+          </Main>
+          <Footer />
+          <GlobalStyle />
+        </>
+      </ThemeProvider>
+    </Router>
+  );
 }

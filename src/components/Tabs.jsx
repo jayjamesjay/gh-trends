@@ -21,35 +21,20 @@ Categories.propTypes = {
 };
 
 // Tab selection and display currently selected tab
-export default class Tabs extends Component {
-  constructor(props) {
-    super(props);
-    const { children } = this.props;
+export default function Tabs({ children }) {
+  const labels = children.map(child => child.props.label);
+  const [activeTab, setActive] = React.useState(labels[0]);
 
-    this.state = {
-      activeTab: children[0].props.label
-    };
+  function onClickTabItem(tab) {
+    setActive(tab);
   }
 
-  onClickTabItem = tab => {
-    this.setState({ activeTab: tab });
-  };
-
-  render() {
-    const {
-      onClickTabItem,
-      props: { children },
-      state: { activeTab }
-    } = this;
-    const labels = children.map(child => child.props.label);
-
-    return (
-      <>
-        <Categories labels={labels} onClick={onClickTabItem} active={activeTab} />
-        {children.find(child => child.props.label === activeTab).props.children}
-      </>
-    );
-  }
+  return (
+    <>
+      <Categories labels={labels} onClick={onClickTabItem} active={activeTab} />
+      {children.find(child => child.props.label === activeTab).props.children}
+    </>
+  );
 }
 
 Tabs.propTypes = {

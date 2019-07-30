@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import View from '../components/View';
 import { Categories } from '../components/Tabs';
@@ -8,64 +8,51 @@ import { Bar } from '../styles/Main';
 import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
 import { ButtonRemove } from '../styles/Button';
 
-export default class Saved extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: 'JSON'
-    };
+export default function Saved({ data, save, removeAll }) {
+  const [active, setActive] = 'JSON';
+  let content;
+
+  function onClick(label) {
+    setActive(label);
   }
 
-  onClick = label => {
-    this.setState({ active: label });
-  };
+  if (data.length > 0) {
+    const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
 
-  render() {
-    const {
-      props: { data, save, removeAll },
-      onClick,
-      state: { active }
-    } = this;
-    let content;
-
-    if (data.length > 0) {
-      const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
-
-      const link =
-        active === 'JSON' ? (
-          <DownloadLink
-            filename="saved.json"
-            content={JSON.stringify(data)}
-            dataType="json"
-            display={imgDownload}
-          />
-        ) : (
-          <DownloadLink filename="saved.md" content={jsonToMarkdown(data)} display={imgDownload} />
-        );
-
-      content = (
-        <>
-          <header>
-            <H1Alt>Saved repositories</H1Alt>
-          </header>
-          <section>
-            <Bar>
-              {link}
-              <ButtonRemove onClick={removeAll}>
-                <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
-              </ButtonRemove>
-            </Bar>
-            <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
-            <View data={data} save={save} saved={data} />
-          </section>
-        </>
+    const link =
+      active === 'JSON' ? (
+        <DownloadLink
+          filename="saved.json"
+          content={JSON.stringify(data)}
+          dataType="json"
+          display={imgDownload}
+        />
+      ) : (
+        <DownloadLink filename="saved.md" content={jsonToMarkdown(data)} display={imgDownload} />
       );
-    } else {
-      content = <H1Alt>You haven&apos;t saved any repos...</H1Alt>;
-    }
 
-    return content;
+    content = (
+      <>
+        <header>
+          <H1Alt>Saved repositories</H1Alt>
+        </header>
+        <section>
+          <Bar>
+            {link}
+            <ButtonRemove onClick={removeAll}>
+              <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
+            </ButtonRemove>
+          </Bar>
+          <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
+          <View data={data} save={save} saved={data} />
+        </section>
+      </>
+    );
+  } else {
+    content = <H1Alt>You haven&apos;t saved any repos...</H1Alt>;
   }
+
+  return content;
 }
 
 Saved.propTypes = {
