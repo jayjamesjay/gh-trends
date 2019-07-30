@@ -18,9 +18,7 @@ export default function InfoBlock({ info, save, saved }) {
   const forks = `Forks: ${info.forks}`;
   let color;
 
-  function saveItem() {
-    save(info);
-  }
+  const saveItem = () => save(info);
 
   if (Object.prototype.hasOwnProperty.call(colors, language)) {
     color = colors[language];

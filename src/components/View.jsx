@@ -45,16 +45,10 @@ ViewSingle.propTypes = {
 };
 
 // View with button firing loadData function with specified id
-export class ViewId extends Component {
-  loadData = () => {
-    const { loadData, id } = this.props;
-    loadData(id);
-  };
-
-  render() {
-    const { props, loadData } = this;
-    return <ViewSingle {...props} loadData={loadData} />;
-  }
+export function ViewId(props) {
+  const { loadData, id } = props;
+  const load = () => loadData(id);
+  return <ViewSingle {...props} loadData={load} />;
 }
 
 ViewId.propTypes = {

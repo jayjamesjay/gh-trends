@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -21,13 +21,9 @@ export default function App() {
   const [theme, setTheme] = React.useState(light);
   const [saved, setSaved] = React.useState([]);
 
-  function toggleMenu() {
-    setMenu(!hideMenu);
-  }
-
-  function switchTheme() {
-    setTheme(theme => (theme === light ? dark : light));
-  }
+  const toggleMenu = () => setMenu(!hideMenu);
+  const switchTheme = () => setTheme(theme => (theme === light ? dark : light));
+  const removeAll = () => setSaved([]);
 
   function save(elem) {
     let currSaved = saved.slice();
@@ -39,10 +35,6 @@ export default function App() {
     }
 
     setSaved(currSaved);
-  }
-
-  function removeAll() {
-    setSaved([]);
   }
 
   return (

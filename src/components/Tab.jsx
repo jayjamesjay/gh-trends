@@ -6,9 +6,7 @@ import LabelTab from '../styles/Label';
 
 // Single select of tab
 export default function Tab({ label, checked, onClick }) {
-  function click() {
-    onClick(label);
-  }
+  const click = () => onClick(label);
 
   return (
     <div onClick={click} role="radio" aria-checked={checked} onKeyPress={click} tabIndex="0">

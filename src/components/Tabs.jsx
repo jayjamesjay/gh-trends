@@ -25,13 +25,9 @@ export default function Tabs({ children }) {
   const labels = children.map(child => child.props.label);
   const [activeTab, setActive] = React.useState(labels[0]);
 
-  function onClickTabItem(tab) {
-    setActive(tab);
-  }
-
   return (
     <>
-      <Categories labels={labels} onClick={onClickTabItem} active={activeTab} />
+      <Categories labels={labels} onClick={setActive} active={activeTab} />
       {children.find(child => child.props.label === activeTab).props.children}
     </>
   );
