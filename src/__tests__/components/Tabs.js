@@ -5,8 +5,8 @@ describe('<Categories />', () => {
   const labels = ['Year', 'Month'];
   const active = 'Year';
   const func = () => {};
-  const categories = shallow(<Categories labels={labels} active={active} onClick={func} />);
-  const tabs = categories.find(Tab);
+  const wrapper = shallow(<Categories labels={labels} active={active} onClick={func} />);
+  const tabs = wrapper.find(Tab);
 
   it(`displays with labels`, () => {
     expect(tabs.at(0).prop('label')).toEqual(labels[0]);
@@ -23,7 +23,7 @@ describe('<Tabs />', () => {
   const label2 = 'Month';
   const content = 'Testing tab content';
   const altContent = `You shouldn't see this`;
-  const tabs = shallow(
+  const wrapper = shallow(
     <Tabs>
       <div label={label1}>{content}</div>
       <div label={label2}>{altContent}</div>
@@ -31,27 +31,28 @@ describe('<Tabs />', () => {
   );
 
   it(`displays content of selected tab`, () => {
-    expect(tabs.text()).toContain(content);
-    expect(tabs.text()).not.toContain(altContent);
+    expect(wrapper.text()).toContain(content);
+    expect(wrapper.text()).not.toContain(altContent);
   });
 
   it(`onClickTabItem`, () => {
-    tabs.instance().onClickTabItem(label2);
-    expect(tabs.state('activeTab')).toEqual(label2);
-  });
+    const setState = jest.fn();
+    const useStateSpy = jest.spyOn(React, 'useState');
+    useStateSpy.mockImplementation(init => [init, setState]);
 
-  it(`fires onClickTabItem`, () => {
-    const tabsAlt = mount(
+    const wrapperAlt = mount(
       <Tabs>
         <div label={label1}>{content}</div>
         <div label={label2}>{altContent}</div>
       </Tabs>
     );
 
-    tabsAlt
+    wrapperAlt
       .find(Tab)
       .at(1)
       .simulate('click');
-    expect(tabsAlt.state('activeTab')).toEqual(label2);
+    expect(setState).toHaveBeenCalledWith(label2);
+
+    jest.clearAllMocks();
   });
 });

@@ -22,7 +22,7 @@ export default function App() {
   const [saved, setSaved] = React.useState([]);
 
   const toggleMenu = () => setMenu(!hideMenu);
-  const switchTheme = () => setTheme(theme => (theme === light ? dark : light));
+  const switchTheme = () => setTheme(curr => (curr === light ? dark : light));
   const removeAll = () => setSaved([]);
 
   function save(elem) {

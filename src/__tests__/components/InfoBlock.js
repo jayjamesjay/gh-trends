@@ -16,36 +16,37 @@ describe('<InfoBlock />', () => {
   const save = info => {
     temp = info;
   };
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<InfoBlock info={info} save={save} saved={saved}  />);
+  });
 
   it('renders with default background color', () => {
     {
-      const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-      expect(infoBlock.prop('bg')).toEqual(null);
+      expect(wrapper.prop('bg')).toEqual(null);
     }
     {
       info.language = 'JavaScript';
-      const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+      const wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
 
-      expect(infoBlock.prop('bg')).toEqual('#f1e05a');
+      expect(wrapper.prop('bg')).toEqual('#f1e05a');
     }
   });
 
   it('renders with license', () => {
-    const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-    expect(infoBlock.text()).toContain('License');
+    expect(wrapper.text()).toContain('License');
   });
 
   it('renders without license', () => {
     info.license = null;
-    const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+    const wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
 
-    expect(infoBlock.text()).not.toContain('License');
+    expect(wrapper.text()).not.toContain('License');
   });
 
   it('saves info', () => {
-    const infoBlock = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-    infoBlock.instance().save();
-
+    wrapper.find(SaveRepo).props().save();
     expect(temp).toEqual(info);
   });
 });

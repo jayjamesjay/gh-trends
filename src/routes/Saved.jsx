@@ -9,12 +9,8 @@ import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
 import { ButtonRemove } from '../styles/Button';
 
 export default function Saved({ data, save, removeAll }) {
-  const [active, setActive] = 'JSON';
+  const [active, setActive] = React.useState('JSON');
   let content;
-
-  function onClick(label) {
-    setActive(label);
-  }
 
   if (data.length > 0) {
     const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
@@ -43,7 +39,7 @@ export default function Saved({ data, save, removeAll }) {
               <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
             </ButtonRemove>
           </Bar>
-          <Categories labels={['JSON', 'Markdown']} active={active} onClick={onClick} />
+          <Categories labels={['JSON', 'Markdown']} active={active} onClick={setActive} />
           <View data={data} save={save} saved={data} />
         </section>
       </>
