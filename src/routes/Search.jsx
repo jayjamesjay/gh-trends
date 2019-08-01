@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
 import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
@@ -15,8 +15,7 @@ const langs = Object.keys(languages);
 export default function Search({ save, saved }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
-  const [data, setData] = React.useState([]);
-  const [page, setPage] = React.useState(1);
+  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList('Search', [], 1));
   const abortController = new AbortController();
   const { signal } = abortController;
 
@@ -26,43 +25,49 @@ export default function Search({ save, saved }) {
     };
   });
 
-  const makeRequest = (currData, currPage) => {
-    let newData = currData;
-    const preUrl = new Url(defApi).query(search).parts(perPage);
-    if (currPage > 1) {
-      preUrl.parts(`page=${currPage + 1}`);
-    }
+  const makeRequest = useCallback(
+    (currData, currPage) => {
+      let newData = currData;
+      const preUrl = new Url(defApi).query(search).parts(perPage);
+      if (currPage > 1) {
+        preUrl.parts(`page=${currPage + 1}`);
+      }
 
-    const url = preUrl.toString();
+      const url = preUrl.toString();
+      getJSON(url, signal)
+        .then(result => {
+          newData = newData.concat(RepoInfoList.fromGithubRes(result.items));
+          const newPage = currPage + 1;
 
-    getJSON(url, signal)
-      .then(result => {
-        newData = newData.concat(RepoInfoList.fromGithubRes(result.items));
-        const newPage = currPage + 1;
+          setRepoInfo(new RepoInfoList('Search', newData, newPage));
+        })
+        .catch(() => {});
+    },
+    [search, signal]
+  );
 
-        setData(newData);
-        setPage(newPage);
-      })
-      .catch(() => {});
-  };
+  const loadData = () => makeRequest(repoInfo.data, repoInfo.page);
+  const reloadData = useCallback(() => makeRequest([], 1), [makeRequest]);
+  const onSubmit = useCallback(event => event.preventDefault(), []);
+  const onKeyPress = useCallback(event => (event.key === 'Enter' ? reloadData() : {}), [
+    reloadData
+  ]);
 
-  const loadData = () => makeRequest(data, page);
-  const reloadData = () => makeRequest([], 1);
-  const onSubmit = event => event.preventDefault();
-  const onKeyPress = event => (event.key === 'Enter' ? reloadData() : {});
-
-  const onInput = event => {
+  const onInput = useCallback(event => {
     const newSearch = event.target.value;
     setSearch(newSearch);
-  };
+  }, []);
 
-  const onSelect = event => {
-    const newLang = event.target.value;
-    const newSearch = addLang(search.slice(), newLang);
+  const onSelect = useCallback(
+    event => {
+      const newLang = event.target.value;
+      const newSearch = addLang(search.slice(), newLang);
 
-    setLang(newLang);
-    setSearch(newSearch);
-  };
+      setLang(newLang);
+      setSearch(newSearch);
+    },
+    [search]
+  );
 
   return (
     <>
@@ -83,7 +88,7 @@ export default function Search({ save, saved }) {
           <Img src="./assets/img/search.svg" alt="Search" />
         </ButtonIcon>
       </Form>
-      <ViewSingle data={data} loadData={loadData} save={save} saved={saved} />
+      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
     </>
   );
 }

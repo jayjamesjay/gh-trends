@@ -9,11 +9,14 @@
   "extends": ["airbnb", "prettier", "prettier/react"],
   "rules": {
     "no-unused-vars": 1,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["src/setupEnzyme.js"] }]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["src/setupEnzyme.js"] }],
+    "react-hooks/rules-of-hooks": "error", 
+    "react-hooks/exhaustive-deps": "warn" 
   },
   "globals": {
     "window": true,
     "navigator": true,
     "document": true
-  }
+  },
+  "plugins": ["react-hooks"]
 }

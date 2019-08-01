@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -21,9 +21,9 @@ export default function App() {
   const [theme, setTheme] = React.useState(light);
   const [saved, setSaved] = React.useState([]);
 
-  const toggleMenu = () => setMenu(!hideMenu);
-  const switchTheme = () => setTheme(curr => (curr === light ? dark : light));
-  const removeAll = () => setSaved([]);
+  const toggleMenu = useCallback(() => setMenu(!hideMenu), [hideMenu]);
+  const switchTheme = useCallback(() => setTheme(curr => (curr === light ? dark : light)), []);
+  const removeAll = useCallback(() => setSaved([]), []);
 
   function save(elem) {
     let currSaved = saved.slice();

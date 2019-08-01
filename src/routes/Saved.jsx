@@ -10,11 +10,10 @@ import { ButtonRemove } from '../styles/Button';
 
 export default function Saved({ data, save, removeAll }) {
   const [active, setActive] = React.useState('JSON');
+  const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
   let content;
 
   if (data.length > 0) {
-    const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
-
     const link =
       active === 'JSON' ? (
         <DownloadLink

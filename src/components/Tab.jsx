@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { LabelSpan } from '../styles/Span';
 import { InputRadio } from '../styles/Input';
@@ -6,7 +6,7 @@ import LabelTab from '../styles/Label';
 
 // Single select of tab
 export default function Tab({ label, checked, onClick }) {
-  const click = () => onClick(label);
+  const click = useCallback(() => onClick(label), [label, onClick]);
 
   return (
     <div onClick={click} role="radio" aria-checked={checked} onKeyPress={click} tabIndex="0">

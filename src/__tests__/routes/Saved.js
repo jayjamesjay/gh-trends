@@ -42,7 +42,7 @@ describe('<Saved />', () => {
     const setState = jest.fn();
     const useStateSpy = jest.spyOn(React, 'useState');
     useStateSpy.mockImplementation(init => [init, setState]);
-    
+
     const wrapper = mount(<Saved save={func} removeAll={func} data={initData} />);
     wrapper
       .find(Tab)

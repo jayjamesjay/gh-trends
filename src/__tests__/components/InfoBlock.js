@@ -19,7 +19,7 @@ describe('<InfoBlock />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<InfoBlock info={info} save={save} saved={saved}  />);
+    wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
   });
 
   it('renders with default background color', () => {
@@ -46,7 +46,10 @@ describe('<InfoBlock />', () => {
   });
 
   it('saves info', () => {
-    wrapper.find(SaveRepo).props().save();
+    wrapper
+      .find(SaveRepo)
+      .props()
+      .save();
     expect(temp).toEqual(info);
   });
 });

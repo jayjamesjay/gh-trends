@@ -6,8 +6,8 @@ import { initData } from '../../components/Data';
 describe('<App />', () => {
   let wrapper;
   const setState = jest.fn();
-  const useStateSpy = jest.spyOn(React, 'useState')
-  useStateSpy.mockImplementation((init) => [init, setState]);
+  const useStateSpy = jest.spyOn(React, 'useState');
+  useStateSpy.mockImplementation(init => [init, setState]);
 
   beforeEach(() => {
     wrapper = shallow(<App />);
@@ -22,7 +22,10 @@ describe('<App />', () => {
   });
 
   it('toggleMenu - shows and hides menu', () => {
-    wrapper.find(Header).props().toggle();
+    wrapper
+      .find(Header)
+      .props()
+      .toggle();
     expect(setState).toHaveBeenCalledWith(false);
   });
 });
