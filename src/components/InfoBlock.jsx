@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { languages as colors, RepoInfo } from './Data';
 import { BottomBar } from '../styles/Main';
@@ -18,7 +18,7 @@ export default function InfoBlock({ info, save, saved }) {
   const forks = `Forks: ${info.forks}`;
   let color;
 
-  const saveItem = () => save(info);
+  const saveItem = useCallback(() => save(info), [save, info]);
 
   if (Object.prototype.hasOwnProperty.call(colors, language)) {
     color = colors[language];

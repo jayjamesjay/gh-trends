@@ -16,6 +16,9 @@ import { dark, light } from '../styles/Theme';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
 
+// Compares if two items have identical nameWithOwner
+export const identicalItems = (item, other) => item.nameWithOwner === other.nameWithOwner;
+
 export default function App() {
   const [hideMenu, setMenu] = React.useState(true);
   const [theme, setTheme] = React.useState(light);
@@ -25,17 +28,20 @@ export default function App() {
   const switchTheme = useCallback(() => setTheme(curr => (curr === light ? dark : light)), []);
   const removeAll = useCallback(() => setSaved([]), []);
 
-  function save(elem) {
-    let currSaved = saved.slice();
+  const save = useCallback(
+    elem => {
+      let currSaved = saved.slice();
 
-    if (currSaved.findIndex(item => item.nameWithOwner === elem.nameWithOwner) < 0) {
-      currSaved.push(elem);
-    } else {
-      currSaved = currSaved.filter(item => item.nameWithOwner !== elem.nameWithOwner);
-    }
+      if (currSaved.findIndex(item => identicalItems(item, elem)) < 0) {
+        currSaved.push(elem);
+      } else {
+        currSaved = currSaved.filter(item => !identicalItems(item, elem));
+      }
 
-    setSaved(currSaved);
-  }
+      setSaved(currSaved);
+    },
+    [saved]
+  );
 
   return (
     <Router>
