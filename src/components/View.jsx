@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Content } from '../styles/Main';
 import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
-import { RepoInfo } from './Data';
+import { RepoInfo, identicalItems } from './Data';
 
 // Group of InfoBlocks wrapped in Content
 export default function View({ data, saved, save }) {
   return (
     <Content>
       {data.map(node => {
-        const saving = saved.findIndex(item => item.nameWithOwner === node.nameWithOwner) > -1;
+        const saving = saved.findIndex(item => identicalItems(item, node)) > -1;
         return <InfoBlock key={node.nameWithOwner} info={node} save={save} saved={saving} />;
       })}
     </Content>
@@ -47,7 +47,7 @@ ViewSingle.propTypes = {
 // View with button firing loadData function with specified id
 export function ViewId(props) {
   const { loadData, id } = props;
-  const load = () => loadData(id);
+  const load = useCallback(() => loadData(id), [loadData, id]);
   return <ViewSingle {...props} loadData={load} />;
 }
 

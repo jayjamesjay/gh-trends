@@ -2,7 +2,7 @@ import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
 import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
-import RepoInfoList, { RepoInfo, languages } from '../components/Data';
+import RepoInfoList, { RepoInfo, languages, imgPath } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import Form from '../styles/Form';
 import TextInput from '../styles/Input';
@@ -85,7 +85,7 @@ export default function Search({ save, saved }) {
           onKeyPress={onKeyPress}
         />
         <ButtonIcon onClick={reloadData}>
-          <Img src="./assets/img/search.svg" alt="Search" />
+          <Img src={`${imgPath}/search.svg`} alt="Search" />
         </ButtonIcon>
       </Form>
       <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />

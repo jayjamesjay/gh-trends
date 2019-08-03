@@ -1,4 +1,16 @@
-import RepoInfoList, { jsonToMarkdown, RepoInfo, DownloadLink } from '../../components/Data';
+import RepoInfoList, {
+  jsonToMarkdown,
+  RepoInfo,
+  DownloadLink,
+  identicalItems
+} from '../../components/Data';
+
+it('compares nameWithOwner of two items', () => {
+  const elem1 = { nameWithOwner: 'abb', age: 30 };
+  const elem2 = { nameWithOwner: 'abb', age: 31 };
+
+  expect(identicalItems(elem1, elem2)).toBe(true);
+});
 
 describe('RepoInfo', () => {
   it('from one element of Github Reest API reponse array', () => {

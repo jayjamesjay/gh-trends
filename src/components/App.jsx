@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import Footer from './Footer';
 import Header from './Header';
 import Nav from './Nav';
+import { identicalItems } from './Data';
 
 import Home from '../routes/Home';
 import Search from '../routes/Search';
@@ -15,9 +16,6 @@ import { Main } from '../styles/Main';
 import { dark, light } from '../styles/Theme';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
-
-// Compares if two items have identical nameWithOwner
-export const identicalItems = (item, other) => item.nameWithOwner === other.nameWithOwner;
 
 export default function App() {
   const [hideMenu, setMenu] = React.useState(true);

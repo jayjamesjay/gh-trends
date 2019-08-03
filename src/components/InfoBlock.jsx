@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { languages as colors, RepoInfo } from './Data';
+import { languages as colors, RepoInfo, imgPath } from './Data';
 import { BottomBar } from '../styles/Main';
 import Article from '../styles/Article';
 import Span from '../styles/Span';
@@ -38,7 +38,7 @@ export default function InfoBlock({ info, save, saved }) {
         <PClean>{license}</PClean>
         <PFlex>
           {stargazersCount}
-          <ImgInline src="./assets/img/stars.svg" alt="Stars" />
+          <ImgInline src={`${imgPath}/stars.svg`} alt="Stars" />
         </PFlex>
         <PClean>{langStr}</PClean>
       </BottomBar>
@@ -75,9 +75,9 @@ export function SaveRepo({ save, saved }) {
   return (
     <ButtonAdd onClick={save}>
       {saved ? (
-        <Img src="./assets/img/delete.svg" alt="Remove from saved" title="Remove from saved" />
+        <Img src={`${imgPath}/delete.svg`} alt="Remove from saved" title="Remove from saved" />
       ) : (
-        <Img src="./assets/img/add-saved.svg" alt="Add to saved" title="Add to saved" />
+        <Img src={`${imgPath}/add-saved.svg`} alt="Add to saved" title="Add to saved" />
       )}
     </ButtonAdd>
   );

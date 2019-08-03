@@ -14,6 +14,12 @@ const queryMonth = `created:>${formatDate(monthAgo)}`;
 const queryAllTime = 'stars:>10';
 export const queryList = [queryWeek, queryMonth, queryAllTime];
 
+// Default path for all images
+export const imgPath = './assets/img';
+
+// Compares if two items have identical nameWithOwner
+export const identicalItems = (item, other) => item.nameWithOwner === other.nameWithOwner;
+
 export const languages = {
   '1C Enterprise': '#814CCC',
   ABAP: '#E8274B',

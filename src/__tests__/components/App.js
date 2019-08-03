@@ -1,4 +1,4 @@
-import App, {identicalItems} from '../../components/App';
+import App from '../../components/App';
 import Header from '../../components/Header';
 import { light } from '../../styles/Theme';
 
@@ -26,12 +26,5 @@ describe('<App />', () => {
       .props()
       .toggle();
     expect(setState).toHaveBeenCalledWith(false);
-  });
-
-  it('identicalItems', () => {
-    const elem1 = {nameWithOwner: "abb", age: 30};
-    const elem2 = {nameWithOwner: "abb", age: 31};
-
-    expect(identicalItems(elem1, elem2)).toBe(true);
   });
 });
