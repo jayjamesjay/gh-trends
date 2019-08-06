@@ -17,6 +17,15 @@ import { dark, light } from '../styles/Theme';
 
 const links = [['Search', '/search'], ['Saved', '/saved']];
 
+/**
+ * @module App
+ */
+
+/**
+ * Main App component
+ *
+ * @returns {App}
+ */
 export default function App() {
   const [hideMenu, setMenu] = React.useState(true);
   const [theme, setTheme] = React.useState(light);

@@ -10,7 +10,18 @@ import { PFlex, PClean } from '../styles/Paragraph';
 import { ButtonAdd } from '../styles/Button';
 import { LinkA } from '../styles/Link';
 
-// Block of information about repository with an indicator if it was saved
+/**
+ * @module InfoBlock
+ */
+
+/**
+ * Block of information about repository with an indicator if it was saved
+ *
+ * @property {object} info - information about repository
+ * @property {function} save - saves repository
+ * @property {array} saved - information about repositories which has been saved
+ * @returns {InfoBlock}
+ */
 export default function InfoBlock({ info, save, saved }) {
   const { language, stargazersCount } = info;
   const langStr = language ? `Language: ${language}` : '';
@@ -52,7 +63,13 @@ InfoBlock.propTypes = {
   info: PropTypes.instanceOf(RepoInfo).isRequired
 };
 
-// Llink to repository
+/**
+ * Link to repository
+ *
+ * @property {string} url - link to this repository
+ * @property {string} nameWithOwner - auth and name of this repository
+ * @returns {RepoLink}
+ */
 export function RepoLink({ url, nameWithOwner }) {
   const [author, name] = nameWithOwner.split('/');
 
@@ -70,7 +87,13 @@ RepoLink.propTypes = {
   nameWithOwner: PropTypes.string.isRequired
 };
 
-// Button to add/remove repository from saved
+/**
+ * Button to add/remove repository from saved
+ *
+ * @property {function} save - saves repository
+ * @property {boolean} saved - is this repository saved
+ * @returns {SaveRepo}
+ */
 export function SaveRepo({ save, saved }) {
   return (
     <ButtonAdd onClick={save}>

@@ -7,7 +7,20 @@ import { Img } from '../styles/Img';
 import { ButtonTheme } from '../styles/Button';
 import { imgPath } from './Data';
 
-// Header of the website
+/**
+ * @module Header
+ */
+
+/**
+ * Header of the website
+ *
+ * @property {string} link - url pointing to Home Page
+ * @property {string} title - displayed text
+ * @property {function} switchTheme - switches theme (dark/light)
+ * @property {boolean} hide - is nav hidden
+ * @property {function} toggle - function fired when MenuToggle is clicked
+ * @returns {Header}
+ */
 export default function Header({ link, title, switchTheme, hide, toggle }) {
   return (
     <StyledHeader>

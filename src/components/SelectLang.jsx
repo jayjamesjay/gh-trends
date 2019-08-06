@@ -5,7 +5,19 @@ import Option from '../styles/Option';
 import { ImgIcon } from '../styles/Img';
 import { imgPath } from './Data';
 
-// Language selection
+/**
+ * @module SelectLang
+ */
+
+/**
+ * Language selection
+ *
+ * @property {string} curr - currently selected language
+ * @property {function} onSelect - action fired when language is selected
+ * @property {array} languages - list of languages to select from
+ * @property {string} label - description of this language selection
+ * @returns {SelectLang}
+ */
 export default function SelectLang({ curr, onSelect, languages, label }) {
   return (
     <>

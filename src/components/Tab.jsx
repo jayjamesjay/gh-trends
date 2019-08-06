@@ -4,7 +4,18 @@ import { LabelSpan } from '../styles/Span';
 import { InputRadio } from '../styles/Input';
 import LabelTab from '../styles/Label';
 
-// Single select of tab
+/**
+ * @module Tab
+ */
+
+/**
+ * Single tab selector
+ *
+ * @property {string} label - name of the tab
+ * @property {boolean} checked - determinates if tab is active
+ * @property {function} onClick - function fired when tab is clicked
+ * @returns {Tab}
+ */
 export default function Tab({ label, checked, onClick }) {
   const click = useCallback(() => onClick(label), [label, onClick]);
 

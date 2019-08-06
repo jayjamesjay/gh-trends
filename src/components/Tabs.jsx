@@ -3,7 +3,18 @@ import PropTypes from 'prop-types';
 import { CategoryMenu } from '../styles/Form';
 import Tab from './Tab';
 
-// Menu to hadle tab selection
+/**
+ * @module Tabs
+ */
+
+/**
+ * Menu to hadle tab selection
+ *
+ * @property {array} labels - names of categories
+ * @property {string} active - name of label which is currently active
+ * @property {function} onClick - function called whenever label is clicked
+ * @returns {Categories}
+ */
 export function Categories({ labels, active, onClick }) {
   return (
     <CategoryMenu>
@@ -20,7 +31,12 @@ Categories.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
-// Tab selection and display currently selected tab
+/**
+ * Shows tab selection and display currently selected tab
+ *
+ * @property {array} children - children of Tabs element
+ * @returns {Tabs}
+ */
 export default function Tabs({ children }) {
   const labels = children.map(child => child.props.label);
   const [activeTab, setActive] = React.useState(labels[0]);

@@ -5,7 +5,18 @@ import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
 import { RepoInfo, identicalItems } from './Data';
 
-// Group of InfoBlocks wrapped in Content
+/**
+ * @module View
+ */
+
+/**
+ * Displays information about repositories from provided data
+ *
+ * @property {array} data - information about all repositories
+ * @property {array} saved - information about repositories which has been saved
+ * @property {function} save - saves repository
+ * @returns {View}
+ */
 export default function View({ data, saved, save }) {
   return (
     <Content>
@@ -23,7 +34,15 @@ View.propTypes = {
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
-// View with button firing loadData function without any id
+/**
+ * View with button firing loadData function
+ *
+ * @property {function} loadData - loads information about more repositories
+ * @property {array} data - information about all repositories
+ * @property {array} saved - information about repositories which has been saved
+ * @property {function} save - saves repository
+ * @returns {ViewSingle}
+ */
 export function ViewSingle(props) {
   const { data, loadData } = props;
 
@@ -44,7 +63,16 @@ ViewSingle.propTypes = {
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
 
-// View with button firing loadData function with specified id
+/**
+ * View with button firing loadData function with specified id
+ *
+ * @property {function} loadData - loads information about more repositories
+ * @property {string} id - id of this View
+ * @property {array} data - information about all repositories
+ * @property {array} saved - information about repositories which has been saved
+ * @property {function} save - saves repository
+ * @returns {ViewId}
+ */
 export function ViewId(props) {
   const { loadData, id } = props;
   const load = useCallback(() => loadData(id), [loadData, id]);

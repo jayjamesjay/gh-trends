@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import formatDate from './Date';
 import { LinkA } from '../styles/Link';
 
+/**
+ * @module Data
+ */
+
 const weekAgo = new Date();
 weekAgo.setDate(weekAgo.getDate() - 7);
 const queryWeek = `created:>${formatDate(weekAgo)}`;
@@ -12,14 +16,29 @@ monthAgo.setMonth(monthAgo.getMonth() - 1);
 const queryMonth = `created:>${formatDate(monthAgo)}`;
 
 const queryAllTime = 'stars:>10';
+
+/**
+ * Query list
+ */
 export const queryList = [queryWeek, queryMonth, queryAllTime];
 
-// Default path for all images
+/**
+ * Default path for all images
+ */
 export const imgPath = './assets/img';
 
-// Compares if two items have identical nameWithOwner
+/**
+ * Compares if two items have identical nameWithOwner
+ *
+ * @param {object} itme - item to campare
+ * @param {object} other - next item to campare
+ * @returns {boolean}
+ */
 export const identicalItems = (item, other) => item.nameWithOwner === other.nameWithOwner;
 
+/**
+ * List of languages with corresponding colors
+ */
 export const languages = {
   '1C Enterprise': '#814CCC',
   ABAP: '#E8274B',
@@ -248,7 +267,22 @@ export const languages = {
   xBase: '#403a40'
 };
 
+/**
+ * Information about repository
+ * @class
+ */
 export class RepoInfo {
+  /**
+   * Creates a RepoInfo
+   *
+   * @param {string} nameWithOwner - name and author of repository
+   * @param {string} url - url of the repository
+   * @param {string} description - description
+   * @param {number} stargazersCount - amount of stars
+   * @param {string} language - programming language
+   * @param {number} forks - amount of forks
+   * @param {string} license - repository license
+   */
   constructor(nameWithOwner, url, description, stargazersCount, language, forks, license) {
     this.nameWithOwner = nameWithOwner;
     this.url = url;
@@ -259,6 +293,12 @@ export class RepoInfo {
     this.license = license;
   }
 
+  /**
+   * Creates RepoInfo from Github API data
+   *
+   * @param {object} item - repository data from Github API
+   * @returns {RepoInfo}
+   */
   static fromGithubRes(item) {
     const { description, language, forks } = item;
     const license = item.license ? item.license.spdx_id : null;
@@ -291,19 +331,46 @@ for (let i = 0; i < initData.length; i += 1) {
   initData[i] = curr;
 }
 
-export default class RepoInfoList {
+/**
+ * List of information about repository
+ * @class
+ */
+class RepoInfoList {
+  /**
+   * Creates a RepoInfoList
+   *
+   * @param {string} id - id of the list
+   * @param {array} data - main content
+   * @param {number} page - last loaded page
+   */
   constructor(id, data, page) {
     this.id = id;
     this.data = data;
     this.page = page;
   }
 
+  /**
+   * Creates RepoInfoList from Github API data
+   *
+   * @param {object} item - list of repository data from Github API
+   * @returns {array}
+   */
   static fromGithubRes(data) {
     return data.map(item => RepoInfo.fromGithubRes(item));
   }
 }
 
-// Creates link to donwload a file
+export default RepoInfoList;
+
+/**
+ * Creates link to donwload a file
+ *
+ * @property {string} filename - name of this file
+ * @property {string} content - raw content of this file
+ * @property {string} dataType - type of data
+ * @property {node} display - visual representation of link
+ * @returns {DownloadLink}
+ */
 export function DownloadLink({ filename, content, dataType, display }) {
   const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(content)}`;
   return (
@@ -324,7 +391,12 @@ DownloadLink.propTypes = {
   display: PropTypes.node.isRequired
 };
 
-// Converts JSON to Markdown
+/**
+ * Converts JSON to Markdown
+ *
+ * @property {array} json - list of data objects
+ * @returns {string}
+ */
 export function jsonToMarkdown(json) {
   return json
     .map(elem => {

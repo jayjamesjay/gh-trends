@@ -1,7 +1,15 @@
 import React from 'react';
 import StyledFooter from '../styles/Footer';
 
-// Footer of the website
+/**
+ * @module Footer
+ */
+
+/**
+ * Footer of the website
+ *
+ * @returns {Footer}
+ */
 export default function Footer() {
   return (
     <StyledFooter>
