@@ -394,7 +394,7 @@ DownloadLink.propTypes = {
 /**
  * Converts JSON to Markdown
  *
- * @property {array} json - list of data objects
+ * @param {array} json - list of data objects
  * @returns {string}
  */
 export function jsonToMarkdown(json) {

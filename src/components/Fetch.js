@@ -1,14 +1,25 @@
-export const defApi = 'https://api.github.com/search/repositories';
-export const sort = 'sort=stars';
-export const perPage = 'per_page=6';
-
 /**
  * @module Fetch
  */
 
 /**
+ * Default Github API url
+ */
+export const defApi = 'https://api.github.com/search/repositories';
+/**
+ * Default sorting option
+ */
+export const sort = 'sort=stars';
+/**
+ * Default amount of repositories per page
+ */
+export const perPage = 'per_page=6';
+
+/**
  * Adds language to query
  *
+ * @param {string} base - current query
+ * @param {string} lang - language which will be added
  * @returns {string}
  */
 export function addLang(base, lang) {
@@ -84,8 +95,12 @@ export class Url {
 /**
  * Fetches data and returns JSON response
  *
+ * @param {string} url - request url
+ * @param {object} signal - AbortSignal object instance used to communicate with/abort a request
  * @returns {Promise}
  */
-export default function getJSON(url, signal) {
+function getJSON(url, signal) {
   return fetch(url, { signal }).then(res => res.json());
 }
+
+export default getJSON;

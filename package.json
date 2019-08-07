@@ -48,7 +48,7 @@
     "coverage": "jest --coverage",
     "lint": "eslint \"src/**/*.jsx\" \"src/**/*.js\"",
     "lintfix": "yarn lint --fix",
-    "doc": "jsdoc \"src/components\""
+    "doc": "jsdoc \"src/components\" -d \"docs\""
   },
   "dependencies": {
     "prop-types": "^15.7.2",
