@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
+import { Url, addLang, defApi, perPage, makeRequest } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, imgPath } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import { FormAlt } from '../styles/Form';
@@ -25,29 +25,16 @@ export default function Search({ save, saved }) {
     };
   });
 
-  const makeRequest = useCallback(
+  const request = useCallback(
     (currData, currPage) => {
-      let newData = currData;
       const preUrl = new Url(defApi).query(search).parts(perPage);
-      if (currPage > 1) {
-        preUrl.parts(`page=${currPage + 1}`);
-      }
-
-      const url = preUrl.toString();
-      getJSON(url, signal)
-        .then(result => {
-          newData = newData.concat(RepoInfoList.fromGithubRes(result.items));
-          const newPage = currPage + 1;
-
-          setRepoInfo(new RepoInfoList('Search', newData, newPage));
-        })
-        .catch(() => {});
+      const infoList = new RepoInfoList('Search', currData, currPage);
+      return makeRequest(infoList, preUrl, signal, setRepoInfo);
     },
-    [search, signal]
+    [search, signal, setRepoInfo]
   );
-
-  const loadData = () => makeRequest(repoInfo.data, repoInfo.page);
-  const reloadData = useCallback(() => makeRequest([], 1), [makeRequest]);
+  const loadData = () => request(repoInfo.data, repoInfo.page);
+  const reloadData = useCallback(() => request([], 1), [request]);
   const onSubmit = useCallback(event => event.preventDefault(), []);
   const onKeyPress = useCallback(event => (event.key === 'Enter' ? reloadData() : {}), [
     reloadData
