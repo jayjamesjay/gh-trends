@@ -14,6 +14,7 @@ exports[`<Article /> renders default 1`] = `
   flex-flow: column nowrap;
   background: linear-gradient( #fff 0%,#fff 0.3rem,#000 0.3rem,#000 0.6rem,#fff 0.6rem );
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  border-radius: 0.5rem;
   text-align: left;
   word-break: break-word;
 }
@@ -21,7 +22,7 @@ exports[`<Article /> renders default 1`] = `
 @media screen and (min-width:40rem) {
   .c0 {
     min-width: 16.5rem;
-    margin: 2.5rem 1.5rem;
+    margin: 1.5rem 1rem;
     -webkit-flex: 1 0 27%;
     -ms-flex: 1 0 27%;
     flex: 1 0 27%;
@@ -29,7 +30,6 @@ exports[`<Article /> renders default 1`] = `
 }
 
 <Article
-  margin="2.5rem 1.5rem"
   theme={
     Object {
       "bg": "#fafafa",
@@ -45,7 +45,6 @@ exports[`<Article /> renders default 1`] = `
       Object {
         "$$typeof": Symbol(react.forward_ref),
         "_foldedDefaultProps": Object {
-          "margin": "2.5rem 1.5rem",
           "theme": Object {
             "bg": "#fafafa",
             "bgAdd": "#fff",
@@ -72,9 +71,7 @@ exports[`<Article /> renders default 1`] = `
             [Function],
             " 0.6rem );box-shadow:",
             [Function],
-            ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:",
-            [Function],
-            ";flex:1 0 27%;}",
+            ";border-radius:0.5rem;text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:1.5rem 1rem;flex:1 0 27%;}",
           ],
         },
         "displayName": "Article",
@@ -88,7 +85,6 @@ exports[`<Article /> renders default 1`] = `
       }
     }
     forwardedRef={null}
-    margin="2.5rem 1.5rem"
     theme={
       Object {
         "bg": "#fafafa",
@@ -120,6 +116,7 @@ exports[`<Article /> renders with theme 1`] = `
   flex-flow: column nowrap;
   background: linear-gradient( #202124 0%,#202124 0.3rem,#fff 0.3rem,#fff 0.6rem,#202124 0.6rem );
   box-shadow: none;
+  border-radius: 0.5rem;
   text-align: left;
   word-break: break-word;
 }
@@ -127,7 +124,7 @@ exports[`<Article /> renders with theme 1`] = `
 @media screen and (min-width:40rem) {
   .c0 {
     min-width: 16.5rem;
-    margin: 2.5rem 1.5rem;
+    margin: 1.5rem 1rem;
     -webkit-flex: 1 0 27%;
     -ms-flex: 1 0 27%;
     flex: 1 0 27%;
@@ -135,7 +132,6 @@ exports[`<Article /> renders with theme 1`] = `
 }
 
 <Article
-  margin="2.5rem 1.5rem"
   theme={
     Object {
       "bg": "#000",
@@ -151,7 +147,6 @@ exports[`<Article /> renders with theme 1`] = `
       Object {
         "$$typeof": Symbol(react.forward_ref),
         "_foldedDefaultProps": Object {
-          "margin": "2.5rem 1.5rem",
           "theme": Object {
             "bg": "#fafafa",
             "bgAdd": "#fff",
@@ -178,9 +173,7 @@ exports[`<Article /> renders with theme 1`] = `
             [Function],
             " 0.6rem );box-shadow:",
             [Function],
-            ";text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:",
-            [Function],
-            ";flex:1 0 27%;}",
+            ";border-radius:0.5rem;text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:1.5rem 1rem;flex:1 0 27%;}",
           ],
         },
         "displayName": "Article",
@@ -194,7 +187,6 @@ exports[`<Article /> renders with theme 1`] = `
       }
     }
     forwardedRef={null}
-    margin="2.5rem 1.5rem"
     theme={
       Object {
         "bg": "#000",

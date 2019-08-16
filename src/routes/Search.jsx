@@ -4,7 +4,7 @@ import { ViewSingle } from '../components/View';
 import getJSON, { Url, addLang, defApi, perPage } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, imgPath } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
-import Form from '../styles/Form';
+import { FormAlt } from '../styles/Form';
 import TextInput from '../styles/Input';
 import { H1Alt } from '../styles/Headers';
 import { Img } from '../styles/Img';
@@ -74,7 +74,7 @@ export default function Search({ save, saved }) {
       <header>
         <H1Alt>Search for repositories</H1Alt>
       </header>
-      <Form onSubmit={onSubmit} noValidate>
+      <FormAlt onSubmit={onSubmit} noValidate>
         <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Add language" />
         <TextInput
           aria-label="Search for repositories"
@@ -87,7 +87,7 @@ export default function Search({ save, saved }) {
         <ButtonIcon onClick={reloadData}>
           <Img src={`${imgPath}/search.svg`} alt="Search" />
         </ButtonIcon>
-      </Form>
+      </FormAlt>
       <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
     </>
   );

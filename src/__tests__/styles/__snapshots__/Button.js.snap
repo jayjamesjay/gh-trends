@@ -21,7 +21,7 @@ exports[`<Button /> renders default 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
         ],
@@ -70,7 +70,7 @@ exports[`<Button /> renders with theme 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
         ],
@@ -119,7 +119,7 @@ exports[`<ButtonMain /> renders default 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
           "margin:auto;padding:1rem;box-shadow:",
@@ -175,7 +175,7 @@ exports[`<ButtonMain /> renders with theme 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
           "margin:auto;padding:1rem;box-shadow:",
@@ -609,7 +609,7 @@ exports[`renders default <ButtonTheme /> 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
           "width:4rem;height:4rem;margin:0 auto;background:transparent;@media screen and (min-width:40rem){margin:0 1rem;}",
@@ -661,7 +661,7 @@ exports[`renders default <MenuToggle /> 1`] = `
         "rules": Array [
           "cursor:pointer;background:",
           [Function],
-          ";border:0;font-size:1.2rem;color:",
+          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
           [Function],
           ";text-transform:uppercase;",
           "margin:0 1rem;padding:0;background:transparent;overflow:hidden;@media screen and (min-width:40rem){display:none;}",

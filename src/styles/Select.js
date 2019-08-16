@@ -7,6 +7,7 @@ const Select = styled.select`
   padding: 0.5rem;
   background: ${props => props.theme.bgAdd};
   border: none;
+  border-radius: 0.5rem;
   box-shadow: ${props => props.theme.shadow};
   font-size: 1.3rem;
   color: ${props => props.theme.color};

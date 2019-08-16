@@ -7,6 +7,7 @@ exports[`<Select /> renders default 1`] = `
   padding: 0.5rem;
   background: #fff;
   border: none;
+  border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
   font-size: 1.3rem;
   color: #000;
@@ -49,7 +50,7 @@ exports[`<Select /> renders default 1`] = `
           "rules": Array [
             "max-width:80%;margin:0.5rem;padding:0.5rem;background:",
             [Function],
-            ";border:none;box-shadow:",
+            ";border:none;border-radius:0.5rem;box-shadow:",
             [Function],
             ";font-size:1.3rem;color:",
             [Function],
@@ -91,6 +92,7 @@ exports[`<Select /> renders with theme 1`] = `
   padding: 0.5rem;
   background: #202124;
   border: none;
+  border-radius: 0.5rem;
   box-shadow: none;
   font-size: 1.3rem;
   color: #fff;
@@ -133,7 +135,7 @@ exports[`<Select /> renders with theme 1`] = `
           "rules": Array [
             "max-width:80%;margin:0.5rem;padding:0.5rem;background:",
             [Function],
-            ";border:none;box-shadow:",
+            ";border:none;border-radius:0.5rem;box-shadow:",
             [Function],
             ";font-size:1.3rem;color:",
             [Function],

@@ -17,19 +17,19 @@ const Article = styled.article`
     ${props => props.theme.bgAdd} 0.6rem
   );
   box-shadow: ${props => props.theme.shadow};
+  border-radius: 0.5rem;
   text-align: left;
   word-break: break-word;
 
   @media screen and (min-width: 40rem) {
     min-width: 16.5rem;
-    margin: ${props => props.margin};
+    margin: 1.5rem 1rem;
     flex: 1 0 27%;
   }
 `;
 
 Article.defaultProps = {
-  theme: light,
-  margin: '2.5rem 1.5rem'
+  theme: light
 };
 
 export default Article;

@@ -20,6 +20,7 @@ exports[`<LabelTab /> renders default 1`] = `
   left: 5%;
   z-index: 20;
   background: #fff;
+  border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
   -webkit-transition: -webkit-transform 0.15s ease-in-out;
   -webkit-transition: transform 0.15s ease-in-out;
@@ -61,7 +62,7 @@ exports[`<LabelTab /> renders default 1`] = `
           "rules": Array [
             "display:inherit;padding:1rem 1.5rem;position:relative;background:transparent;overflow:hidden;font-size:1.3rem;cursor:pointer;&::before{content:'';width:90%;height:90%;position:absolute;top:5%;left:5%;z-index:20;background:",
             [Function],
-            ";box-shadow:",
+            ";border-radius:0.5rem;box-shadow:",
             [Function],
             ";transition:transform 0.15s ease-in-out;transform:translateX(",
             [Function],
@@ -116,6 +117,7 @@ exports[`<LabelTab /> renders with theme 1`] = `
   left: 5%;
   z-index: 20;
   background: #202124;
+  border-radius: 0.5rem;
   box-shadow: none;
   -webkit-transition: -webkit-transform 0.15s ease-in-out;
   -webkit-transition: transform 0.15s ease-in-out;
@@ -157,7 +159,7 @@ exports[`<LabelTab /> renders with theme 1`] = `
           "rules": Array [
             "display:inherit;padding:1rem 1.5rem;position:relative;background:transparent;overflow:hidden;font-size:1.3rem;cursor:pointer;&::before{content:'';width:90%;height:90%;position:absolute;top:5%;left:5%;z-index:20;background:",
             [Function],
-            ";box-shadow:",
+            ";border-radius:0.5rem;box-shadow:",
             [Function],
             ";transition:transform 0.15s ease-in-out;transform:translateX(",
             [Function],

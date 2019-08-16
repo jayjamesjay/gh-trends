@@ -19,6 +19,7 @@ const LabelTab = styled.label`
     left: 5%;
     z-index: 20;
     background: ${props => props.theme.bgAdd};
+    border-radius: 0.5rem;
     box-shadow: ${props => props.theme.shadow};
     transition: transform 0.15s ease-in-out;
     transform: translateX(${props => (props.active ? '0%' : '-200%')});

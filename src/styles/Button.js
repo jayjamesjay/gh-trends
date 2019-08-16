@@ -5,6 +5,7 @@ export const Button = styled.button`
   cursor: pointer;
   background: ${props => props.theme.bgAdd};
   border: 0;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
   color: ${props => props.theme.color};
   text-transform: uppercase;
