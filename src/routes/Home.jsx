@@ -1,125 +1,76 @@
-import React, { Component } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import getJSON, { Url, defApi, sort, perPage } from '../components/Fetch';
-import Tabs from '../components/Tabs';
-import { ViewId } from '../components/View';
-import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/Data';
+import { Url, defApi, perPage, addLang, makeRequest } from '../components/Fetch';
+import { ViewSingle } from '../components/View';
+import RepoInfoList, { queries, RepoInfo, languages } from '../components/Data';
 import { MainHeader, H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
-import { SelectLang } from '../components/Select';
+import Select from '../components/Select';
 
-const langs = Object.keys(languages);
+const langs = ['All', ...Object.keys(languages)];
+const timeList = Object.keys(queries);
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [
-        new RepoInfoList('Week', initData, 1),
-        new RepoInfoList('Month', initData, 1),
-        new RepoInfoList('All Time', initData, 1)
-      ],
-      lang: 'all'
+export default function Home({ save, saved }) {
+  const [lang, setLang] = React.useState('All');
+  const [time, setTime] = React.useState('Week');
+  const [query, setQuery] = React.useState(queries[time]);
+  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList('All', [], 1));
+  const abortController = new AbortController();
+  const { signal } = abortController;
+
+  useEffect(() => {
+    reloadData();
+
+    return () => {
+      abortController.abort();
     };
-  }
+  }, [lang, time]);
 
-  componentDidMount() {
-    const {
-      reloadData,
-      state: { lang }
-    } = this;
-    reloadData(lang);
-  }
+  const selectLang = useCallback(
+    event => {
+      const newLang = event.target.value;
+      const newQuery = addLang(queries[time], newLang);
 
-  componentWillUnmount() {
-    if (this.asyncRequest) {
-      this.asyncRequest.cancel();
-    }
-  }
+      setLang(newLang);
+      setQuery(newQuery);
+    },
+    [query]
+  );
 
-  makeRequest = (lang, data, ...id) => {
-    const currData = data;
-    let idxList;
+  const selectTime = useCallback(
+    event => {
+      const newTime = event.target.value;
+      const newQuery = addLang(queries[newTime], lang);
 
-    if (id[0]) {
-      idxList = [currData.findIndex(elem => elem.id === id[0])];
-    } else {
-      idxList = [0, 1, 2];
-    }
+      setTime(newTime);
+      setQuery(newQuery);
+    },
+    [query]
+  );
 
-    idxList.forEach(i => {
-      const url = new Url(defApi)
-        .query(queryList[i])
-        .lang(lang)
-        .parts(sort, perPage, `page=${currData[i].page + 1}`)
-        .toString();
+  const request = useCallback(
+    (currData, currPage) => {
+      const preUrl = new Url(defApi).query(query).parts(perPage);
+      const infoList = new RepoInfoList('Search', currData, currPage);
+      return makeRequest(infoList, preUrl, signal, setRepoInfo);
+    },
+    [query, signal, setRepoInfo]
+  );
+  const loadData = () => request(repoInfo.data, repoInfo.page);
+  const reloadData = useCallback(() => request([], 1), [request]);
 
-      this.asyncRequest = getJSON(url)
-        .then(result => {
-          currData[i].data = currData[i].data.concat(RepoInfoList.fromGithubRes(result.items));
-          currData[i].page += 1;
-
-          this.asyncRequest = null;
-
-          this.setState({
-            data: currData
-          });
-        })
-        .catch(() => {
-          this.asyncRequest = null;
-        });
-    });
-  };
-
-  loadData = id => {
-    const { data, lang } = this.state;
-    this.makeRequest(lang, data, id);
-  };
-
-  reloadData = lang => {
-    this.makeRequest(lang, [
-      new RepoInfoList('Week', [], 0),
-      new RepoInfoList('Month', [], 0),
-      new RepoInfoList('All Time', [], 0)
-    ]);
-  };
-
-  onSelect = event => {
-    if (this.asyncRequest) {
-      this.asyncRequest.cancel();
-    }
-
-    const lang = event.target.value;
-    this.setState({ lang });
-    this.reloadData(lang);
-  };
-
-  render() {
-    const {
-      loadData,
-      onSelect,
-      props: { save, saved },
-      state: { data, lang }
-    } = this;
-
-    return (
-      <>
-        <MainHeader>
-          <H1>Trending repositories</H1>
-        </MainHeader>
-        <FormAlt>
-          <SelectLang curr={lang} onSelect={onSelect} options={langs} label="Language" />
-        </FormAlt>
-        <Tabs>
-          {data.map(elem => (
-            <div key={elem.id} label={elem.id}>
-              <ViewId id={elem.id} data={elem.data} loadData={loadData} save={save} saved={saved} />
-            </div>
-          ))}
-        </Tabs>
-      </>
-    );
-  }
+  return (
+    <>
+      <MainHeader>
+        <H1>Trending repositories</H1>
+      </MainHeader>
+      <FormAlt>
+        <Select curr={lang} onSelect={selectLang} options={langs} label="Languages" />
+        <Select curr={time} onSelect={selectTime} options={timeList} label="Periods of time" />
+      </FormAlt>
+      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
+    </>
+  );
 }
 
 Home.propTypes = {

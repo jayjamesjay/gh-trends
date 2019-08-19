@@ -18,9 +18,9 @@ const queryMonth = `created:>${formatDate(monthAgo)}`;
 const queryAllTime = 'stars:>10';
 
 /**
- * Query list
+ * Queries generated for different periods of time
  */
-export const queryList = [queryWeek, queryMonth, queryAllTime];
+export const queries = { Week: queryWeek, Month: queryMonth, 'All Time': queryAllTime };
 
 /**
  * Default path for all images
