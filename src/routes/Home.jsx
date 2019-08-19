@@ -6,7 +6,7 @@ import { ViewId } from '../components/View';
 import RepoInfoList, { queryList, initData, RepoInfo, languages } from '../components/Data';
 import { MainHeader, H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
-import SelectLang from '../components/SelectLang';
+import { SelectLang } from '../components/Select';
 
 const langs = Object.keys(languages);
 
@@ -108,7 +108,7 @@ export default class Home extends Component {
           <H1>Trending repositories</H1>
         </MainHeader>
         <FormAlt>
-          <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Language" />
+          <SelectLang curr={lang} onSelect={onSelect} options={langs} label="Language" />
         </FormAlt>
         <Tabs>
           {data.map(elem => (

@@ -1,6 +1,6 @@
 import Search from '../../routes/Search';
 import TextInput from '../../styles/Input';
-import SelectLang from '../../components/SelectLang';
+import { SelectLang } from '../../components/Select';
 
 describe('<Search />', () => {
   const func = () => {};

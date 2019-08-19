@@ -8,7 +8,7 @@ import { FormAlt } from '../styles/Form';
 import TextInput from '../styles/Input';
 import { H1Alt } from '../styles/Headers';
 import { Img } from '../styles/Img';
-import SelectLang from '../components/SelectLang';
+import { SelectLang } from '../components/Select';
 
 const langs = Object.keys(languages);
 
@@ -62,7 +62,7 @@ export default function Search({ save, saved }) {
         <H1Alt>Search for repositories</H1Alt>
       </header>
       <FormAlt onSubmit={onSubmit} noValidate>
-        <SelectLang curr={lang} onSelect={onSelect} languages={langs} label="Add language" />
+        <SelectLang curr={lang} onSelect={onSelect} options={langs} label="Add language" />
         <TextInput
           aria-label="Search for repositories"
           required
