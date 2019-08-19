@@ -343,8 +343,7 @@ class RepoInfoList {
    * @param {array} data - main content
    * @param {number} page - last loaded page
    */
-  constructor(id, data, page) {
-    this.id = id;
+  constructor(data, page) {
     this.data = data;
     this.page = page;
   }

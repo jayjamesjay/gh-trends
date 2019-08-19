@@ -50,22 +50,3 @@ describe('<ViewSingle />', () => {
     expect(tempId).toEqual(id);
   });
 });
-
-describe('<ViewId />', () => {
-  const id = 'view-1';
-  let tempId;
-  const func = () => {};
-  const load = id => {
-    tempId = id;
-  };
-
-  it('fires loadData with id', () => {
-    const view = mount(<ViewId id={id} data={initData} saved={[]} save={func} loadData={load} />);
-
-    view
-      .find(ButtonMain)
-      .at(0)
-      .simulate('click');
-    expect(tempId).toEqual(id);
-  });
-});

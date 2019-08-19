@@ -25,7 +25,7 @@ export function SelectLang(props) {
   return (
     <>
       <ImgIcon src={`${imgPath}/filter-list.svg`} alt={label} title={label} />
-      <Select {...props} options={langs} label='Languages' />
+      <Select {...props} options={langs} label="Languages" />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import { Url, addLang, defApi, perPage, makeRequest } from '../components/Fetch';
+import makeRequest, { Url, addLang, defApi, perPage } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, imgPath } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import { FormAlt } from '../styles/Form';
@@ -15,7 +15,7 @@ const langs = Object.keys(languages);
 export default function Search({ save, saved }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
-  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList('Search', [], 1));
+  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const abortController = new AbortController();
   const { signal } = abortController;
 
@@ -28,7 +28,7 @@ export default function Search({ save, saved }) {
   const request = useCallback(
     (currData, currPage) => {
       const preUrl = new Url(defApi).query(search).parts(perPage);
-      const infoList = new RepoInfoList('Search', currData, currPage);
+      const infoList = new RepoInfoList(currData, currPage);
       return makeRequest(infoList, preUrl, signal, setRepoInfo);
     },
     [search, signal, setRepoInfo]

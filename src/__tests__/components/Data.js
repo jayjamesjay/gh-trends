@@ -98,11 +98,9 @@ describe('<RepoInfoList />', () => {
   });
 
   it('constructs full with id', () => {
-    const id = 'Week';
     const page = 1;
-    const infoList = new RepoInfoList(id, expectedData, page);
+    const infoList = new RepoInfoList(expectedData, page);
     const expectedList = {
-      id: id,
       data: expectedData,
       page: page
     };

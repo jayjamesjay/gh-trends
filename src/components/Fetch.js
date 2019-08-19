@@ -101,20 +101,20 @@ export class Url {
  * @param {object} signal - AbortSignal object instance used to communicate with/abort a request
  * @returns {Promise}
  */
-function getJSON(url, signal) {
+export function getJSON(url, signal) {
   return fetch(url, { signal }).then(res => res.json());
 }
 
 /**
  * Fetches data and saves it as RepoInfoList using callback
  *
- * @param {RepoInfoList} infoList - current information list (id, data, page)
+ * @param {RepoInfoList} infoList - current information list (data, page)
  * @param {Url} url - request url
  * @param {object} signal - AbortSignal object instance used to communicate with/abort a request
  * @param {function} callback - function called on fetched data
  * @returns {Promise}
  */
-export function makeRequest(infoList, url, signal, callback) {
+function request(infoList, url, signal, callback) {
   let { data, page } = infoList;
   const preUrl = url;
 
@@ -129,9 +129,9 @@ export function makeRequest(infoList, url, signal, callback) {
       data = data.concat(RepoInfoList.fromGithubRes(result.items));
       page += 1;
 
-      callback(new RepoInfoList(infoList.id, data, page));
+      callback(new RepoInfoList(data, page));
     })
     .catch(() => {});
 }
 
-export default getJSON;
+export default request;
