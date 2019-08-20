@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { light } from './Theme';
 
-export const MainHeader = styled.header`
-  padding: 1rem 0.5rem 0 0.5rem;
-`;
-
 const Header = styled.header`
   display: flex;
   justify-content: space-between;
@@ -27,13 +23,9 @@ Header.defaultProps = {
 };
 
 export const H1 = styled.h1`
-  margin: 2rem 0 0 0;
+  margin: 3rem auto 1rem auto;
   font-size: 2rem;
   text-transform: uppercase;
-`;
-
-export const H1Alt = styled(H1)`
-  margin: 3rem auto 1rem auto;
 `;
 
 export const H2 = styled.h2`

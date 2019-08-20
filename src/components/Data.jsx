@@ -20,7 +20,11 @@ const queryAllTime = 'stars:>10';
 /**
  * Queries generated for different periods of time
  */
-export const queries = { Week: queryWeek, Month: queryMonth, 'All Time': queryAllTime };
+export const queries = {
+  'This Week': queryWeek,
+  'This Month': queryMonth,
+  'All Time': queryAllTime
+};
 
 /**
  * Default path for all images
@@ -332,14 +336,13 @@ for (let i = 0; i < initData.length; i += 1) {
 }
 
 /**
- * List of information about repository
+ * List of information about repositories
  * @class
  */
 class RepoInfoList {
   /**
    * Creates a RepoInfoList
    *
-   * @param {string} id - id of the list
    * @param {array} data - main content
    * @param {number} page - last loaded page
    */
@@ -349,13 +352,25 @@ class RepoInfoList {
   }
 
   /**
-   * Creates RepoInfoList from Github API data
+   * Creates data part of RepoInfoList from Github API data
    *
-   * @param {object} item - list of repository data from Github API
+   * @param {array} data - list of repository data from Github API
    * @returns {array}
    */
   static fromGithubRes(data) {
     return data.map(item => RepoInfo.fromGithubRes(item));
+  }
+
+  /**
+   * Parses and adds Github API data to this RepoInfoList
+   * and increases the page by 1.
+   *
+   * @param {array} data - list of repository data from Github API
+   */
+  update(data) {
+    const content = RepoInfoList.fromGithubRes(data);
+    this.data = this.data.concat(content);
+    this.page += 1;
   }
 }
 

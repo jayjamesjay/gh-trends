@@ -19,11 +19,6 @@ it('renders default <H1 />', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-it('renders default <H1Alt />', () => {
-  const wrapper = mount(<H1Alt />);
-  expect(wrapper).toMatchSnapshot();
-});
-
 it('renders default <H2 />', () => {
   const wrapper = mount(<H2 />);
   expect(wrapper).toMatchSnapshot();

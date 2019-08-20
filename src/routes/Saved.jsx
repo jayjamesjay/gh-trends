@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import View from '../components/View';
-import { Categories } from '../components/Tabs';
-import { H1Alt } from '../styles/Headers';
+import Categories from '../components/Categories';
+import { H1 } from '../styles/Headers';
 import { ImgIcon } from '../styles/Img';
 import { Bar } from '../styles/Main';
 import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
@@ -29,7 +29,7 @@ export default function Saved({ data, save, removeAll }) {
     content = (
       <>
         <header>
-          <H1Alt>Saved repositories</H1Alt>
+          <H1>Saved repositories</H1>
         </header>
         <section>
           <Bar>
@@ -44,7 +44,7 @@ export default function Saved({ data, save, removeAll }) {
       </>
     );
   } else {
-    content = <H1Alt>You haven&apos;t saved any repos...</H1Alt>;
+    content = <H1>You haven&apos;t saved any repos...</H1>;
   }
 
   return content;

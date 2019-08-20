@@ -20,7 +20,7 @@ import { imgPath } from './Data';
  */
 export function SelectLang(props) {
   const { options, label } = props;
-  const langs = ['All'].concat(options);
+  const langs = ['All Languages'].concat(options);
 
   return (
     <>

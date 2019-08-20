@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { light } from './Theme';
 
-const LabelTab = styled.label`
+const LabelCategory = styled.label`
   display: inherit;
   padding: 1rem 1.5rem;
   position: relative;
@@ -26,8 +26,8 @@ const LabelTab = styled.label`
   }
 `;
 
-LabelTab.defaultProps = {
+LabelCategory.defaultProps = {
   theme: light
 };
 
-export default LabelTab;
+export default LabelCategory;

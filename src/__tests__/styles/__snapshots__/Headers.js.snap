@@ -59,7 +59,7 @@ exports[`<Header /> renders default 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Headers__Header-sc-1tudo8a-1",
+          "componentId": "Headers__Header-sc-1tudo8a-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -71,7 +71,7 @@ exports[`<Header /> renders default 1`] = `
         "displayName": "Headers__Header",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+        "styledComponentId": "Headers__Header-sc-1tudo8a-0",
         "target": "header",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -155,7 +155,7 @@ exports[`<Header /> renders with theme 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Headers__Header-sc-1tudo8a-1",
+          "componentId": "Headers__Header-sc-1tudo8a-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -167,7 +167,7 @@ exports[`<Header /> renders with theme 1`] = `
         "displayName": "Headers__Header",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Headers__Header-sc-1tudo8a-1",
+        "styledComponentId": "Headers__Header-sc-1tudo8a-0",
         "target": "header",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -194,7 +194,7 @@ exports[`<Header /> renders with theme 1`] = `
 
 exports[`renders default <H1 /> 1`] = `
 .c0 {
-  margin: 2rem 0 0 0;
+  margin: 3rem auto 1rem auto;
   font-size: 2rem;
   text-transform: uppercase;
 }
@@ -206,17 +206,17 @@ exports[`renders default <H1 /> 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Headers__H1-sc-1tudo8a-2",
+          "componentId": "Headers__H1-sc-1tudo8a-1",
           "isStatic": true,
           "lastClassName": "c0",
           "rules": Array [
-            "margin:2rem 0 0 0;font-size:2rem;text-transform:uppercase;",
+            "margin:3rem auto 1rem auto;font-size:2rem;text-transform:uppercase;",
           ],
         },
         "displayName": "Headers__H1",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Headers__H1-sc-1tudo8a-2",
+        "styledComponentId": "Headers__H1-sc-1tudo8a-1",
         "target": "h1",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -232,50 +232,6 @@ exports[`renders default <H1 /> 1`] = `
 </Headers__H1>
 `;
 
-exports[`renders default <H1Alt /> 1`] = `
-.c0 {
-  margin: 2rem 0 0 0;
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin: 3rem auto 1rem auto;
-}
-
-<Headers__H1Alt>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Headers__H1Alt-sc-1tudo8a-3",
-          "isStatic": true,
-          "lastClassName": "c0",
-          "rules": Array [
-            "margin:2rem 0 0 0;font-size:2rem;text-transform:uppercase;",
-            "margin:3rem auto 1rem auto;",
-          ],
-        },
-        "displayName": "Headers__H1Alt",
-        "foldedComponentIds": Array [
-          "Headers__H1-sc-1tudo8a-2",
-        ],
-        "render": [Function],
-        "styledComponentId": "Headers__H1Alt-sc-1tudo8a-3",
-        "target": "h1",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-  >
-    <h1
-      className="c0"
-    />
-  </StyledComponent>
-</Headers__H1Alt>
-`;
-
 exports[`renders default <H2 /> 1`] = `
 .c0 {
   margin: 0.2rem 0;
@@ -289,7 +245,7 @@ exports[`renders default <H2 /> 1`] = `
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Headers__H2-sc-1tudo8a-4",
+          "componentId": "Headers__H2-sc-1tudo8a-2",
           "isStatic": true,
           "lastClassName": "c0",
           "rules": Array [
@@ -299,7 +255,7 @@ exports[`renders default <H2 /> 1`] = `
         "displayName": "Headers__H2",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Headers__H2-sc-1tudo8a-4",
+        "styledComponentId": "Headers__H2-sc-1tudo8a-2",
         "target": "h2",
         "toString": [Function],
         "warnTooManyClasses": [Function],

@@ -1,6 +1,6 @@
 import Saved from '../../routes/Saved';
 import { initData, DownloadLink } from '../../components/Data';
-import Tab from '../../components/Tab';
+import Category from '../../components/Category';
 
 describe('<Saved />', () => {
   let wrapper;
@@ -31,7 +31,7 @@ describe('<Saved />', () => {
     const name = `saved.md`;
     const wrapper = mount(<Saved save={func} removeAll={func} data={initData} />);
     wrapper
-      .find(Tab)
+      .find(Category)
       .at(1)
       .simulate('click');
 
@@ -45,7 +45,7 @@ describe('<Saved />', () => {
 
     const wrapper = mount(<Saved save={func} removeAll={func} data={initData} />);
     wrapper
-      .find(Tab)
+      .find(Category)
       .at(1)
       .simulate('click');
 

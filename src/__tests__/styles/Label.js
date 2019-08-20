@@ -1,15 +1,15 @@
-import LabelTab from '../../styles/Label';
+import LabelCategory from '../../styles/Label';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 
-describe('<LabelTab />', () => {
+describe('<LabelCategory />', () => {
   it('renders default', () => {
-    const wrapper = mount(<LabelTab />);
+    const wrapper = mount(<LabelCategory />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<LabelTab theme={dark} />);
+    const wrapper = mount(<LabelCategory theme={dark} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

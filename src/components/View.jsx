@@ -62,4 +62,3 @@ ViewSingle.propTypes = {
   loadData: PropTypes.func.isRequired,
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };
-

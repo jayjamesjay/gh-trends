@@ -2,28 +2,28 @@ import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { LabelSpan } from '../styles/Span';
 import { InputRadio } from '../styles/Input';
-import LabelTab from '../styles/Label';
+import LabelCategory from '../styles/Label';
 
 /**
- * @module Tab
+ * @module Category
  */
 
 /**
- * Single tab selector
+ * Single category selector
  *
- * @property {string} label - name of the tab
- * @property {boolean} checked - determinates if tab is active
- * @property {function} onClick - function fired when tab is clicked
- * @returns {Tab}
+ * @property {string} label - name of the category
+ * @property {boolean} checked - determinates if category is active
+ * @property {function} onClick - function fired when category is clicked
+ * @returns {Category}
  */
-export default function Tab({ label, checked, onClick }) {
+export default function Category({ label, checked, onClick }) {
   const click = useCallback(() => onClick(label), [label, onClick]);
 
   return (
     <div onClick={click} role="radio" aria-checked={checked} onKeyPress={click} tabIndex="0">
-      <LabelTab active={checked} htmlFor={label}>
+      <LabelCategory active={checked} htmlFor={label}>
         <LabelSpan>{label}</LabelSpan>
-      </LabelTab>
+      </LabelCategory>
       <InputRadio
         id={label}
         type="radio"
@@ -36,7 +36,7 @@ export default function Tab({ label, checked, onClick }) {
   );
 }
 
-Tab.propTypes = {
+Category.propTypes = {
   label: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired

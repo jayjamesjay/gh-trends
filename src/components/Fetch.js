@@ -1,5 +1,3 @@
-import RepoInfoList from './Data';
-
 /**
  * @module Fetch
  */
@@ -29,7 +27,7 @@ export function addLang(base, lang) {
 
   if (lang === 'C++') {
     result += ' language:"cpp"';
-  } else if (lang !== 'all') {
+  } else if (lang !== 'All' && lang !== 'All Languages') {
     result += ` language:"${lang}"`;
   }
 
@@ -114,9 +112,10 @@ export function getJSON(url, signal) {
  * @param {function} callback - function called on fetched data
  * @returns {Promise}
  */
-function request(infoList, url, signal, callback) {
-  let { data, page } = infoList;
+function getAndSave(infoList, url, signal, callback) {
   const preUrl = url;
+  const { page } = infoList;
+  const newInfoList = infoList;
 
   if (page > 1) {
     preUrl.parts(`page=${page + 1}`);
@@ -126,12 +125,10 @@ function request(infoList, url, signal, callback) {
 
   return getJSON(urlStr, signal)
     .then(result => {
-      data = data.concat(RepoInfoList.fromGithubRes(result.items));
-      page += 1;
-
-      callback(new RepoInfoList(data, page));
+      newInfoList.update(result.items);
+      callback(newInfoList);
     })
     .catch(() => {});
 }
 
-export default request;
+export default getAndSave;

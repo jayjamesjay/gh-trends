@@ -1,18 +1,18 @@
 import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import makeRequest, { Url, defApi, perPage, addLang } from '../components/Fetch';
+import getAndSave, { Url, defApi, perPage, addLang } from '../components/Fetch';
 import { ViewSingle } from '../components/View';
 import RepoInfoList, { queries, RepoInfo, languages, initData } from '../components/Data';
-import { MainHeader, H1 } from '../styles/Headers';
+import { H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
 import Select from '../components/Select';
 
-const langs = ['All', ...Object.keys(languages)];
+const langs = ['All Languages', ...Object.keys(languages)];
 const timeList = Object.keys(queries);
 
 export default function Home({ save, saved }) {
   const [lang, setLang] = React.useState('All');
-  const [time, setTime] = React.useState('Week');
+  const [time, setTime] = React.useState('This Week');
   const [query, setQuery] = React.useState(queries[time]);
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList(initData, 1));
   const abortController = new AbortController();
@@ -48,7 +48,7 @@ export default function Home({ save, saved }) {
     (currData, currPage) => {
       const preUrl = new Url(defApi).query(query).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return makeRequest(infoList, preUrl, signal, setRepoInfo);
+      return getAndSave(infoList, preUrl, signal, setRepoInfo);
     },
     [query, signal, setRepoInfo]
   );
@@ -65,9 +65,9 @@ export default function Home({ save, saved }) {
 
   return (
     <>
-      <MainHeader>
+      <header>
         <H1>Trending repositories</H1>
-      </MainHeader>
+      </header>
       <FormAlt>
         <Select curr={lang} onSelect={selectLang} options={langs} label="Languages" />
         <Select curr={time} onSelect={selectTime} options={timeList} label="Periods of time" />

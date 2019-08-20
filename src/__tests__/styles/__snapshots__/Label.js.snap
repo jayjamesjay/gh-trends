@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LabelTab /> renders default 1`] = `
+exports[`<LabelCategory /> renders default 1`] = `
 .c0 {
   display: inherit;
   padding: 1rem 1.5rem;
@@ -30,7 +30,7 @@ exports[`<LabelTab /> renders default 1`] = `
   transform: translateX(-200%);
 }
 
-<Label__LabelTab
+<Label__LabelCategory
   theme={
     Object {
       "bg": "#fafafa",
@@ -56,7 +56,7 @@ exports[`<LabelTab /> renders default 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Label__LabelTab-icvmzg-0",
+          "componentId": "Label__LabelCategory-icvmzg-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -69,10 +69,10 @@ exports[`<LabelTab /> renders default 1`] = `
             ");}",
           ],
         },
-        "displayName": "Label__LabelTab",
+        "displayName": "Label__LabelCategory",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Label__LabelTab-icvmzg-0",
+        "styledComponentId": "Label__LabelCategory-icvmzg-0",
         "target": "label",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -94,10 +94,10 @@ exports[`<LabelTab /> renders default 1`] = `
       className="c0"
     />
   </StyledComponent>
-</Label__LabelTab>
+</Label__LabelCategory>
 `;
 
-exports[`<LabelTab /> renders with theme 1`] = `
+exports[`<LabelCategory /> renders with theme 1`] = `
 .c0 {
   display: inherit;
   padding: 1rem 1.5rem;
@@ -127,7 +127,7 @@ exports[`<LabelTab /> renders with theme 1`] = `
   transform: translateX(-200%);
 }
 
-<Label__LabelTab
+<Label__LabelCategory
   theme={
     Object {
       "bg": "#000",
@@ -153,7 +153,7 @@ exports[`<LabelTab /> renders with theme 1`] = `
         },
         "attrs": Array [],
         "componentStyle": ComponentStyle {
-          "componentId": "Label__LabelTab-icvmzg-0",
+          "componentId": "Label__LabelCategory-icvmzg-0",
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
@@ -166,10 +166,10 @@ exports[`<LabelTab /> renders with theme 1`] = `
             ");}",
           ],
         },
-        "displayName": "Label__LabelTab",
+        "displayName": "Label__LabelCategory",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "Label__LabelTab-icvmzg-0",
+        "styledComponentId": "Label__LabelCategory-icvmzg-0",
         "target": "label",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -191,5 +191,5 @@ exports[`<LabelTab /> renders with theme 1`] = `
       className="c0"
     />
   </StyledComponent>
-</Label__LabelTab>
+</Label__LabelCategory>
 `;

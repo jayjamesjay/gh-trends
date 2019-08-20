@@ -14,8 +14,14 @@ describe('addLang', () => {
   });
 
   it('all languages', () => {
-    const lang = 'all';
-    expect(addLang(query, lang)).toBe('react');
+    {
+      const lang = 'All';
+      expect(addLang(query, lang)).toBe('react');
+    }
+    {
+      const lang = 'All Languages';
+      expect(addLang(query, lang)).toBe('react');
+    }
   });
 });
 

@@ -1,12 +1,12 @@
 import React, { useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import makeRequest, { Url, addLang, defApi, perPage } from '../components/Fetch';
+import getAndSave, { Url, addLang, defApi, perPage } from '../components/Fetch';
 import RepoInfoList, { RepoInfo, languages, imgPath } from '../components/Data';
 import { ButtonIcon } from '../styles/Button';
 import { FormAlt } from '../styles/Form';
 import TextInput from '../styles/Input';
-import { H1Alt } from '../styles/Headers';
+import { H1 } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import { SelectLang } from '../components/Select';
 
@@ -29,7 +29,7 @@ export default function Search({ save, saved }) {
     (currData, currPage) => {
       const preUrl = new Url(defApi).query(search).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return makeRequest(infoList, preUrl, signal, setRepoInfo);
+      return getAndSave(infoList, preUrl, signal, setRepoInfo);
     },
     [search, signal, setRepoInfo]
   );
@@ -59,7 +59,7 @@ export default function Search({ save, saved }) {
   return (
     <>
       <header>
-        <H1Alt>Search for repositories</H1Alt>
+        <H1>Search for repositories</H1>
       </header>
       <FormAlt onSubmit={onSubmit} noValidate>
         <SelectLang curr={lang} onSelect={onSelect} options={langs} label="Add language" />

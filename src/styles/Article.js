@@ -24,7 +24,7 @@ const Article = styled.article`
   @media screen and (min-width: 40rem) {
     min-width: 16.5rem;
     margin: 1.5rem 1rem;
-    flex: 1 0 27%;
+    flex: 1 1 27%;
   }
 `;
 
