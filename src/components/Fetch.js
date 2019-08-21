@@ -99,9 +99,7 @@ export class Url {
  * @param {object} signal - AbortSignal object instance used to communicate with/abort a request
  * @returns {Promise}
  */
-export function getJSON(url, signal) {
-  return fetch(url, { signal }).then(res => res.json());
-}
+export const getJSON = (url, signal) => fetch(url, { signal }).then(res => res.json());
 
 /**
  * Fetches data and saves it as RepoInfoList using callback

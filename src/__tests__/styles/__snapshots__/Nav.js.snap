@@ -32,7 +32,7 @@ exports[`<Nav /> renders default 1`] = `
       "bg": "#fafafa",
       "bgAdd": "#fff",
       "color": "#000",
-      "colorAdd": "#707070",
+      "colorAdd": "#767676",
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
@@ -47,7 +47,7 @@ exports[`<Nav /> renders default 1`] = `
             "bg": "#fafafa",
             "bgAdd": "#fff",
             "color": "#000",
-            "colorAdd": "#707070",
+            "colorAdd": "#767676",
             "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
           },
         },
@@ -81,7 +81,7 @@ exports[`<Nav /> renders default 1`] = `
         "bg": "#fafafa",
         "bgAdd": "#fff",
         "color": "#000",
-        "colorAdd": "#707070",
+        "colorAdd": "#767676",
         "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
       }
     }
@@ -140,7 +140,7 @@ exports[`<Nav /> renders with theme 1`] = `
             "bg": "#fafafa",
             "bgAdd": "#fff",
             "color": "#000",
-            "colorAdd": "#707070",
+            "colorAdd": "#767676",
             "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
           },
         },

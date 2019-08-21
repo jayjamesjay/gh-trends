@@ -13,7 +13,7 @@ describe('<Home />', () => {
     expect(wrapper.text()).toContain(title);
   });
 
-  it('onSelect', () => {
+  it('selects lang', () => {
     const lang = 'CSS';
     const e = {
       target: {
@@ -27,5 +27,21 @@ describe('<Home />', () => {
       .onSelect(e);
 
     expect(setState).toHaveBeenCalledWith(lang);
+  });
+
+  it('selecct time', () => {
+    const time = 'This Week';
+    const e = {
+      target: {
+        value: time
+      }
+    };
+    wrapper
+      .find(Select)
+      .at(1)
+      .props()
+      .onSelect(e);
+
+    expect(setState).toHaveBeenCalledWith(time);
   });
 });

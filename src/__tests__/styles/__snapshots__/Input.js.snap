@@ -5,14 +5,15 @@ exports[`<TextInput /> renders default 1`] = `
   min-width: 50%;
   padding: 0.5rem;
   background: #fafafa;
-  border: solid #000;
+  border: solid #767676;
   border-width: 0 0 0.15rem 0;
   font-size: 1.2rem;
   color: #000;
 }
 
 .c0:focus {
-  border-width: 0.15rem;
+  border: solid #000;
+  border-width: 0 0 0.15rem 0;
 }
 
 <Input__TextInput
@@ -21,7 +22,7 @@ exports[`<TextInput /> renders default 1`] = `
       "bg": "#fafafa",
       "bgAdd": "#fff",
       "color": "#000",
-      "colorAdd": "#707070",
+      "colorAdd": "#767676",
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
@@ -35,7 +36,7 @@ exports[`<TextInput /> renders default 1`] = `
             "bg": "#fafafa",
             "bgAdd": "#fff",
             "color": "#000",
-            "colorAdd": "#707070",
+            "colorAdd": "#767676",
             "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
           },
         },
@@ -51,7 +52,9 @@ exports[`<TextInput /> renders default 1`] = `
             [Function],
             ";border-width:0 0 0.15rem 0;font-size:1.2rem;color:",
             [Function],
-            ";&:focus{border-width:0.15rem;}",
+            ";&:focus{border:solid ",
+            [Function],
+            ";border-width:0 0 0.15rem 0;}",
           ],
         },
         "displayName": "Input__TextInput",
@@ -70,7 +73,7 @@ exports[`<TextInput /> renders default 1`] = `
         "bg": "#fafafa",
         "bgAdd": "#fff",
         "color": "#000",
-        "colorAdd": "#707070",
+        "colorAdd": "#767676",
         "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
       }
     }
@@ -87,14 +90,15 @@ exports[`<TextInput /> renders with theme 1`] = `
   min-width: 50%;
   padding: 0.5rem;
   background: #000;
-  border: solid #fff;
+  border: solid #8d8d8d;
   border-width: 0 0 0.15rem 0;
   font-size: 1.2rem;
   color: #fff;
 }
 
 .c0:focus {
-  border-width: 0.15rem;
+  border: solid #fff;
+  border-width: 0 0 0.15rem 0;
 }
 
 <Input__TextInput
@@ -117,7 +121,7 @@ exports[`<TextInput /> renders with theme 1`] = `
             "bg": "#fafafa",
             "bgAdd": "#fff",
             "color": "#000",
-            "colorAdd": "#707070",
+            "colorAdd": "#767676",
             "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
           },
         },
@@ -133,7 +137,9 @@ exports[`<TextInput /> renders with theme 1`] = `
             [Function],
             ";border-width:0 0 0.15rem 0;font-size:1.2rem;color:",
             [Function],
-            ";&:focus{border-width:0.15rem;}",
+            ";&:focus{border:solid ",
+            [Function],
+            ";border-width:0 0 0.15rem 0;}",
           ],
         },
         "displayName": "Input__TextInput",

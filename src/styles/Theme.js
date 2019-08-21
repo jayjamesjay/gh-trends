@@ -3,7 +3,7 @@ export const light = {
   bgAdd: '#fff',
   shadow: '0px 3px 5px 1px rgba(217,217,217,0.82)',
   color: '#000',
-  colorAdd: '#707070'
+  colorAdd: '#767676'
 };
 
 export const dark = {
