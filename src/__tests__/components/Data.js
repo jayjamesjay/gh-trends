@@ -97,6 +97,26 @@ describe('<RepoInfoList />', () => {
     expect(RepoInfoList.fromGithubRes(response)).toEqual(expectedData);
   });
 
+  it('upates current data', () => {
+    const respElem = {
+      full_name: 'jayjamesjay/gh-trends',
+      html_url: '',
+      description: 'Loading content for this website...',
+      stargazers_count: 100,
+      language: 'JavaScript',
+      forks: 321,
+      license: {
+        spdx_id: 'MIT'
+      }
+    };
+    const response = [respElem];
+    const infoList = new RepoInfoList(expectedData, 1);
+    const expectedInfoList = new RepoInfoList(expectedData.concat(expectedElem), 2);
+    infoList.update(response);
+
+    expect(infoList).toEqual(expectedInfoList);
+  });
+
   it('constructs full with id', () => {
     const page = 1;
     const infoList = new RepoInfoList(expectedData, page);
