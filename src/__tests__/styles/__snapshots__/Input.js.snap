@@ -178,7 +178,7 @@ exports[`renders default <InputRadio /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Input__InputRadio-f34vry-1",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "opacity:0;",
         ],

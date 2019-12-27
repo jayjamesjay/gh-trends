@@ -24,7 +24,7 @@ describe('<Link />', () => {
 });
 
 it('renders default <HeaderLink />', () => {
-  const wrapper = shallow(<HeaderLink />);
+  const wrapper = shallow(<HeaderLink to="/"/>);
   expect(wrapper).toMatchSnapshot();
 });
 

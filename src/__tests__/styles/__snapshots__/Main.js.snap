@@ -8,7 +8,7 @@ exports[`renders default <Bar /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Main__Bar-sc-1yl8y0q-2",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:row wrap;justify-content:center;align-content:center;align-items:center;",
         ],
@@ -35,7 +35,7 @@ exports[`renders default <BottomBar /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Main__BottomBar-sc-1yl8y0q-3",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:row wrap;justify-content:center;align-content:center;align-items:center;",
           "margin:auto 0 0 0;",
@@ -65,7 +65,7 @@ exports[`renders default <Content /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Main__Content-sc-1yl8y0q-1",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "@media screen and (min-width:40rem){display:flex;flex-flow:row wrap;justify-content:space-around;margin:0 1.5rem;}",
         ],
@@ -92,7 +92,7 @@ exports[`renders default <Main /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Main-sc-1yl8y0q-0",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:column;align-content:center;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);text-align:center;",
         ],

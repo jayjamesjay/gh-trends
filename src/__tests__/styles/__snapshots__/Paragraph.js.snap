@@ -8,7 +8,7 @@ exports[`<PClean /> renders default 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Paragraph__PClean-sc-1weuljs-0",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "margin:0 0.5rem;padding:0;",
         ],
@@ -35,7 +35,7 @@ exports[`<PFlex /> renders default 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Paragraph__PFlex-sc-1weuljs-1",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;align-content:center;align-items:center;margin:0 0.5rem;padding:0;",
         ],

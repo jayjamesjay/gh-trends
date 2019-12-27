@@ -76,9 +76,27 @@ exports[`<Link /> renders default 1`] = `
             },
             "displayName": "Link",
             "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
             "render": [Function],
             "styledComponentId": "Link-sc-1ikxq-0",
-            "target": [Function],
+            "target": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "Link",
+              "propTypes": Object {
+                "innerRef": [Function],
+                "onClick": [Function],
+                "replace": [Function],
+                "target": [Function],
+                "to": [Function],
+              },
+              "render": [Function],
+            },
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
@@ -110,11 +128,11 @@ exports[`<Link /> renders default 1`] = `
           }
           to="/"
         >
-          <a
+          <LinkAnchor
             className="c0"
             fontSize="1.3rem"
             href="/"
-            onClick={[Function]}
+            navigate={[Function]}
             theme={
               Object {
                 "bg": "#fafafa",
@@ -124,7 +142,23 @@ exports[`<Link /> renders default 1`] = `
                 "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
               }
             }
-          />
+          >
+            <a
+              className="c0"
+              fontSize="1.3rem"
+              href="/"
+              onClick={[Function]}
+              theme={
+                Object {
+                  "bg": "#fafafa",
+                  "bgAdd": "#fff",
+                  "color": "#000",
+                  "colorAdd": "#767676",
+                  "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+                }
+              }
+            />
+          </LinkAnchor>
         </Link>
       </StyledComponent>
     </Link>
@@ -208,9 +242,27 @@ exports[`<Link /> renders with theme 1`] = `
             },
             "displayName": "Link",
             "foldedComponentIds": Array [],
+            "propTypes": Object {
+              "innerRef": [Function],
+              "onClick": [Function],
+              "replace": [Function],
+              "target": [Function],
+              "to": [Function],
+            },
             "render": [Function],
             "styledComponentId": "Link-sc-1ikxq-0",
-            "target": [Function],
+            "target": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "displayName": "Link",
+              "propTypes": Object {
+                "innerRef": [Function],
+                "onClick": [Function],
+                "replace": [Function],
+                "target": [Function],
+                "to": [Function],
+              },
+              "render": [Function],
+            },
             "toString": [Function],
             "warnTooManyClasses": [Function],
             "withComponent": [Function],
@@ -242,11 +294,11 @@ exports[`<Link /> renders with theme 1`] = `
           }
           to="/"
         >
-          <a
+          <LinkAnchor
             className="c0"
             fontSize="1.3rem"
             href="/"
-            onClick={[Function]}
+            navigate={[Function]}
             theme={
               Object {
                 "bg": "#000",
@@ -256,7 +308,23 @@ exports[`<Link /> renders with theme 1`] = `
                 "shadow": "none",
               }
             }
-          />
+          >
+            <a
+              className="c0"
+              fontSize="1.3rem"
+              href="/"
+              onClick={[Function]}
+              theme={
+                Object {
+                  "bg": "#000",
+                  "bgAdd": "#202124",
+                  "color": "#fff",
+                  "colorAdd": "#8d8d8d",
+                  "shadow": "none",
+                }
+              }
+            />
+          </LinkAnchor>
         </Link>
       </StyledComponent>
     </Link>
@@ -391,9 +459,27 @@ exports[`renders default <HeaderLink /> 1`] = `
       "foldedComponentIds": Array [
         "Link-sc-1ikxq-0",
       ],
+      "propTypes": Object {
+        "innerRef": [Function],
+        "onClick": [Function],
+        "replace": [Function],
+        "target": [Function],
+        "to": [Function],
+      },
       "render": [Function],
       "styledComponentId": "Link__HeaderLink-sc-1ikxq-1",
-      "target": [Function],
+      "target": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "displayName": "Link",
+        "propTypes": Object {
+          "innerRef": [Function],
+          "onClick": [Function],
+          "replace": [Function],
+          "target": [Function],
+          "to": [Function],
+        },
+        "render": [Function],
+      },
       "toString": [Function],
       "warnTooManyClasses": [Function],
       "withComponent": [Function],
@@ -409,5 +495,6 @@ exports[`renders default <HeaderLink /> 1`] = `
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
+  to="/"
 />
 `;

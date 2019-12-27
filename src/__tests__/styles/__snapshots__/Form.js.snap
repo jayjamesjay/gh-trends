@@ -8,7 +8,7 @@ exports[`renders default <CategoryMenu /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Form__CategoryMenu-cy7ws1-2",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:row wrap;justify-content:center;width:100%;text-transform:uppercase;",
         ],
@@ -35,7 +35,7 @@ exports[`renders default <Form /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Form-cy7ws1-0",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:row wrap;justify-content:center;max-width:90%;",
         ],
@@ -62,7 +62,7 @@ exports[`renders default <FormAlt /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Form__FormAlt-cy7ws1-1",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "display:flex;flex-flow:row wrap;justify-content:center;max-width:90%;",
           "padding:1rem;",

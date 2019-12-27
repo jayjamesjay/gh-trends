@@ -207,7 +207,7 @@ exports[`renders default <H1 /> 1`] = `
         "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "Headers__H1-sc-1tudo8a-1",
-          "isStatic": true,
+          "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
             "margin:3rem auto 1rem auto;font-size:2rem;text-transform:uppercase;",
@@ -246,7 +246,7 @@ exports[`renders default <H2 /> 1`] = `
         "attrs": Array [],
         "componentStyle": ComponentStyle {
           "componentId": "Headers__H2-sc-1tudo8a-2",
-          "isStatic": true,
+          "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
             "margin:0.2rem 0;font-size:1.7rem;",

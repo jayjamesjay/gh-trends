@@ -102,7 +102,7 @@ exports[`renders default <LabelSpan /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Span__LabelSpan-sc-1jc552j-1",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "position:relative;z-index:100;",
         ],

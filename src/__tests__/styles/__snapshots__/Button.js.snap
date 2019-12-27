@@ -509,7 +509,7 @@ exports[`renders default <ButtonAdd /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Button__ButtonAdd-iu7iy2-5",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "cursor:pointer;height:auto;background:transparent;border:0;",
           "margin:0.5rem 0 0 0;",
@@ -539,7 +539,7 @@ exports[`renders default <ButtonIcon /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Button__ButtonIcon-iu7iy2-3",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "cursor:pointer;height:auto;background:transparent;border:0;",
         ],
@@ -566,7 +566,7 @@ exports[`renders default <ButtonRemove /> 1`] = `
       "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "Button__ButtonRemove-iu7iy2-4",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "cursor:pointer;height:auto;background:transparent;border:0;",
           "margin-top:-0.6rem;",
