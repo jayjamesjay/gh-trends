@@ -5,7 +5,8 @@ import Categories from '../components/Categories';
 import { H1 } from '../styles/Headers';
 import { ImgIcon } from '../styles/Img';
 import { Bar } from '../styles/Main';
-import { DownloadLink, jsonToMarkdown, RepoInfo } from '../components/Data';
+import { DownloadLink, jsonToMarkdown } from '../components/Data';
+import RepoInfo from '../components/RepoInfo';
 import { ButtonRemove } from '../styles/Button';
 
 export default function Saved({ data, save, removeAll }) {

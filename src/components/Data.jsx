@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import formatDate from './Date';
 import { LinkA } from '../styles/Link';
+import RepoInfo from './RepoInfo';
 
 /**
  * @module Data
@@ -271,54 +272,6 @@ export const languages = {
   xBase: '#403a40'
 };
 
-/**
- * Information about repository
- * @class
- */
-export class RepoInfo {
-  /**
-   * Creates a RepoInfo
-   *
-   * @param {string} nameWithOwner - name and author of repository
-   * @param {string} url - url of the repository
-   * @param {string} description - description
-   * @param {number} stargazersCount - amount of stars
-   * @param {string} language - programming language
-   * @param {number} forks - amount of forks
-   * @param {string} license - repository license
-   */
-  constructor(nameWithOwner, url, description, stargazersCount, language, forks, license) {
-    this.nameWithOwner = nameWithOwner;
-    this.url = url;
-    this.description = description;
-    this.stargazersCount = stargazersCount;
-    this.language = language;
-    this.forks = forks;
-    this.license = license;
-  }
-
-  /**
-   * Creates RepoInfo from Github API data
-   *
-   * @param {object} item - repository data from Github API
-   * @returns {RepoInfo}
-   */
-  static fromGithubRes(item) {
-    const { description, language, forks } = item;
-    const license = item.license ? item.license.spdx_id : null;
-
-    return new RepoInfo(
-      item.full_name,
-      item.html_url,
-      description,
-      item.stargazers_count,
-      language,
-      forks,
-      license
-    );
-  }
-}
-
 export const initData = new Array(6);
 
 for (let i = 0; i < initData.length; i += 1) {
@@ -334,47 +287,6 @@ for (let i = 0; i < initData.length; i += 1) {
   curr.nameWithOwner += i;
   initData[i] = curr;
 }
-
-/**
- * List of information about repositories
- * @class
- */
-class RepoInfoList {
-  /**
-   * Creates a RepoInfoList
-   *
-   * @param {array} data - main content
-   * @param {number} page - last loaded page
-   */
-  constructor(data, page) {
-    this.data = data;
-    this.page = page;
-  }
-
-  /**
-   * Creates data part of RepoInfoList from Github API data
-   *
-   * @param {array} data - list of repository data from Github API
-   * @returns {array}
-   */
-  static fromGithubRes(data) {
-    return data.map(item => RepoInfo.fromGithubRes(item));
-  }
-
-  /**
-   * Parses and adds Github API data to this RepoInfoList
-   * and increases the page by 1.
-   *
-   * @param {array} data - list of repository data from Github API
-   */
-  update(data) {
-    const content = RepoInfoList.fromGithubRes(data);
-    this.data = this.data.concat(content);
-    this.page += 1;
-  }
-}
-
-export default RepoInfoList;
 
 /**
  * Creates link to donwload a file

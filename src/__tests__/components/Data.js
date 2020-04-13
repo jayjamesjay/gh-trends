@@ -1,9 +1,6 @@
-import RepoInfoList, {
-  jsonToMarkdown,
-  RepoInfo,
-  DownloadLink,
-  identicalItems
-} from '../../components/Data';
+import { jsonToMarkdown, DownloadLink, identicalItems } from '../../components/Data';
+import RepoInfoList from '../../components/RepoInfoList';
+import RepoInfo from '../../components/RepoInfo';
 
 it('compares nameWithOwner of two items', () => {
   const elem1 = { nameWithOwner: 'abb', age: 30 };

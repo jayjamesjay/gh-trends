@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Content } from '../styles/Main';
 import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
-import { RepoInfo, identicalItems } from './Data';
+import { identicalItems } from './Data';
+import RepoInfo from './RepoInfo';
 
 /**
  * @module View

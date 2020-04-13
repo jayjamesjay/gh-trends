@@ -28,14 +28,6 @@ module.exports = {
         resolve: {
           extensions: ['.js', '.jsx']
         }
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
-          }
-        ]
       }
     ]
   },
