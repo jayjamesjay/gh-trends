@@ -6,17 +6,21 @@
     "jest": true
   },
   "parser": "babel-eslint",
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react"],
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react", "plugin:jest/recommended"],
   "rules": {
     "no-unused-vars": 1,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": ["src/setupEnzyme.js"] }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["src/__tests__/**/*.jsx", "src/setupEnzyme.js"]
+      }
+    ],
     "react/jsx-props-no-spreading": "off"
   },
   "globals": {
     "window": true,
     "navigator": true,
     "document": true
-  }
+  },
+  "plugins": ["jest"]
 }

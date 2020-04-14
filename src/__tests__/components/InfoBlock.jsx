@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import InfoBlock, { RepoLink, SaveRepo } from '../../components/InfoBlock';
 import RepoInfo from '../../components/RepoInfo';
 
@@ -13,8 +15,8 @@ describe('<InfoBlock />', () => {
   );
   const saved = false;
   let temp;
-  const save = info => {
-    temp = info;
+  const save = currInfo => {
+    temp = currInfo;
   };
   let wrapper;
 
@@ -23,14 +25,12 @@ describe('<InfoBlock />', () => {
   });
 
   it('renders with default background color', () => {
-    {
-      expect(wrapper.prop('bg')).toEqual(null);
-    }
+    expect(wrapper.prop('bg')).toEqual(null);
     {
       info.language = 'JavaScript';
-      const wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+      const wrapperAlt = shallow(<InfoBlock info={info} save={save} saved={saved} />);
 
-      expect(wrapper.prop('bg')).toEqual('#f1e05a');
+      expect(wrapperAlt.prop('bg')).toEqual('#f1e05a');
     }
   });
 
@@ -40,9 +40,9 @@ describe('<InfoBlock />', () => {
 
   it('renders without license', () => {
     info.license = null;
-    const wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
+    const wrapperAlt = shallow(<InfoBlock info={info} save={save} saved={saved} />);
 
-    expect(wrapper.text()).not.toContain('License');
+    expect(wrapperAlt.text()).not.toContain('License');
   });
 
   it('saves info', () => {

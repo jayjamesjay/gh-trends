@@ -1,3 +1,5 @@
+import React from 'react';
+import { mount } from 'enzyme';
 import Article, { oppositeBg } from '../../styles/Article';
 import { light, dark } from '../../styles/Theme';
 import 'jest-styled-components';

@@ -1,4 +1,6 @@
-import Header, { H1, H1Alt, H2 } from '../../styles/Headers';
+import React from 'react';
+import { mount } from 'enzyme';
+import Header, { H1, H2 } from '../../styles/Headers';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 

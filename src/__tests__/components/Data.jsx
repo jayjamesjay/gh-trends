@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import { jsonToMarkdown, DownloadLink, identicalItems } from '../../components/Data';
 import RepoInfoList from '../../components/RepoInfoList';
 import RepoInfo from '../../components/RepoInfo';
@@ -119,7 +121,7 @@ describe('<RepoInfoList />', () => {
     const infoList = new RepoInfoList(expectedData, page);
     const expectedList = {
       data: expectedData,
-      page: page
+      page
     };
 
     expect(infoList).toEqual(expectedList);
@@ -150,18 +152,17 @@ it('converts JSON to Markdown', () => {
   ];
 
   expect(jsonToMarkdown(json)).toBe(
-    '# Dog \r\n\
-length: 1 \r\n\
-\r\n\
-\r\n\
-# Sharp \r\n\
-length: 22 \r\n\
-\r\n\
-\r\n\
-# Cat \r\n\
-length: 2 \r\n\
-\r\n\
-\r\n\
-'
+    '# Dog \r\n' +
+      'length: 1 \r\n' +
+      '\r\n' +
+      '\r\n' +
+      '# Sharp \r\n' +
+      'length: 22 \r\n' +
+      '\r\n' +
+      '\r\n' +
+      '# Cat \r\n' +
+      'length: 2 \r\n' +
+      '\r\n' +
+      '\r\n'
   );
 });

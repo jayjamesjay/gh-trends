@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import { Main, Content, Bar, BottomBar } from '../../styles/Main';
 import 'jest-styled-components';
 

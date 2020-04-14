@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import { invertColor, Img, ImgIcon, ImgInline } from '../../styles/Img';
 import { light, dark } from '../../styles/Theme';
 import 'jest-styled-components';

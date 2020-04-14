@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import App from '../../components/App';
 import Header from '../../components/Header';
 import { light } from '../../styles/Theme';

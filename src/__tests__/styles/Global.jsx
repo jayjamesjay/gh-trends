@@ -1,3 +1,5 @@
+import React from 'react';
+import { mount } from 'enzyme';
 import GlobalStyle from '../../styles/Global';
 import 'jest-styled-components';
 import { light } from '../../styles/Theme';

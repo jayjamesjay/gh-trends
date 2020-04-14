@@ -1,3 +1,5 @@
+import React from 'react';
+import { mount } from 'enzyme';
 import LabelCategory from '../../styles/Label';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';

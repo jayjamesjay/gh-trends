@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import Saved from '../../routes/Saved';
 import { initData, DownloadLink } from '../../components/Data';
 import Category from '../../components/Category';
@@ -29,13 +31,13 @@ describe('<Saved />', () => {
 
   it('creates download link for Markdown', () => {
     const name = `saved.md`;
-    const wrapper = mount(<Saved save={func} removeAll={func} data={initData} />);
-    wrapper
+    const wrapperAlt = mount(<Saved save={func} removeAll={func} data={initData} />);
+    wrapperAlt
       .find(Category)
       .at(1)
       .simulate('click');
 
-    expect(wrapper.find(DownloadLink).prop('filename')).toEqual(name);
+    expect(wrapperAlt.find(DownloadLink).prop('filename')).toEqual(name);
   });
 
   it('onClick', () => {
@@ -43,8 +45,8 @@ describe('<Saved />', () => {
     const useStateSpy = jest.spyOn(React, 'useState');
     useStateSpy.mockImplementation(init => [init, setState]);
 
-    const wrapper = mount(<Saved save={func} removeAll={func} data={initData} />);
-    wrapper
+    const wrapperAlt = mount(<Saved save={func} removeAll={func} data={initData} />);
+    wrapperAlt
       .find(Category)
       .at(1)
       .simulate('click');

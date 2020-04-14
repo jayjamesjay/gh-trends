@@ -1,3 +1,5 @@
+import React from 'react';
+import { mount } from 'enzyme';
 import Nav from '../../styles/Nav';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';

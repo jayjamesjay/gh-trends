@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import Option from '../../styles/Option';
 import 'jest-styled-components';
 

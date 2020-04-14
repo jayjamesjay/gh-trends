@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import {
   Button,
   ButtonMain,
@@ -35,7 +37,7 @@ describe('<ButtonMain />', () => {
   });
 
   it('renders visible', () => {
-    const button = mount(<ButtonMain visible={true} />);
+    const button = mount(<ButtonMain visible />);
     expect(button).toHaveStyleRule('visibility', 'visible');
   });
 

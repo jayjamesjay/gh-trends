@@ -1,6 +1,8 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { shallow, mount } from 'enzyme';
 import { Link, LinkA, HeaderLink } from '../../styles/Link';
 import { dark } from '../../styles/Theme';
-import { BrowserRouter as Router } from 'react-router-dom';
 import 'jest-styled-components';
 
 describe('<Link />', () => {

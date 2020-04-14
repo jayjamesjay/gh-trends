@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import TextInput, { InputRadio } from '../../styles/Input';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';

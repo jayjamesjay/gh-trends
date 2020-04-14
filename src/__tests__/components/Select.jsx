@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import Select, { SelectLang } from '../../components/Select';
 
 describe('<Select />', () => {

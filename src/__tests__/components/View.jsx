@@ -1,4 +1,6 @@
-import View, { ViewId, ViewSingle } from '../../components/View';
+import React from 'react';
+import { shallow } from 'enzyme';
+import View, { ViewSingle } from '../../components/View';
 import { initData } from '../../components/Data';
 import InfoBlock from '../../components/InfoBlock';
 import { ButtonMain } from '../../styles/Button';

@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import Span, { LabelSpan } from '../../styles/Span';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';

@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import { PClean, PFlex } from '../../styles/Paragraph';
 import 'jest-styled-components';
 

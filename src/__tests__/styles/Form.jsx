@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import Form, { FormAlt, CategoryMenu } from '../../styles/Form';
 import 'jest-styled-components';
 

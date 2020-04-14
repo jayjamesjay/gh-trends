@@ -1,3 +1,5 @@
+import React from 'react';
+import { shallow } from 'enzyme';
 import Categories from '../../components/Categories';
 import Category from '../../components/Category';
 
