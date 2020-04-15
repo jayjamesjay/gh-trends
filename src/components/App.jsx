@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -15,11 +15,13 @@ import GlobalStyle from '../styles/Global';
 import { Main } from '../styles/Main';
 import { dark, light } from '../styles/Theme';
 
-const links = [['Search', '/search'], ['Saved', '/saved']];
-
 /**
  * @module App
  */
+
+const links = [['Search', '/search'], ['Saved', '/saved']];
+const { localStorage } = window;
+const initTheme = localStorage.getItem('theme') === JSON.stringify(light) ? light : dark;
 
 /**
  * Main App component
@@ -28,8 +30,12 @@ const links = [['Search', '/search'], ['Saved', '/saved']];
  */
 export default function App() {
   const [hideMenu, setMenu] = React.useState(true);
-  const [theme, setTheme] = React.useState(light);
+  const [theme, setTheme] = React.useState(initTheme);
   const [saved, setSaved] = React.useState([]);
+
+  useEffect(() => {
+    localStorage.setItem('theme', JSON.stringify(theme));
+  });
 
   const toggleMenu = useCallback(() => setMenu(!hideMenu), [hideMenu]);
   const switchTheme = useCallback(() => setTheme(curr => (curr === light ? dark : light)), []);

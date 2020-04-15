@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../../components/App';
 import Header from '../../components/Header';
-import { light } from '../../styles/Theme';
+import { dark } from '../../styles/Theme';
 
 describe('<App />', () => {
   let wrapper;
@@ -19,7 +19,7 @@ describe('<App />', () => {
   });
 
   it('renders with default theme', () => {
-    expect(wrapper.find('ThemeProvider').prop('theme')).toEqual(light);
+    expect(wrapper.find('ThemeProvider').prop('theme')).toEqual(dark);
   });
 
   it('toggleMenu - shows and hides menu', () => {
