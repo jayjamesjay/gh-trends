@@ -46,63 +46,9 @@ exports[`<Link /> renders default 1`] = `
       }
       to="/"
     >
-      <StyledComponent
+      <Link
+        className="c0"
         fontSize="1.3rem"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "_foldedDefaultProps": Object {
-              "fontSize": "1.3rem",
-              "theme": Object {
-                "bg": "#fafafa",
-                "bgAdd": "#fff",
-                "color": "#000",
-                "colorAdd": "#767676",
-                "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-              },
-            },
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "Link-sc-1ikxq-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "padding:0.5rem;font-size:",
-                [Function],
-                ";font-family:'Noto Sans HK',sans-serif;color:",
-                [Function],
-                ";text-decoration:none;",
-              ],
-            },
-            "displayName": "Link",
-            "foldedComponentIds": Array [],
-            "propTypes": Object {
-              "innerRef": [Function],
-              "onClick": [Function],
-              "replace": [Function],
-              "target": [Function],
-              "to": [Function],
-            },
-            "render": [Function],
-            "styledComponentId": "Link-sc-1ikxq-0",
-            "target": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "displayName": "Link",
-              "propTypes": Object {
-                "innerRef": [Function],
-                "onClick": [Function],
-                "replace": [Function],
-                "target": [Function],
-                "to": [Function],
-              },
-              "render": [Function],
-            },
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
         theme={
           Object {
             "bg": "#fafafa",
@@ -114,9 +60,11 @@ exports[`<Link /> renders default 1`] = `
         }
         to="/"
       >
-        <Link
+        <LinkAnchor
           className="c0"
           fontSize="1.3rem"
+          href="/"
+          navigate={[Function]}
           theme={
             Object {
               "bg": "#fafafa",
@@ -126,13 +74,12 @@ exports[`<Link /> renders default 1`] = `
               "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
             }
           }
-          to="/"
         >
-          <LinkAnchor
+          <a
             className="c0"
             fontSize="1.3rem"
             href="/"
-            navigate={[Function]}
+            onClick={[Function]}
             theme={
               Object {
                 "bg": "#fafafa",
@@ -142,25 +89,9 @@ exports[`<Link /> renders default 1`] = `
                 "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
               }
             }
-          >
-            <a
-              className="c0"
-              fontSize="1.3rem"
-              href="/"
-              onClick={[Function]}
-              theme={
-                Object {
-                  "bg": "#fafafa",
-                  "bgAdd": "#fff",
-                  "color": "#000",
-                  "colorAdd": "#767676",
-                  "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-                }
-              }
-            />
-          </LinkAnchor>
-        </Link>
-      </StyledComponent>
+          />
+        </LinkAnchor>
+      </Link>
     </Link>
   </Router>
 </BrowserRouter>
@@ -212,63 +143,9 @@ exports[`<Link /> renders with theme 1`] = `
       }
       to="/"
     >
-      <StyledComponent
+      <Link
+        className="c0"
         fontSize="1.3rem"
-        forwardedComponent={
-          Object {
-            "$$typeof": Symbol(react.forward_ref),
-            "_foldedDefaultProps": Object {
-              "fontSize": "1.3rem",
-              "theme": Object {
-                "bg": "#fafafa",
-                "bgAdd": "#fff",
-                "color": "#000",
-                "colorAdd": "#767676",
-                "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-              },
-            },
-            "attrs": Array [],
-            "componentStyle": ComponentStyle {
-              "componentId": "Link-sc-1ikxq-0",
-              "isStatic": false,
-              "lastClassName": "c0",
-              "rules": Array [
-                "padding:0.5rem;font-size:",
-                [Function],
-                ";font-family:'Noto Sans HK',sans-serif;color:",
-                [Function],
-                ";text-decoration:none;",
-              ],
-            },
-            "displayName": "Link",
-            "foldedComponentIds": Array [],
-            "propTypes": Object {
-              "innerRef": [Function],
-              "onClick": [Function],
-              "replace": [Function],
-              "target": [Function],
-              "to": [Function],
-            },
-            "render": [Function],
-            "styledComponentId": "Link-sc-1ikxq-0",
-            "target": Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "displayName": "Link",
-              "propTypes": Object {
-                "innerRef": [Function],
-                "onClick": [Function],
-                "replace": [Function],
-                "target": [Function],
-                "to": [Function],
-              },
-              "render": [Function],
-            },
-            "toString": [Function],
-            "warnTooManyClasses": [Function],
-            "withComponent": [Function],
-          }
-        }
-        forwardedRef={null}
         theme={
           Object {
             "bg": "#000",
@@ -280,9 +157,11 @@ exports[`<Link /> renders with theme 1`] = `
         }
         to="/"
       >
-        <Link
+        <LinkAnchor
           className="c0"
           fontSize="1.3rem"
+          href="/"
+          navigate={[Function]}
           theme={
             Object {
               "bg": "#000",
@@ -292,13 +171,12 @@ exports[`<Link /> renders with theme 1`] = `
               "shadow": "none",
             }
           }
-          to="/"
         >
-          <LinkAnchor
+          <a
             className="c0"
             fontSize="1.3rem"
             href="/"
-            navigate={[Function]}
+            onClick={[Function]}
             theme={
               Object {
                 "bg": "#000",
@@ -308,184 +186,62 @@ exports[`<Link /> renders with theme 1`] = `
                 "shadow": "none",
               }
             }
-          >
-            <a
-              className="c0"
-              fontSize="1.3rem"
-              href="/"
-              onClick={[Function]}
-              theme={
-                Object {
-                  "bg": "#000",
-                  "bgAdd": "#202124",
-                  "color": "#fff",
-                  "colorAdd": "#8d8d8d",
-                  "shadow": "none",
-                }
-              }
-            />
-          </LinkAnchor>
-        </Link>
-      </StyledComponent>
+          />
+        </LinkAnchor>
+      </Link>
     </Link>
   </Router>
 </BrowserRouter>
 `;
 
 exports[`<LinkA /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Link__LinkA-sc-1ikxq-2",
-        "isStatic": false,
-        "rules": Array [
-          "display:block;font-size:1.2rem;font-family:'Noto Sans HK',sans-serif;color:",
-          [Function],
-          ";text-decoration:none;cursor:pointer;",
-        ],
-      },
-      "displayName": "Link__LinkA",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Link__LinkA-sc-1ikxq-2",
-      "target": "a",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#fafafa",
-      "bgAdd": "#fff",
-      "color": "#000",
-      "colorAdd": "#767676",
-      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-    }
-  }
+.c0 {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
 />
 `;
 
 exports[`<LinkA /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Link__LinkA-sc-1ikxq-2",
-        "isStatic": false,
-        "rules": Array [
-          "display:block;font-size:1.2rem;font-family:'Noto Sans HK',sans-serif;color:",
-          [Function],
-          ";text-decoration:none;cursor:pointer;",
-        ],
-      },
-      "displayName": "Link__LinkA",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Link__LinkA-sc-1ikxq-2",
-      "target": "a",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#000",
-      "bgAdd": "#202124",
-      "color": "#fff",
-      "colorAdd": "#8d8d8d",
-      "shadow": "none",
-    }
-  }
+.c0 {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
 />
 `;
 
 exports[`renders default <HeaderLink /> 1`] = `
-<StyledComponent
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+<Link
+  className="Link-sc-1ikxq-0 c0"
   fontSize="1.3rem"
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "fontSize": "1.3rem",
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Link__HeaderLink-sc-1ikxq-1",
-        "isStatic": false,
-        "rules": Array [
-          "padding:0.5rem;font-size:",
-          [Function],
-          ";font-family:'Noto Sans HK',sans-serif;color:",
-          [Function],
-          ";text-decoration:none;",
-          "margin:0.5rem;font-weight:700;font-size:2rem;",
-        ],
-      },
-      "displayName": "Link__HeaderLink",
-      "foldedComponentIds": Array [
-        "Link-sc-1ikxq-0",
-      ],
-      "propTypes": Object {
-        "innerRef": [Function],
-        "onClick": [Function],
-        "replace": [Function],
-        "target": [Function],
-        "to": [Function],
-      },
-      "render": [Function],
-      "styledComponentId": "Link__HeaderLink-sc-1ikxq-1",
-      "target": Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "displayName": "Link",
-        "propTypes": Object {
-          "innerRef": [Function],
-          "onClick": [Function],
-          "replace": [Function],
-          "target": [Function],
-          "to": [Function],
-        },
-        "render": [Function],
-      },
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
   theme={
     Object {
       "bg": "#fafafa",

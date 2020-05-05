@@ -17,7 +17,7 @@
     "copy-webpack-plugin": "^5.0.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.3.5",
+    "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.0.0",
@@ -28,8 +28,8 @@
     "eslint-plugin-react-hooks": "^2.5.0",
     "html-webpack-plugin": "^4.2.0",
     "husky": "^4.2.5",
-    "jest": "^24.8.0",
-    "jest-styled-components": "^6.3.3",
+    "jest": "^26.0.0",
+    "jest-styled-components": "^7.0.2",
     "jsdoc": "^3.6.3",
     "prettier": "1.18.2",
     "react-test-renderer": "^16.8.6",
@@ -40,7 +40,7 @@
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
     "format": "prettier --write src/**",
-    "test": "jest --verbose",
+    "test": "jest",
     "coverage": "jest --coverage",
     "lint": "eslint ./src/**/*.jsx ./src/**/*.js",
     "lintfix": "yarn lint --fix",
@@ -48,12 +48,12 @@
   },
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "styled-components": "^4.2.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^5.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "jest": {
     "setupFilesAfterEnv": [

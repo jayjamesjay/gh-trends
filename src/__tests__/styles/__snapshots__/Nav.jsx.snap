@@ -37,59 +37,9 @@ exports[`<Nav /> renders default 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "hide": true,
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Nav-sc-1rdz8lw-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "width:100%;padding:0.7rem 0;position:fixed;top:4.8rem;left:0;z-index:200;background:",
-            [Function],
-            ";box-shadow:0 3px 6px 0 rgba(104,104,104,0.5);opacity:",
-            [Function],
-            ";transition:opacity 0.2s linear;@media screen and (min-width:40rem){width:50%;top:1rem;left:47%;box-shadow:none;opacity:1;}",
-          ],
-        },
-        "displayName": "Nav",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Nav-sc-1rdz8lw-0",
-        "target": "nav",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    hide={true}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
-  >
-    <nav
-      className="c0"
-    />
-  </StyledComponent>
+  <nav
+    className="c0"
+  />
 </Nav>
 `;
 
@@ -130,58 +80,8 @@ exports[`<Nav /> renders with theme 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "hide": true,
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Nav-sc-1rdz8lw-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "width:100%;padding:0.7rem 0;position:fixed;top:4.8rem;left:0;z-index:200;background:",
-            [Function],
-            ";box-shadow:0 3px 6px 0 rgba(104,104,104,0.5);opacity:",
-            [Function],
-            ";transition:opacity 0.2s linear;@media screen and (min-width:40rem){width:50%;top:1rem;left:47%;box-shadow:none;opacity:1;}",
-          ],
-        },
-        "displayName": "Nav",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Nav-sc-1rdz8lw-0",
-        "target": "nav",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    hide={true}
-    theme={
-      Object {
-        "bg": "#000",
-        "bgAdd": "#202124",
-        "color": "#fff",
-        "colorAdd": "#8d8d8d",
-        "shadow": "none",
-      }
-    }
-  >
-    <nav
-      className="c0"
-    />
-  </StyledComponent>
+  <nav
+    className="c0"
+  />
 </Nav>
 `;

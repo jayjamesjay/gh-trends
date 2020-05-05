@@ -37,13 +37,13 @@ describe('<ButtonMain />', () => {
   });
 
   it('renders visible', () => {
-    const button = mount(<ButtonMain visible />);
-    expect(button).toHaveStyleRule('visibility', 'visible');
+    const wrapper = mount(<ButtonMain visible />);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('renders hidden', () => {
-    const button = mount(<ButtonMain visible={false} />);
-    expect(button).toHaveStyleRule('visibility', 'hidden');
+    const wrapper = mount(<ButtonMain visible={false} />);
+    expect(wrapper).toMatchSnapshot();
   });
 });
 

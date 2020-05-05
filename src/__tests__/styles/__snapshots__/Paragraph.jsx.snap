@@ -1,55 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PClean /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Paragraph__PClean-sc-1weuljs-0",
-        "isStatic": false,
-        "rules": Array [
-          "margin:0 0.5rem;padding:0;",
-        ],
-      },
-      "displayName": "Paragraph__PClean",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Paragraph__PClean-sc-1weuljs-0",
-      "target": "p",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  margin: 0 0.5rem;
+  padding: 0;
+}
+
+<p
+  className="c0"
 />
 `;
 
 exports[`<PFlex /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Paragraph__PFlex-sc-1weuljs-1",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;align-content:center;align-items:center;margin:0 0.5rem;padding:0;",
-        ],
-      },
-      "displayName": "Paragraph__PFlex",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Paragraph__PFlex-sc-1weuljs-1",
-      "target": "p",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 0;
+}
+
+<p
+  className="c0"
 />
 `;

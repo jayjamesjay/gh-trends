@@ -27,61 +27,9 @@ exports[`<TextInput /> renders default 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Input__TextInput-f34vry-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "min-width:50%;padding:0.5rem;background:",
-            [Function],
-            ";border:solid ",
-            [Function],
-            ";border-width:0 0 0.15rem 0;font-size:1.2rem;color:",
-            [Function],
-            ";&:focus{border:solid ",
-            [Function],
-            ";border-width:0 0 0.15rem 0;}",
-          ],
-        },
-        "displayName": "Input__TextInput",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Input__TextInput-f34vry-0",
-        "target": "input",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
-  >
-    <input
-      className="c0"
-    />
-  </StyledComponent>
+  <input
+    className="c0"
+  />
 </Input__TextInput>
 `;
 
@@ -112,87 +60,18 @@ exports[`<TextInput /> renders with theme 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Input__TextInput-f34vry-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "min-width:50%;padding:0.5rem;background:",
-            [Function],
-            ";border:solid ",
-            [Function],
-            ";border-width:0 0 0.15rem 0;font-size:1.2rem;color:",
-            [Function],
-            ";&:focus{border:solid ",
-            [Function],
-            ";border-width:0 0 0.15rem 0;}",
-          ],
-        },
-        "displayName": "Input__TextInput",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Input__TextInput-f34vry-0",
-        "target": "input",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    theme={
-      Object {
-        "bg": "#000",
-        "bgAdd": "#202124",
-        "color": "#fff",
-        "colorAdd": "#8d8d8d",
-        "shadow": "none",
-      }
-    }
-  >
-    <input
-      className="c0"
-    />
-  </StyledComponent>
+  <input
+    className="c0"
+  />
 </Input__TextInput>
 `;
 
 exports[`renders default <InputRadio /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Input__InputRadio-f34vry-1",
-        "isStatic": false,
-        "rules": Array [
-          "opacity:0;",
-        ],
-      },
-      "displayName": "Input__InputRadio",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Input__InputRadio-f34vry-1",
-      "target": "input",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  opacity: 0;
+}
+
+<input
+  className="c0"
 />
 `;

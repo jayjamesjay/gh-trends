@@ -1,85 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders default <CategoryMenu /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Form__CategoryMenu-cy7ws1-2",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:row wrap;justify-content:center;width:100%;text-transform:uppercase;",
-        ],
-      },
-      "displayName": "Form__CategoryMenu",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Form__CategoryMenu-cy7ws1-2",
-      "target": "form",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+<form
+  className="c0"
 />
 `;
 
 exports[`renders default <Form /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Form-cy7ws1-0",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:row wrap;justify-content:center;max-width:90%;",
-        ],
-      },
-      "displayName": "Form",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Form-cy7ws1-0",
-      "target": "form",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 90%;
+}
+
+<form
+  className="c0"
 />
 `;
 
 exports[`renders default <FormAlt /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Form__FormAlt-cy7ws1-1",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:row wrap;justify-content:center;max-width:90%;",
-          "padding:1rem;",
-        ],
-      },
-      "displayName": "Form__FormAlt",
-      "foldedComponentIds": Array [
-        "Form-cy7ws1-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "Form__FormAlt-cy7ws1-1",
-      "target": "form",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-width: 90%;
+  padding: 1rem;
+}
+
+<form
+  className="Form-cy7ws1-0 c0"
 />
 `;

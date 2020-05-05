@@ -1,122 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Span /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Span-sc-1jc552j-0",
-        "isStatic": false,
-        "rules": Array [
-          "font-weight:400;font-size:1.3rem;color:",
-          [Function],
-          ";",
-        ],
-      },
-      "displayName": "Span",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Span-sc-1jc552j-0",
-      "target": "span",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#fafafa",
-      "bgAdd": "#fff",
-      "color": "#000",
-      "colorAdd": "#767676",
-      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-    }
-  }
+.c0 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #767676;
+}
+
+<span
+  className="c0"
 />
 `;
 
 exports[`<Span /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Span-sc-1jc552j-0",
-        "isStatic": false,
-        "rules": Array [
-          "font-weight:400;font-size:1.3rem;color:",
-          [Function],
-          ";",
-        ],
-      },
-      "displayName": "Span",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Span-sc-1jc552j-0",
-      "target": "span",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#000",
-      "bgAdd": "#202124",
-      "color": "#fff",
-      "colorAdd": "#8d8d8d",
-      "shadow": "none",
-    }
-  }
+.c0 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #8d8d8d;
+}
+
+<span
+  className="c0"
 />
 `;
 
 exports[`renders default <LabelSpan /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Span__LabelSpan-sc-1jc552j-1",
-        "isStatic": false,
-        "rules": Array [
-          "position:relative;z-index:100;",
-        ],
-      },
-      "displayName": "Span__LabelSpan",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Span__LabelSpan-sc-1jc552j-1",
-      "target": "span",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  position: relative;
+  z-index: 100;
+}
+
+<span
+  className="c0"
 />
 `;

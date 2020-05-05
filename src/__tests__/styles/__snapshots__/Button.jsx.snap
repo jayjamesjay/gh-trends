@@ -1,147 +1,73 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button-iu7iy2-0",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-        ],
-      },
-      "displayName": "Button",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Button-iu7iy2-0",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#fafafa",
-      "bgAdd": "#fff",
-      "color": "#000",
-      "colorAdd": "#767676",
-      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-    }
-  }
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+<button
+  className="c0"
 />
 `;
 
 exports[`<Button /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button-iu7iy2-0",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-        ],
-      },
-      "displayName": "Button",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Button-iu7iy2-0",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#000",
-      "bgAdd": "#202124",
-      "color": "#fff",
-      "colorAdd": "#8d8d8d",
-      "shadow": "none",
-    }
-  }
+.c0 {
+  cursor: pointer;
+  background: #202124;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+<button
+  className="c0"
 />
 `;
 
 exports[`<ButtonMain /> renders default 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonMain-iu7iy2-2",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-          "margin:auto;padding:1rem;box-shadow:",
-          [Function],
-          ";visibility:",
-          [Function],
-          ";",
-        ],
-      },
-      "displayName": "Button__ButtonMain",
-      "foldedComponentIds": Array [
-        "Button-iu7iy2-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonMain-iu7iy2-2",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  visibility: hidden;
+}
+
+<button
+  className="Button-iu7iy2-0 c0"
+/>
+`;
+
+exports[`<ButtonMain /> renders hidden 1`] = `
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  visibility: hidden;
+}
+
+<Button__ButtonMain
   theme={
     Object {
       "bg": "#fafafa",
@@ -151,62 +77,64 @@ exports[`<ButtonMain /> renders default 1`] = `
       "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
     }
   }
-/>
+  visible={false}
+>
+  <button
+    className="Button-iu7iy2-0 c0"
+  />
+</Button__ButtonMain>
+`;
+
+exports[`<ButtonMain /> renders visible 1`] = `
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  visibility: visible;
+}
+
+<Button__ButtonMain
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#767676",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+  visible={true}
+>
+  <button
+    className="Button-iu7iy2-0 c0"
+  />
+</Button__ButtonMain>
 `;
 
 exports[`<ButtonMain /> renders with theme 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonMain-iu7iy2-2",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-          "margin:auto;padding:1rem;box-shadow:",
-          [Function],
-          ";visibility:",
-          [Function],
-          ";",
-        ],
-      },
-      "displayName": "Button__ButtonMain",
-      "foldedComponentIds": Array [
-        "Button-iu7iy2-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonMain-iu7iy2-2",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#000",
-      "bgAdd": "#202124",
-      "color": "#fff",
-      "colorAdd": "#8d8d8d",
-      "shadow": "none",
-    }
-  }
+.c0 {
+  cursor: pointer;
+  background: #202124;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  margin: auto;
+  padding: 1rem;
+  box-shadow: none;
+  visibility: hidden;
+}
+
+<button
+  className="Button-iu7iy2-0 c0"
 />
 `;
 
@@ -234,64 +162,10 @@ exports[`<ToggleSpan /> open/close 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "open": true,
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-7",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "display:block;width:1.8rem;height:0.2rem;margin:0.3rem 0;background:",
-            [Function],
-            ";transition:transform 0.2s linear;&:first-child{transform:",
-            [Function],
-            ";}&:nth-child(2){transform:",
-            [Function],
-            ";}&:last-child{transform:",
-            [Function],
-            ";}",
-          ],
-        },
-        "displayName": "Button__ToggleSpan",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
-        "target": "span",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
+  <span
+    className="c0"
     open={false}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
-  >
-    <span
-      className="c0"
-      open={false}
-    />
-  </StyledComponent>
+  />
 </Button__ToggleSpan>
 `;
 
@@ -337,64 +211,10 @@ exports[`<ToggleSpan /> renders default 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "open": true,
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-7",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "display:block;width:1.8rem;height:0.2rem;margin:0.3rem 0;background:",
-            [Function],
-            ";transition:transform 0.2s linear;&:first-child{transform:",
-            [Function],
-            ";}&:nth-child(2){transform:",
-            [Function],
-            ";}&:last-child{transform:",
-            [Function],
-            ";}",
-          ],
-        },
-        "displayName": "Button__ToggleSpan",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
-        "target": "span",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
+  <span
+    className="c0"
     open={true}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
-  >
-    <span
-      className="c0"
-      open={true}
-    />
-  </StyledComponent>
+  />
 </Button__ToggleSpan>
 `;
 
@@ -440,254 +260,102 @@ exports[`<ToggleSpan /> renders with theme 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "open": true,
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Button__ToggleSpan-iu7iy2-7",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "display:block;width:1.8rem;height:0.2rem;margin:0.3rem 0;background:",
-            [Function],
-            ";transition:transform 0.2s linear;&:first-child{transform:",
-            [Function],
-            ";}&:nth-child(2){transform:",
-            [Function],
-            ";}&:last-child{transform:",
-            [Function],
-            ";}",
-          ],
-        },
-        "displayName": "Button__ToggleSpan",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Button__ToggleSpan-iu7iy2-7",
-        "target": "span",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
+  <span
+    className="c0"
     open={true}
-    theme={
-      Object {
-        "bg": "#000",
-        "bgAdd": "#202124",
-        "color": "#fff",
-        "colorAdd": "#8d8d8d",
-        "shadow": "none",
-      }
-    }
-  >
-    <span
-      className="c0"
-      open={true}
-    />
-  </StyledComponent>
+  />
 </Button__ToggleSpan>
 `;
 
 exports[`renders default <ButtonAdd /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonAdd-iu7iy2-5",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;height:auto;background:transparent;border:0;",
-          "margin:0.5rem 0 0 0;",
-        ],
-      },
-      "displayName": "Button__ButtonAdd",
-      "foldedComponentIds": Array [
-        "Button__ButtonIcon-iu7iy2-3",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonAdd-iu7iy2-5",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  cursor: pointer;
+  height: auto;
+  background: transparent;
+  border: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+<button
+  className="Button__ButtonIcon-iu7iy2-3 c0"
 />
 `;
 
 exports[`renders default <ButtonIcon /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonIcon-iu7iy2-3",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;height:auto;background:transparent;border:0;",
-        ],
-      },
-      "displayName": "Button__ButtonIcon",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonIcon-iu7iy2-3",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  cursor: pointer;
+  height: auto;
+  background: transparent;
+  border: 0;
+}
+
+<button
+  className="c0"
 />
 `;
 
 exports[`renders default <ButtonRemove /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonRemove-iu7iy2-4",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;height:auto;background:transparent;border:0;",
-          "margin-top:-0.6rem;",
-        ],
-      },
-      "displayName": "Button__ButtonRemove",
-      "foldedComponentIds": Array [
-        "Button__ButtonIcon-iu7iy2-3",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonRemove-iu7iy2-4",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  cursor: pointer;
+  height: auto;
+  background: transparent;
+  border: 0;
+  margin-top: -0.6rem;
+}
+
+<button
+  className="Button__ButtonIcon-iu7iy2-3 c0"
 />
 `;
 
 exports[`renders default <ButtonTheme /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__ButtonTheme-iu7iy2-1",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-          "width:4rem;height:4rem;margin:0 auto;background:transparent;@media screen and (min-width:40rem){margin:0 1rem;}",
-        ],
-      },
-      "displayName": "Button__ButtonTheme",
-      "foldedComponentIds": Array [
-        "Button-iu7iy2-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__ButtonTheme-iu7iy2-1",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  background: transparent;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    margin: 0 1rem;
   }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#fafafa",
-      "bgAdd": "#fff",
-      "color": "#000",
-      "colorAdd": "#767676",
-      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-    }
-  }
+}
+
+<button
+  className="Button-iu7iy2-0 c0"
 />
 `;
 
 exports[`renders default <MenuToggle /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "_foldedDefaultProps": Object {
-        "theme": Object {
-          "bg": "#fafafa",
-          "bgAdd": "#fff",
-          "color": "#000",
-          "colorAdd": "#767676",
-          "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-        },
-      },
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Button__MenuToggle-iu7iy2-6",
-        "isStatic": false,
-        "rules": Array [
-          "cursor:pointer;background:",
-          [Function],
-          ";border:0;border-radius:0.5rem;font-size:1.2rem;color:",
-          [Function],
-          ";text-transform:uppercase;",
-          "margin:0 1rem;padding:0;background:transparent;overflow:hidden;@media screen and (min-width:40rem){display:none;}",
-        ],
-      },
-      "displayName": "Button__MenuToggle",
-      "foldedComponentIds": Array [
-        "Button-iu7iy2-0",
-      ],
-      "render": [Function],
-      "styledComponentId": "Button__MenuToggle-iu7iy2-6",
-      "target": "button",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+  margin: 0 1rem;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    display: none;
   }
-  forwardedRef={null}
-  theme={
-    Object {
-      "bg": "#fafafa",
-      "bgAdd": "#fff",
-      "color": "#000",
-      "colorAdd": "#767676",
-      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-    }
-  }
+}
+
+<button
+  className="Button-iu7iy2-0 c0"
 />
 `;

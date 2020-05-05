@@ -1,112 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders default <Bar /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Main__Bar-sc-1yl8y0q-2",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:row wrap;justify-content:center;align-content:center;align-items:center;",
-        ],
-      },
-      "displayName": "Main__Bar",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Main__Bar-sc-1yl8y0q-2",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
 />
 `;
 
 exports[`renders default <BottomBar /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Main__BottomBar-sc-1yl8y0q-3",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:row wrap;justify-content:center;align-content:center;align-items:center;",
-          "margin:auto 0 0 0;",
-        ],
-      },
-      "displayName": "Main__BottomBar",
-      "foldedComponentIds": Array [
-        "Main__Bar-sc-1yl8y0q-2",
-      ],
-      "render": [Function],
-      "styledComponentId": "Main__BottomBar-sc-1yl8y0q-3",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: auto 0 0 0;
+}
+
+<div
+  className="Main__Bar-sc-1yl8y0q-2 c0"
 />
 `;
 
 exports[`renders default <Content /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Main__Content-sc-1yl8y0q-1",
-        "isStatic": false,
-        "rules": Array [
-          "@media screen and (min-width:40rem){display:flex;flex-flow:row wrap;justify-content:space-around;margin:0 1.5rem;}",
-        ],
-      },
-      "displayName": "Main__Content",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Main__Content-sc-1yl8y0q-1",
-      "target": "div",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
+@media screen and (min-width:40rem) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    margin: 0 1.5rem;
   }
-  forwardedRef={null}
+}
+
+<div
+  className="c0"
 />
 `;
 
 exports[`renders default <Main /> 1`] = `
-<StyledComponent
-  forwardedComponent={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "attrs": Array [],
-      "componentStyle": ComponentStyle {
-        "componentId": "Main-sc-1yl8y0q-0",
-        "isStatic": false,
-        "rules": Array [
-          "display:flex;flex-flow:column;align-content:center;align-items:center;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);text-align:center;",
-        ],
-      },
-      "displayName": "Main",
-      "foldedComponentIds": Array [],
-      "render": [Function],
-      "styledComponentId": "Main-sc-1yl8y0q-0",
-      "target": "main",
-      "toString": [Function],
-      "warnTooManyClasses": [Function],
-      "withComponent": [Function],
-    }
-  }
-  forwardedRef={null}
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  text-align: center;
+}
+
+<main
+  className="c0"
 />
 `;

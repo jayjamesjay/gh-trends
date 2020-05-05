@@ -40,65 +40,9 @@ exports[`<Article /> renders default 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Article-yap135-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "display:flex;margin:2rem 1rem;min-height:13rem;padding:1.2rem 1.2rem 0.8rem 1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
-            [Function],
-            " 0%,",
-            [Function],
-            " 0.3rem,",
-            [Function],
-            " 0.3rem,",
-            [Function],
-            " 0.6rem,",
-            [Function],
-            " 0.6rem );box-shadow:",
-            [Function],
-            ";border-radius:0.5rem;text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:1.5rem 1rem;flex:1 1 27%;}",
-          ],
-        },
-        "displayName": "Article",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Article-yap135-0",
-        "target": "article",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
-  >
-    <article
-      className="c0"
-    />
-  </StyledComponent>
+  <article
+    className="c0"
+  />
 </Article>
 `;
 
@@ -142,64 +86,8 @@ exports[`<Article /> renders with theme 1`] = `
     }
   }
 >
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "_foldedDefaultProps": Object {
-          "theme": Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          },
-        },
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "Article-yap135-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "display:flex;margin:2rem 1rem;min-height:13rem;padding:1.2rem 1.2rem 0.8rem 1.2rem;flex-flow:column nowrap;background:linear-gradient( ",
-            [Function],
-            " 0%,",
-            [Function],
-            " 0.3rem,",
-            [Function],
-            " 0.3rem,",
-            [Function],
-            " 0.6rem,",
-            [Function],
-            " 0.6rem );box-shadow:",
-            [Function],
-            ";border-radius:0.5rem;text-align:left;word-break:break-word;@media screen and (min-width:40rem){min-width:16.5rem;margin:1.5rem 1rem;flex:1 1 27%;}",
-          ],
-        },
-        "displayName": "Article",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "Article-yap135-0",
-        "target": "article",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
-    }
-    forwardedRef={null}
-    theme={
-      Object {
-        "bg": "#000",
-        "bgAdd": "#202124",
-        "color": "#fff",
-        "colorAdd": "#8d8d8d",
-        "shadow": "none",
-      }
-    }
-  >
-    <article
-      className="c0"
-    />
-  </StyledComponent>
+  <article
+    className="c0"
+  />
 </Article>
 `;
