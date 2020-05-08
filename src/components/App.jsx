@@ -69,13 +69,18 @@ export default function App() {
           />
           <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
           <Main>
-            <Route path="/search" render={() => <Search save={save} saved={saved} />} />
-            <Route
-              path="/saved"
-              render={() => <Saved data={saved} save={save} removeAll={removeAll} />}
-            />
-            <Route exact path="/" render={() => <Home save={save} saved={saved} />} />
-            <Route path="/home" render={() => <Home save={save} saved={saved} />} />
+            <Route path="/search">
+              <Search save={save} saved={saved} />
+            </Route>
+            <Route path="/saved">
+              <Saved data={saved} save={save} removeAll={removeAll} />
+            </Route>
+            <Route exact path="/">
+              <Home save={save} saved={saved} />
+            </Route>
+            <Route path="/home">
+              <Home save={save} saved={saved} />
+            </Route>
           </Main>
           <Footer />
           <GlobalStyle />
