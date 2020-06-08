@@ -5,14 +5,14 @@
 
 Unofficial website showing trends at Github.
 
-## Features:
+## Features
 
 - Shows most popular repositories of all-time, created this month or this week which are gaining popularity.
 - Filter trending repositories by language.
 - Search for repositories.
 - Save repositories and download informations about them in JSON or Markdown format.
 
-## Technologies:
+## Technologies
 
 - React (Hooks) 
 - Redux
