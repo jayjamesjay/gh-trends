@@ -20,6 +20,7 @@ Unofficial website showing trends at Github.
 - Jest 
 - Enzyme
 - prop-types
+- Webpack
 
 ## Run via Webpack Dev Server
 
