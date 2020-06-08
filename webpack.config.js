@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/components/Index.jsx',
+    main: './src/index.jsx',
     worker: './src/service-worker.js'
   },
   output: {

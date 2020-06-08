@@ -12,6 +12,15 @@ Unofficial website showing trends at Github.
 - Search for repositories.
 - Save repositories and download informations about them in JSON or Markdown format.
 
+## Technologies:
+
+- React (Hooks) 
+- Redux
+- styled components
+- Jest 
+- Enzyme
+- prop-types
+
 ## Run via Webpack Dev Server
 
 ```

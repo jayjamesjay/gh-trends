@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Search from '../../routes/Search';
+import { Search } from '../../routes/Search';
 import TextInput from '../../styles/Input';
 import { SelectLang } from '../../components/Select';
 

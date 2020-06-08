@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import View from '../components/View';
 import Categories from '../components/Categories';
@@ -8,23 +9,33 @@ import { Bar } from '../styles/Main';
 import { DownloadLink, jsonToMarkdown } from '../components/Data';
 import RepoInfo from '../components/RepoInfo';
 import { ButtonRemove } from '../styles/Button';
+import { save, removeAllSaved } from '../actions';
 
-export default function Saved({ data, save, removeAll }) {
+const mapStateToProps = state => {
+  return {
+    saved: state.saved
+  };
+};
+
+const mapDispatchToProps = { removeAllSaved, save };
+
+// eslint-disable-next-line no-shadow
+export function Saved({ saved, save, removeAllSaved }) {
   const [active, setActive] = React.useState('JSON');
   const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
   let content;
 
-  if (data.length > 0) {
+  if (saved.length > 0) {
     const link =
       active === 'JSON' ? (
         <DownloadLink
           filename="saved.json"
-          content={JSON.stringify(data)}
+          content={JSON.stringify(saved)}
           dataType="json"
           display={imgDownload}
         />
       ) : (
-        <DownloadLink filename="saved.md" content={jsonToMarkdown(data)} display={imgDownload} />
+        <DownloadLink filename="saved.md" content={jsonToMarkdown(saved)} display={imgDownload} />
       );
 
     content = (
@@ -35,12 +46,12 @@ export default function Saved({ data, save, removeAll }) {
         <section>
           <Bar>
             {link}
-            <ButtonRemove onClick={removeAll}>
+            <ButtonRemove onClick={removeAllSaved}>
               <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
             </ButtonRemove>
           </Bar>
           <Categories labels={['JSON', 'Markdown']} active={active} onClick={setActive} />
-          <View data={data} save={save} saved={data} />
+          <View data={saved} save={save} saved={saved} />
         </section>
       </>
     );
@@ -52,7 +63,14 @@ export default function Saved({ data, save, removeAll }) {
 }
 
 Saved.propTypes = {
-  save: PropTypes.func.isRequired,
-  removeAll: PropTypes.func.isRequired,
-  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
+  removeAllSaved: PropTypes.func.isRequired,
+  save: PropTypes.func.isRequired
 };
+
+const SavedContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Saved);
+
+export default SavedContainer;

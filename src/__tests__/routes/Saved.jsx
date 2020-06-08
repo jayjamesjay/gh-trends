@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Saved from '../../routes/Saved';
+import { Saved } from '../../routes/Saved';
 import { initData, DownloadLink } from '../../components/Data';
 import Category from '../../components/Category';
 
@@ -9,11 +9,11 @@ describe('<Saved />', () => {
   const func = () => {};
 
   beforeEach(() => {
-    wrapper = shallow(<Saved save={func} removeAll={func} data={initData} />);
+    wrapper = shallow(<Saved save={func} removeAllSaved={func} saved={initData} />);
   });
 
   it('renders with title - no repos', () => {
-    const saved = shallow(<Saved save={func} removeAll={func} data={[]} />);
+    const saved = shallow(<Saved save={func} removeAllSaved={func} saved={[]} />);
     const title = `You haven't saved any repos...`;
 
     expect(saved.text()).toContain(title);
@@ -31,7 +31,7 @@ describe('<Saved />', () => {
 
   it('creates download link for Markdown', () => {
     const name = `saved.md`;
-    const wrapperAlt = mount(<Saved save={func} removeAll={func} data={initData} />);
+    const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
     wrapperAlt
       .find(Category)
       .at(1)
@@ -45,7 +45,7 @@ describe('<Saved />', () => {
     const useStateSpy = jest.spyOn(React, 'useState');
     useStateSpy.mockImplementation(init => [init, setState]);
 
-    const wrapperAlt = mount(<Saved save={func} removeAll={func} data={initData} />);
+    const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
     wrapperAlt
       .find(Category)
       .at(1)

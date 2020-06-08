@@ -1,4 +1,5 @@
 import React, { useEffect, useCallback } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
 import getAndSave, { Url, addLang, defApi, perPage } from '../components/Fetch';
@@ -11,10 +12,20 @@ import TextInput from '../styles/Input';
 import { H1 } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import { SelectLang } from '../components/Select';
+import { save } from '../actions';
 
 const langs = Object.keys(languages);
 
-export default function Search({ save, saved }) {
+const mapStateToProps = state => {
+  return {
+    saved: state.saved
+  };
+};
+
+const mapDispatchToProps = { save };
+
+// eslint-disable-next-line no-shadow
+export function Search({ saved, save }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
@@ -83,6 +94,13 @@ export default function Search({ save, saved }) {
 }
 
 Search.propTypes = {
-  save: PropTypes.func.isRequired,
-  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
+  save: PropTypes.func.isRequired
 };
+
+const SearchContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Search);
+
+export default SearchContainer;

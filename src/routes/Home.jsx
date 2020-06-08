@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import getAndSave, { Url, defApi, perPage, addLang } from '../components/Fetch';
 import { ViewSingle } from '../components/View';
@@ -8,11 +9,21 @@ import RepoInfo from '../components/RepoInfo';
 import { H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
 import Select from '../components/Select';
+import { save } from '../actions';
 
 const langs = ['All Languages', ...Object.keys(languages)];
 const timeList = Object.keys(queries);
 
-export default function Home({ save, saved }) {
+const mapStateToProps = state => {
+  return {
+    saved: state.saved
+  };
+};
+
+const mapDispatchToProps = { save };
+
+// eslint-disable-next-line no-shadow
+export function Home({ saved, save }) {
   const [lang, setLang] = React.useState('All');
   const [time, setTime] = React.useState('This Week');
   const [query, setQuery] = React.useState(queries[time]);
@@ -80,6 +91,13 @@ export default function Home({ save, saved }) {
 }
 
 Home.propTypes = {
-  save: PropTypes.func.isRequired,
-  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
+  saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
+  save: PropTypes.func.isRequired
 };
+
+const HomeContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
+
+export default HomeContainer;
