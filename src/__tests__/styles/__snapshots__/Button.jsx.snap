@@ -42,9 +42,11 @@ exports[`<ButtonMain /> renders default 1`] = `
   color: #000;
   text-transform: uppercase;
   margin: auto;
-  padding: 1rem;
+  padding: 0;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 <button
@@ -62,9 +64,11 @@ exports[`<ButtonMain /> renders hidden 1`] = `
   color: #000;
   text-transform: uppercase;
   margin: auto;
-  padding: 1rem;
+  padding: 0;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 <Button__ButtonMain
@@ -97,7 +101,8 @@ exports[`<ButtonMain /> renders visible 1`] = `
   margin: auto;
   padding: 1rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  visibility: visible;
+  width: auto;
+  height: auto;
 }
 
 <Button__ButtonMain
@@ -128,9 +133,11 @@ exports[`<ButtonMain /> renders with theme 1`] = `
   color: #fff;
   text-transform: uppercase;
   margin: auto;
-  padding: 1rem;
+  padding: 0;
   box-shadow: none;
-  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 <button

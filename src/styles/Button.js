@@ -28,9 +28,11 @@ export const ButtonTheme = styled(Button)`
 
 export const ButtonMain = styled(Button)`
   margin: auto;
-  padding: 1rem;
+  padding: ${props => (props.visible ? '1rem' : '0')};
   box-shadow: ${props => props.theme.shadow};
-  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
+  width: ${props => (props.visible ? 'auto' : '0')};
+  height: ${props => (props.visible ? 'auto' : '0')};
+  overflow: ${props => (props.visible ? '' : 'hidden')};
 `;
 
 ButtonMain.defaultProps = {

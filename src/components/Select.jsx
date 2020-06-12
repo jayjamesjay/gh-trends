@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import StyledSelect from '../styles/Select';
 import Option from '../styles/Option';
 import { ImgIcon } from '../styles/Img';
-import FilterImg from '../assets/img/stars.svg';
+import FilterImg from '../assets/img/filter-list.svg';
 
 /**
  * @module Select

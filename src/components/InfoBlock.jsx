@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import RepoInfo from './RepoInfo';
-import { languages as colors, imgPath } from './Data';
+import { languages as colors } from './Data';
 import { BottomBar } from '../styles/Main';
 import Article from '../styles/Article';
 import Span from '../styles/Span';

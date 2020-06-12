@@ -5,6 +5,8 @@ import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
 import { identicalItems } from './Data';
 import RepoInfo from './RepoInfo';
+import { ImgLoader } from '../styles/Img';
+import LoadingSpinner from '../assets/img/loading-spinner.svg';
 
 /**
  * @module View
@@ -45,13 +47,14 @@ View.propTypes = {
  * @returns {ViewSingle}
  */
 export function ViewSingle(props) {
-  const { data, loadData } = props;
+  const { data, loadData, loading } = props;
 
   return (
     <>
       <View {...props} />
       <footer>
-        <ButtonMain visible={data.length > 0} onClick={loadData}>
+        <ImgLoader src={LoadingSpinner} alt="Loading items" active={loading} />
+        <ButtonMain visible={data.length > 0 && !loading} onClick={loadData}>
           Show more
         </ButtonMain>
       </footer>
@@ -61,5 +64,6 @@ export function ViewSingle(props) {
 
 ViewSingle.propTypes = {
   loadData: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
   data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
 };

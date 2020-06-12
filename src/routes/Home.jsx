@@ -8,10 +8,8 @@ import RepoInfoList from '../components/RepoInfoList';
 import RepoInfo from '../components/RepoInfo';
 import { H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
-import { ImgLoader } from '../styles/Img';
 import Select from '../components/Select';
 import { save } from '../actions';
-import LoadingSpinner from '../assets/img/loading-spinner.svg';
 
 const langs = ['All Languages', ...Object.keys(languages)];
 const timeList = Object.keys(queries);
@@ -55,6 +53,7 @@ export function Home({ saved, save }) {
 
   const request = useCallback(
     (currData, currPage) => {
+      setLoading(true);
       const preUrl = new Url(defApi).query(query).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
       return getAndSave(infoList, preUrl, signal, setRepoInfo).then(() => {
@@ -83,8 +82,13 @@ export function Home({ saved, save }) {
         <Select curr={lang} onSelect={selectLang} options={langs} label="Languages" />
         <Select curr={time} onSelect={selectTime} options={timeList} label="Periods of time" />
       </FormAlt>
-      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
-      <ImgLoader src={LoadingSpinner} alt="Loading items" active={loading} />
+      <ViewSingle
+        data={repoInfo.data}
+        loadData={loadData}
+        save={save}
+        saved={saved}
+        loading={loading}
+      />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
@@ -29,21 +29,19 @@ const mapDispatchToProps = { save };
 export function Search({ saved, save }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
+  const [loading, setLoading] = React.useState(false);
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const abortController = new AbortController();
   const { signal } = abortController;
 
-  useEffect(() => {
-    return () => {
-      abortController.abort();
-    };
-  });
-
   const request = useCallback(
     (currData, currPage) => {
+      setLoading(true);
       const preUrl = new Url(defApi).query(search).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo);
+      return getAndSave(infoList, preUrl, signal, setRepoInfo).then(() => {
+        setLoading(false);
+      });
     },
     [search, signal, setRepoInfo]
   );
@@ -89,7 +87,7 @@ export function Search({ saved, save }) {
           <Img src={SearchImg} alt="Search" />
         </ButtonIcon>
       </FormAlt>
-      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
+      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} loading={loading} />
     </>
   );
 }
