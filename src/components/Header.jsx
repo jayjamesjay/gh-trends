@@ -5,7 +5,7 @@ import StyledHeader from '../styles/Headers';
 import { HeaderLink } from '../styles/Link';
 import { Img } from '../styles/Img';
 import { ButtonTheme } from '../styles/Button';
-import { imgPath } from './Data';
+import SwitchThemeImg from '../assets/img/dark-mode.svg';
 
 /**
  * @module Header
@@ -26,7 +26,7 @@ export default function Header({ link, title, switchTheme, hide, toggle }) {
     <StyledHeader>
       <HeaderLink to={link}>{title}</HeaderLink>
       <ButtonTheme onClick={switchTheme}>
-        <Img src={`${imgPath}/dark-mode.svg`} alt="Switch between dark and light mode" />
+        <Img src={SwitchThemeImg} alt="Switch between dark and light mode" />
       </ButtonTheme>
       <MenuToggle toggle={toggle} open={!hide} />
     </StyledHeader>

@@ -10,6 +10,8 @@ import { DownloadLink, jsonToMarkdown } from '../components/Data';
 import RepoInfo from '../components/RepoInfo';
 import { ButtonRemove } from '../styles/Button';
 import { save, removeAllSaved } from '../actions';
+import DownloadImg from '../assets/img/download.svg';
+import RemoveAllImg from '../assets/img/remove-all.svg';
 
 const mapStateToProps = state => {
   return {
@@ -22,7 +24,7 @@ const mapDispatchToProps = { removeAllSaved, save };
 // eslint-disable-next-line no-shadow
 export function Saved({ saved, save, removeAllSaved }) {
   const [active, setActive] = React.useState('JSON');
-  const imgDownload = <ImgIcon src="./assets/img/download.svg" alt="Download saved items" />;
+  const imgDownload = <ImgIcon src={DownloadImg} alt="Download saved items" />;
   let content;
 
   if (saved.length > 0) {
@@ -47,7 +49,7 @@ export function Saved({ saved, save, removeAllSaved }) {
           <Bar>
             {link}
             <ButtonRemove onClick={removeAllSaved}>
-              <ImgIcon src="./assets/img/remove-all.svg" alt="Remove all" />
+              <ImgIcon src={RemoveAllImg} alt="Remove all" />
             </ButtonRemove>
           </Bar>
           <Categories labels={['JSON', 'Markdown']} active={active} onClick={setActive} />

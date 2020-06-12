@@ -10,6 +10,9 @@ import { Img, ImgInline } from '../styles/Img';
 import { PFlex, PClean } from '../styles/Paragraph';
 import { ButtonAdd } from '../styles/Button';
 import { LinkA } from '../styles/Link';
+import DeleteImg from '../assets/img/delete.svg';
+import SaveImg from '../assets/img/add-saved.svg';
+import StarsImg from '../assets/img/stars.svg';
 
 /**
  * @module InfoBlock
@@ -50,7 +53,7 @@ export default function InfoBlock({ info, save, saved }) {
         <PClean>{license}</PClean>
         <PFlex>
           {stargazersCount}
-          <ImgInline src={`${imgPath}/stars.svg`} alt="Stars" />
+          <ImgInline src={StarsImg} alt="Stars" />
         </PFlex>
         <PClean>{langStr}</PClean>
       </BottomBar>
@@ -99,9 +102,9 @@ export function SaveRepo({ save, saved }) {
   return (
     <ButtonAdd onClick={save}>
       {saved ? (
-        <Img src={`${imgPath}/delete.svg`} alt="Remove from saved" title="Remove from saved" />
+        <Img src={DeleteImg} alt="Remove from saved" title="Remove from saved" />
       ) : (
-        <Img src={`${imgPath}/add-saved.svg`} alt="Add to saved" title="Add to saved" />
+        <Img src={SaveImg} alt="Add to saved" title="Add to saved" />
       )}
     </ButtonAdd>
   );

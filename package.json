@@ -26,6 +26,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
+    "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.2.0",
     "husky": "^4.2.5",
     "jest": "^26.0.0",
@@ -63,7 +64,10 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js"
+    }
   },
   "prettier": {
     "printWidth": 100,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import StyledSelect from '../styles/Select';
 import Option from '../styles/Option';
 import { ImgIcon } from '../styles/Img';
-import { imgPath } from './Data';
+import FilterImg from '../assets/img/stars.svg';
 
 /**
  * @module Select
@@ -24,7 +24,7 @@ export function SelectLang(props) {
 
   return (
     <>
-      <ImgIcon src={`${imgPath}/filter-list.svg`} alt={label} title={label} />
+      <ImgIcon src={FilterImg} alt={label} title={label} />
       <Select {...props} options={langs} label="Languages" />
     </>
   );

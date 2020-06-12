@@ -1,15 +1,17 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import getAndSave, { Url, defApi, perPage, addLang } from '../components/Fetch';
 import { ViewSingle } from '../components/View';
-import { queries, languages, initData } from '../components/Data';
+import { queries, languages } from '../components/Data';
 import RepoInfoList from '../components/RepoInfoList';
 import RepoInfo from '../components/RepoInfo';
 import { H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
+import { ImgLoader } from '../styles/Img';
 import Select from '../components/Select';
 import { save } from '../actions';
+import LoadingSpinner from '../assets/img/loading-spinner.svg';
 
 const langs = ['All Languages', ...Object.keys(languages)];
 const timeList = Object.keys(queries);
@@ -26,42 +28,38 @@ const mapDispatchToProps = { save };
 export function Home({ saved, save }) {
   const [lang, setLang] = React.useState('All');
   const [time, setTime] = React.useState('This Week');
-  const [query, setQuery] = React.useState(queries[time]);
-  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList(initData, 1));
+  const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
+  const [loading, setLoading] = React.useState(true);
   const abortController = new AbortController();
   const { signal } = abortController;
+  const query = useMemo(() => addLang(queries[time], lang), [lang, time]);
 
-  const onSelect = useCallback(
-    (newTime, newLang) => {
-      const newQuery = addLang(queries[newTime], newLang);
-      setQuery(newQuery);
-    },
-    [setQuery]
-  );
+  const onSelect = useCallback((event, callback) => {
+    const val = event.target.value;
+    callback(val);
+  }, []);
 
   const selectLang = useCallback(
     event => {
-      const newLang = event.target.value;
-      setLang(newLang);
-      onSelect(time, newLang);
+      onSelect(event, setLang);
     },
-    [time, onSelect]
+    [onSelect, setLang]
   );
 
   const selectTime = useCallback(
     event => {
-      const newTime = event.target.value;
-      setTime(newTime);
-      onSelect(newTime, lang);
+      onSelect(event, setTime);
     },
-    [lang, onSelect]
+    [onSelect, setTime]
   );
 
   const request = useCallback(
     (currData, currPage) => {
       const preUrl = new Url(defApi).query(query).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo);
+      return getAndSave(infoList, preUrl, signal, setRepoInfo).then(() => {
+        setLoading(false);
+      });
     },
     [query, signal, setRepoInfo]
   );
@@ -86,6 +84,7 @@ export function Home({ saved, save }) {
         <Select curr={time} onSelect={selectTime} options={timeList} label="Periods of time" />
       </FormAlt>
       <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />
+      <ImgLoader src={LoadingSpinner} alt="Loading items" active={loading} />
     </>
   );
 }

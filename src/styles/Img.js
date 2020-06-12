@@ -13,6 +13,12 @@ export const ImgIcon = styled(Img)`
   width: 3rem;
 `;
 
+export const ImgLoader = styled(Img)`
+  width: ${props => (props.active ? '5rem' : '0')};
+  height: ${props => (props.active ? 'auto' : '0')};
+  overflow: ${props => (props.active ? '' : 'hidden')};
+`;
+
 export const ImgInline = styled.img`
   display: inline-block;
   width: auto;

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
 import getAndSave, { Url, addLang, defApi, perPage } from '../components/Fetch';
-import { languages, imgPath } from '../components/Data';
+import { languages } from '../components/Data';
 import RepoInfoList from '../components/RepoInfoList';
 import RepoInfo from '../components/RepoInfo';
 import { ButtonIcon } from '../styles/Button';
@@ -13,6 +13,7 @@ import { H1 } from '../styles/Headers';
 import { Img } from '../styles/Img';
 import { SelectLang } from '../components/Select';
 import { save } from '../actions';
+import SearchImg from '../assets/img/search.svg';
 
 const langs = Object.keys(languages);
 
@@ -85,7 +86,7 @@ export function Search({ saved, save }) {
           onKeyPress={onKeyPress}
         />
         <ButtonIcon onClick={reloadData}>
-          <Img src={`${imgPath}/search.svg`} alt="Search" />
+          <Img src={SearchImg} alt="Search" />
         </ButtonIcon>
       </FormAlt>
       <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} />

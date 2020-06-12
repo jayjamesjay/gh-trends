@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import formatDate from './Date';
 import { LinkA } from '../styles/Link';
-import RepoInfo from './RepoInfo';
 
 /**
  * @module Data
@@ -26,11 +25,6 @@ export const queries = {
   'This Month': queryMonth,
   'All Time': queryAllTime
 };
-
-/**
- * Default path for all images
- */
-export const imgPath = './assets/img';
 
 /**
  * Compares if two items have identical nameWithOwner
@@ -271,22 +265,6 @@ export const languages = {
   wisp: '#7582D1',
   xBase: '#403a40'
 };
-
-export const initData = new Array(6);
-
-for (let i = 0; i < initData.length; i += 1) {
-  const curr = new RepoInfo(
-    'jayjamesjay/gh-trends',
-    '',
-    'Loading content for this website...',
-    123,
-    'JavaScript',
-    321,
-    'MIT'
-  );
-  curr.nameWithOwner += i;
-  initData[i] = curr;
-}
 
 /**
  * Creates link to donwload a file

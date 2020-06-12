@@ -28,6 +28,12 @@ module.exports = {
         resolve: {
           extensions: ['.js', '.jsx']
         }
+      },
+      {
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        use: {
+          loader: 'file-loader'
+        }
       }
     ]
   },

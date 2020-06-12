@@ -1,9 +1,25 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import View, { ViewSingle } from '../../components/View';
-import { initData } from '../../components/Data';
 import InfoBlock from '../../components/InfoBlock';
 import { ButtonMain } from '../../styles/Button';
+import RepoInfo from '../../components/RepoInfo';
+
+const initData = new Array(6);
+
+for (let i = 0; i < initData.length; i += 1) {
+  const curr = new RepoInfo(
+    'jayjamesjay/gh-trends',
+    '',
+    'Loading content for this website...',
+    123,
+    'JavaScript',
+    321,
+    'MIT'
+  );
+  curr.nameWithOwner += i;
+  initData[i] = curr;
+}
 
 describe('<View />', () => {
   const func = () => {};

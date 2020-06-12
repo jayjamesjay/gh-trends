@@ -1,12 +1,28 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { Saved } from '../../routes/Saved';
-import { initData, DownloadLink } from '../../components/Data';
+import { DownloadLink } from '../../components/Data';
 import Category from '../../components/Category';
+import RepoInfo from '../../components/RepoInfo';
 
 describe('<Saved />', () => {
   let wrapper;
   const func = () => {};
+  const initData = new Array(6);
+
+  for (let i = 0; i < initData.length; i += 1) {
+    const curr = new RepoInfo(
+      'jayjamesjay/gh-trends',
+      '',
+      'Loading content for this website...',
+      123,
+      'JavaScript',
+      321,
+      'MIT'
+    );
+    curr.nameWithOwner += i;
+    initData[i] = curr;
+  }
 
   beforeEach(() => {
     wrapper = shallow(<Saved save={func} removeAllSaved={func} saved={initData} />);
