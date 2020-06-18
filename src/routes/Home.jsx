@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import getAndSave, { Url, defApi, perPage, addLang } from '../components/Fetch';
+import getAndSave, { Url, defApi, perPage, addLang, load } from '../components/Fetch';
 import { ViewSingle } from '../components/View';
 import { queries, languages } from '../components/Data';
 import RepoInfoList from '../components/RepoInfoList';
@@ -27,7 +27,7 @@ export function Home({ saved, save }) {
   const [lang, setLang] = React.useState('All');
   const [time, setTime] = React.useState('This Week');
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
-  const [loading, setLoading] = React.useState(true);
+  const [loading, setLoading] = React.useState(load.INPROGRESS);
   const abortController = new AbortController();
   const { signal } = abortController;
   const query = useMemo(() => addLang(queries[time], lang), [lang, time]);
@@ -51,22 +51,24 @@ export function Home({ saved, save }) {
     [onSelect, setTime]
   );
 
-  const request = useCallback(
-    (currData, currPage) => {
-      setLoading(true);
+  const loadData = useCallback(
+    (currData = [], currPage = 1) => {
+      setLoading(load.INPROGRESS);
       const preUrl = new Url(defApi).query(query).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo).then(() => {
-        setLoading(false);
-      });
+      return getAndSave(infoList, preUrl, signal, setRepoInfo)
+        .then(() => {
+          setLoading(load.LOADED);
+        })
+        .catch(() => {
+          setLoading(load.ERORR);
+        });
     },
     [query, signal, setRepoInfo]
   );
-  const loadData = () => request(repoInfo.data, repoInfo.page);
-  const reloadData = useCallback(() => request([], 1), [request]);
 
   useEffect(() => {
-    reloadData();
+    loadData();
 
     return () => {
       abortController.abort();
@@ -84,7 +86,7 @@ export function Home({ saved, save }) {
       </FormAlt>
       <ViewSingle
         data={repoInfo.data}
-        loadData={loadData}
+        loadData={() => loadData(repoInfo.data, repoInfo.page)}
         save={save}
         saved={saved}
         loading={loading}

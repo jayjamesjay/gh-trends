@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import View, { ViewSingle } from '../../components/View';
 import InfoBlock from '../../components/InfoBlock';
+import { load } from '../../components/Fetch';
 import { ButtonMain } from '../../styles/Button';
 import RepoInfo from '../../components/RepoInfo';
 
@@ -44,22 +45,29 @@ describe('<ViewSingle />', () => {
   const id = 'view-1';
   let tempId;
   const func = () => {};
-  const load = () => {
+  const loading = load.LOADED;
+  const loadData = () => {
     tempId = id;
   };
 
   it(`renders empty and does not display Button`, () => {
-    const view = shallow(<ViewSingle data={[]} saved={[]} save={func} loadData={func} />);
+    const view = shallow(
+      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={loading} />
+    );
     expect(view.find(ButtonMain).prop('visible')).toEqual(false);
   });
 
   it('renders with items and displays Button', () => {
-    const view = shallow(<ViewSingle data={initData} saved={[]} save={func} loadData={func} />);
+    const view = shallow(
+      <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />
+    );
     expect(view.find(ButtonMain).prop('visible')).toEqual(true);
   });
 
   it('fires loadData', () => {
-    const view = shallow(<ViewSingle data={initData} saved={[]} save={func} loadData={load} />);
+    const view = shallow(
+      <ViewSingle data={initData} saved={[]} save={func} loadData={loadData} loading={loading} />
+    );
 
     view
       .find(ButtonMain)

@@ -14,9 +14,8 @@ export const ImgIcon = styled(Img)`
 `;
 
 export const ImgLoader = styled(Img)`
-  width: ${props => (props.active ? '5rem' : '0')};
-  height: ${props => (props.active ? 'auto' : '0')};
-  overflow: ${props => (props.active ? '' : 'hidden')};
+  width: 5rem;
+  height: auto;
 `;
 
 export const ImgInline = styled.img`

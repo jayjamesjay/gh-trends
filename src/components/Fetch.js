@@ -102,6 +102,15 @@ export class Url {
 export const getJSON = (url, signal) => fetch(url, { signal }).then(res => res.json());
 
 /**
+ * Set of states of loading
+ */
+export const load = {
+  LOADED: 'loaded',
+  INPROGRESS: 'in-progress',
+  ERORR: 'error'
+};
+
+/**
  * Fetches data and saves it as RepoInfoList using callback
  *
  * @param {RepoInfoList} infoList - current information list (data, page)
@@ -121,12 +130,10 @@ function getAndSave(infoList, url, signal, callback) {
 
   const urlStr = preUrl.toString();
 
-  return getJSON(urlStr, signal)
-    .then(result => {
-      newInfoList.update(result.items);
-      callback(newInfoList);
-    })
-    .catch(() => {});
+  return getJSON(urlStr, signal).then(result => {
+    newInfoList.update(result.items);
+    callback(newInfoList);
+  });
 }
 
 export default getAndSave;

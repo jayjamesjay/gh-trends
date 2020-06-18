@@ -2,7 +2,7 @@ import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { ViewSingle } from '../components/View';
-import getAndSave, { Url, addLang, defApi, perPage } from '../components/Fetch';
+import getAndSave, { Url, addLang, defApi, perPage, load } from '../components/Fetch';
 import { languages } from '../components/Data';
 import RepoInfoList from '../components/RepoInfoList';
 import RepoInfo from '../components/RepoInfo';
@@ -29,28 +29,28 @@ const mapDispatchToProps = { save };
 export function Search({ saved, save }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = React.useState(load.LOADED);
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const abortController = new AbortController();
   const { signal } = abortController;
 
-  const request = useCallback(
-    (currData, currPage) => {
-      setLoading(true);
+  const loadData = useCallback(
+    (currData = [], currPage = 1) => {
+      setLoading(load.INPROGRESS);
       const preUrl = new Url(defApi).query(search).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo).then(() => {
-        setLoading(false);
-      });
+      return getAndSave(infoList, preUrl, signal, setRepoInfo)
+        .then(() => {
+          setLoading(load.LOADED);
+        })
+        .catch(() => {
+          setLoading(load.ERORR);
+        });
     },
-    [search, signal, setRepoInfo]
+    [signal, search, setRepoInfo]
   );
-  const loadData = () => request(repoInfo.data, repoInfo.page);
-  const reloadData = useCallback(() => request([], 1), [request]);
   const onSubmit = useCallback(event => event.preventDefault(), []);
-  const onKeyPress = useCallback(event => (event.key === 'Enter' ? reloadData() : {}), [
-    reloadData
-  ]);
+  const onKeyPress = useCallback(event => (event.key === 'Enter' ? loadData() : {}), [loadData]);
 
   const onInput = useCallback(event => {
     const newSearch = event.target.value;
@@ -83,11 +83,17 @@ export function Search({ saved, save }) {
           value={search}
           onKeyPress={onKeyPress}
         />
-        <ButtonIcon onClick={reloadData}>
+        <ButtonIcon onClick={() => loadData()}>
           <Img src={SearchImg} alt="Search" />
         </ButtonIcon>
       </FormAlt>
-      <ViewSingle data={repoInfo.data} loadData={loadData} save={save} saved={saved} loading={loading} />
+      <ViewSingle
+        data={repoInfo.data}
+        loadData={() => loadData(repoInfo.data, repoInfo.page)}
+        save={save}
+        saved={saved}
+        loading={loading}
+      />
     </>
   );
 }
