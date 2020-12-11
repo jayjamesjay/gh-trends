@@ -10,21 +10,11 @@ describe('<Select />', () => {
   const select = shallow(<Select curr={curr} onSelect={func} options={languages} label={label} />);
 
   it(`contains select`, () => {
-    expect(
-      select
-        .find('Select')
-        .children()
-        .exists()
-    ).toEqual(true);
+    expect(select.find('Select').children().exists()).toEqual(true);
   });
 
   it(`contains options`, () => {
-    expect(
-      select
-        .find('Option')
-        .children()
-        .exists()
-    ).toEqual(true);
+    expect(select.find('Option').children().exists()).toEqual(true);
   });
 });
 
@@ -38,11 +28,6 @@ describe('<SelectLang />', () => {
   );
 
   it(`contains <Select />`, () => {
-    expect(
-      wrapper
-        .find(Select)
-        .at(0)
-        .exists()
-    ).toEqual(true);
+    expect(wrapper.find(Select).at(0).exists()).toEqual(true);
   });
 });

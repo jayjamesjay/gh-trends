@@ -17,11 +17,9 @@ import SearchImg from '../assets/img/search.svg';
 
 const langs = Object.keys(languages);
 
-const mapStateToProps = state => {
-  return {
-    saved: state.saved
-  };
-};
+const mapStateToProps = (state) => ({
+  saved: state.saved,
+});
 
 const mapDispatchToProps = { save };
 
@@ -49,16 +47,16 @@ export function Search({ saved, save }) {
     },
     [signal, search, setRepoInfo]
   );
-  const onSubmit = useCallback(event => event.preventDefault(), []);
-  const onKeyPress = useCallback(event => (event.key === 'Enter' ? loadData() : {}), [loadData]);
+  const onSubmit = useCallback((event) => event.preventDefault(), []);
+  const onKeyPress = useCallback((event) => (event.key === 'Enter' ? loadData() : {}), [loadData]);
 
-  const onInput = useCallback(event => {
+  const onInput = useCallback((event) => {
     const newSearch = event.target.value;
     setSearch(newSearch);
   }, []);
 
   const onSelect = useCallback(
-    event => {
+    (event) => {
       const newLang = event.target.value;
       const newSearch = addLang(search.slice(), newLang);
 
@@ -100,12 +98,9 @@ export function Search({ saved, save }) {
 
 Search.propTypes = {
   saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
-  save: PropTypes.func.isRequired
+  save: PropTypes.func.isRequired,
 };
 
-const SearchContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Search);
+const SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
 
 export default SearchContainer;

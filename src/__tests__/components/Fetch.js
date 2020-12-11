@@ -70,11 +70,7 @@ describe('<Url />', () => {
     const lang = 'JavaScript';
     const sort = 'sort=stars';
 
-    const url = new Url(api)
-      .query(query)
-      .lang(lang)
-      .parts(sort)
-      .toString();
+    const url = new Url(api).query(query).lang(lang).parts(sort).toString();
 
     expect(url).toBe(
       'https://api.github.com/search/repositories?q=react+language:"JavaScript"&sort=stars'

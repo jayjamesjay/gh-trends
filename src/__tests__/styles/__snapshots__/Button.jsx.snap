@@ -41,6 +41,9 @@ exports[`<ButtonMain /> renders default 1`] = `
   font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
+}
+
+.c1 {
   margin: auto;
   padding: 0;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
@@ -50,7 +53,7 @@ exports[`<ButtonMain /> renders default 1`] = `
 }
 
 <button
-  className="Button-iu7iy2-0 c0"
+  className="c0 c1"
 />
 `;
 
@@ -63,6 +66,9 @@ exports[`<ButtonMain /> renders hidden 1`] = `
   font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
+}
+
+.c1 {
   margin: auto;
   padding: 0;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
@@ -84,7 +90,7 @@ exports[`<ButtonMain /> renders hidden 1`] = `
   visible={false}
 >
   <button
-    className="Button-iu7iy2-0 c0"
+    className="c0 c1"
   />
 </Button__ButtonMain>
 `;
@@ -98,6 +104,9 @@ exports[`<ButtonMain /> renders visible 1`] = `
   font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
+}
+
+.c1 {
   margin: auto;
   padding: 1rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
@@ -118,7 +127,7 @@ exports[`<ButtonMain /> renders visible 1`] = `
   visible={true}
 >
   <button
-    className="Button-iu7iy2-0 c0"
+    className="c0 c1"
   />
 </Button__ButtonMain>
 `;
@@ -132,6 +141,9 @@ exports[`<ButtonMain /> renders with theme 1`] = `
   font-size: 1.2rem;
   color: #fff;
   text-transform: uppercase;
+}
+
+.c1 {
   margin: auto;
   padding: 0;
   box-shadow: none;
@@ -141,7 +153,7 @@ exports[`<ButtonMain /> renders with theme 1`] = `
 }
 
 <button
-  className="Button-iu7iy2-0 c0"
+  className="c0 c1"
 />
 `;
 
@@ -280,11 +292,14 @@ exports[`renders default <ButtonAdd /> 1`] = `
   height: auto;
   background: transparent;
   border: 0;
+}
+
+.c1 {
   margin: 0.5rem 0 0 0;
 }
 
 <button
-  className="Button__ButtonIcon-iu7iy2-3 c0"
+  className="c0 c1"
 />
 `;
 
@@ -307,11 +322,14 @@ exports[`renders default <ButtonRemove /> 1`] = `
   height: auto;
   background: transparent;
   border: 0;
+}
+
+.c1 {
   margin-top: -0.6rem;
 }
 
 <button
-  className="Button__ButtonIcon-iu7iy2-3 c0"
+  className="c0 c1"
 />
 `;
 
@@ -324,6 +342,9 @@ exports[`renders default <ButtonTheme /> 1`] = `
   font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
+}
+
+.c1 {
   width: 4rem;
   height: 4rem;
   margin: 0 auto;
@@ -331,13 +352,13 @@ exports[`renders default <ButtonTheme /> 1`] = `
 }
 
 @media screen and (min-width:40rem) {
-  .c0 {
+  .c1 {
     margin: 0 1rem;
   }
 }
 
 <button
-  className="Button-iu7iy2-0 c0"
+  className="c0 c1"
 />
 `;
 
@@ -350,6 +371,9 @@ exports[`renders default <MenuToggle /> 1`] = `
   font-size: 1.2rem;
   color: #000;
   text-transform: uppercase;
+}
+
+.c1 {
   margin: 0 1rem;
   padding: 0;
   background: transparent;
@@ -357,12 +381,12 @@ exports[`renders default <MenuToggle /> 1`] = `
 }
 
 @media screen and (min-width:40rem) {
-  .c0 {
+  .c1 {
     display: none;
   }
 }
 
 <button
-  className="Button-iu7iy2-0 c0"
+  className="c0 c1"
 />
 `;

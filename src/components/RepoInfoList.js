@@ -26,7 +26,7 @@ class RepoInfoList {
    * @returns {array}
    */
   static fromGithubRes(data) {
-    return data.map(item => RepoInfo.fromGithubRes(item));
+    return data.map((item) => RepoInfo.fromGithubRes(item));
   }
 
   /**

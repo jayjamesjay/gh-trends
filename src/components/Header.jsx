@@ -38,5 +38,5 @@ Header.propTypes = {
   toggle: PropTypes.func.isRequired,
   switchTheme: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
 };

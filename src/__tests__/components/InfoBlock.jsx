@@ -15,7 +15,7 @@ describe('<InfoBlock />', () => {
   );
   const saved = false;
   let temp;
-  const save = currInfo => {
+  const save = (currInfo) => {
     temp = currInfo;
   };
   let wrapper;
@@ -46,10 +46,7 @@ describe('<InfoBlock />', () => {
   });
 
   it('saves info', () => {
-    wrapper
-      .find(SaveRepo)
-      .props()
-      .save();
+    wrapper.find(SaveRepo).props().save();
     expect(temp).toEqual(info);
   });
 });
@@ -72,7 +69,7 @@ describe('<RepoLink />', () => {
 
 describe('<SaveRepo />', () => {
   const func = () => {};
-  const btn = saved => shallow(<SaveRepo save={func} saved={saved} />);
+  const btn = (saved) => shallow(<SaveRepo save={func} saved={saved} />);
 
   it(`displays add icon if repo hasn't been saved`, () => {
     const saved = false;

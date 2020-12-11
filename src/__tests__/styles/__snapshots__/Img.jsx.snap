@@ -88,10 +88,13 @@ exports[`renders default <ImgIcon /> 1`] = `
   height: auto;
   -webkit-filter: invert(0%);
   filter: invert(0%);
+}
+
+.c1 {
   width: 3rem;
 }
 
 <img
-  className="Img-rkj2yv-0 c0"
+  className="c0 c1"
 />
 `;

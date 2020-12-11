@@ -3,16 +3,16 @@ import { light } from './Theme';
 
 export const Button = styled.button`
   cursor: pointer;
-  background: ${props => props.theme.bgAdd};
+  background: ${(props) => props.theme.bgAdd};
   border: 0;
   border-radius: 0.5rem;
   font-size: 1.2rem;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   text-transform: uppercase;
 `;
 
 Button.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const ButtonTheme = styled(Button)`
@@ -28,15 +28,15 @@ export const ButtonTheme = styled(Button)`
 
 export const ButtonMain = styled(Button)`
   margin: auto;
-  padding: ${props => (props.visible ? '1rem' : '0')};
-  box-shadow: ${props => props.theme.shadow};
-  width: ${props => (props.visible ? 'auto' : '0')};
-  height: ${props => (props.visible ? 'auto' : '0')};
-  overflow: ${props => (props.visible ? '' : 'hidden')};
+  padding: ${(props) => (props.visible ? '1rem' : '0')};
+  box-shadow: ${(props) => props.theme.shadow};
+  width: ${(props) => (props.visible ? 'auto' : '0')};
+  height: ${(props) => (props.visible ? 'auto' : '0')};
+  overflow: ${(props) => (props.visible ? '' : 'hidden')};
 `;
 
 ButtonMain.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const ButtonIcon = styled.button`
@@ -66,7 +66,7 @@ export const MenuToggle = styled(Button)`
 `;
 
 MenuToggle.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const ToggleSpan = styled.span`
@@ -74,23 +74,23 @@ export const ToggleSpan = styled.span`
   width: 1.8rem;
   height: 0.2rem;
   margin: 0.3rem 0;
-  background: ${props => props.theme.color};
+  background: ${(props) => props.theme.color};
   transition: transform 0.2s linear;
 
   &:first-child {
-    transform: ${props => (props.open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
+    transform: ${(props) => (props.open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
   }
 
   &:nth-child(2) {
-    transform: ${props => (props.open ? 'translateX(5rem)' : '')};
+    transform: ${(props) => (props.open ? 'translateX(5rem)' : '')};
   }
 
   &:last-child {
-    transform: ${props => (props.open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
+    transform: ${(props) => (props.open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
   }
 `;
 
 ToggleSpan.defaultProps = {
   theme: light,
-  open: true
+  open: true,
 };

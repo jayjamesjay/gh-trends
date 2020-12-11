@@ -57,10 +57,13 @@ exports[`renders default <FormAlt /> 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 90%;
+}
+
+.c1 {
   padding: 1rem;
 }
 
 <form
-  className="Form-cy7ws1-0 c0"
+  className="c0 c1"
 />
 `;

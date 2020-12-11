@@ -28,7 +28,7 @@ export function MenuToggle({ toggle, open }) {
 
 MenuToggle.propTypes = {
   open: PropTypes.bool.isRequired,
-  toggle: PropTypes.func.isRequired
+  toggle: PropTypes.func.isRequired,
 };
 
 /**
@@ -43,7 +43,7 @@ export default function Nav({ hide, links, linkClick }) {
   return (
     <StyledNav hide={hide}>
       <Menu>
-        {links.map(link => (
+        {links.map((link) => (
           <ListItemLink click={linkClick} key={link[0]} title={link[0]} link={link[1]} />
         ))}
       </Menu>
@@ -54,7 +54,7 @@ export default function Nav({ hide, links, linkClick }) {
 Nav.propTypes = {
   hide: PropTypes.bool.isRequired,
   links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
-  linkClick: PropTypes.func.isRequired
+  linkClick: PropTypes.func.isRequired,
 };
 
 /**
@@ -78,5 +78,5 @@ export function ListItemLink({ click, link, title }) {
 ListItemLink.propTypes = {
   click: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired
+  link: PropTypes.string.isRequired,
 };

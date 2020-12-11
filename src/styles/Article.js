@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { light } from './Theme';
 
-export const oppositeBg = props => (props.bg ? props.bg : props.theme.color);
+export const oppositeBg = (props) => (props.bg ? props.bg : props.theme.color);
 
 const Article = styled.article`
   display: flex;
@@ -10,13 +10,13 @@ const Article = styled.article`
   padding: 1.2rem 1.2rem 0.8rem 1.2rem;
   flex-flow: column nowrap;
   background: linear-gradient(
-    ${props => props.theme.bgAdd} 0%,
-    ${props => props.theme.bgAdd} 0.3rem,
-    ${props => oppositeBg(props)} 0.3rem,
-    ${props => oppositeBg(props)} 0.6rem,
-    ${props => props.theme.bgAdd} 0.6rem
+    ${(props) => props.theme.bgAdd} 0%,
+    ${(props) => props.theme.bgAdd} 0.3rem,
+    ${(props) => oppositeBg(props)} 0.3rem,
+    ${(props) => oppositeBg(props)} 0.6rem,
+    ${(props) => props.theme.bgAdd} 0.6rem
   );
-  box-shadow: ${props => props.theme.shadow};
+  box-shadow: ${(props) => props.theme.shadow};
   border-radius: 0.5rem;
   text-align: left;
   word-break: break-word;
@@ -29,7 +29,7 @@ const Article = styled.article`
 `;
 
 Article.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export default Article;

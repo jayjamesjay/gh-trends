@@ -14,7 +14,7 @@ describe('<Category />', () => {
 
   it('fires onClick func', () => {
     let temp;
-    const onClick = currLabel => {
+    const onClick = (currLabel) => {
       temp = currLabel;
     };
     const category = shallow(<Category checked={checked} label={label} onClick={onClick} />);

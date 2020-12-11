@@ -25,8 +25,8 @@ import { load } from './Fetch';
 export default function View({ data, saved, save }) {
   return (
     <Content>
-      {data.map(node => {
-        const saving = saved.findIndex(item => identicalItems(item, node)) > -1;
+      {data.map((node) => {
+        const saving = saved.findIndex((item) => identicalItems(item, node)) > -1;
         return <InfoBlock key={node.nameWithOwner} info={node} save={save} saved={saving} />;
       })}
     </Content>
@@ -36,7 +36,7 @@ export default function View({ data, saved, save }) {
 View.propTypes = {
   save: PropTypes.func.isRequired,
   saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
-  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
+  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
 };
 
 /**
@@ -84,5 +84,5 @@ export function ViewSingle(props) {
 ViewSingle.propTypes = {
   loadData: PropTypes.func.isRequired,
   loading: PropTypes.string.isRequired,
-  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired
+  data: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
 };

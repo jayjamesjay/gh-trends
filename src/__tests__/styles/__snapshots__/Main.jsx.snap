@@ -47,11 +47,14 @@ exports[`renders default <BottomBar /> 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.c1 {
   margin: auto 0 0 0;
 }
 
 <div
-  className="Main__Bar-sc-1yl8y0q-2 c0"
+  className="c0 c1"
 />
 `;
 

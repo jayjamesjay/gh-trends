@@ -69,10 +69,7 @@ describe('<ViewSingle />', () => {
       <ViewSingle data={initData} saved={[]} save={func} loadData={loadData} loading={loading} />
     );
 
-    view
-      .find(ButtonMain)
-      .at(0)
-      .simulate('click');
+    view.find(ButtonMain).at(0).simulate('click');
     expect(tempId).toEqual(id);
   });
 });

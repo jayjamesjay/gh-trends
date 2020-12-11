@@ -68,6 +68,9 @@ exports[`renders default <Menu /> 1`] = `
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.c1 {
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
@@ -77,7 +80,7 @@ exports[`renders default <Menu /> 1`] = `
 }
 
 @media screen and (min-width:40rem) {
-  .c0 {
+  .c1 {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -86,6 +89,6 @@ exports[`renders default <Menu /> 1`] = `
 }
 
 <ul
-  className="List-f451ab-0 c0"
+  className="c0 c1"
 />
 `;

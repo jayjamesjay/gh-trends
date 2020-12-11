@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable func-names */
-(function() {
+(function () {
   const staticCache = 's-cache-v0.1.8';
   const dynamicCache = 'd-cache-v0.1.8';
   const cacheStorage = [
@@ -19,36 +19,36 @@
     './assets/img/stars.svg',
     './index.html',
     './manifest.json',
-    'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap'
+    'https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap',
   ];
 
-  self.addEventListener('install', event => {
-    event.waitUntil(caches.open(staticCache).then(cache => cache.addAll(cacheStorage)));
+  self.addEventListener('install', (event) => {
+    event.waitUntil(caches.open(staticCache).then((cache) => cache.addAll(cacheStorage)));
   });
 
-  self.addEventListener('activate', event => {
+  self.addEventListener('activate', (event) => {
     event.waitUntil(
       caches
         .keys()
-        .then(keys =>
+        .then((keys) =>
           Promise.all(
             keys
-              .filter(key => key !== staticCache && key !== dynamicCache)
-              .map(key => caches.delete(key))
+              .filter((key) => key !== staticCache && key !== dynamicCache)
+              .map((key) => caches.delete(key))
           )
         )
     );
   });
 
-  self.addEventListener('fetch', event => {
+  self.addEventListener('fetch', (event) => {
     event.respondWith(
       caches
         .match(event.request)
         .then(
-          data =>
+          (data) =>
             data ||
-            fetch(event.request).then(res =>
-              caches.open(dynamicCache).then(cache => {
+            fetch(event.request).then((res) =>
+              caches.open(dynamicCache).then((cache) => {
                 cache.put(event.request.url, res.clone());
                 return res;
               })

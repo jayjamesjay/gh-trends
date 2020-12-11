@@ -4,15 +4,15 @@ import { light } from './Theme';
 
 export const Link = styled(RouterLink)`
   padding: 0.5rem;
-  font-size: ${props => props.fontSize};
+  font-size: ${(props) => props.fontSize};
   font-family: 'Noto Sans HK', sans-serif;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   text-decoration: none;
 `;
 
 Link.defaultProps = {
   theme: light,
-  fontSize: '1.3rem'
+  fontSize: '1.3rem',
 };
 
 export const HeaderLink = styled(Link)`
@@ -25,11 +25,11 @@ export const LinkA = styled.a`
   display: block;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK', sans-serif;
-  color: ${props => props.theme.color};
+  color: ${(props) => props.theme.color};
   text-decoration: none;
   cursor: pointer;
 `;
 
 LinkA.defaultProps = {
-  theme: light
+  theme: light,
 };

@@ -14,11 +14,9 @@ import { save } from '../actions';
 const langs = ['All Languages', ...Object.keys(languages)];
 const timeList = Object.keys(queries);
 
-const mapStateToProps = state => {
-  return {
-    saved: state.saved
-  };
-};
+const mapStateToProps = (state) => ({
+  saved: state.saved,
+});
 
 const mapDispatchToProps = { save };
 
@@ -38,14 +36,14 @@ export function Home({ saved, save }) {
   }, []);
 
   const selectLang = useCallback(
-    event => {
+    (event) => {
       onSelect(event, setLang);
     },
     [onSelect, setLang]
   );
 
   const selectTime = useCallback(
-    event => {
+    (event) => {
       onSelect(event, setTime);
     },
     [onSelect, setTime]
@@ -97,12 +95,9 @@ export function Home({ saved, save }) {
 
 Home.propTypes = {
   saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
-  save: PropTypes.func.isRequired
+  save: PropTypes.func.isRequired,
 };
 
-const HomeContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home);
+const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
 
 export default HomeContainer;

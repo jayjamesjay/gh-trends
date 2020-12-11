@@ -64,7 +64,7 @@ export default function InfoBlock({ info, save, saved }) {
 InfoBlock.propTypes = {
   saved: PropTypes.bool.isRequired,
   save: PropTypes.func.isRequired,
-  info: PropTypes.instanceOf(RepoInfo).isRequired
+  info: PropTypes.instanceOf(RepoInfo).isRequired,
 };
 
 /**
@@ -88,7 +88,7 @@ export function RepoLink({ url, nameWithOwner }) {
 
 RepoLink.propTypes = {
   url: PropTypes.string.isRequired,
-  nameWithOwner: PropTypes.string.isRequired
+  nameWithOwner: PropTypes.string.isRequired,
 };
 
 /**
@@ -112,5 +112,5 @@ export function SaveRepo({ save, saved }) {
 
 SaveRepo.propTypes = {
   saved: PropTypes.bool.isRequired,
-  save: PropTypes.func.isRequired
+  save: PropTypes.func.isRequired,
 };

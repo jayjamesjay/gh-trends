@@ -1,9 +1,9 @@
-export const save = saved => ({
+export const save = (saved) => ({
   type: 'SAVED_ADD_REMOVE',
-  saved
+  saved,
 });
 
-export const removeAllSaved = saved => ({
+export const removeAllSaved = (saved) => ({
   type: 'ALL_SAVED_REMOVED',
-  saved
+  saved,
 });

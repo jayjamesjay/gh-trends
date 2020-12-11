@@ -23,7 +23,7 @@ const queryAllTime = 'stars:>10';
 export const queries = {
   'This Week': queryWeek,
   'This Month': queryMonth,
-  'All Time': queryAllTime
+  'All Time': queryAllTime,
 };
 
 /**
@@ -263,7 +263,7 @@ export const languages = {
   ooc: '#b0b77e',
   wdl: '#42f1f4',
   wisp: '#7582D1',
-  xBase: '#403a40'
+  xBase: '#403a40',
 };
 
 /**
@@ -285,14 +285,14 @@ export function DownloadLink({ filename, content, dataType, display }) {
 }
 
 DownloadLink.defaultProps = {
-  dataType: 'plain'
+  dataType: 'plain',
 };
 
 DownloadLink.propTypes = {
   filename: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,
   dataType: PropTypes.string,
-  display: PropTypes.node.isRequired
+  display: PropTypes.node.isRequired,
 };
 
 /**
@@ -303,7 +303,7 @@ DownloadLink.propTypes = {
  */
 export function jsonToMarkdown(json) {
   return json
-    .map(elem => {
+    .map((elem) => {
       let result = Object.entries(elem);
       const first = result.shift();
       result = `# ${first[1]} \r\n${result

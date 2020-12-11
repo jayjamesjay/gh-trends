@@ -10,7 +10,7 @@ describe('<Search />', () => {
   let wrapper;
   const setState = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
-  useStateSpy.mockImplementation(init => [init, setState]);
+  useStateSpy.mockImplementation((init) => [init, setState]);
 
   beforeEach(() => {
     wrapper = shallow(<Search save={func} saved={[]} />);
@@ -23,14 +23,11 @@ describe('<Search />', () => {
   it('onInput', () => {
     const e = {
       target: {
-        value: query
-      }
+        value: query,
+      },
     };
 
-    wrapper
-      .find(TextInput)
-      .props()
-      .onChange(e);
+    wrapper.find(TextInput).props().onChange(e);
     expect(setState).toHaveBeenCalledWith(query);
   });
 
@@ -38,14 +35,11 @@ describe('<Search />', () => {
     const lang = 'JavaScript';
     const e = {
       target: {
-        value: lang
-      }
+        value: lang,
+      },
     };
 
-    wrapper
-      .find(SelectLang)
-      .props()
-      .onSelect(e);
+    wrapper.find(SelectLang).props().onSelect(e);
     expect(setState).toHaveBeenCalledWith(lang);
   });
 });

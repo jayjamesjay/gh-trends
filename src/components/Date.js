@@ -8,7 +8,7 @@
  * @param {number} val - value to which zero will be added
  * @returns {string}
  */
-export const addLeadingZero = val => val.toString().padStart(2, '0');
+export const addLeadingZero = (val) => val.toString().padStart(2, '0');
 
 /**
  * Formats date according to Github Search API standards

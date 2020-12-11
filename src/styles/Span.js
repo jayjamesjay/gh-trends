@@ -4,11 +4,11 @@ import { light } from './Theme';
 const Span = styled.span`
   font-weight: 400;
   font-size: 1.3rem;
-  color: ${props => props.theme.colorAdd};
+  color: ${(props) => props.theme.colorAdd};
 `;
 
 Span.defaultProps = {
-  theme: light
+  theme: light,
 };
 
 export const LabelSpan = styled.span`

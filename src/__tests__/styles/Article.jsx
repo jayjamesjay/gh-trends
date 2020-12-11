@@ -7,7 +7,7 @@ import 'jest-styled-components';
 describe('oppositeBg', () => {
   it('with selected bg', () => {
     const props = {
-      bg: light.bg
+      bg: light.bg,
     };
 
     const bg = oppositeBg(props);
@@ -17,7 +17,7 @@ describe('oppositeBg', () => {
   it('with no bg in props', () => {
     {
       const props = {
-        theme: light
+        theme: light,
       };
 
       const bg = oppositeBg(props);
@@ -25,7 +25,7 @@ describe('oppositeBg', () => {
     }
     {
       const props = {
-        theme: dark
+        theme: dark,
       };
 
       const bg = oppositeBg(props);

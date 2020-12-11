@@ -39,5 +39,5 @@ export default function Category({ label, checked, onClick }) {
 Category.propTypes = {
   label: PropTypes.string.isRequired,
   checked: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };

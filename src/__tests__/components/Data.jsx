@@ -21,8 +21,8 @@ describe('RepoInfo', () => {
       language: 'JavaScript',
       forks: 321,
       license: {
-        spdx_id: 'MIT'
-      }
+        spdx_id: 'MIT',
+      },
     };
 
     const expected = new RepoInfo(
@@ -46,7 +46,7 @@ describe('RepoInfo', () => {
       stargazers_count: 100,
       language: 'JavaScript',
       forks: 321,
-      license: null
+      license: null,
     };
 
     const expected = new RepoInfo(
@@ -86,8 +86,8 @@ describe('<RepoInfoList />', () => {
       language: 'JavaScript',
       forks: 321,
       license: {
-        spdx_id: 'MIT'
-      }
+        spdx_id: 'MIT',
+      },
     };
 
     const response = new Array(3);
@@ -105,8 +105,8 @@ describe('<RepoInfoList />', () => {
       language: 'JavaScript',
       forks: 321,
       license: {
-        spdx_id: 'MIT'
-      }
+        spdx_id: 'MIT',
+      },
     };
     const response = [respElem];
     const infoList = new RepoInfoList(expectedData, 1);
@@ -121,7 +121,7 @@ describe('<RepoInfoList />', () => {
     const infoList = new RepoInfoList(expectedData, page);
     const expectedList = {
       data: expectedData,
-      page
+      page,
     };
 
     expect(infoList).toEqual(expectedList);
@@ -148,7 +148,7 @@ it('converts JSON to Markdown', () => {
   const json = [
     { name: 'Dog', length: 1 },
     { name: 'Sharp', length: 22 },
-    { name: 'Cat', length: 2 }
+    { name: 'Cat', length: 2 },
   ];
 
   expect(jsonToMarkdown(json)).toBe(

@@ -7,7 +7,7 @@ describe('<Home />', () => {
   const func = () => {};
   const setState = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
-  useStateSpy.mockImplementation(init => [init, setState]);
+  useStateSpy.mockImplementation((init) => [init, setState]);
   const wrapper = shallow(<Home save={func} saved={[]} />);
   const title = 'Trending repositories';
 
@@ -19,14 +19,10 @@ describe('<Home />', () => {
     const lang = 'CSS';
     const e = {
       target: {
-        value: lang
-      }
+        value: lang,
+      },
     };
-    wrapper
-      .find(Select)
-      .at(0)
-      .props()
-      .onSelect(e);
+    wrapper.find(Select).at(0).props().onSelect(e);
 
     expect(setState).toHaveBeenCalledWith(lang);
   });
@@ -35,14 +31,10 @@ describe('<Home />', () => {
     const time = 'This Week';
     const e = {
       target: {
-        value: time
-      }
+        value: time,
+      },
     };
-    wrapper
-      .find(Select)
-      .at(1)
-      .props()
-      .onSelect(e);
+    wrapper.find(Select).at(1).props().onSelect(e);
 
     expect(setState).toHaveBeenCalledWith(time);
   });

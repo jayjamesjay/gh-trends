@@ -20,7 +20,10 @@ import store from '../store';
  * @module App
  */
 
-const links = [['Search', '/search'], ['Saved', '/saved']];
+const links = [
+  ['Search', '/search'],
+  ['Saved', '/saved'],
+];
 const { localStorage } = window;
 const initTheme = localStorage.getItem('theme') === JSON.stringify(light) ? light : dark;
 
@@ -38,7 +41,7 @@ export default function App() {
   });
 
   const toggleMenu = useCallback(() => setMenu(!hideMenu), [hideMenu]);
-  const switchTheme = useCallback(() => setTheme(curr => (curr === light ? dark : light)), []);
+  const switchTheme = useCallback(() => setTheme((curr) => (curr === light ? dark : light)), []);
 
   return (
     <Router>

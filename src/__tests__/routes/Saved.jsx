@@ -48,10 +48,7 @@ describe('<Saved />', () => {
   it('creates download link for Markdown', () => {
     const name = `saved.md`;
     const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    wrapperAlt
-      .find(Category)
-      .at(1)
-      .simulate('click');
+    wrapperAlt.find(Category).at(1).simulate('click');
 
     expect(wrapperAlt.find(DownloadLink).prop('filename')).toEqual(name);
   });
@@ -59,13 +56,10 @@ describe('<Saved />', () => {
   it('onClick', () => {
     const setState = jest.fn();
     const useStateSpy = jest.spyOn(React, 'useState');
-    useStateSpy.mockImplementation(init => [init, setState]);
+    useStateSpy.mockImplementation((init) => [init, setState]);
 
     const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    wrapperAlt
-      .find(Category)
-      .at(1)
-      .simulate('click');
+    wrapperAlt.find(Category).at(1).simulate('click');
 
     expect(setState).toHaveBeenCalledWith('Markdown');
     jest.clearAllMocks();

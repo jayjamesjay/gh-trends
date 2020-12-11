@@ -38,7 +38,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([{ from: './public', to: './' }]),
+    new CopyPlugin( { 
+      patterns:[{ from: './public', to: './' }]}),
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })

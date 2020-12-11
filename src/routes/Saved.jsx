@@ -13,11 +13,9 @@ import { save, removeAllSaved } from '../actions';
 import DownloadImg from '../assets/img/download.svg';
 import RemoveAllImg from '../assets/img/remove-all.svg';
 
-const mapStateToProps = state => {
-  return {
-    saved: state.saved
-  };
-};
+const mapStateToProps = (state) => ({
+  saved: state.saved,
+});
 
 const mapDispatchToProps = { removeAllSaved, save };
 
@@ -67,12 +65,9 @@ export function Saved({ saved, save, removeAllSaved }) {
 Saved.propTypes = {
   saved: PropTypes.arrayOf(PropTypes.instanceOf(RepoInfo)).isRequired,
   removeAllSaved: PropTypes.func.isRequired,
-  save: PropTypes.func.isRequired
+  save: PropTypes.func.isRequired,
 };
 
-const SavedContainer = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Saved);
+const SavedContainer = connect(mapStateToProps, mapDispatchToProps)(Saved);
 
 export default SavedContainer;

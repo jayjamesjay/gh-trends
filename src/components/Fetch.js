@@ -70,8 +70,8 @@ export class Url {
   query(params) {
     this.q = params
       .split(' ')
-      .map(elem => elem.trim())
-      .filter(elem => elem !== '')
+      .map((elem) => elem.trim())
+      .filter((elem) => elem !== '')
       .join('+');
     return this;
   }
@@ -99,7 +99,7 @@ export class Url {
  * @param {object} signal - AbortSignal object instance used to communicate with/abort a request
  * @returns {Promise}
  */
-export const getJSON = (url, signal) => fetch(url, { signal }).then(res => res.json());
+export const getJSON = (url, signal) => fetch(url, { signal }).then((res) => res.json());
 
 /**
  * Set of states of loading
@@ -107,7 +107,7 @@ export const getJSON = (url, signal) => fetch(url, { signal }).then(res => res.j
 export const load = {
   LOADED: 'loaded',
   INPROGRESS: 'in-progress',
-  ERORR: 'error'
+  ERORR: 'error',
 };
 
 /**
@@ -130,7 +130,7 @@ function getAndSave(infoList, url, signal, callback) {
 
   const urlStr = preUrl.toString();
 
-  return getJSON(urlStr, signal).then(result => {
+  return getJSON(urlStr, signal).then((result) => {
     newInfoList.update(result.items);
     callback(newInfoList);
   });

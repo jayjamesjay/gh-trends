@@ -234,13 +234,16 @@ exports[`renders default <HeaderLink /> 1`] = `
   color: #000;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c1 {
   margin: 0.5rem;
   font-weight: 700;
   font-size: 2rem;
 }
 
 <Link
-  className="Link-sc-1ikxq-0 c0"
+  className="c0 c1"
   fontSize="1.3rem"
   theme={
     Object {

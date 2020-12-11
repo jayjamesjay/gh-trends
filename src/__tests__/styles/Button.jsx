@@ -8,7 +8,7 @@ import {
   ButtonTheme,
   ButtonAdd,
   MenuToggle,
-  ToggleSpan
+  ToggleSpan,
 } from '../../styles/Button';
 import { dark } from '../../styles/Theme';
 import 'jest-styled-components';

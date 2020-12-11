@@ -7,7 +7,7 @@ import 'jest-styled-components';
 it('inverts color of icon', () => {
   {
     const props = {
-      theme: light
+      theme: light,
     };
     const invert = invertColor(props);
     expect(invert).toBe('invert(0%)');
@@ -15,7 +15,7 @@ it('inverts color of icon', () => {
 
   {
     const props = {
-      theme: dark
+      theme: dark,
     };
     const invert = invertColor(props);
     expect(invert).toBe('invert(100%)');

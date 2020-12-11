@@ -18,7 +18,7 @@ import Category from './Category';
 export default function Categories({ labels, active, onClick }) {
   return (
     <CategoryMenu>
-      {labels.map(label => (
+      {labels.map((label) => (
         <Category checked={active === label} key={label} label={label} onClick={onClick} />
       ))}
     </CategoryMenu>
@@ -28,5 +28,5 @@ export default function Categories({ labels, active, onClick }) {
 Categories.propTypes = {
   labels: PropTypes.arrayOf(PropTypes.string).isRequired,
   active: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
 };

@@ -34,7 +34,7 @@ SelectLang.propTypes = {
   curr: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
 };
 
 /**
@@ -49,7 +49,7 @@ SelectLang.propTypes = {
 export default function Select({ curr, onSelect, options, label }) {
   return (
     <StyledSelect value={curr} onChange={onSelect} aria-label={label}>
-      {options.map(name => (
+      {options.map((name) => (
         <Option key={name} value={name}>
           {name}
         </Option>
@@ -62,5 +62,5 @@ Select.propTypes = {
   curr: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string.isRequired,
 };

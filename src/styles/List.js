@@ -11,7 +11,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   padding: 0.5rem 1rem 0 0;
-  color: ${props => props.theme.colorAdd};
+  color: ${(props) => props.theme.colorAdd};
 `;
 
 export const Menu = styled(List)`
