@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Provider } from 'react-redux';
 
@@ -56,18 +56,12 @@ export default function App() {
           />
           <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
           <Main>
-            <Route path="/search">
-              <SearchContainer />
-            </Route>
-            <Route path="/saved">
-              <SavedContainer />
-            </Route>
-            <Route exact path="/">
-              <HomeContainer />
-            </Route>
-            <Route path="/home">
-              <HomeContainer />
-            </Route>
+            <Routes>
+              <Route path="/search" element={<SearchContainer />} />
+              <Route path="/saved" element={<SavedContainer />} />
+              <Route exact path="/" element={<HomeContainer />} />
+              <Route path="/home" element={<HomeContainer />} />
+            </Routes>
           </Main>
           <Footer />
           <GlobalStyle />
