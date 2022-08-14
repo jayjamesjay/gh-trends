@@ -1,9 +1,11 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Option from '../../styles/Option';
 import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import Option from '../../styles/Option';
 
 it('renders default <Option/>', () => {
-  const wrapper = shallow(<Option />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderer.create(<Option />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

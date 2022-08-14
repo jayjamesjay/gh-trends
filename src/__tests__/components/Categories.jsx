@@ -1,21 +1,32 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import Categories from '../../components/Categories';
-import Category from '../../components/Category';
 
 describe('<Categories />', () => {
   const labels = ['Year', 'Month'];
-  const active = 'Year';
+  const active = 'Month';
   const func = () => {};
-  const wrapper = shallow(<Categories labels={labels} active={active} onClick={func} />);
-  const categoryList = wrapper.find(Category);
 
-  it(`displays with labels`, () => {
-    expect(categoryList.at(0).prop('label')).toEqual(labels[0]);
-    expect(categoryList.at(1).prop('label')).toEqual(labels[1]);
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <Categories labels={labels} active={active} onClick={func} />
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`displays labels`, () => {
+    render(<Categories labels={labels} active={active} onClick={func} />);
+
+    expect(screen.getByText(labels[0]).textContent).toEqual(labels[0]);
+    expect(screen.getByText(labels[1]).textContent).toEqual(labels[1]);
   });
 
   it(`checks active category`, () => {
-    expect(categoryList.at(0).prop('checked')).toEqual(true);
+    render(<Categories labels={labels} active={active} onClick={func} />);
+    expect(screen.getAllByRole('radio', { checked: true })[1].value).toEqual(labels[1]);
   });
 });

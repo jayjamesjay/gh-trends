@@ -1,27 +1,35 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import { List, ListItem, Menu } from '../../styles/List';
 import { dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 it('renders default <List />', () => {
-  const wrapper = shallow(<List />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderer.create(<List />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
 describe('<ListItem />', () => {
   it('renders default', () => {
-    const wrapper = mount(<ListItem />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<ListItem />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<ListItem theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<ListItem theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
 it('renders default <Menu />', () => {
-  const wrapper = shallow(<Menu />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderer.create(<Menu />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

@@ -1,27 +1,35 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import Header, { H1, H2 } from '../../styles/Headers';
 import { dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 describe('<Header />', () => {
-  it('renders default', () => {
-    const wrapper = mount(<Header />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders default`, () => {
+    const component = renderer.create(<Header />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with theme', () => {
-    const wrapper = mount(<Header theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders default`, () => {
+    const component = renderer.create(<Header theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
-it('renders default <H1 />', () => {
-  const wrapper = mount(<H1 />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <H1 />`, () => {
+  const component = renderer.create(<H1 />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
-it('renders default <H2 />', () => {
-  const wrapper = mount(<H2 />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <H2 />`, () => {
+  const component = renderer.create(<H2 />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

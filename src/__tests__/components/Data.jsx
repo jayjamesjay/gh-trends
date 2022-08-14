@@ -1,5 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import { jsonToMarkdown, DownloadLink, identicalItems } from '../../components/Data';
 import RepoInfoList from '../../components/RepoInfoList';
 import RepoInfo from '../../components/RepoInfo';
@@ -132,15 +134,26 @@ describe('<DownloadLink />', () => {
   const name = 'msg.txt';
   const text = `You've just downloaded this text ;)`;
   const title = 'Download message';
-  const link = shallow(<DownloadLink filename={name} content={text} display={title} />);
 
-  it('displays node', () => {
-    expect(link.text()).toEqual(title);
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <DownloadLink filename={name} content={text} display={title} />
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('displays title', () => {
+    render(<DownloadLink filename={name} content={text} display={title} />);
+    expect(screen.getByRole('link').textContent).toEqual(title);
   });
 
   it('points to content', () => {
     const data = `data:plain/plain;charset=utf-8,${encodeURIComponent(text)}`;
-    expect(link.prop('href')).toEqual(data);
+    render(<DownloadLink filename={name} content={text} display={title} />);
+
+    expect(screen.getByRole('link').href).toEqual(data);
   });
 });
 

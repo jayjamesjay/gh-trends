@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link /> renders default 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+  className="c0"
+  fontSize="1.3rem"
+  href="/"
+  onClick={[Function]}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#767676",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;
+
+exports[`<Link /> renders with theme 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<a
+  className="c0"
+  fontSize="1.3rem"
+  href="/"
+  onClick={[Function]}
+  theme={
+    Object {
+      "bg": "#000",
+      "bgAdd": "#202124",
+      "color": "#fff",
+      "colorAdd": "#8d8d8d",
+      "shadow": "none",
+    }
+  }
+/>
+`;
+
+exports[`<LinkA /> renders default 1`] = `
+.c0 {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
+/>
+`;
+
+exports[`<LinkA /> renders with theme 1`] = `
+.c0 {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #fff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+<a
+  className="c0"
+/>
+`;
+
+exports[`renders default <HeaderLink /> 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1 {
+  margin: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+<a
+  className="c0 c1"
+  fontSize="1.3rem"
+  href="/"
+  onClick={[Function]}
+  theme={
+    Object {
+      "bg": "#fafafa",
+      "bgAdd": "#fff",
+      "color": "#000",
+      "colorAdd": "#767676",
+      "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+    }
+  }
+/>
+`;

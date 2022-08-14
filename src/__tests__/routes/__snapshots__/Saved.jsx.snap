@@ -1,0 +1,723 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Saved /> renders with default style 1`] = `
+Array [
+  .c0 {
+  margin: 3rem auto 1rem auto;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:40rem) {
+
+}
+
+@media screen and (min-width:40rem) {
+
+}
+
+<header>
+    <h1
+      className="c0"
+    >
+      Saved repositories
+    </h1>
+  </header>,
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c15 {
+  margin: auto 0 0 0;
+}
+
+.c4 {
+  cursor: pointer;
+  height: auto;
+  background: transparent;
+  border: 0;
+}
+
+.c5 {
+  margin-top: -0.6rem;
+}
+
+.c16 {
+  margin: 0.5rem 0 0 0;
+}
+
+.c1 {
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 1rem;
+  min-height: 13rem;
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  background: linear-gradient( #fff 0%,#fff 0.3rem,#f1e05a 0.3rem,#f1e05a 0.6rem,#fff 0.6rem );
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  border-radius: 0.5rem;
+  text-align: left;
+  word-break: break-word;
+}
+
+.c14 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #767676;
+}
+
+.c8 {
+  position: relative;
+  z-index: 100;
+}
+
+.c13 {
+  margin: 0.2rem 0;
+  font-size: 1.7rem;
+}
+
+.c2 {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+.c3 {
+  width: 3rem;
+}
+
+.c19 {
+  display: inline-block;
+  width: auto;
+  height: 2rem;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+.c17 {
+  margin: 0 0.5rem;
+  padding: 0;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  padding: 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.c9 {
+  opacity: 0;
+}
+
+.c7 {
+  display: inherit;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.c7::before {
+  content: '';
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.c10 {
+  display: inherit;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.c10::before {
+  content: '';
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+@media screen and (min-width:40rem) {
+  .c11 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    margin: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width:40rem) {
+  .c12 {
+    min-width: 16.5rem;
+    margin: 1.5rem 1rem;
+    -webkit-flex: 1 1 27%;
+    -ms-flex: 1 1 27%;
+    flex: 1 1 27%;
+  }
+}
+
+<section>
+    <div
+      className="c0"
+    >
+      <a
+        className="c1"
+        download="saved.json"
+        href="data:json/plain;charset=utf-8,%5B%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends0%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends1%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends2%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends3%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends4%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends5%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%5D"
+      >
+        <img
+          alt="Download saved items"
+          className="c2 c3"
+          src="test-file-stub"
+        />
+      </a>
+      <button
+        className="c4 c5"
+        onClick={[Function]}
+      >
+        <img
+          alt="Remove all"
+          className="c2 c3"
+          src="test-file-stub"
+        />
+      </button>
+    </div>
+    <form
+      className="c6"
+    >
+      <div
+        aria-checked={true}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="radio"
+        tabIndex="0"
+      >
+        <label
+          className="c7"
+          htmlFor="JSON"
+        >
+          <span
+            className="c8"
+          >
+            JSON
+          </span>
+        </label>
+        <input
+          checked={true}
+          className="c9"
+          id="JSON"
+          onChange={[Function]}
+          tabIndex="-1"
+          type="radio"
+          value="JSON"
+        />
+      </div>
+      <div
+        aria-checked={false}
+        onClick={[Function]}
+        onKeyPress={[Function]}
+        role="radio"
+        tabIndex="0"
+      >
+        <label
+          className="c10"
+          htmlFor="Markdown"
+        >
+          <span
+            className="c8"
+          >
+            Markdown
+          </span>
+        </label>
+        <input
+          checked={false}
+          className="c9"
+          id="Markdown"
+          onChange={[Function]}
+          tabIndex="-1"
+          type="radio"
+          value="Markdown"
+        />
+      </div>
+    </form>
+    <div
+      className="c11"
+    >
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends0
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends1
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends2
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends3
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends4
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+      <article
+        className="c12"
+      >
+        <h2
+          className="c13"
+        >
+          <a
+            className="c1"
+            href=""
+          >
+            <span
+              className="c14"
+            >
+              jayjamesjay
+            </span>
+             /
+            gh-trends5
+          </a>
+        </h2>
+        <p>
+          Loading content for this website...
+        </p>
+        <div
+          className="c0 c15"
+        >
+          <button
+            className="c4 c16"
+            onClick={[Function]}
+          >
+            <img
+              alt="Remove from saved"
+              className="c2"
+              src="test-file-stub"
+              title="Remove from saved"
+            />
+          </button>
+          <p
+            className="c17"
+          >
+            Forks: 321
+          </p>
+          <p
+            className="c17"
+          >
+            License: MIT
+          </p>
+          <p
+            className="c18"
+          >
+            123
+            <img
+              alt="Stars"
+              className="c19"
+              src="test-file-stub"
+            />
+          </p>
+          <p
+            className="c17"
+          >
+            Language: JavaScript
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>,
+]
+`;

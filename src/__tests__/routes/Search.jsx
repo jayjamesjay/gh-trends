@@ -1,45 +1,41 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Search } from '../../routes/Search';
-import TextInput from '../../styles/Input';
-import { SelectLang } from '../../components/Select';
 
 describe('<Search />', () => {
   const func = () => {};
   const query = 'react';
-  let wrapper;
+  const lang = 'JavaScript';
+
+  const wrapper = () => render(<Search save={func} saved={[]} />);
   const setState = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
   useStateSpy.mockImplementation((init) => [init, setState]);
-
-  beforeEach(() => {
-    wrapper = shallow(<Search save={func} saved={[]} />);
-  });
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
-  it('onInput', () => {
-    const e = {
-      target: {
-        value: query,
-      },
-    };
+  it(`renders with default style`, () => {
+    const component = renderer.create(<Search save={func} saved={[]} />);
+    let tree = component.toJSON();
 
-    wrapper.find(TextInput).props().onChange(e);
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('onInput', () => {
+    wrapper();
+    fireEvent.input(screen.getByLabelText('Search for repositories'), { target: { value: query } });
+
     expect(setState).toHaveBeenCalledWith(query);
   });
 
   it('onSelect', () => {
-    const lang = 'JavaScript';
-    const e = {
-      target: {
-        value: lang,
-      },
-    };
+    wrapper();
+    fireEvent.change(screen.getByLabelText('Languages'), { target: { value: lang } });
 
-    wrapper.find(SelectLang).props().onSelect(e);
     expect(setState).toHaveBeenCalledWith(lang);
   });
 });

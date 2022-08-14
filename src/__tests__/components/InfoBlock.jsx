@@ -1,5 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import InfoBlock, { RepoLink, SaveRepo } from '../../components/InfoBlock';
 import RepoInfo from '../../components/RepoInfo';
 
@@ -9,7 +11,7 @@ describe('<InfoBlock />', () => {
     '',
     'Loading content for this website...',
     123,
-    '',
+    'JavaScript',
     321,
     'MIT'
   );
@@ -18,36 +20,26 @@ describe('<InfoBlock />', () => {
   const save = (currInfo) => {
     temp = currInfo;
   };
-  let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-  });
+  it(`renders with default style`, () => {
+    const component = renderer.create(<InfoBlock info={info} save={save} saved={saved} />);
+    let tree = component.toJSON();
 
-  it('renders with default background color', () => {
-    expect(wrapper.prop('bg')).toEqual(null);
-    {
-      info.language = 'JavaScript';
-      const wrapperAlt = shallow(<InfoBlock info={info} save={save} saved={saved} />);
-
-      expect(wrapperAlt.prop('bg')).toEqual('#f1e05a');
-    }
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with license', () => {
-    expect(wrapper.text()).toContain('License');
+    render(<InfoBlock info={info} save={save} saved={saved} />);
+
+    expect(screen.queryByText(`License: ${info.license}`)).not.toBeNull();
   });
 
   it('renders without license', () => {
     info.license = null;
-    const wrapperAlt = shallow(<InfoBlock info={info} save={save} saved={saved} />);
 
-    expect(wrapperAlt.text()).not.toContain('License');
-  });
+    render(<InfoBlock info={info} save={save} saved={saved} />);
 
-  it('saves info', () => {
-    wrapper.find(SaveRepo).props().save();
-    expect(temp).toEqual(info);
+    expect(screen.queryByText(`License: ${info.license}`)).toBeNull();
   });
 });
 
@@ -56,32 +48,47 @@ describe('<RepoLink />', () => {
   const name = 'gh-trends';
   const title = `${author}/${name}`;
   const url = 'https://github.com/jayjamesjay/gh-trends';
-  const repoLink = shallow(<RepoLink nameWithOwner={title} url={url} />);
+
+  it(`renders with default style`, () => {
+    const component = renderer.create(<RepoLink nameWithOwner={title} url={url} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it('displays owner', () => {
-    expect(repoLink.text()).toContain(author);
+    render(<RepoLink nameWithOwner={title} url={url} />);
+    expect(screen.queryByText(author).textContent).not.toBeNull();
   });
 
   it('displays name', () => {
-    expect(repoLink.text()).toContain(name);
+    render(<RepoLink nameWithOwner={title} url={url} />);
+    expect(screen.queryByText(`/${name}`).textContent).not.toBeNull();
   });
 });
 
 describe('<SaveRepo />', () => {
   const func = () => {};
-  const btn = (saved) => shallow(<SaveRepo save={func} saved={saved} />);
+  const btn = (saved) => render(<SaveRepo save={func} saved={saved} />);
+
+  it(`renders with default style`, () => {
+    const component = renderer.create(<SaveRepo save={func} saved={true} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it(`displays add icon if repo hasn't been saved`, () => {
     const saved = false;
-    const saveRepo = btn(saved);
+    btn(saved);
 
-    expect(saveRepo.find('Img').prop('alt')).toContain('Add');
+    expect(screen.getByRole('img').getAttribute('alt')).toContain('Add');
   });
 
   it(`displays remove icon if repo has been saved`, () => {
     const saved = true;
-    const saveRepo = btn(saved);
+    btn(saved);
 
-    expect(saveRepo.find('Img').prop('alt')).toContain('Remove');
+    expect(screen.getByRole('img').getAttribute('alt')).toContain('Remove');
   });
 });

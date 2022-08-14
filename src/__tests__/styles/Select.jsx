@@ -1,17 +1,21 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import Select from '../../styles/Select';
 import { dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 describe('<Select />', () => {
-  it('renders default', () => {
-    const wrapper = mount(<Select />);
-    expect(wrapper).toMatchSnapshot();
+  it('renders with default style', () => {
+    const component = renderer.create(<Select />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<Select theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<Select theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

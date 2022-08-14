@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders with default style 1`] = `
+.c3 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.c4 {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.c6 {
+  margin: 0 1rem;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.c7 {
+  display: block;
+  width: 1.8rem;
+  height: 0.2rem;
+  margin: 0.3rem 0;
+  background: #000;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.c7:first-child {
+  -webkit-transform: translateY(0.45rem) rotate(-45deg);
+  -ms-transform: translateY(0.45rem) rotate(-45deg);
+  transform: translateY(0.45rem) rotate(-45deg);
+}
+
+.c7:nth-child(2) {
+  -webkit-transform: translateX(5rem);
+  -ms-transform: translateX(5rem);
+  transform: translateX(5rem);
+}
+
+.c7:last-child {
+  -webkit-transform: translateY(-0.45rem) rotate(45deg);
+  -ms-transform: translateY(-0.45rem) rotate(45deg);
+  transform: translateY(-0.45rem) rotate(45deg);
+}
+
+.c1 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 {
+  margin: 0.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);
+  text-transform: uppercase;
+}
+
+.c5 {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+@media screen and (min-width:40rem) {
+  .c4 {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) {
+  .c6 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+<header
+  className="c0"
+>
+  <a
+    className="c1 c2"
+    fontSize="1.3rem"
+    href="/"
+    onClick={[Function]}
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#767676",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    GH Trends
+  </a>
+  <button
+    className="c3 c4"
+    onClick={[Function]}
+  >
+    <img
+      alt="Switch between dark and light mode"
+      className="c5"
+      src="test-file-stub"
+    />
+  </button>
+  <button
+    aria-label="Open menu"
+    className="c3 c6"
+    onClick={[Function]}
+  >
+    <span
+      className="c7"
+      open={true}
+    />
+    <span
+      className="c7"
+      open={true}
+    />
+    <span
+      className="c7"
+      open={true}
+    />
+  </button>
+</header>
+`;

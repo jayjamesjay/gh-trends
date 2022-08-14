@@ -1,5 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import Select, { SelectLang } from '../../components/Select';
 
 describe('<Select />', () => {
@@ -7,14 +9,26 @@ describe('<Select />', () => {
   const label = 'Select language';
   const func = () => {};
   const curr = 'JavaScript';
-  const select = shallow(<Select curr={curr} onSelect={func} options={languages} label={label} />);
+  const select = () =>
+    render(<Select curr={curr} onSelect={func} options={languages} label={label} />);
 
-  it(`contains select`, () => {
-    expect(select.find('Select').children().exists()).toEqual(true);
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <Select curr={curr} onSelect={func} options={languages} label={label} />
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`has aria-label`, () => {
+    select();
+    expect(screen.queryByRole('combobox').getAttribute('aria-label')).toEqual('Select language');
   });
 
   it(`contains options`, () => {
-    expect(select.find('Option').children().exists()).toEqual(true);
+    select();
+    expect(screen.queryAllByRole('option')).toHaveLength(2);
   });
 });
 
@@ -23,11 +37,25 @@ describe('<SelectLang />', () => {
   const label = 'Select language';
   const func = () => {};
   const curr = 'JavaScript';
-  const wrapper = shallow(
-    <SelectLang curr={curr} onSelect={func} options={languages} label={label} />
-  );
+  const select = () =>
+    render(<SelectLang curr={curr} onSelect={func} options={languages} label={label} />);
 
-  it(`contains <Select />`, () => {
-    expect(wrapper.find(Select).at(0).exists()).toEqual(true);
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <SelectLang curr={curr} onSelect={func} options={languages} label={label} />
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`has aria-label`, () => {
+    select();
+    expect(screen.queryByRole('combobox').getAttribute('aria-label')).toEqual('Languages');
+  });
+
+  it(`contains image`, () => {
+    select();
+    expect(screen.queryByRole('img').getAttribute('alt')).toEqual(label);
   });
 });

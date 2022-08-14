@@ -1,16 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { fireEvent, render, screen } from '@testing-library/react';
 import View, { ViewSingle } from '../../components/View';
-import InfoBlock from '../../components/InfoBlock';
 import { load } from '../../components/Fetch';
-import { ButtonMain } from '../../styles/Button';
 import RepoInfo from '../../components/RepoInfo';
 
 const initData = new Array(6);
 
 for (let i = 0; i < initData.length; i += 1) {
   const curr = new RepoInfo(
-    'jayjamesjay/gh-trends',
+    `jayjamesjay/gh-trends`,
     '',
     'Loading content for this website...',
     123,
@@ -24,20 +24,28 @@ for (let i = 0; i < initData.length; i += 1) {
 
 describe('<View />', () => {
   const func = () => {};
+  const license = 'License: MIT';
+
+  it(`renders with default style`, () => {
+    const component = renderer.create(<View data={[]} saved={[]} save={func} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it('renders empty', () => {
-    const view = shallow(<View data={[]} saved={[]} save={func} />);
-    expect(view.find(InfoBlock).exists()).toEqual(false);
+    render(<View data={[]} saved={[]} save={func} />);
+    expect(screen.queryAllByText(license)).toHaveLength(0);
   });
 
   it('renders with items', () => {
-    const view = shallow(<View data={initData} saved={[]} save={func} />);
-    expect(view.find(InfoBlock).exists()).toEqual(true);
+    render(<View data={initData} saved={[]} save={func} />);
+    expect(screen.queryAllByText(license)).toHaveLength(6);
   });
 
   it('renders with saved', () => {
-    const view = shallow(<View data={initData} saved={initData.slice(0, 3)} save={func} />);
-    expect(view.find(InfoBlock).exists()).toEqual(true);
+    render(<View data={initData} saved={initData.slice(0, 3)} save={func} />);
+    expect(screen.queryAllByAltText('Remove from saved')).toHaveLength(3);
   });
 });
 
@@ -50,26 +58,33 @@ describe('<ViewSingle />', () => {
     tempId = id;
   };
 
-  it(`renders empty and does not display Button`, () => {
-    const view = shallow(
-      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={loading} />
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />
     );
-    expect(view.find(ButtonMain).prop('visible')).toEqual(false);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it(`renders empty and does not display Button`, () => {
+    render(
+      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={load.INPROGRESS} />
+    );
+    expect(screen.queryByRole('button')).toBeNull();
   });
 
   it('renders with items and displays Button', () => {
-    const view = shallow(
-      <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />
-    );
-    expect(view.find(ButtonMain).prop('visible')).toEqual(true);
+    render(<ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />);
+    expect(screen.queryByText('Show more')).not.toBeNull();
   });
 
   it('fires loadData', () => {
-    const view = shallow(
+    render(
       <ViewSingle data={initData} saved={[]} save={func} loadData={loadData} loading={loading} />
     );
+    fireEvent.click(screen.queryByText('Show more'));
 
-    view.find(ButtonMain).at(0).simulate('click');
     expect(tempId).toEqual(id);
   });
 });

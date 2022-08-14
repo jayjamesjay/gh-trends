@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItemLink /> renders with default style 1`] = `
+.c0 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<li>
+  <a
+    className="c0"
+    fontSize="1.3rem"
+    href="/saved"
+    onClick={[Function]}
+    theme={
+      Object {
+        "bg": "#fafafa",
+        "bgAdd": "#fff",
+        "color": "#000",
+        "colorAdd": "#767676",
+        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+      }
+    }
+  >
+    Go to saved
+  </a>
+</li>
+`;
+
+exports[`<MenuToggle /> renders with default style 1`] = `
+.c0 {
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.c1 {
+  margin: 0 1rem;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.c2 {
+  display: block;
+  width: 1.8rem;
+  height: 0.2rem;
+  margin: 0.3rem 0;
+  background: #000;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -webkit-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.c2:first-child {
+  -webkit-transform: translateY(0.45rem) rotate(-45deg);
+  -ms-transform: translateY(0.45rem) rotate(-45deg);
+  transform: translateY(0.45rem) rotate(-45deg);
+}
+
+.c2:nth-child(2) {
+  -webkit-transform: translateX(5rem);
+  -ms-transform: translateX(5rem);
+  transform: translateX(5rem);
+}
+
+.c2:last-child {
+  -webkit-transform: translateY(-0.45rem) rotate(45deg);
+  -ms-transform: translateY(-0.45rem) rotate(45deg);
+  transform: translateY(-0.45rem) rotate(45deg);
+}
+
+@media screen and (min-width:40rem) {
+  .c1 {
+    display: none;
+  }
+}
+
+<button
+  aria-label="Open menu"
+  className="c0 c1"
+  onClick={[Function]}
+>
+  <span
+    className="c2"
+    open={true}
+  />
+  <span
+    className="c2"
+    open={true}
+  />
+  <span
+    className="c2"
+    open={true}
+  />
+</button>
+`;
+
+exports[`<Nav /> renders with default style 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.c2 {
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.c3 {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-family: 'Noto Sans HK',sans-serif;
+  color: #000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 {
+  width: 100%;
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 4.8rem;
+  left: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
+  opacity: 1.0;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+
+@media screen and (min-width:40rem) {
+  .c2 {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width:40rem) {
+  .c0 {
+    width: 50%;
+    top: 1rem;
+    left: 47%;
+    box-shadow: none;
+    opacity: 1;
+  }
+}
+
+<nav
+  className="c0"
+>
+  <ul
+    className="c1 c2"
+  >
+    <li>
+      <a
+        className="c3"
+        fontSize="1.3rem"
+        href="/saved"
+        onClick={[Function]}
+        theme={
+          Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#767676",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          }
+        }
+      >
+        Saved
+      </a>
+    </li>
+    <li>
+      <a
+        className="c3"
+        fontSize="1.3rem"
+        href="/"
+        onClick={[Function]}
+        theme={
+          Object {
+            "bg": "#fafafa",
+            "bgAdd": "#fff",
+            "color": "#000",
+            "colorAdd": "#767676",
+            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
+          }
+        }
+      >
+        Home
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

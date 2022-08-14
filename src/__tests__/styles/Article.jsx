@@ -1,8 +1,8 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import Article, { oppositeBg } from '../../styles/Article';
 import { light, dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 describe('oppositeBg', () => {
   it('with selected bg', () => {
@@ -35,13 +35,17 @@ describe('oppositeBg', () => {
 });
 
 describe('<Article />', () => {
-  it('renders default', () => {
-    const wrapper = mount(<Article />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with default style`, () => {
+    const component = renderer.create(<Article />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with theme', () => {
-    const wrapper = mount(<Article theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with theme`, () => {
+    const component = renderer.create(<Article theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

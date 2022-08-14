@@ -1,5 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import {
   Button,
   ButtonMain,
@@ -14,77 +15,105 @@ import { dark } from '../../styles/Theme';
 import 'jest-styled-components';
 
 describe('<Button />', () => {
-  it('renders default', () => {
-    const wrapper = shallow(<Button />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with default style`, () => {
+    const component = renderer.create(<Button />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with theme', () => {
-    const wrapper = shallow(<Button theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with theme`, () => {
+    const component = renderer.create(<Button theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
 describe('<ButtonMain />', () => {
-  it('renders default', () => {
-    const wrapper = shallow(<ButtonMain />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with default style`, () => {
+    const component = renderer.create(<ButtonMain />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with theme', () => {
-    const wrapper = shallow(<ButtonMain theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with theme`, () => {
+    const component = renderer.create(<ButtonMain theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders visible', () => {
-    const wrapper = mount(<ButtonMain visible />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders visible`, () => {
+    const component = renderer.create(<ButtonMain visible />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders hidden', () => {
-    const wrapper = mount(<ButtonMain visible={false} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders hidden`, () => {
+    const component = renderer.create(<ButtonMain visible={false} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
 describe('<ToggleSpan />', () => {
-  it('renders default', () => {
-    const wrapper = mount(<ToggleSpan />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with default style`, () => {
+    const component = renderer.create(<ToggleSpan />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('open/close', () => {
-    const wrapper = mount(<ToggleSpan open={false} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`open/close`, () => {
+    const component = renderer.create(<ToggleSpan open={false} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
-  it('renders with theme', () => {
-    const wrapper = mount(<ToggleSpan theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+  it(`renders with default style`, () => {
+    const component = renderer.create(<ToggleSpan theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
-it('renders default <MenuToggle />', () => {
-  const wrapper = shallow(<MenuToggle />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <MenuToggle />'`, () => {
+  const component = renderer.create(<MenuToggle />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
-it('renders default <ButtonTheme />', () => {
-  const wrapper = shallow(<ButtonTheme />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <ButtonTheme />'`, () => {
+  const component = renderer.create(<ButtonTheme />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
-it('renders default <ButtonIcon />', () => {
-  const wrapper = shallow(<ButtonIcon />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <ButtonIcon />'`, () => {
+  const component = renderer.create(<ButtonIcon />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
-it('renders default <ButtonRemove />', () => {
-  const wrapper = shallow(<ButtonRemove />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <ButtonRemove />'`, () => {
+  const component = renderer.create(<ButtonRemove />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
-it('renders default <ButtonAdd />', () => {
-  const wrapper = shallow(<ButtonAdd />);
-  expect(wrapper).toMatchSnapshot();
+it(`renders default <ButtonAdd />'`, () => {
+  const component = renderer.create(<ButtonAdd />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });

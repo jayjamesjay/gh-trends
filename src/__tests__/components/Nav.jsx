@@ -1,5 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import 'jest-styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
+import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react';
 import Nav, { ListItemLink, MenuToggle } from '../../components/Nav';
 
 const func = () => {};
@@ -7,31 +10,82 @@ const func = () => {};
 describe('<ListItemLink />', () => {
   const url = '/saved';
   const title = 'Go to saved';
-  const item = shallow(<ListItemLink click={func} link={url} title={title} />);
+  const item = () =>
+    render(
+      <Router>
+        <ListItemLink click={func} link={url} title={title} />
+      </Router>
+    );
+
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <Router>
+        <ListItemLink click={func} link={url} title={title} />
+      </Router>
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it('contains title', () => {
-    expect(item.text()).toContain(title);
+    item();
+    expect(screen.getByRole('link').textContent).toContain(title);
   });
 
   it(`is 'li'`, () => {
-    expect(item.is('li')).toEqual(true);
+    item();
+    expect(screen.getByRole('listitem').textContent).toContain(title);
   });
 });
 
 describe('<Nav />', () => {
-  const hide = false;
-  const nav = shallow(<Nav hide={hide} links={[['Saved', '/saved']]} linkClick={func} />);
+  it(`renders with default style`, () => {
+    const component = renderer.create(
+      <Router>
+        <Nav
+          hide={false}
+          links={[
+            ['Saved', '/saved'],
+            ['Home', '/'],
+          ]}
+          linkClick={func}
+        />
+      </Router>
+    );
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it(`contains links`, () => {
-    expect(nav.find(ListItemLink).exists()).toEqual(true);
+    render(
+      <Router>
+        <Nav
+          hide={false}
+          links={[
+            ['Saved', '/saved'],
+            ['Home', '/'],
+          ]}
+          linkClick={func}
+        />
+      </Router>
+    );
+
+    expect(screen.getAllByRole('link')).toHaveLength(2);
   });
 });
 
 describe('<MenuToggle />', () => {
-  const open = true;
-  const toggle = shallow(<MenuToggle toggle={func} open={open} />);
+  it(`renders with default style`, () => {
+    const component = renderer.create(<MenuToggle toggle={func} open={true} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 
   it(`has aria-label`, () => {
-    expect(toggle.prop('aria-label')).toContain('menu');
+    render(<MenuToggle toggle={func} open={true} />);
+    expect(screen.queryByRole('button').getAttribute('aria-label')).toBe('Open menu');
   });
 });

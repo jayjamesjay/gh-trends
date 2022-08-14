@@ -1,12 +1,12 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Saved } from '../../routes/Saved';
-import { DownloadLink } from '../../components/Data';
-import Category from '../../components/Category';
 import RepoInfo from '../../components/RepoInfo';
 
 describe('<Saved />', () => {
-  let wrapper;
+  const wrapper = () => render(<Saved save={func} removeAllSaved={func} saved={initData} />);
   const func = () => {};
   const initData = new Array(6);
 
@@ -24,33 +24,40 @@ describe('<Saved />', () => {
     initData[i] = curr;
   }
 
-  beforeEach(() => {
-    wrapper = shallow(<Saved save={func} removeAllSaved={func} saved={initData} />);
+  it(`renders with default style`, () => {
+    const component = renderer.create(<Saved save={func} removeAllSaved={func} saved={initData} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with title - no repos', () => {
-    const saved = shallow(<Saved save={func} removeAllSaved={func} saved={[]} />);
+    render(<Saved save={func} removeAllSaved={func} saved={[]} />);
     const title = `You haven't saved any repos...`;
 
-    expect(saved.text()).toContain(title);
+    expect(screen.getByRole('heading').textContent).toContain(title);
   });
 
   it('renders with title - some repos', () => {
+    wrapper();
     const title = `Saved repositories`;
-    expect(wrapper.text()).toContain(title);
+
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain(title);
   });
 
-  it('creates deafult download link', () => {
+  it('creates default download link', () => {
+    wrapper();
     const name = `saved.json`;
-    expect(wrapper.find(DownloadLink).prop('filename')).toEqual(name);
+
+    expect(screen.getAllByRole('link')[0].getAttribute('download')).toEqual(name);
   });
 
   it('creates download link for Markdown', () => {
     const name = `saved.md`;
-    const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    wrapperAlt.find(Category).at(1).simulate('click');
+    render(<Saved save={func} removeAllSaved={func} saved={initData} />);
+    fireEvent.click(screen.getByLabelText('Markdown'));
 
-    expect(wrapperAlt.find(DownloadLink).prop('filename')).toEqual(name);
+    expect(screen.getAllByRole('link')[0].getAttribute('download')).toEqual(name);
   });
 
   it('onClick', () => {
@@ -58,8 +65,8 @@ describe('<Saved />', () => {
     const useStateSpy = jest.spyOn(React, 'useState');
     useStateSpy.mockImplementation((init) => [init, setState]);
 
-    const wrapperAlt = mount(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    wrapperAlt.find(Category).at(1).simulate('click');
+    render(<Saved save={func} removeAllSaved={func} saved={initData} />);
+    fireEvent.click(screen.getByLabelText('Markdown'));
 
     expect(setState).toHaveBeenCalledWith('Markdown');
     jest.clearAllMocks();

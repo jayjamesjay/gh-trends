@@ -5,14 +5,14 @@
     "node": true,
     "jest": true
   },
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "airbnb/hooks", "prettier", "prettier/react", "plugin:jest/recommended"],
+  "parser": "@babel/eslint-parser",
+  "extends": ["airbnb", "airbnb/hooks", "prettier", "plugin:jest/recommended"],
   "rules": {
     "no-unused-vars": 1,
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["src/__tests__/**/*.jsx", "src/setupEnzyme.js"]
+        "devDependencies": ["src/__tests__/**/*.jsx"]
       }
     ],
     "react/jsx-props-no-spreading": "off"

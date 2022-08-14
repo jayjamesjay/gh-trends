@@ -1,17 +1,21 @@
 import React from 'react';
-import { mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import LabelCategory from '../../styles/Label';
 import { dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 describe('<LabelCategory />', () => {
   it('renders default', () => {
-    const wrapper = mount(<LabelCategory />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<LabelCategory />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<LabelCategory theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<LabelCategory theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders with default style 1`] = `
+.c0 {
+  margin: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+<footer
+  className="c0"
+>
+  <p>
+    Copyright © 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.
+  </p>
+</footer>
+`;

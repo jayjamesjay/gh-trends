@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders default <Option/> 1`] = `
+.c0 {
+  font-size: 1.2rem;
+  line-break: loose;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<option
+  className="c0"
+/>
+`;

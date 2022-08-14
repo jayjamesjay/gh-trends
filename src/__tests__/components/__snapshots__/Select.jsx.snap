@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> renders with default style 1`] = `
+.c0 {
+  max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-size: 1.3rem;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 {
+  font-size: 1.2rem;
+  line-break: loose;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<select
+  aria-label="Select language"
+  className="c0"
+  onChange={[Function]}
+  value="JavaScript"
+>
+  <option
+    className="c1"
+    value="JavaScript"
+  >
+    JavaScript
+  </option>
+  <option
+    className="c1"
+    value="CSS"
+  >
+    CSS
+  </option>
+</select>
+`;
+
+exports[`<SelectLang /> renders with default style 1`] = `
+Array [
+  .c0 {
+  width: 100%;
+  height: auto;
+  -webkit-filter: invert(0%);
+  filter: invert(0%);
+}
+
+.c1 {
+  width: 3rem;
+}
+
+<img
+    alt="Select language"
+    className="c0 c1"
+    src="test-file-stub"
+    title="Select language"
+  />,
+  .c0 {
+  max-width: 80%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-size: 1.3rem;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.c1 {
+  font-size: 1.2rem;
+  line-break: loose;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<select
+    aria-label="Languages"
+    className="c0"
+    onChange={[Function]}
+    value="JavaScript"
+  >
+    <option
+      className="c1"
+      value="All Languages"
+    >
+      All Languages
+    </option>
+    <option
+      className="c1"
+      value="JavaScript"
+    >
+      JavaScript
+    </option>
+    <option
+      className="c1"
+      value="CSS"
+    >
+      CSS
+    </option>
+  </select>,
+]
+`;

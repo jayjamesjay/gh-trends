@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import { invertColor, Img, ImgIcon, ImgInline } from '../../styles/Img';
 import { light, dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 it('inverts color of icon', () => {
   {
@@ -24,29 +24,39 @@ it('inverts color of icon', () => {
 
 describe('<Img />', () => {
   it('renders default', () => {
-    const wrapper = mount(<Img />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<Img />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<Img theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<Img theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
 it('renders default <ImgIcon />', () => {
-  const wrapper = shallow(<ImgIcon />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderer.create(<ImgIcon />);
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
 describe('<ImgInline />', () => {
   it('renders default', () => {
-    const wrapper = mount(<ImgInline />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<ImgInline />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(<ImgInline theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<ImgInline theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });

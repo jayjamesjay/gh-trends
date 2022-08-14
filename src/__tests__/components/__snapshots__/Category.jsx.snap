@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Category /> renders with default style 1`] = `
+.c1 {
+  position: relative;
+  z-index: 100;
+}
+
+.c2 {
+  opacity: 0;
+}
+
+.c0 {
+  display: inherit;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.c0::before {
+  content: '';
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 20;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  -webkit-transition: -webkit-transform 0.15s ease-in-out;
+  -webkit-transition: transform 0.15s ease-in-out;
+  transition: transform 0.15s ease-in-out;
+  -webkit-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+<div
+  aria-checked={false}
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  role="radio"
+  tabIndex="0"
+>
+  <label
+    className="c0"
+    htmlFor="Year"
+  >
+    <span
+      className="c1"
+    >
+      Year
+    </span>
+  </label>
+  <input
+    checked={false}
+    className="c2"
+    id="Year"
+    onChange={[Function]}
+    tabIndex="-1"
+    type="radio"
+    value="Year"
+  />
+</div>
+`;

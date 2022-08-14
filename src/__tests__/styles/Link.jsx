@@ -1,43 +1,57 @@
 import React from 'react';
+import 'jest-styled-components';
+import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { shallow, mount } from 'enzyme';
 import { Link, LinkA, HeaderLink } from '../../styles/Link';
 import { dark } from '../../styles/Theme';
-import 'jest-styled-components';
 
 describe('<Link />', () => {
   it('renders default', () => {
-    const wrapper = mount(
+    const component = renderer.create(
       <Router>
         <Link to="/" />
       </Router>
     );
-    expect(wrapper).toMatchSnapshot();
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = mount(
+    const component = renderer.create(
       <Router>
         <Link theme={dark} to="/" />
       </Router>
     );
-    expect(wrapper).toMatchSnapshot();
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
 
 it('renders default <HeaderLink />', () => {
-  const wrapper = shallow(<HeaderLink to="/" />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderer.create(
+    <Router>
+      <HeaderLink to="/" />
+    </Router>
+  );
+  let tree = component.toJSON();
+
+  expect(tree).toMatchSnapshot();
 });
 
 describe('<LinkA />', () => {
   it('renders default', () => {
-    const wrapper = shallow(<LinkA />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<LinkA />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const wrapper = shallow(<LinkA theme={dark} />);
-    expect(wrapper).toMatchSnapshot();
+    const component = renderer.create(<LinkA theme={dark} />);
+    let tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
   });
 });
