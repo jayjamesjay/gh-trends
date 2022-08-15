@@ -1,4 +1,3 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -12,7 +11,6 @@ module.exports = {
     path: __dirname + '/dist'
   },
   optimization: {
-    minimizer: [new UglifyJsPlugin()],
     splitChunks: {
       chunks: 'all'
     }

@@ -33,7 +33,6 @@
     "jsdoc": "^3.6.11",
     "prettier": "^2.7.1",
     "react-test-renderer": "^18.2.0",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-dev-server": "^4.9.3"
   },
   "scripts": {
