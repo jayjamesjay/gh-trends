@@ -45,7 +45,7 @@ class RepoInfo {
       item.stargazers_count,
       language,
       forks,
-      license
+      license,
     );
   }
 }

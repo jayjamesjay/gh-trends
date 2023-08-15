@@ -6,7 +6,6 @@ exports[`<DownloadLink /> renders with default style 1`] = `
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
   color: #000;
-  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }

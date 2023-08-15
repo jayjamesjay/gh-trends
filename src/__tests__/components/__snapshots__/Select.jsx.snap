@@ -13,8 +13,6 @@ exports[`<Select /> renders with default style 1`] = `
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -47,11 +45,10 @@ exports[`<Select /> renders with default style 1`] = `
 `;
 
 exports[`<SelectLang /> renders with default style 1`] = `
-Array [
+[
   .c0 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -77,8 +74,6 @@ Array [
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 

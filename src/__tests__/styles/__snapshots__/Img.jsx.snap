@@ -4,7 +4,6 @@ exports[`<Img /> renders default 1`] = `
 .c0 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -17,7 +16,6 @@ exports[`<Img /> renders with theme 1`] = `
 .c0 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(100%);
   filter: invert(100%);
 }
 
@@ -31,7 +29,6 @@ exports[`<ImgInline /> renders default 1`] = `
   display: inline-block;
   width: auto;
   height: 2rem;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -45,7 +42,6 @@ exports[`<ImgInline /> renders with theme 1`] = `
   display: inline-block;
   width: auto;
   height: 2rem;
-  -webkit-filter: invert(100%);
   filter: invert(100%);
 }
 
@@ -58,7 +54,6 @@ exports[`renders default <ImgIcon /> 1`] = `
 .c0 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 

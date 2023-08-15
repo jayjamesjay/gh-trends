@@ -13,8 +13,6 @@ exports[`<Select /> renders with default style 1`] = `
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -36,8 +34,6 @@ exports[`<Select /> renders with theme 1`] = `
   color: #fff;
   text-align: center;
   text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 

@@ -31,11 +31,7 @@ exports[`<Category /> renders with default style 1`] = `
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
-  -webkit-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
   transform: translateX(-200%);
 }
 
@@ -47,6 +43,7 @@ exports[`<Category /> renders with default style 1`] = `
   tabIndex="0"
 >
   <label
+    active={false}
     className="c0"
     htmlFor="Year"
   >

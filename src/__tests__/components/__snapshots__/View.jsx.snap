@@ -3,16 +3,8 @@
 exports[`<View /> renders with default style 1`] = `
 @media screen and (min-width:40rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
     justify-content: space-around;
     margin: 0 1.5rem;
   }
@@ -24,25 +16,12 @@ exports[`<View /> renders with default style 1`] = `
 `;
 
 exports[`<ViewSingle /> renders with default style 1`] = `
-Array [
+[
   .c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -66,21 +45,15 @@ Array [
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
   color: #000;
-  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 2rem 1rem;
   min-height: 13rem;
   padding: 1.2rem 1.2rem 0.8rem 1.2rem;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   background: linear-gradient( #fff 0%,#fff 0.3rem,#f1e05a 0.3rem,#f1e05a 0.6rem,#fff 0.6rem );
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
@@ -103,7 +76,6 @@ Array [
 .c9 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -111,7 +83,6 @@ Array [
   display: inline-block;
   width: auto;
   height: 2rem;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -121,16 +92,8 @@ Array [
 }
 
 .c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 0 0.5rem;
   padding: 0;
@@ -138,16 +101,8 @@ Array [
 
 @media screen and (min-width:40rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
     justify-content: space-around;
     margin: 0 1.5rem;
   }
@@ -157,8 +112,6 @@ Array [
   .c1 {
     min-width: 16.5rem;
     margin: 1.5rem 1rem;
-    -webkit-flex: 1 1 27%;
-    -ms-flex: 1 1 27%;
     flex: 1 1 27%;
   }
 }
@@ -167,6 +120,7 @@ Array [
     className="c0"
   >
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -230,6 +184,7 @@ Array [
       </div>
     </article>
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -293,6 +248,7 @@ Array [
       </div>
     </article>
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -356,6 +312,7 @@ Array [
       </div>
     </article>
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -419,6 +376,7 @@ Array [
       </div>
     </article>
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -482,6 +440,7 @@ Array [
       </div>
     </article>
     <article
+      bg="#f1e05a"
       className="c1"
     >
       <h2
@@ -575,6 +534,7 @@ Array [
     <button
       className="c0 c1"
       onClick={[Function]}
+      visible={true}
     >
       Show more
     </button>

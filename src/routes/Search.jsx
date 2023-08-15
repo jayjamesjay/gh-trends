@@ -45,7 +45,7 @@ export function Search({ saved, save }) {
           setLoading(load.ERORR);
         });
     },
-    [signal, search, setRepoInfo]
+    [signal, search, setRepoInfo],
   );
   const onSubmit = useCallback((event) => event.preventDefault(), []);
   const onKeyPress = useCallback((event) => (event.key === 'Enter' ? loadData() : {}), [loadData]);
@@ -63,7 +63,7 @@ export function Search({ saved, save }) {
       setLang(newLang);
       setSearch(newSearch);
     },
-    [search]
+    [search],
   );
 
   return (

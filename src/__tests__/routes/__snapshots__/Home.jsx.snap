@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home /> renders with default style 1`] = `
-Array [
+[
   .c0 {
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
@@ -20,16 +20,8 @@ Array [
     </h1>
   </header>,
   .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   max-width: 90%;
 }
@@ -50,8 +42,6 @@ Array [
   color: #000;
   text-align: center;
   text-transform: uppercase;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -1460,16 +1450,8 @@ Array [
   </form>,
   @media screen and (min-width:40rem) {
   .c0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
     justify-content: space-around;
     margin: 0 1.5rem;
   }
@@ -1481,7 +1463,6 @@ Array [
   .c0 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 

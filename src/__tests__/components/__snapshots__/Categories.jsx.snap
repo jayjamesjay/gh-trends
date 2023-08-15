@@ -2,16 +2,8 @@
 
 exports[`<Categories /> renders with default style 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   text-transform: uppercase;
@@ -47,11 +39,7 @@ exports[`<Categories /> renders with default style 1`] = `
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
-  -webkit-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
   transform: translateX(-200%);
 }
 
@@ -76,11 +64,7 @@ exports[`<Categories /> renders with default style 1`] = `
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
   transform: translateX(0%);
 }
 
@@ -95,6 +79,7 @@ exports[`<Categories /> renders with default style 1`] = `
     tabIndex="0"
   >
     <label
+      active={false}
       className="c1"
       htmlFor="Year"
     >
@@ -122,6 +107,7 @@ exports[`<Categories /> renders with default style 1`] = `
     tabIndex="0"
   >
     <label
+      active={true}
       className="c4"
       htmlFor="Month"
     >

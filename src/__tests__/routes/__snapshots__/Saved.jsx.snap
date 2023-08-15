@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Saved /> renders with default style 1`] = `
-Array [
+[
   .c0 {
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
@@ -24,23 +24,10 @@ Array [
     </h1>
   </header>,
   .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -68,21 +55,15 @@ Array [
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
   color: #000;
-  -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
 .c12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   margin: 2rem 1rem;
   min-height: 13rem;
   padding: 1.2rem 1.2rem 0.8rem 1.2rem;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   background: linear-gradient( #fff 0%,#fff 0.3rem,#f1e05a 0.3rem,#f1e05a 0.6rem,#fff 0.6rem );
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
@@ -110,7 +91,6 @@ Array [
 .c2 {
   width: 100%;
   height: auto;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -122,7 +102,6 @@ Array [
   display: inline-block;
   width: auto;
   height: 2rem;
-  -webkit-filter: invert(0%);
   filter: invert(0%);
 }
 
@@ -132,32 +111,16 @@ Array [
 }
 
 .c18 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin: 0 0.5rem;
   padding: 0;
 }
 
 .c6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
   text-transform: uppercase;
@@ -188,11 +151,7 @@ Array [
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
   transform: translateX(0%);
 }
 
@@ -217,26 +176,14 @@ Array [
   background: #fff;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  -webkit-transition: -webkit-transform 0.15s ease-in-out;
-  -webkit-transition: transform 0.15s ease-in-out;
   transition: transform 0.15s ease-in-out;
-  -webkit-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
   transform: translateX(-200%);
 }
 
 @media screen and (min-width:40rem) {
   .c11 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
-    -webkit-box-pack: space-around;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: space-around;
     justify-content: space-around;
     margin: 0 1.5rem;
   }
@@ -246,8 +193,6 @@ Array [
   .c12 {
     min-width: 16.5rem;
     margin: 1.5rem 1rem;
-    -webkit-flex: 1 1 27%;
-    -ms-flex: 1 1 27%;
     flex: 1 1 27%;
   }
 }
@@ -289,6 +234,7 @@ Array [
         tabIndex="0"
       >
         <label
+          active={true}
           className="c7"
           htmlFor="JSON"
         >
@@ -316,6 +262,7 @@ Array [
         tabIndex="0"
       >
         <label
+          active={false}
           className="c10"
           htmlFor="Markdown"
         >
@@ -340,6 +287,7 @@ Array [
       className="c11"
     >
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2
@@ -403,6 +351,7 @@ Array [
         </div>
       </article>
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2
@@ -466,6 +415,7 @@ Array [
         </div>
       </article>
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2
@@ -529,6 +479,7 @@ Array [
         </div>
       </article>
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2
@@ -592,6 +543,7 @@ Array [
         </div>
       </article>
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2
@@ -655,6 +607,7 @@ Array [
         </div>
       </article>
       <article
+        bg="#f1e05a"
         className="c12"
       >
         <h2

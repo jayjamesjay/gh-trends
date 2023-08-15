@@ -39,14 +39,14 @@ export function Home({ saved, save }) {
     (event) => {
       onSelect(event, setLang);
     },
-    [onSelect, setLang]
+    [onSelect, setLang],
   );
 
   const selectTime = useCallback(
     (event) => {
       onSelect(event, setTime);
     },
-    [onSelect, setTime]
+    [onSelect, setTime],
   );
 
   const loadData = useCallback(
@@ -62,7 +62,7 @@ export function Home({ saved, save }) {
           setLoading(load.ERORR);
         });
     },
-    [query, signal, setRepoInfo]
+    [query, signal, setRepoInfo],
   );
 
   useEffect(() => {

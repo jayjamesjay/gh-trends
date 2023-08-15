@@ -2,20 +2,10 @@
 
 exports[`<Header /> renders default 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -26,9 +16,6 @@ exports[`<Header /> renders default 1`] = `
 
 @media screen and (min-width:40rem) {
   .c0 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }
@@ -40,20 +27,10 @@ exports[`<Header /> renders default 1`] = `
 
 exports[`<Header /> renders default 2`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 200;
@@ -64,9 +41,6 @@ exports[`<Header /> renders default 2`] = `
 
 @media screen and (min-width:40rem) {
   .c0 {
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-    -ms-flex-pack: start;
     justify-content: flex-start;
   }
 }

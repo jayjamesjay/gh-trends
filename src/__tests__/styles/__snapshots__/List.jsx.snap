@@ -23,12 +23,7 @@ exports[`<ListItem /> renders with theme 1`] = `
 
 exports[`renders default <List /> 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   width: 60%;
   margin: 0;
@@ -43,12 +38,7 @@ exports[`renders default <List /> 1`] = `
 
 exports[`renders default <Menu /> 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   width: 60%;
   margin: 0;
@@ -57,9 +47,6 @@ exports[`renders default <Menu /> 1`] = `
 }
 
 .c1 {
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
   justify-content: space-around;
   width: 100%;
   text-transform: uppercase;
@@ -67,9 +54,6 @@ exports[`renders default <Menu /> 1`] = `
 
 @media screen and (min-width:40rem) {
   .c1 {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }

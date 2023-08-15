@@ -54,6 +54,7 @@ exports[`<ButtonMain /> renders hidden 1`] = `
 
 <button
   className="c0 c1"
+  visible={false}
 />
 `;
 
@@ -78,6 +79,7 @@ exports[`<ButtonMain /> renders visible 1`] = `
 
 <button
   className="c0 c1"
+  visible={true}
 />
 `;
 
@@ -138,8 +140,6 @@ exports[`<ToggleSpan /> open/close 1`] = `
   height: 0.2rem;
   margin: 0.3rem 0;
   background: #000;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  -webkit-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
 }
 
@@ -156,26 +156,18 @@ exports[`<ToggleSpan /> renders with default style 1`] = `
   height: 0.2rem;
   margin: 0.3rem 0;
   background: #000;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  -webkit-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
 }
 
 .c0:first-child {
-  -webkit-transform: translateY(0.45rem) rotate(-45deg);
-  -ms-transform: translateY(0.45rem) rotate(-45deg);
   transform: translateY(0.45rem) rotate(-45deg);
 }
 
 .c0:nth-child(2) {
-  -webkit-transform: translateX(5rem);
-  -ms-transform: translateX(5rem);
   transform: translateX(5rem);
 }
 
 .c0:last-child {
-  -webkit-transform: translateY(-0.45rem) rotate(45deg);
-  -ms-transform: translateY(-0.45rem) rotate(45deg);
   transform: translateY(-0.45rem) rotate(45deg);
 }
 
@@ -192,26 +184,18 @@ exports[`<ToggleSpan /> renders with default style 2`] = `
   height: 0.2rem;
   margin: 0.3rem 0;
   background: #fff;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  -webkit-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
 }
 
 .c0:first-child {
-  -webkit-transform: translateY(0.45rem) rotate(-45deg);
-  -ms-transform: translateY(0.45rem) rotate(-45deg);
   transform: translateY(0.45rem) rotate(-45deg);
 }
 
 .c0:nth-child(2) {
-  -webkit-transform: translateX(5rem);
-  -ms-transform: translateX(5rem);
   transform: translateX(5rem);
 }
 
 .c0:last-child {
-  -webkit-transform: translateY(-0.45rem) rotate(45deg);
-  -ms-transform: translateY(-0.45rem) rotate(45deg);
   transform: translateY(-0.45rem) rotate(45deg);
 }
 

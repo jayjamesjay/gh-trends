@@ -6,7 +6,6 @@ exports[`<ListItemLink /> renders with default style 1`] = `
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
   color: #000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -16,15 +15,6 @@ exports[`<ListItemLink /> renders with default style 1`] = `
     fontSize="1.3rem"
     href="/saved"
     onClick={[Function]}
-    theme={
-      Object {
-        "bg": "#fafafa",
-        "bgAdd": "#fff",
-        "color": "#000",
-        "colorAdd": "#767676",
-        "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-      }
-    }
   >
     Go to saved
   </a>
@@ -55,26 +45,18 @@ exports[`<MenuToggle /> renders with default style 1`] = `
   height: 0.2rem;
   margin: 0.3rem 0;
   background: #000;
-  -webkit-transition: -webkit-transform 0.2s linear;
-  -webkit-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
 }
 
 .c2:first-child {
-  -webkit-transform: translateY(0.45rem) rotate(-45deg);
-  -ms-transform: translateY(0.45rem) rotate(-45deg);
   transform: translateY(0.45rem) rotate(-45deg);
 }
 
 .c2:nth-child(2) {
-  -webkit-transform: translateX(5rem);
-  -ms-transform: translateX(5rem);
   transform: translateX(5rem);
 }
 
 .c2:last-child {
-  -webkit-transform: translateY(-0.45rem) rotate(45deg);
-  -ms-transform: translateY(-0.45rem) rotate(45deg);
   transform: translateY(-0.45rem) rotate(45deg);
 }
 
@@ -106,12 +88,7 @@ exports[`<MenuToggle /> renders with default style 1`] = `
 
 exports[`<Nav /> renders with default style 1`] = `
 .c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   width: 60%;
   margin: 0;
@@ -120,9 +97,6 @@ exports[`<Nav /> renders with default style 1`] = `
 }
 
 .c2 {
-  -webkit-box-pack: space-around;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: space-around;
   justify-content: space-around;
   width: 100%;
   text-transform: uppercase;
@@ -133,7 +107,6 @@ exports[`<Nav /> renders with default style 1`] = `
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
   color: #000;
-  -webkit-text-decoration: none;
   text-decoration: none;
 }
 
@@ -147,15 +120,11 @@ exports[`<Nav /> renders with default style 1`] = `
   background: #fff;
   box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
   opacity: 1.0;
-  -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 
 @media screen and (min-width:40rem) {
   .c2 {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
@@ -172,6 +141,7 @@ exports[`<Nav /> renders with default style 1`] = `
 
 <nav
   className="c0"
+  hide={false}
 >
   <ul
     className="c1 c2"
@@ -182,15 +152,6 @@ exports[`<Nav /> renders with default style 1`] = `
         fontSize="1.3rem"
         href="/saved"
         onClick={[Function]}
-        theme={
-          Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          }
-        }
       >
         Saved
       </a>
@@ -201,15 +162,6 @@ exports[`<Nav /> renders with default style 1`] = `
         fontSize="1.3rem"
         href="/"
         onClick={[Function]}
-        theme={
-          Object {
-            "bg": "#fafafa",
-            "bgAdd": "#fff",
-            "color": "#000",
-            "colorAdd": "#767676",
-            "shadow": "0px 3px 5px 1px rgba(217,217,217,0.82)",
-          }
-        }
       >
         Home
       </a>
