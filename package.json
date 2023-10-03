@@ -43,7 +43,8 @@
     "coverage": "jest --coverage",
     "lint": "eslint ./src/**/*.jsx ./src/**/*.js",
     "lintfix": "yarn lint --fix",
-    "doc": "jsdoc ./src/components -d ./docs"
+    "doc": "jsdoc ./src/components -d ./docs",
+    "prepare": "husky install" 
   },
   "dependencies": {
     "prop-types": "^15.8.1",
