@@ -12,7 +12,7 @@ describe('<Header />', () => {
   it(`renders with default style`, () => {
     const component = renderer.create(
       <Router>
-        <Header link="" title={title} switchTheme={func} hide={false} toggle={func} />
+        <Header link="" title={title} switchTheme={func} $hide={false} toggle={func} />
       </Router>
     );
     let tree = component.toJSON();
@@ -23,7 +23,7 @@ describe('<Header />', () => {
   it('renders with title', () => {
     render(
       <Router>
-        <Header link="" title={title} switchTheme={func} hide={false} toggle={func} />
+        <Header link="" title={title} switchTheme={func} $hide={false} toggle={func} />
       </Router>
     );
 

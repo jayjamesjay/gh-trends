@@ -141,7 +141,6 @@ exports[`<Nav /> renders with default style 1`] = `
 
 <nav
   className="c0"
-  hide={false}
 >
   <ul
     className="c1 c2"

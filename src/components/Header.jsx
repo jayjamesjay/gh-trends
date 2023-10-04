@@ -21,20 +21,20 @@ import SwitchThemeImg from '../assets/img/dark-mode.svg';
  * @property {function} toggle - function fired when MenuToggle is clicked
  * @returns {Header}
  */
-export default function Header({ link, title, switchTheme, hide, toggle }) {
+export default function Header({ link, title, switchTheme, $hide, toggle }) {
   return (
     <StyledHeader>
       <HeaderLink to={link}>{title}</HeaderLink>
       <ButtonTheme onClick={switchTheme}>
         <Img src={SwitchThemeImg} alt="Switch between dark and light mode" />
       </ButtonTheme>
-      <MenuToggle toggle={toggle} open={!hide} />
+      <MenuToggle toggle={toggle} $open={!$hide} />
     </StyledHeader>
   );
 }
 
 Header.propTypes = {
-  hide: PropTypes.bool.isRequired,
+  $hide: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
   switchTheme: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,

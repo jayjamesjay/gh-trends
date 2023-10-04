@@ -7,7 +7,7 @@ import { light, dark } from '../../styles/Theme';
 describe('oppositeBg', () => {
   it('with selected bg', () => {
     const props = {
-      bg: light.bg,
+      $bg: light.bg,
     };
 
     const bg = oppositeBg(props);

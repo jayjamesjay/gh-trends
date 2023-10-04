@@ -16,18 +16,18 @@ import StyledNav from '../styles/Nav';
  * @property {boolean} open - is menu open
  * @returns {MenuToggle}
  */
-export function MenuToggle({ toggle, open }) {
+export function MenuToggle({ toggle, $open }) {
   return (
     <StyledToggle aria-label="Open menu" onClick={toggle}>
-      <ToggleSpan open={open} />
-      <ToggleSpan open={open} />
-      <ToggleSpan open={open} />
+      <ToggleSpan $open={$open} />
+      <ToggleSpan $open={$open} />
+      <ToggleSpan $open={$open} />
     </StyledToggle>
   );
 }
 
 MenuToggle.propTypes = {
-  open: PropTypes.bool.isRequired,
+  $open: PropTypes.bool.isRequired,
   toggle: PropTypes.func.isRequired,
 };
 
@@ -39,9 +39,9 @@ MenuToggle.propTypes = {
  * @property {function} linkClick - function fired when link is clicked
  * @returns {Nav}
  */
-export default function Nav({ hide, links, linkClick }) {
+export default function Nav({ $hide, links, linkClick }) {
   return (
-    <StyledNav hide={hide}>
+    <StyledNav $hide={$hide}>
       <Menu>
         {links.map((link) => (
           <ListItemLink click={linkClick} key={link[0]} title={link[0]} link={link[1]} />
@@ -52,7 +52,7 @@ export default function Nav({ hide, links, linkClick }) {
 }
 
 Nav.propTypes = {
-  hide: PropTypes.bool.isRequired,
+  $hide: PropTypes.bool.isRequired,
   links: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
   linkClick: PropTypes.func.isRequired,
 };

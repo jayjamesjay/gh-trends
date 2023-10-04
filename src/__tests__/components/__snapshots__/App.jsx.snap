@@ -126,15 +126,15 @@ exports[`<App /> renders default view 1`] = `
     >
       <span
         className="c7"
-        open={false}
+        open={true}
       />
       <span
         className="c7"
-        open={false}
+        open={true}
       />
       <span
         className="c7"
-        open={false}
+        open={true}
       />
     </button>
   </header>,
@@ -208,7 +208,6 @@ exports[`<App /> renders default view 1`] = `
 
 <nav
     className="c0"
-    hide={true}
   >
     <ul
       className="c1 c2"

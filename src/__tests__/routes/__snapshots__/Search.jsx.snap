@@ -1521,7 +1521,6 @@ exports[`<Search /> renders with default style 1`] = `
     <button
       className="c0 c1"
       onClick={[Function]}
-      visible={false}
     >
       Show more
     </button>

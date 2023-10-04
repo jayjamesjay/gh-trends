@@ -71,10 +71,11 @@ exports[`<ButtonMain /> renders visible 1`] = `
 
 .c1 {
   margin: auto;
-  padding: 1rem;
+  padding: 0;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
-  width: auto;
-  height: auto;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 <button
@@ -159,18 +160,6 @@ exports[`<ToggleSpan /> renders with default style 1`] = `
   transition: transform 0.2s linear;
 }
 
-.c0:first-child {
-  transform: translateY(0.45rem) rotate(-45deg);
-}
-
-.c0:nth-child(2) {
-  transform: translateX(5rem);
-}
-
-.c0:last-child {
-  transform: translateY(-0.45rem) rotate(45deg);
-}
-
 <span
   className="c0"
   open={true}
@@ -185,18 +174,6 @@ exports[`<ToggleSpan /> renders with default style 2`] = `
   margin: 0.3rem 0;
   background: #fff;
   transition: transform 0.2s linear;
-}
-
-.c0:first-child {
-  transform: translateY(0.45rem) rotate(-45deg);
-}
-
-.c0:nth-child(2) {
-  transform: translateX(5rem);
-}
-
-.c0:last-child {
-  transform: translateY(-0.45rem) rotate(45deg);
 }
 
 <span

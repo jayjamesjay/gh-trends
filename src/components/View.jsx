@@ -58,7 +58,7 @@ export function ViewSingle(props) {
         return <ImgLoader src={LoadingSpinner} alt="Loading items" />;
       case load.LOADED:
         return (
-          <ButtonMain visible={data.length > 0} onClick={loadData}>
+          <ButtonMain $visible={data.length > 0} onClick={loadData}>
             Show more
           </ButtonMain>
         );

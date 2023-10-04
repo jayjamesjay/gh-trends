@@ -42,7 +42,7 @@ export default function InfoBlock({ info, save, saved }) {
   }
 
   return (
-    <Article bg={color}>
+    <Article $bg={color}>
       <H2>
         <RepoLink url={info.url} nameWithOwner={info.nameWithOwner} />
       </H2>

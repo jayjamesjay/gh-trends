@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { light } from './Theme';
 
-export const oppositeBg = (props) => (props.bg ? props.bg : props.theme.color);
+export const oppositeBg = (props) => (props.$bg ? props.$bg : props.theme.color);
 
 const Article = styled.article`
   display: flex;
   margin: 2rem 1rem;
   min-height: 13rem;
   padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  flex: 1 1 100%;
   flex-flow: column nowrap;
   background: linear-gradient(
     ${(props) => props.theme.bgAdd} 0%,

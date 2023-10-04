@@ -26,7 +26,7 @@ describe('<Nav />', () => {
   });
 
   it('renders visible', () => {
-    render(<Nav hide={false} />);
+    render(<Nav $hide={false} />);
     expect(screen.getByRole('navigation')).toHaveStyleRule('opacity', '1.0');
   });
 });

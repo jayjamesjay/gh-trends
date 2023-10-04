@@ -51,10 +51,10 @@ export default function App() {
             link="/"
             title="GH Trends"
             toggle={toggleMenu}
-            hide={hideMenu}
+            $hide={hideMenu}
             switchTheme={switchTheme}
           />
-          <Nav links={links} hide={hideMenu} linkClick={toggleMenu} />
+          <Nav links={links} $hide={hideMenu} linkClick={toggleMenu} />
           <Main>
             <Routes>
               <Route path="/search" element={<SearchContainer />} />

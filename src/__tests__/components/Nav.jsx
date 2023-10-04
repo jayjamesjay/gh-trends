@@ -44,7 +44,7 @@ describe('<Nav />', () => {
     const component = renderer.create(
       <Router>
         <Nav
-          hide={false}
+          $hide={false}
           links={[
             ['Saved', '/saved'],
             ['Home', '/'],
@@ -62,7 +62,7 @@ describe('<Nav />', () => {
     render(
       <Router>
         <Nav
-          hide={false}
+          $hide={false}
           links={[
             ['Saved', '/saved'],
             ['Home', '/'],
@@ -78,14 +78,14 @@ describe('<Nav />', () => {
 
 describe('<MenuToggle />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(<MenuToggle toggle={func} open={true} />);
+    const component = renderer.create(<MenuToggle toggle={func} $open={true} />);
     let tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it(`has aria-label`, () => {
-    render(<MenuToggle toggle={func} open={true} />);
+    render(<MenuToggle toggle={func} $open={true} />);
     expect(screen.queryByRole('button').getAttribute('aria-label')).toBe('Open menu');
   });
 });

@@ -28,11 +28,11 @@ export const ButtonTheme = styled(Button)`
 
 export const ButtonMain = styled(Button)`
   margin: auto;
-  padding: ${(props) => (props.visible ? '1rem' : '0')};
+  padding: ${(props) => (props.$visible ? '1rem' : '0')};
   box-shadow: ${(props) => props.theme.shadow};
-  width: ${(props) => (props.visible ? 'auto' : '0')};
-  height: ${(props) => (props.visible ? 'auto' : '0')};
-  overflow: ${(props) => (props.visible ? '' : 'hidden')};
+  width: ${(props) => (props.$visible ? 'auto' : '0')};
+  height: ${(props) => (props.$visible ? 'auto' : '0')};
+  overflow: ${(props) => (props.$visible ? '' : 'hidden')};
 `;
 
 ButtonMain.defaultProps = {
@@ -78,15 +78,15 @@ export const ToggleSpan = styled.span`
   transition: transform 0.2s linear;
 
   &:first-child {
-    transform: ${(props) => (props.open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
+    transform: ${(props) => (props.$open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
   }
 
   &:nth-child(2) {
-    transform: ${(props) => (props.open ? 'translateX(5rem)' : '')};
+    transform: ${(props) => (props.$open ? 'translateX(5rem)' : '')};
   }
 
   &:last-child {
-    transform: ${(props) => (props.open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
+    transform: ${(props) => (props.$open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
   }
 `;
 

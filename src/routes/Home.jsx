@@ -26,8 +26,6 @@ export function Home({ saved, save }) {
   const [time, setTime] = React.useState('This Week');
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const [loading, setLoading] = React.useState(load.INPROGRESS);
-  const abortController = new AbortController();
-  const { signal } = abortController;
   const query = useMemo(() => addLang(queries[time], lang), [lang, time]);
 
   const onSelect = useCallback((event, callback) => {
@@ -49,28 +47,27 @@ export function Home({ saved, save }) {
     [onSelect, setTime],
   );
 
-  const loadData = useCallback(
-    (currData = [], currPage = 1) => {
-      setLoading(load.INPROGRESS);
-      const preUrl = new Url(defApi).query(query).parts(perPage);
-      const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo)
-        .then(() => {
-          setLoading(load.LOADED);
-        })
-        .catch(() => {
-          setLoading(load.ERORR);
-        });
-    },
-    [query, signal, setRepoInfo],
-  );
+  async function loadData(currData = [], currPage = 1) {
+    const abortController = new AbortController();
+    const { signal } = abortController;
+
+    setLoading(load.INPROGRESS);
+
+    const preUrl = new Url(defApi).query(query).parts(perPage);
+    const infoList = new RepoInfoList(currData, currPage);
+
+    try {
+      await getAndSave(infoList, preUrl, signal, setRepoInfo);
+      setLoading(load.LOADED);
+    } catch (error) {
+      setLoading(load.ERORR);
+    }
+  }
 
   useEffect(() => {
     loadData();
 
-    return () => {
-      abortController.abort();
-    };
+    return () => {};
   }, [lang, time]); // eslint-disable-line
 
   return (
@@ -99,5 +96,4 @@ Home.propTypes = {
 };
 
 const HomeContainer = connect(mapStateToProps, mapDispatchToProps)(Home);
-
 export default HomeContainer;
