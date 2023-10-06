@@ -2,9 +2,10 @@ import React from 'react';
 import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
+
 import View, { ViewSingle } from '../../components/View';
-import { load } from '../../components/Fetch';
-import RepoInfo from '../../components/RepoInfo';
+import { loadingState } from '../../utils/Fetch';
+import RepoInfo from '../../utils/RepoInfo';
 
 const initData = new Array(6);
 
@@ -53,7 +54,7 @@ describe('<ViewSingle />', () => {
   const id = 'view-1';
   let tempId;
   const func = () => {};
-  const loading = load.LOADED;
+  const loading = loadingState.LOADED;
   const loadData = () => {
     tempId = id;
   };
@@ -69,7 +70,7 @@ describe('<ViewSingle />', () => {
 
   it(`renders empty and does not display Button`, () => {
     render(
-      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={load.INPROGRESS} />
+      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={loadingState.INPROGRESS} />
     );
     expect(screen.queryByRole('button')).toBeNull();
   });

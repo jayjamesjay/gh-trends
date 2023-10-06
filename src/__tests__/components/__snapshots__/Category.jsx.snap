@@ -43,7 +43,6 @@ exports[`<Category /> renders with default style 1`] = `
   tabIndex="0"
 >
   <label
-    active={false}
     className="c0"
     htmlFor="Year"
   >

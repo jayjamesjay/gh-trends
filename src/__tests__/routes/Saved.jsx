@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Saved } from '../../routes/Saved';
-import RepoInfo from '../../components/RepoInfo';
+import RepoInfo from '../../utils/RepoInfo';
 
 describe('<Saved />', () => {
   const wrapper = () => render(<Saved save={func} removeAllSaved={func} saved={initData} />);

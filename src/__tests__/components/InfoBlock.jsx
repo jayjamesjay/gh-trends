@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import InfoBlock, { RepoLink, SaveRepo } from '../../components/InfoBlock';
-import RepoInfo from '../../components/RepoInfo';
+import RepoInfo from '../../utils/RepoInfo';
 
 describe('<InfoBlock />', () => {
   const info = new RepoInfo(

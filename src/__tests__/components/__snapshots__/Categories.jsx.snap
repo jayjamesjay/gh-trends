@@ -79,7 +79,6 @@ exports[`<Categories /> renders with default style 1`] = `
     tabIndex="0"
   >
     <label
-      active={false}
       className="c1"
       htmlFor="Year"
     >
@@ -107,7 +106,6 @@ exports[`<Categories /> renders with default style 1`] = `
     tabIndex="0"
   >
     <label
-      active={true}
       className="c4"
       htmlFor="Month"
     >

@@ -1,11 +1,12 @@
 import React, { useCallback, useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import getAndSave, { Url, defApi, perPage, addLang, load } from '../components/Fetch';
+
+import getAndSave, { Url, defApi, perPage, addLang, loadingState } from '../utils/Fetch';
 import { ViewSingle } from '../components/View';
 import { queries, languages } from '../components/Data';
-import RepoInfoList from '../components/RepoInfoList';
-import RepoInfo from '../components/RepoInfo';
+import RepoInfoList from '../utils/RepoInfoList';
+import RepoInfo from '../utils/RepoInfo';
 import { H1 } from '../styles/Headers';
 import { FormAlt } from '../styles/Form';
 import Select from '../components/Select';
@@ -25,7 +26,7 @@ export function Home({ saved, save }) {
   const [lang, setLang] = React.useState('All');
   const [time, setTime] = React.useState('This Week');
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
-  const [loading, setLoading] = React.useState(load.INPROGRESS);
+  const [loading, setLoading] = React.useState(loadingState.INPROGRESS);
   const query = useMemo(() => addLang(queries[time], lang), [lang, time]);
 
   const onSelect = useCallback((event, callback) => {
@@ -51,16 +52,16 @@ export function Home({ saved, save }) {
     const abortController = new AbortController();
     const { signal } = abortController;
 
-    setLoading(load.INPROGRESS);
+    setLoading(loadingState.INPROGRESS);
 
     const preUrl = new Url(defApi).query(query).parts(perPage);
     const infoList = new RepoInfoList(currData, currPage);
 
     try {
       await getAndSave(infoList, preUrl, signal, setRepoInfo);
-      setLoading(load.LOADED);
+      setLoading(loadingState.LOADED);
     } catch (error) {
-      setLoading(load.ERORR);
+      setLoading(loadingState.ERORR);
     }
   }
 

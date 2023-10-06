@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
+
 import { LabelSpan } from '../styles/Span';
 import { InputRadio } from '../styles/Input';
 import LabelCategory from '../styles/Label';
@@ -21,7 +22,7 @@ export default function Category({ label, checked, onClick }) {
 
   return (
     <div onClick={click} role="radio" aria-checked={checked} onKeyPress={click} tabIndex="0">
-      <LabelCategory active={checked} htmlFor={label}>
+      <LabelCategory $active={checked} htmlFor={label}>
         <LabelSpan>{label}</LabelSpan>
       </LabelCategory>
       <InputRadio

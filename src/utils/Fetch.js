@@ -2,17 +2,11 @@
  * @module Fetch
  */
 
-/**
- * Default Github API url
- */
+/** Default Github API url */
 export const defApi = 'https://api.github.com/search/repositories';
-/**
- * Default sorting option
- */
+/** Default sorting option */
 export const sort = 'sort=stars';
-/**
- * Default amount of repositories per page
- */
+/** Default amount of repositories per page */
 export const perPage = 'per_page=6';
 
 /**
@@ -104,7 +98,7 @@ export const getJSON = (url, signal) => fetch(url, { signal }).then((res) => res
 /**
  * Set of states of loading
  */
-export const load = {
+export const loadingState = {
   LOADED: 'loaded',
   INPROGRESS: 'in-progress',
   ERORR: 'error',

@@ -22,7 +22,7 @@ const LabelCategory = styled.label`
     border-radius: 0.5rem;
     box-shadow: ${(props) => props.theme.shadow};
     transition: transform 0.15s ease-in-out;
-    transform: translateX(${(props) => (props.active ? '0%' : '-200%')});
+    transform: translateX(${(props) => (props.$active ? '0%' : '-200%')});
   }
 `;
 

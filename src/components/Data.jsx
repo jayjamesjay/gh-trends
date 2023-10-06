@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import formatDate from './Date';
+
+import formatDate from '../utils/Date';
 import { LinkA } from '../styles/Link';
 
 /**

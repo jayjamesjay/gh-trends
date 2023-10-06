@@ -1,11 +1,12 @@
 import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
 import { ViewSingle } from '../components/View';
-import getAndSave, { Url, addLang, defApi, perPage, load } from '../components/Fetch';
+import getAndSave, { Url, addLang, defApi, perPage, loadingState } from '../utils/Fetch';
 import { languages } from '../components/Data';
-import RepoInfoList from '../components/RepoInfoList';
-import RepoInfo from '../components/RepoInfo';
+import RepoInfoList from '../utils/RepoInfoList';
+import RepoInfo from '../utils/RepoInfo';
 import { ButtonIcon } from '../styles/Button';
 import { FormAlt } from '../styles/Form';
 import TextInput from '../styles/Input';
@@ -27,22 +28,22 @@ const mapDispatchToProps = { save };
 export function Search({ saved, save }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
-  const [loading, setLoading] = React.useState(load.LOADED);
+  const [loading, setLoading] = React.useState(loadingState.LOADED);
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const abortController = new AbortController();
   const { signal } = abortController;
 
   const loadData = useCallback(
     (currData = [], currPage = 1) => {
-      setLoading(load.INPROGRESS);
+      setLoading(loadingState.INPROGRESS);
       const preUrl = new Url(defApi).query(search).parts(perPage);
       const infoList = new RepoInfoList(currData, currPage);
       return getAndSave(infoList, preUrl, signal, setRepoInfo)
         .then(() => {
-          setLoading(load.LOADED);
+          setLoading(loadingState.LOADED);
         })
         .catch(() => {
-          setLoading(load.ERORR);
+          setLoading(loadingState.ERORR);
         });
     },
     [signal, search, setRepoInfo],
@@ -102,5 +103,4 @@ Search.propTypes = {
 };
 
 const SearchContainer = connect(mapStateToProps, mapDispatchToProps)(Search);
-
 export default SearchContainer;

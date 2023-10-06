@@ -3,8 +3,8 @@ import 'jest-styled-components';
 import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { jsonToMarkdown, DownloadLink, identicalItems } from '../../components/Data';
-import RepoInfoList from '../../components/RepoInfoList';
-import RepoInfo from '../../components/RepoInfo';
+import RepoInfoList from '../../utils/RepoInfoList';
+import RepoInfo from '../../utils/RepoInfo';
 
 it('compares nameWithOwner of two items', () => {
   const elem1 = { nameWithOwner: 'abb', age: 30 };

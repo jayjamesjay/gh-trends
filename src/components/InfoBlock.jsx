@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
-import RepoInfo from './RepoInfo';
+
+import RepoInfo from '../utils/RepoInfo';
 import { languages as colors } from './Data';
 import { BottomBar } from '../styles/Main';
 import Article from '../styles/Article';

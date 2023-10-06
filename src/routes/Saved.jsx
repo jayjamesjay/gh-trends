@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+
 import View from '../components/View';
 import Categories from '../components/Categories';
 import { H1 } from '../styles/Headers';
 import { ImgIcon } from '../styles/Img';
 import { Bar } from '../styles/Main';
 import { DownloadLink, jsonToMarkdown } from '../components/Data';
-import RepoInfo from '../components/RepoInfo';
+import RepoInfo from '../utils/RepoInfo';
 import { ButtonRemove } from '../styles/Button';
 import { save, removeAllSaved } from '../actions';
 import DownloadImg from '../assets/img/download.svg';

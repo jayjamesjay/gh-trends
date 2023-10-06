@@ -1,14 +1,15 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
+
 import { Content } from '../styles/Main';
 import { ButtonMain } from '../styles/Button';
 import InfoBlock from './InfoBlock';
 import { identicalItems } from './Data';
-import RepoInfo from './RepoInfo';
+import RepoInfo from '../utils/RepoInfo';
 import { ImgLoader } from '../styles/Img';
 import { PFlex } from '../styles/Paragraph';
 import LoadingSpinner from '../assets/img/loading-spinner.svg';
-import { load } from './Fetch';
+import { loadingState } from '../utils/Fetch';
 
 /**
  * @module View
@@ -54,15 +55,15 @@ export function ViewSingle(props) {
 
   const content = useMemo(() => {
     switch (loading) {
-      case load.INPROGRESS:
+      case loadingState.INPROGRESS:
         return <ImgLoader src={LoadingSpinner} alt="Loading items" />;
-      case load.LOADED:
+      case loadingState.LOADED:
         return (
           <ButtonMain $visible={data.length > 0} onClick={loadData}>
             Show more
           </ButtonMain>
         );
-      case load.ERORR:
+      case loadingState.ERORR:
         return (
           <PFlex>
             Something went wrong during loading repositories. Please try to refresh the website.

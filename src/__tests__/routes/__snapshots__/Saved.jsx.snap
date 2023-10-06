@@ -235,7 +235,6 @@ exports[`<Saved /> renders with default style 1`] = `
         tabIndex="0"
       >
         <label
-          active={true}
           className="c7"
           htmlFor="JSON"
         >
@@ -263,7 +262,6 @@ exports[`<Saved /> renders with default style 1`] = `
         tabIndex="0"
       >
         <label
-          active={false}
           className="c10"
           htmlFor="Markdown"
         >

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { MenuToggle as StyledToggle, ToggleSpan } from '../styles/Button';
 import { Menu } from '../styles/List';
 import { Link } from '../styles/Link';
