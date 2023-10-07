@@ -9,7 +9,7 @@ import RepoInfo from '../utils/RepoInfo';
 import { ImgLoader } from '../styles/Img';
 import { PFlex } from '../styles/Paragraph';
 import LoadingSpinner from '../assets/img/loading-spinner.svg';
-import { loadingState } from '../utils/Fetch';
+import { loadingState } from '../utils/Request';
 
 /**
  * @module View

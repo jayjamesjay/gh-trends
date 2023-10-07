@@ -339,7 +339,7 @@ exports[`<App /> renders default view 1`] = `
         aria-label="Languages"
         className="c4"
         onChange={[Function]}
-        value="All"
+        value="All Languages"
       >
         <option
           className="c5"

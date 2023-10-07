@@ -2,7 +2,8 @@ import React, { useCallback, useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import getAndSave, { Url, defApi, perPage, addLang, loadingState } from '../utils/Fetch';
+import Request, { loadingState } from '../utils/Request';
+import { addLang } from '../utils/Url';
 import { ViewSingle } from '../components/View';
 import { queries, languages } from '../components/Data';
 import RepoInfoList from '../utils/RepoInfoList';
@@ -23,11 +24,12 @@ const mapDispatchToProps = { save };
 
 // eslint-disable-next-line no-shadow
 export function Home({ saved, save }) {
-  const [lang, setLang] = React.useState('All');
+  const [lang, setLang] = React.useState('All Languages');
   const [time, setTime] = React.useState('This Week');
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
   const [loading, setLoading] = React.useState(loadingState.INPROGRESS);
   const query = useMemo(() => addLang(queries[time], lang), [lang, time]);
+  const request = new Request();
 
   const onSelect = useCallback((event, callback) => {
     const val = event.target.value;
@@ -48,28 +50,11 @@ export function Home({ saved, save }) {
     [onSelect, setTime],
   );
 
-  async function loadData(currData = [], currPage = 1) {
-    const abortController = new AbortController();
-    const { signal } = abortController;
-
-    setLoading(loadingState.INPROGRESS);
-
-    const preUrl = new Url(defApi).query(query).parts(perPage);
-    const infoList = new RepoInfoList(currData, currPage);
-
-    try {
-      await getAndSave(infoList, preUrl, signal, setRepoInfo);
-      setLoading(loadingState.LOADED);
-    } catch (error) {
-      setLoading(loadingState.ERORR);
-    }
-  }
-
   useEffect(() => {
-    loadData();
+    request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, query);
 
     return () => {};
-  }, [lang, time]); // eslint-disable-line
+  }, [query]); // eslint-disable-line
 
   return (
     <>
@@ -82,7 +67,7 @@ export function Home({ saved, save }) {
       </FormAlt>
       <ViewSingle
         data={repoInfo.data}
-        loadData={() => loadData(repoInfo.data, repoInfo.page)}
+        loadData={() => request.loadData(setLoading, repoInfo, setRepoInfo, query)}
         save={save}
         saved={saved}
         loading={loading}

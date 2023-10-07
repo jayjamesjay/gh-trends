@@ -63,7 +63,7 @@ exports[`<Home /> renders with default style 1`] = `
       aria-label="Languages"
       className="c2"
       onChange={[Function]}
-      value="All"
+      value="All Languages"
     >
       <option
         className="c3"

@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { ViewSingle } from '../components/View';
-import getAndSave, { Url, addLang, defApi, perPage, loadingState } from '../utils/Fetch';
+import Request, { loadingState } from '../utils/Request';
+import { addLang } from '../utils/Url';
 import { languages } from '../components/Data';
 import RepoInfoList from '../utils/RepoInfoList';
 import RepoInfo from '../utils/RepoInfo';
@@ -30,26 +31,16 @@ export function Search({ saved, save }) {
   const [search, setSearch] = React.useState('');
   const [loading, setLoading] = React.useState(loadingState.LOADED);
   const [repoInfo, setRepoInfo] = React.useState(new RepoInfoList([], 1));
-  const abortController = new AbortController();
-  const { signal } = abortController;
+  const request = new Request();
 
-  const loadData = useCallback(
-    (currData = [], currPage = 1) => {
-      setLoading(loadingState.INPROGRESS);
-      const preUrl = new Url(defApi).query(search).parts(perPage);
-      const infoList = new RepoInfoList(currData, currPage);
-      return getAndSave(infoList, preUrl, signal, setRepoInfo)
-        .then(() => {
-          setLoading(loadingState.LOADED);
-        })
-        .catch(() => {
-          setLoading(loadingState.ERORR);
-        });
-    },
-    [signal, search, setRepoInfo],
-  );
   const onSubmit = useCallback((event) => event.preventDefault(), []);
-  const onKeyPress = useCallback((event) => (event.key === 'Enter' ? loadData() : {}), [loadData]);
+  const onKeyPress = useCallback(
+    (event) =>
+      event.key === 'Enter'
+        ? request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, search)
+        : {},
+    [repoInfo, search], // eslint-disable-line
+  );
 
   const onInput = useCallback((event) => {
     const newSearch = event.target.value;
@@ -82,13 +73,15 @@ export function Search({ saved, save }) {
           value={search}
           onKeyPress={onKeyPress}
         />
-        <ButtonIcon onClick={() => loadData()}>
+        <ButtonIcon
+          onClick={() => request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, search)}
+        >
           <Img src={SearchImg} alt="Search" />
         </ButtonIcon>
       </FormAlt>
       <ViewSingle
         data={repoInfo.data}
-        loadData={() => loadData(repoInfo.data, repoInfo.page)}
+        loadData={() => request.loadData(setLoading, repoInfo, setRepoInfo, search)}
         save={save}
         saved={saved}
         loading={loading}

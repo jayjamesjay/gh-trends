@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import View, { ViewSingle } from '../../components/View';
-import { loadingState } from '../../utils/Fetch';
+import { loadingState } from '../../utils/Request';
 import RepoInfo from '../../utils/RepoInfo';
 
 const initData = new Array(6);

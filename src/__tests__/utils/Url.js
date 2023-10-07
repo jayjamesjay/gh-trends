@@ -1,4 +1,4 @@
-import { Url, addLang } from '../../utils/Fetch';
+import Url, { addLang } from '../../utils/Url';
 
 describe('addLang', () => {
   const query = 'react';
@@ -13,15 +13,9 @@ describe('addLang', () => {
     expect(addLang(query, lang)).toBe('react language:"cpp"');
   });
 
-  it('all languages', () => {
-    {
-      const lang = 'All';
-      expect(addLang(query, lang)).toBe('react');
-    }
-    {
-      const lang = 'All Languages';
-      expect(addLang(query, lang)).toBe('react');
-    }
+  it('All languages', () => {
+    const lang = 'All Languages';
+    expect(addLang(query, lang)).toBe('react');
   });
 });
 
@@ -33,7 +27,7 @@ describe('<Url />', () => {
 
     expect(url.api).toEqual(api);
     expect(url.params).toEqual([]);
-    expect(url.q).toEqual('');
+    expect(url.queryStr).toEqual('');
   });
 
   it('adds parts', () => {
@@ -48,11 +42,11 @@ describe('<Url />', () => {
 
     {
       const url = new Url(api).query('react     language:JavaScript   ');
-      expect(url.q).toEqual(expected);
+      expect(url.queryStr).toEqual(expected);
     }
     {
       const url = new Url(api).query('react language:JavaScript');
-      expect(url.q).toEqual(expected);
+      expect(url.queryStr).toEqual(expected);
     }
   });
 
@@ -62,7 +56,7 @@ describe('<Url />', () => {
     const expected = `${query}+language:"${lang}"`;
     const url = new Url(api).query(query).lang(lang);
 
-    expect(url.q).toEqual(expected);
+    expect(url.queryStr).toEqual(expected);
   });
 
   it('full toString', () => {
