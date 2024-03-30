@@ -34,7 +34,7 @@ describe('RepoInfo', () => {
       100,
       'JavaScript',
       321,
-      'MIT'
+      'MIT',
     );
 
     expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
@@ -58,7 +58,7 @@ describe('RepoInfo', () => {
       100,
       'JavaScript',
       321,
-      null
+      null,
     );
 
     expect(RepoInfo.fromGithubRes(response)).toEqual(expected);
@@ -73,7 +73,7 @@ describe('<RepoInfoList />', () => {
     100,
     'JavaScript',
     321,
-    'MIT'
+    'MIT',
   );
 
   const expectedData = new Array(3);
@@ -137,9 +137,9 @@ describe('<DownloadLink />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(
-      <DownloadLink filename={name} content={text} display={title} />
+      <DownloadLink filename={name} content={text} display={title} />,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -176,6 +176,6 @@ it('converts JSON to Markdown', () => {
       '# Cat \r\n' +
       'length: 2 \r\n' +
       '\r\n' +
-      '\r\n'
+      '\r\n',
   );
 });

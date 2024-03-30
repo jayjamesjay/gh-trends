@@ -11,9 +11,9 @@ describe('<Categories />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(
-      <Categories labels={labels} active={active} onClick={func} />
+      <Categories labels={labels} active={active} onClick={func} />,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

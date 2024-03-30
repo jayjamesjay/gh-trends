@@ -37,14 +37,14 @@ describe('oppositeBg', () => {
 describe('<Article />', () => {
   it(`renders with default style`, () => {
     const component = renderer.create(<Article />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it(`renders with theme`, () => {
     const component = renderer.create(<Article theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

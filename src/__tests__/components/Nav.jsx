@@ -14,16 +14,16 @@ describe('<ListItemLink />', () => {
     render(
       <Router>
         <ListItemLink click={func} link={url} title={title} />
-      </Router>
+      </Router>,
     );
 
   it(`renders with default style`, () => {
     const component = renderer.create(
       <Router>
         <ListItemLink click={func} link={url} title={title} />
-      </Router>
+      </Router>,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -51,9 +51,9 @@ describe('<Nav />', () => {
           ]}
           linkClick={func}
         />
-      </Router>
+      </Router>,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -69,7 +69,7 @@ describe('<Nav />', () => {
           ]}
           linkClick={func}
         />
-      </Router>
+      </Router>,
     );
 
     expect(screen.getAllByRole('link')).toHaveLength(2);
@@ -78,14 +78,14 @@ describe('<Nav />', () => {
 
 describe('<MenuToggle />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(<MenuToggle toggle={func} $open={true} />);
-    let tree = component.toJSON();
+    const component = renderer.create(<MenuToggle toggle={func} $open />);
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it(`has aria-label`, () => {
-    render(<MenuToggle toggle={func} $open={true} />);
+    render(<MenuToggle toggle={func} $open />);
     expect(screen.queryByRole('button').getAttribute('aria-label')).toBe('Open menu');
   });
 });

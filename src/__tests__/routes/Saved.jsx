@@ -6,9 +6,9 @@ import { Saved } from '../../routes/Saved';
 import RepoInfo from '../../utils/RepoInfo';
 
 describe('<Saved />', () => {
-  const wrapper = () => render(<Saved save={func} removeAllSaved={func} saved={initData} />);
   const func = () => {};
   const initData = new Array(6);
+  const wrapper = () => render(<Saved save={func} removeAllSaved={func} saved={initData} />);
 
   for (let i = 0; i < initData.length; i += 1) {
     const curr = new RepoInfo(
@@ -18,7 +18,7 @@ describe('<Saved />', () => {
       123,
       'JavaScript',
       321,
-      'MIT'
+      'MIT',
     );
     curr.nameWithOwner += i;
     initData[i] = curr;
@@ -26,7 +26,7 @@ describe('<Saved />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

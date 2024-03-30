@@ -5,7 +5,7 @@ import Option from '../../styles/Option';
 
 it('renders default <Option/>', () => {
   const component = renderer.create(<Option />);
-  let tree = component.toJSON();
+  const tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });

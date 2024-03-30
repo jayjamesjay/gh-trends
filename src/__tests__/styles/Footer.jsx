@@ -5,7 +5,7 @@ import Footer from '../../styles/Footer';
 
 test('renders default <Footer />', () => {
   const component = renderer.create(<Footer />);
-  let tree = component.toJSON();
+  const tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });

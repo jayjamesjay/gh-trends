@@ -7,14 +7,14 @@ import { dark } from '../../styles/Theme';
 describe('<TextInput />', () => {
   it('renders default', () => {
     const component = renderer.create(<TextInput />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
     const component = renderer.create(<TextInput theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -22,7 +22,7 @@ describe('<TextInput />', () => {
 
 it('renders default <InputRadio />', () => {
   const component = renderer.create(<InputRadio />);
-  let tree = component.toJSON();
+  const tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });

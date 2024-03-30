@@ -15,12 +15,12 @@ describe('<Home />', () => {
   global.fetch = jest.fn(() =>
     Promise.resolve({
       json: () => Promise.resolve({}),
-    })
+    }),
   );
 
   it(`renders with default style`, () => {
     const component = renderer.create(<Home save={func} saved={[]} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

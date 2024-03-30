@@ -25,14 +25,14 @@ it('inverts color of icon', () => {
 describe('<Img />', () => {
   it('renders default', () => {
     const component = renderer.create(<Img />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
     const component = renderer.create(<Img theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -40,7 +40,7 @@ describe('<Img />', () => {
 
 it('renders default <ImgIcon />', () => {
   const component = renderer.create(<ImgIcon />);
-  let tree = component.toJSON();
+  const tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });
@@ -48,14 +48,14 @@ it('renders default <ImgIcon />', () => {
 describe('<ImgInline />', () => {
   it('renders default', () => {
     const component = renderer.create(<ImgInline />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
     const component = renderer.create(<ImgInline theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

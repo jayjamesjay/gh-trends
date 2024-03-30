@@ -8,14 +8,14 @@ import { dark } from '../../styles/Theme';
 describe('<Nav />', () => {
   it('renders default', () => {
     const component = renderer.create(<Nav />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
     const component = renderer.create(<Nav theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

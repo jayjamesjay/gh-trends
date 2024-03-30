@@ -6,7 +6,7 @@ import { PClean, PFlex } from '../../styles/Paragraph';
 describe('<PClean />', () => {
   it('renders default', () => {
     const component = renderer.create(<PClean />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -15,7 +15,7 @@ describe('<PClean />', () => {
 describe('<PFlex />', () => {
   it('renders default', () => {
     const component = renderer.create(<PFlex />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

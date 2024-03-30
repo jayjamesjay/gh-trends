@@ -10,9 +10,9 @@ describe('<Link />', () => {
     const component = renderer.create(
       <Router>
         <Link to="/" />
-      </Router>
+      </Router>,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -21,9 +21,9 @@ describe('<Link />', () => {
     const component = renderer.create(
       <Router>
         <Link theme={dark} to="/" />
-      </Router>
+      </Router>,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -33,9 +33,9 @@ it('renders default <HeaderLink />', () => {
   const component = renderer.create(
     <Router>
       <HeaderLink to="/" />
-    </Router>
+    </Router>,
   );
-  let tree = component.toJSON();
+  const tree = component.toJSON();
 
   expect(tree).toMatchSnapshot();
 });
@@ -43,14 +43,14 @@ it('renders default <HeaderLink />', () => {
 describe('<LinkA />', () => {
   it('renders default', () => {
     const component = renderer.create(<LinkA />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
     const component = renderer.create(<LinkA theme={dark} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

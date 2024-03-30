@@ -10,7 +10,7 @@ describe('<App />', () => {
 
   it('renders default view', () => {
     const component = renderer.create(<App />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

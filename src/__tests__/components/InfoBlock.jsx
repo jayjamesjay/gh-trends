@@ -13,17 +13,14 @@ describe('<InfoBlock />', () => {
     123,
     'JavaScript',
     321,
-    'MIT'
+    'MIT',
   );
   const saved = false;
-  let temp;
-  const save = (currInfo) => {
-    temp = currInfo;
-  };
+  const save = (currInfo) => currInfo;
 
   it(`renders with default style`, () => {
     const component = renderer.create(<InfoBlock info={info} save={save} saved={saved} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -51,7 +48,7 @@ describe('<RepoLink />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(<RepoLink nameWithOwner={title} url={url} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -72,8 +69,8 @@ describe('<SaveRepo />', () => {
   const btn = (saved) => render(<SaveRepo save={func} saved={saved} />);
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<SaveRepo save={func} saved={true} />);
-    let tree = component.toJSON();
+    const component = renderer.create(<SaveRepo save={func} saved />);
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

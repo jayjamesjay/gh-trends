@@ -11,7 +11,7 @@ describe('<Category />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(<Category checked={checked} label={label} onClick={func} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

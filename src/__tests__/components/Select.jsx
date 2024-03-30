@@ -14,9 +14,9 @@ describe('<Select />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(
-      <Select curr={curr} onSelect={func} options={languages} label={label} />
+      <Select curr={curr} onSelect={func} options={languages} label={label} />,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -42,9 +42,9 @@ describe('<SelectLang />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(
-      <SelectLang curr={curr} onSelect={func} options={languages} label={label} />
+      <SelectLang curr={curr} onSelect={func} options={languages} label={label} />,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

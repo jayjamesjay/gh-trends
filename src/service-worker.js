@@ -34,9 +34,9 @@
           Promise.all(
             keys
               .filter((key) => key !== staticCache && key !== dynamicCache)
-              .map((key) => caches.delete(key))
-          )
-        )
+              .map((key) => caches.delete(key)),
+          ),
+        ),
     );
   });
 
@@ -51,10 +51,10 @@
               caches.open(dynamicCache).then((cache) => {
                 cache.put(event.request.url, res.clone());
                 return res;
-              })
-            )
+              }),
+            ),
         )
-        .catch(() => caches.match('./index.html'))
+        .catch(() => caches.match('./index.html')),
     );
   });
 })();

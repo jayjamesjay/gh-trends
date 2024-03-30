@@ -13,9 +13,9 @@ describe('<Header />', () => {
     const component = renderer.create(
       <Router>
         <Header link="" title={title} switchTheme={func} $hide={false} toggle={func} />
-      </Router>
+      </Router>,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -24,7 +24,7 @@ describe('<Header />', () => {
     render(
       <Router>
         <Header link="" title={title} switchTheme={func} $hide={false} toggle={func} />
-      </Router>
+      </Router>,
     );
 
     expect(screen.getByRole('link').textContent).toEqual(title);

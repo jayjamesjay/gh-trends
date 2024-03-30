@@ -9,7 +9,7 @@ const text = 'Copyright © 2022 jayjamesjay. All Rights Reserved. Project under 
 describe('<Footer />', () => {
   it(`renders with default style`, () => {
     const component = renderer.create(<Footer />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

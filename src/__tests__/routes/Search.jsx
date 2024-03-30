@@ -20,7 +20,7 @@ describe('<Search />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(<Search save={func} saved={[]} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });

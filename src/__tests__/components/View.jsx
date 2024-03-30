@@ -17,7 +17,7 @@ for (let i = 0; i < initData.length; i += 1) {
     123,
     'JavaScript',
     321,
-    'MIT'
+    'MIT',
   );
   curr.nameWithOwner += i;
   initData[i] = curr;
@@ -29,7 +29,7 @@ describe('<View />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(<View data={[]} saved={[]} save={func} />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
@@ -61,16 +61,22 @@ describe('<ViewSingle />', () => {
 
   it(`renders with default style`, () => {
     const component = renderer.create(
-      <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />
+      <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />,
     );
-    let tree = component.toJSON();
+    const tree = component.toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   it(`renders empty and does not display Button`, () => {
     render(
-      <ViewSingle data={[]} saved={[]} save={func} loadData={func} loading={loadingState.INPROGRESS} />
+      <ViewSingle
+        data={[]}
+        saved={[]}
+        save={func}
+        loadData={func}
+        loading={loadingState.INPROGRESS}
+      />,
     );
     expect(screen.queryByRole('button')).toBeNull();
   });
@@ -82,7 +88,7 @@ describe('<ViewSingle />', () => {
 
   it('fires loadData', () => {
     render(
-      <ViewSingle data={initData} saved={[]} save={func} loadData={loadData} loading={loading} />
+      <ViewSingle data={initData} saved={[]} save={func} loadData={loadData} loading={loading} />,
     );
     fireEvent.click(screen.queryByText('Show more'));
 
