@@ -55,8 +55,8 @@ exports[`<InfoBlock /> renders with default style 1`] = `
 
 .c11 {
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(0%);
 }
 
@@ -75,7 +75,8 @@ exports[`<InfoBlock /> renders with default style 1`] = `
 
 .c6 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -196,7 +197,8 @@ exports[`<SaveRepo /> renders with default style 1`] = `
 
 .c0 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }

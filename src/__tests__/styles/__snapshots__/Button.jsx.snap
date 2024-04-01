@@ -185,7 +185,8 @@ exports[`<ToggleSpan /> renders with default style - light theme 1`] = `
 exports[`renders default <ButtonAdd />' 1`] = `
 .c0 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -202,7 +203,8 @@ exports[`renders default <ButtonAdd />' 1`] = `
 exports[`renders default <ButtonIcon />' 1`] = `
 .c0 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -215,7 +217,8 @@ exports[`renders default <ButtonIcon />' 1`] = `
 exports[`renders default <ButtonRemove />' 1`] = `
 .c0 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -241,8 +244,8 @@ exports[`renders default <ButtonTheme />' 1`] = `
 }
 
 .c1 {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   margin: 0 auto;
   background: transparent;
 }

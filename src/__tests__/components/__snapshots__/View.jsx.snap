@@ -31,7 +31,8 @@ exports[`<ViewSingle /> renders with default style 1`] = `
 
 .c7 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -82,8 +83,8 @@ exports[`<ViewSingle /> renders with default style 1`] = `
 
 .c12 {
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(0%);
 }
 

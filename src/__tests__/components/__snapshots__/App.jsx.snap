@@ -13,8 +13,8 @@ exports[`<App /> renders default view 1`] = `
 }
 
 .c4 {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   margin: 0 auto;
   background: transparent;
 }
@@ -114,7 +114,7 @@ exports[`<App /> renders default view 1`] = `
       onClick={[Function]}
     >
       <img
-        alt="Switch between dark and light mode"
+        alt="Toggle dark/light mode"
         className="c5"
         src="test-file-stub"
       />

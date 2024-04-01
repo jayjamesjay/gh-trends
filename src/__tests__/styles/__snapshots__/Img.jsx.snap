@@ -27,8 +27,8 @@ exports[`<Img /> renders with theme 1`] = `
 exports[`<ImgInline /> renders default 1`] = `
 .c0 {
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(0%);
 }
 
@@ -40,8 +40,8 @@ exports[`<ImgInline /> renders default 1`] = `
 exports[`<ImgInline /> renders with theme 1`] = `
 .c0 {
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(100%);
 }
 

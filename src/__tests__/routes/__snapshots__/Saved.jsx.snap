@@ -37,7 +37,8 @@ exports[`<Saved /> renders with default style 1`] = `
 
 .c4 {
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 }
@@ -101,8 +102,8 @@ exports[`<Saved /> renders with default style 1`] = `
 
 .c19 {
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: invert(0%);
 }
 
