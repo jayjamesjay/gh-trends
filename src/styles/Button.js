@@ -16,8 +16,8 @@ Button.defaultProps = {
 };
 
 export const ButtonTheme = styled(Button)`
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   margin: 0 auto;
   background: transparent;
 
@@ -41,7 +41,8 @@ ButtonMain.defaultProps = {
 
 export const ButtonIcon = styled.button`
   cursor: pointer;
-  height: auto;
+  width: 2rem;
+  height: 2rem;
   background: transparent;
   border: 0;
 `;

@@ -27,7 +27,7 @@ export default function Header({ link, title, switchTheme, $hide, toggle }) {
     <StyledHeader>
       <HeaderLink to={link}>{title}</HeaderLink>
       <ButtonTheme onClick={switchTheme}>
-        <Img src={SwitchThemeImg} alt="Switch between dark and light mode" />
+        <Img src={SwitchThemeImg} alt="Toggle dark/light mode" />
       </ButtonTheme>
       <MenuToggle toggle={toggle} $open={!$hide} />
     </StyledHeader>

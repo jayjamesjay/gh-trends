@@ -20,7 +20,7 @@ export const ImgLoader = styled(Img)`
 
 export const ImgInline = styled.img`
   display: inline-block;
-  width: auto;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   filter: ${(props) => invertColor(props)};
 `;
