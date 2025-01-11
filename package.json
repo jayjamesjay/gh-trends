@@ -6,8 +6,8 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.24.3",
-    "@babel/eslint-parser": "^7.24.1",
+    "@babel/core": "^7.26.0",
+    "@babel/eslint-parser": "^7.26.5",
     "@babel/plugin-transform-class-properties": "^7.24.1",
     "@babel/preset-env": "^7.24.3",
     "@babel/preset-react": "^7.24.1",
@@ -32,7 +32,7 @@
     "jest-styled-components": "^7.2.0",
     "jsdoc": "^4.0.2",
     "prettier": "^3.2.5",
-    "react-test-renderer": "^18.2.0",
+    "react-test-renderer": "^18.3.1",
     "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
@@ -47,16 +47,16 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.2",
+    "@reduxjs/toolkit": "^2.5.0",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-redux": "^9.1.0",
-    "react-router-dom": "^6.22.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^6.28.0",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.8",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4"
+    "styled-components": "^6.1.14",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   },
   "jest": {
     "moduleNameMapper": {
@@ -68,5 +68,5 @@
     "printWidth": 100,
     "singleQuote": true
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.6.0"
 }
