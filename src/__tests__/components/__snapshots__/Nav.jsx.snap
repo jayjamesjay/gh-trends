@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListItemLink /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem;
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -10,19 +11,21 @@ exports[`<ListItemLink /> renders with default style 1`] = `
 }
 
 <li>
-  <a
-    className="c0"
-    fontSize="1.3rem"
-    href="/saved"
-    onClick={[Function]}
-  >
-    Go to saved
-  </a>
-</li>
+    <a
+      class="c0"
+      data-discover="true"
+      font-size="1.3rem"
+      href="/saved"
+    >
+      Go to saved
+    </a>
+  </li>
+</DocumentFragment>
 `;
 
 exports[`<MenuToggle /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -67,27 +70,28 @@ exports[`<MenuToggle /> renders with default style 1`] = `
 }
 
 <button
-  aria-label="Open menu"
-  className="c0 c1"
-  onClick={[Function]}
->
-  <span
-    className="c2"
-    open={true}
-  />
-  <span
-    className="c2"
-    open={true}
-  />
-  <span
-    className="c2"
-    open={true}
-  />
-</button>
+    aria-label="Open menu"
+    class="c0 c1"
+  >
+    <span
+      class="c2"
+      open=""
+    />
+    <span
+      class="c2"
+      open=""
+    />
+    <span
+      class="c2"
+      open=""
+    />
+  </button>
+</DocumentFragment>
 `;
 
 exports[`<Nav /> renders with default style 1`] = `
-.c1 {
+<DocumentFragment>
+  .c1 {
   display: flex;
   flex-flow: row wrap;
   width: 60%;
@@ -140,31 +144,32 @@ exports[`<Nav /> renders with default style 1`] = `
 }
 
 <nav
-  className="c0"
->
-  <ul
-    className="c1 c2"
+    class="c0"
   >
-    <li>
-      <a
-        className="c3"
-        fontSize="1.3rem"
-        href="/saved"
-        onClick={[Function]}
-      >
-        Saved
-      </a>
-    </li>
-    <li>
-      <a
-        className="c3"
-        fontSize="1.3rem"
-        href="/"
-        onClick={[Function]}
-      >
-        Home
-      </a>
-    </li>
-  </ul>
-</nav>
+    <ul
+      class="c1 c2"
+    >
+      <li>
+        <a
+          class="c3"
+          data-discover="true"
+          font-size="1.3rem"
+          href="/saved"
+        >
+          Saved
+        </a>
+      </li>
+      <li>
+        <a
+          class="c3"
+          data-discover="true"
+          font-size="1.3rem"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
 `;

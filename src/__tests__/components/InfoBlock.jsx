@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import InfoBlock, { RepoLink, SaveRepo } from '../../components/InfoBlock';
 import RepoInfo from '../../utils/RepoInfo';
@@ -19,15 +18,12 @@ describe('<InfoBlock />', () => {
   const save = (currInfo) => currInfo;
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<InfoBlock info={info} save={save} saved={saved} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<InfoBlock info={info} save={save} saved={saved} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with license', () => {
     render(<InfoBlock info={info} save={save} saved={saved} />);
-
     expect(screen.queryByText(`License: ${info.license}`)).not.toBeNull();
   });
 
@@ -35,7 +31,6 @@ describe('<InfoBlock />', () => {
     info.license = null;
 
     render(<InfoBlock info={info} save={save} saved={saved} />);
-
     expect(screen.queryByText(`License: ${info.license}`)).toBeNull();
   });
 });
@@ -47,10 +42,8 @@ describe('<RepoLink />', () => {
   const url = 'https://github.com/jayjamesjay/gh-trends';
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<RepoLink nameWithOwner={title} url={url} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<RepoLink nameWithOwner={title} url={url} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('displays owner', () => {
@@ -69,10 +62,8 @@ describe('<SaveRepo />', () => {
   const btn = (saved) => render(<SaveRepo save={func} saved={saved} />);
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<SaveRepo save={func} saved />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<SaveRepo save={func} saved />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`displays add icon if repo hasn't been saved`, () => {

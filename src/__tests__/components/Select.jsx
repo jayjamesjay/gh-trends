@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Select, { SelectLang } from '../../components/Select';
 
@@ -13,12 +12,10 @@ describe('<Select />', () => {
     render(<Select curr={curr} onSelect={func} options={languages} label={label} />);
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
+    const { asFragment } = render(
       <Select curr={curr} onSelect={func} options={languages} label={label} />,
     );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`has aria-label`, () => {
@@ -41,12 +38,10 @@ describe('<SelectLang />', () => {
     render(<SelectLang curr={curr} onSelect={func} options={languages} label={label} />);
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
+    const { asFragment } = render(
       <SelectLang curr={curr} onSelect={func} options={languages} label={label} />,
     );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`has aria-label`, () => {

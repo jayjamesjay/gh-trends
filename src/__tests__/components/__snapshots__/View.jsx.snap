@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<View /> renders with default style 1`] = `
-@media screen and (min-width:40rem) {
+<DocumentFragment>
+  @media screen and (min-width:40rem) {
   .c0 {
     display: flex;
     flex-flow: row wrap;
@@ -11,12 +12,13 @@ exports[`<View /> renders with default style 1`] = `
 }
 
 <div
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ViewSingle /> renders with default style 1`] = `
-[
+<DocumentFragment>
   .c5 {
   display: flex;
   flex-flow: row wrap;
@@ -119,387 +121,375 @@ exports[`<ViewSingle /> renders with default style 1`] = `
 }
 
 <div
-    className="c0"
+    class="c0"
   >
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends0
+           /gh-trends0
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends1
+           /gh-trends1
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends2
+           /gh-trends2
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends3
+           /gh-trends3
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends4
+           /gh-trends4
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
     <article
-      className="c1"
+      class="c1"
     >
       <h2
-        className="c2"
+        class="c2"
       >
         <a
-          className="c3"
+          class="c3"
           href=""
         >
           <span
-            className="c4"
+            class="c4"
           >
             jayjamesjay
           </span>
-           /
-          gh-trends5
+           /gh-trends5
         </a>
       </h2>
       <p>
         Loading content for this website...
       </p>
       <div
-        className="c5 c6"
+        class="c5 c6"
       >
         <button
-          className="c7 c8"
-          onClick={[Function]}
+          class="c7 c8"
         >
           <img
             alt="Add to saved"
-            className="c9"
+            class="c9"
             src="test-file-stub"
             title="Add to saved"
           />
         </button>
         <p
-          className="c10"
+          class="c10"
         >
           Forks: 321
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           License: MIT
         </p>
         <p
-          className="c11"
+          class="c11"
         >
           123
           <img
             alt="Stars"
-            className="c12"
+            class="c12"
             src="test-file-stub"
           />
         </p>
         <p
-          className="c10"
+          class="c10"
         >
           Language: JavaScript
         </p>
       </div>
     </article>
-  </div>,
+  </div>
   .c0 {
   cursor: pointer;
   background: #fff;
@@ -528,11 +518,10 @@ exports[`<ViewSingle /> renders with default style 1`] = `
 
 <footer>
     <button
-      className="c0 c1"
-      onClick={[Function]}
+      class="c0 c1"
     >
       Show more
     </button>
-  </footer>,
-]
+  </footer>
+</DocumentFragment>
 `;

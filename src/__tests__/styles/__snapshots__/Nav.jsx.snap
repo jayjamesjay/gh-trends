@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Nav /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   width: 100%;
   padding: 0.7rem 0;
   position: fixed;
@@ -25,12 +26,14 @@ exports[`<Nav /> renders default 1`] = `
 }
 
 <nav
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Nav /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   width: 100%;
   padding: 0.7rem 0;
   position: fixed;
@@ -54,6 +57,7 @@ exports[`<Nav /> renders with theme 1`] = `
 }
 
 <nav
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

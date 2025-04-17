@@ -1,6 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import App from '../../components/App';
 
 describe('<App />', () => {
@@ -9,9 +9,7 @@ describe('<App />', () => {
   useStateSpy.mockImplementation((init) => [init, setState]);
 
   it('renders default view', () => {
-    const component = renderer.create(<App />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

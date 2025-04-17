@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders default - dark theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,12 +22,14 @@ exports[`<Header /> renders default - dark theme 1`] = `
 }
 
 <header
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Header /> renders default - light theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,29 +49,34 @@ exports[`<Header /> renders default - light theme 1`] = `
 }
 
 <header
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <H1 /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
 <h1
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <H2 /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0.2rem 0;
   font-size: 1.7rem;
 }
 
 <h2
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

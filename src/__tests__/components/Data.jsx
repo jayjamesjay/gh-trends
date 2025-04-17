@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import { jsonToMarkdown, DownloadLink, identicalItems } from '../../components/Data';
 import RepoInfoList from '../../utils/RepoInfoList';
@@ -136,12 +135,8 @@ describe('<DownloadLink />', () => {
   const title = 'Download message';
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
-      <DownloadLink filename={name} content={text} display={title} />,
-    );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<DownloadLink filename={name} content={text} display={title} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('displays title', () => {

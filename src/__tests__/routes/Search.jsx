@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Search } from '../../routes/Search';
 
@@ -19,10 +18,8 @@ describe('<Search />', () => {
   });
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<Search save={func} saved={[]} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Search save={func} saved={[]} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('onInput', () => {

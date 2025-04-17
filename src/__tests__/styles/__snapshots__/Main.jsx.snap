@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders default <Bar /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -10,12 +11,14 @@ exports[`renders default <Bar /> 1`] = `
 }
 
 <div
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <BottomBar /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -28,12 +31,14 @@ exports[`renders default <BottomBar /> 1`] = `
 }
 
 <div
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <Content /> 1`] = `
-@media screen and (min-width:40rem) {
+<DocumentFragment>
+  @media screen and (min-width:40rem) {
   .c0 {
     display: flex;
     flex-flow: row wrap;
@@ -43,12 +48,14 @@ exports[`renders default <Content /> 1`] = `
 }
 
 <div
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <Main /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: column;
   align-content: center;
@@ -58,6 +65,7 @@ exports[`renders default <Main /> 1`] = `
 }
 
 <main
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

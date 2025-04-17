@@ -1,28 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListItem /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem 1rem 0 0;
 }
 
 <li
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ListItem /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem 1rem 0 0;
   color: #8d8d8d;
 }
 
 <li
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <List /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: row wrap;
   width: 60%;
@@ -32,12 +37,14 @@ exports[`renders default <List /> 1`] = `
 }
 
 <ul
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <Menu /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: row wrap;
   width: 60%;
@@ -59,6 +66,7 @@ exports[`renders default <Menu /> 1`] = `
 }
 
 <ul
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;

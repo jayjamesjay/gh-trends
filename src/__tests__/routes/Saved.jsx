@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { Saved } from '../../routes/Saved';
 import RepoInfo from '../../utils/RepoInfo';
@@ -25,10 +24,8 @@ describe('<Saved />', () => {
   }
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<Saved save={func} removeAllSaved={func} saved={initData} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Saved save={func} removeAllSaved={func} saved={initData} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with title - no repos', () => {

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TextInput /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   min-width: 50%;
   padding: 0.5rem;
   background: #fafafa;
@@ -17,12 +18,14 @@ exports[`<TextInput /> renders default 1`] = `
 }
 
 <input
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<TextInput /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   min-width: 50%;
   padding: 0.5rem;
   background: #000;
@@ -38,16 +41,19 @@ exports[`<TextInput /> renders with theme 1`] = `
 }
 
 <input
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <InputRadio /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   opacity: 0;
 }
 
 <input
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Category /> renders with default style 1`] = `
-.c1 {
+<DocumentFragment>
+  .c1 {
   position: relative;
   z-index: 100;
 }
@@ -36,30 +37,27 @@ exports[`<Category /> renders with default style 1`] = `
 }
 
 <div
-  aria-checked={false}
-  onClick={[Function]}
-  onKeyPress={[Function]}
-  role="radio"
-  tabIndex="0"
->
-  <label
-    className="c0"
-    htmlFor="Year"
+    aria-checked="false"
+    role="radio"
+    tabindex="0"
   >
-    <span
-      className="c1"
+    <label
+      class="c0"
+      for="Year"
     >
-      Year
-    </span>
-  </label>
-  <input
-    checked={false}
-    className="c2"
-    id="Year"
-    onChange={[Function]}
-    tabIndex="-1"
-    type="radio"
-    value="Year"
-  />
-</div>
+      <span
+        class="c1"
+      >
+        Year
+      </span>
+    </label>
+    <input
+      class="c2"
+      id="Year"
+      tabindex="-1"
+      type="radio"
+      value="Year"
+    />
+  </div>
+</DocumentFragment>
 `;

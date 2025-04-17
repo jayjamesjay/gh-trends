@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Categories /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -69,61 +70,55 @@ exports[`<Categories /> renders with default style 1`] = `
 }
 
 <form
-  className="c0"
->
-  <div
-    aria-checked={false}
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="radio"
-    tabIndex="0"
+    class="c0"
   >
-    <label
-      className="c1"
-      htmlFor="Year"
+    <div
+      aria-checked="false"
+      role="radio"
+      tabindex="0"
     >
-      <span
-        className="c2"
+      <label
+        class="c1"
+        for="Year"
       >
-        Year
-      </span>
-    </label>
-    <input
-      checked={false}
-      className="c3"
-      id="Year"
-      onChange={[Function]}
-      tabIndex="-1"
-      type="radio"
-      value="Year"
-    />
-  </div>
-  <div
-    aria-checked={true}
-    onClick={[Function]}
-    onKeyPress={[Function]}
-    role="radio"
-    tabIndex="0"
-  >
-    <label
-      className="c4"
-      htmlFor="Month"
+        <span
+          class="c2"
+        >
+          Year
+        </span>
+      </label>
+      <input
+        class="c3"
+        id="Year"
+        tabindex="-1"
+        type="radio"
+        value="Year"
+      />
+    </div>
+    <div
+      aria-checked="true"
+      role="radio"
+      tabindex="0"
     >
-      <span
-        className="c2"
+      <label
+        class="c4"
+        for="Month"
       >
-        Month
-      </span>
-    </label>
-    <input
-      checked={true}
-      className="c3"
-      id="Month"
-      onChange={[Function]}
-      tabIndex="-1"
-      type="radio"
-      value="Month"
-    />
-  </div>
-</form>
+        <span
+          class="c2"
+        >
+          Month
+        </span>
+      </label>
+      <input
+        checked=""
+        class="c3"
+        id="Month"
+        tabindex="-1"
+        type="radio"
+        value="Month"
+      />
+    </div>
+  </form>
+</DocumentFragment>
 `;

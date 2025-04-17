@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Saved /> renders with default style 1`] = `
-[
+<DocumentFragment>
   .c0 {
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
@@ -18,11 +18,11 @@ exports[`<Saved /> renders with default style 1`] = `
 
 <header>
     <h1
-      className="c0"
+      class="c0"
     >
       Saved repositories
     </h1>
-  </header>,
+  </header>
   .c0 {
   display: flex;
   flex-flow: row wrap;
@@ -201,470 +201,450 @@ exports[`<Saved /> renders with default style 1`] = `
 
 <section>
     <div
-      className="c0"
+      class="c0"
     >
       <a
-        className="c1"
+        class="c1"
         download="saved.json"
         href="data:json/plain;charset=utf-8,%5B%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends0%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends1%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends2%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends3%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends4%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%2C%7B%22nameWithOwner%22%3A%22jayjamesjay%2Fgh-trends5%22%2C%22url%22%3A%22%22%2C%22description%22%3A%22Loading%20content%20for%20this%20website...%22%2C%22stargazersCount%22%3A123%2C%22language%22%3A%22JavaScript%22%2C%22forks%22%3A321%2C%22license%22%3A%22MIT%22%7D%5D"
       >
         <img
           alt="Download saved items"
-          className="c2 c3"
+          class="c2 c3"
           src="test-file-stub"
         />
       </a>
       <button
-        className="c4 c5"
-        onClick={[Function]}
+        class="c4 c5"
       >
         <img
           alt="Remove all"
-          className="c2 c3"
+          class="c2 c3"
           src="test-file-stub"
         />
       </button>
     </div>
     <form
-      className="c6"
+      class="c6"
     >
       <div
-        aria-checked={true}
-        onClick={[Function]}
-        onKeyPress={[Function]}
+        aria-checked="true"
         role="radio"
-        tabIndex="0"
+        tabindex="0"
       >
         <label
-          className="c7"
-          htmlFor="JSON"
+          class="c7"
+          for="JSON"
         >
           <span
-            className="c8"
+            class="c8"
           >
             JSON
           </span>
         </label>
         <input
-          checked={true}
-          className="c9"
+          checked=""
+          class="c9"
           id="JSON"
-          onChange={[Function]}
-          tabIndex="-1"
+          tabindex="-1"
           type="radio"
           value="JSON"
         />
       </div>
       <div
-        aria-checked={false}
-        onClick={[Function]}
-        onKeyPress={[Function]}
+        aria-checked="false"
         role="radio"
-        tabIndex="0"
+        tabindex="0"
       >
         <label
-          className="c10"
-          htmlFor="Markdown"
+          class="c10"
+          for="Markdown"
         >
           <span
-            className="c8"
+            class="c8"
           >
             Markdown
           </span>
         </label>
         <input
-          checked={false}
-          className="c9"
+          class="c9"
           id="Markdown"
-          onChange={[Function]}
-          tabIndex="-1"
+          tabindex="-1"
           type="radio"
           value="Markdown"
         />
       </div>
     </form>
     <div
-      className="c11"
+      class="c11"
     >
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends0
+             /gh-trends0
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends1
+             /gh-trends1
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends2
+             /gh-trends2
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends3
+             /gh-trends3
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends4
+             /gh-trends4
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
       <article
-        className="c12"
+        class="c12"
       >
         <h2
-          className="c13"
+          class="c13"
         >
           <a
-            className="c1"
+            class="c1"
             href=""
           >
             <span
-              className="c14"
+              class="c14"
             >
               jayjamesjay
             </span>
-             /
-            gh-trends5
+             /gh-trends5
           </a>
         </h2>
         <p>
           Loading content for this website...
         </p>
         <div
-          className="c0 c15"
+          class="c0 c15"
         >
           <button
-            className="c4 c16"
-            onClick={[Function]}
+            class="c4 c16"
           >
             <img
               alt="Remove from saved"
-              className="c2"
+              class="c2"
               src="test-file-stub"
               title="Remove from saved"
             />
           </button>
           <p
-            className="c17"
+            class="c17"
           >
             Forks: 321
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             License: MIT
           </p>
           <p
-            className="c18"
+            class="c18"
           >
             123
             <img
               alt="Stars"
-              className="c19"
+              class="c19"
               src="test-file-stub"
             />
           </p>
           <p
-            className="c17"
+            class="c17"
           >
             Language: JavaScript
           </p>
         </div>
       </article>
     </div>
-  </section>,
-]
+  </section>
+</DocumentFragment>
 `;

@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Categories from '../../components/Categories';
 
@@ -10,12 +9,8 @@ describe('<Categories />', () => {
   const func = () => {};
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
-      <Categories labels={labels} active={active} onClick={func} />,
-    );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Categories labels={labels} active={active} onClick={func} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`displays labels`, () => {

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Select /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   max-width: 80%;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -9,6 +10,7 @@ exports[`<Select /> renders with default style 1`] = `
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-family: 'Noto Sans HK',sans-serif;
   font-size: 1.3rem;
   color: #000;
   text-align: center;
@@ -24,28 +26,27 @@ exports[`<Select /> renders with default style 1`] = `
 }
 
 <select
-  aria-label="Select language"
-  className="c0"
-  onChange={[Function]}
-  value="JavaScript"
->
-  <option
-    className="c1"
-    value="JavaScript"
+    aria-label="Select language"
+    class="c0"
   >
-    JavaScript
-  </option>
-  <option
-    className="c1"
-    value="CSS"
-  >
-    CSS
-  </option>
-</select>
+    <option
+      class="c1"
+      value="JavaScript"
+    >
+      JavaScript
+    </option>
+    <option
+      class="c1"
+      value="CSS"
+    >
+      CSS
+    </option>
+  </select>
+</DocumentFragment>
 `;
 
 exports[`<SelectLang /> renders with default style 1`] = `
-[
+<DocumentFragment>
   .c0 {
   width: 100%;
   height: auto;
@@ -58,10 +59,10 @@ exports[`<SelectLang /> renders with default style 1`] = `
 
 <img
     alt="Select language"
-    className="c0 c1"
+    class="c0 c1"
     src="test-file-stub"
     title="Select language"
-  />,
+  />
   .c0 {
   max-width: 80%;
   margin: 0.5rem;
@@ -70,6 +71,7 @@ exports[`<SelectLang /> renders with default style 1`] = `
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-family: 'Noto Sans HK',sans-serif;
   font-size: 1.3rem;
   color: #000;
   text-align: center;
@@ -86,28 +88,26 @@ exports[`<SelectLang /> renders with default style 1`] = `
 
 <select
     aria-label="Languages"
-    className="c0"
-    onChange={[Function]}
-    value="JavaScript"
+    class="c0"
   >
     <option
-      className="c1"
+      class="c1"
       value="All Languages"
     >
       All Languages
     </option>
     <option
-      className="c1"
+      class="c1"
       value="JavaScript"
     >
       JavaScript
     </option>
     <option
-      className="c1"
+      class="c1"
       value="CSS"
     >
       CSS
     </option>
-  </select>,
-]
+  </select>
+</DocumentFragment>
 `;

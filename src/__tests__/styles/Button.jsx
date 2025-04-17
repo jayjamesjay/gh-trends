@@ -1,5 +1,5 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import {
   Button,
   ButtonMain,
@@ -15,104 +15,76 @@ import 'jest-styled-components';
 
 describe('<Button />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(<Button />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Button />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders with theme`, () => {
-    const component = renderer.create(<Button theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Button theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
 describe('<ButtonMain />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(<ButtonMain />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ButtonMain />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders with theme`, () => {
-    const component = renderer.create(<ButtonMain theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ButtonMain theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders visible`, () => {
-    const component = renderer.create(<ButtonMain visible />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ButtonMain visible="true" />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders hidden`, () => {
-    const component = renderer.create(<ButtonMain visible={false} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ButtonMain visible="false" />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
 describe('<ToggleSpan />', () => {
   it(`renders with default style - light theme`, () => {
-    const component = renderer.create(<ToggleSpan />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ToggleSpan />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`open/close`, () => {
-    const component = renderer.create(<ToggleSpan open={false} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ToggleSpan open={false} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders with default style - dark theme`, () => {
-    const component = renderer.create(<ToggleSpan theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<ToggleSpan theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
 it(`renders default <MenuToggle />'`, () => {
-  const component = renderer.create(<MenuToggle />);
-  const tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const { asFragment } = render(<MenuToggle />);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 it(`renders default <ButtonTheme />'`, () => {
-  const component = renderer.create(<ButtonTheme />);
-  const tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const { asFragment } = render(<ButtonTheme />);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 it(`renders default <ButtonIcon />'`, () => {
-  const component = renderer.create(<ButtonIcon />);
-  const tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const { asFragment } = render(<ButtonIcon />);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 it(`renders default <ButtonRemove />'`, () => {
-  const component = renderer.create(<ButtonRemove />);
-  const tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const { asFragment } = render(<ButtonRemove />);
+  expect(asFragment()).toMatchSnapshot();
 });
 
 it(`renders default <ButtonAdd />'`, () => {
-  const component = renderer.create(<ButtonAdd />);
-  const tree = component.toJSON();
-
-  expect(tree).toMatchSnapshot();
+  const { asFragment } = render(<ButtonAdd />);
+  expect(asFragment()).toMatchSnapshot();
 });

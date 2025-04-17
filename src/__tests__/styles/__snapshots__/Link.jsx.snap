@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Link /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem;
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -10,15 +11,17 @@ exports[`<Link /> renders default 1`] = `
 }
 
 <a
-  className="c0"
-  fontSize="1.3rem"
-  href="/"
-  onClick={[Function]}
-/>
+    class="c0"
+    data-discover="true"
+    font-size="1.3rem"
+    href="/"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Link /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem;
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -27,15 +30,17 @@ exports[`<Link /> renders with theme 1`] = `
 }
 
 <a
-  className="c0"
-  fontSize="1.3rem"
-  href="/"
-  onClick={[Function]}
-/>
+    class="c0"
+    data-discover="true"
+    font-size="1.3rem"
+    href="/"
+  />
+</DocumentFragment>
 `;
 
 exports[`<LinkA /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -45,12 +50,14 @@ exports[`<LinkA /> renders default 1`] = `
 }
 
 <a
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<LinkA /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -60,12 +67,14 @@ exports[`<LinkA /> renders with theme 1`] = `
 }
 
 <a
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <HeaderLink /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   padding: 0.5rem;
   font-size: 1.3rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -80,9 +89,10 @@ exports[`renders default <HeaderLink /> 1`] = `
 }
 
 <a
-  className="c0 c1"
-  fontSize="1.3rem"
-  href="/"
-  onClick={[Function]}
-/>
+    class="c0 c1"
+    data-discover="true"
+    font-size="1.3rem"
+    href="/"
+  />
+</DocumentFragment>
 `;

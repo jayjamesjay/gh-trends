@@ -1,21 +1,17 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import LabelCategory from '../../styles/Label';
 import { dark } from '../../styles/Theme';
 
 describe('<LabelCategory />', () => {
   it('renders default', () => {
-    const component = renderer.create(<LabelCategory />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<LabelCategory />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const component = renderer.create(<LabelCategory theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<LabelCategory theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

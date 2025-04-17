@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<App /> renders default view 1`] = `
-[
+<DocumentFragment>
   .c3 {
   cursor: pointer;
   background: #202124;
@@ -99,45 +99,43 @@ exports[`<App /> renders default view 1`] = `
 }
 
 <header
-    className="c0"
+    class="c0"
   >
     <a
-      className="c1 c2"
-      fontSize="1.3rem"
+      class="c1 c2"
+      data-discover="true"
+      font-size="1.3rem"
       href="/"
-      onClick={[Function]}
     >
       GH Trends
     </a>
     <button
-      className="c3 c4"
-      onClick={[Function]}
+      class="c3 c4"
     >
       <img
         alt="Toggle dark/light mode"
-        className="c5"
+        class="c5"
         src="test-file-stub"
       />
     </button>
     <button
       aria-label="Open menu"
-      className="c3 c6"
-      onClick={[Function]}
+      class="c3 c6"
     >
       <span
-        className="c7"
-        open={true}
+        class="c7"
+        open=""
       />
       <span
-        className="c7"
-        open={true}
+        class="c7"
+        open=""
       />
       <span
-        className="c7"
-        open={true}
+        class="c7"
+        open=""
       />
     </button>
-  </header>,
+  </header>
   .c1 {
   display: flex;
   flex-flow: row wrap;
@@ -207,33 +205,33 @@ exports[`<App /> renders default view 1`] = `
 }
 
 <nav
-    className="c0"
+    class="c0"
   >
     <ul
-      className="c1 c2"
+      class="c1 c2"
     >
       <li>
         <a
-          className="c3"
-          fontSize="1.3rem"
+          class="c3"
+          data-discover="true"
+          font-size="1.3rem"
           href="/search"
-          onClick={[Function]}
         >
           Search
         </a>
       </li>
       <li>
         <a
-          className="c3"
-          fontSize="1.3rem"
+          class="c3"
+          data-discover="true"
+          font-size="1.3rem"
           href="/saved"
-          onClick={[Function]}
         >
           Saved
         </a>
       </li>
     </ul>
-  </nav>,
+  </nav>
   .c1 {
   margin: 3rem auto 1rem auto;
   font-size: 2rem;
@@ -279,6 +277,7 @@ exports[`<App /> renders default view 1`] = `
   border: none;
   border-radius: 0.5rem;
   box-shadow: none;
+  font-family: 'Noto Sans HK',sans-serif;
   font-size: 1.3rem;
   color: #fff;
   text-align: center;
@@ -323,1376 +322,1374 @@ exports[`<App /> renders default view 1`] = `
 }
 
 <main
-    className="c0"
+    class="c0"
   >
     <header>
       <h1
-        className="c1"
+        class="c1"
       >
         Trending repositories
       </h1>
     </header>
     <form
-      className="c2 c3"
+      class="c2 c3"
     >
       <select
         aria-label="Languages"
-        className="c4"
-        onChange={[Function]}
-        value="All Languages"
+        class="c4"
       >
         <option
-          className="c5"
+          class="c5"
           value="All Languages"
         >
           All Languages
         </option>
         <option
-          className="c5"
+          class="c5"
           value="1C Enterprise"
         >
           1C Enterprise
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ABAP"
         >
           ABAP
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AGS Script"
         >
           AGS Script
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AMPL"
         >
           AMPL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ANTLR"
         >
           ANTLR
         </option>
         <option
-          className="c5"
+          class="c5"
           value="API Blueprint"
         >
           API Blueprint
         </option>
         <option
-          className="c5"
+          class="c5"
           value="APL"
         >
           APL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ASP"
         >
           ASP
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ATS"
         >
           ATS
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ActionScript"
         >
           ActionScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ada"
         >
           Ada
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Agda"
         >
           Agda
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Alloy"
         >
           Alloy
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AngelScript"
         >
           AngelScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AppleScript"
         >
           AppleScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Arc"
         >
           Arc
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AspectJ"
         >
           AspectJ
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Assembly"
         >
           Assembly
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AutoHotkey"
         >
           AutoHotkey
         </option>
         <option
-          className="c5"
+          class="c5"
           value="AutoIt"
         >
           AutoIt
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ballerina"
         >
           Ballerina
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Batchfile"
         >
           Batchfile
         </option>
         <option
-          className="c5"
+          class="c5"
           value="BlitzMax"
         >
           BlitzMax
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Boo"
         >
           Boo
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Brainfuck"
         >
           Brainfuck
         </option>
         <option
-          className="c5"
+          class="c5"
           value="C"
         >
           C
         </option>
         <option
-          className="c5"
+          class="c5"
           value="C#"
         >
           C#
         </option>
         <option
-          className="c5"
+          class="c5"
           value="CSS"
         >
           CSS
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ceylon"
         >
           Ceylon
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Chapel"
         >
           Chapel
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Cirru"
         >
           Cirru
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Clarion"
         >
           Clarion
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Clean"
         >
           Clean
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Click"
         >
           Click
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Clojure"
         >
           Clojure
         </option>
         <option
-          className="c5"
+          class="c5"
           value="CoffeeScript"
         >
           CoffeeScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ColdFusion"
         >
           ColdFusion
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Common Lisp"
         >
           Common Lisp
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Common Workflow Language"
         >
           Common Workflow Language
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Component Pascal"
         >
           Component Pascal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Crystal"
         >
           Crystal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="C++"
         >
           C++
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Cuda"
         >
           Cuda
         </option>
         <option
-          className="c5"
+          class="c5"
           value="D"
         >
           D
         </option>
         <option
-          className="c5"
+          class="c5"
           value="DM"
         >
           DM
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Dart"
         >
           Dart
         </option>
         <option
-          className="c5"
+          class="c5"
           value="DataWeave"
         >
           DataWeave
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Dogescript"
         >
           Dogescript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Dylan"
         >
           Dylan
         </option>
         <option
-          className="c5"
+          class="c5"
           value="E"
         >
           E
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ECL"
         >
           ECL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="EQ"
         >
           EQ
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Eiffel"
         >
           Eiffel
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Elixir"
         >
           Elixir
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Elm"
         >
           Elm
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Emacs Lisp"
         >
           Emacs Lisp
         </option>
         <option
-          className="c5"
+          class="c5"
           value="EmberScript"
         >
           EmberScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Erlang"
         >
           Erlang
         </option>
         <option
-          className="c5"
+          class="c5"
           value="F#"
         >
           F#
         </option>
         <option
-          className="c5"
+          class="c5"
           value="FLUX"
         >
           FLUX
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Factor"
         >
           Factor
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Fancy"
         >
           Fancy
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Fantom"
         >
           Fantom
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Forth"
         >
           Forth
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Fortran"
         >
           Fortran
         </option>
         <option
-          className="c5"
+          class="c5"
           value="FreeMarker"
         >
           FreeMarker
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Frege"
         >
           Frege
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Game Maker Language"
         >
           Game Maker Language
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Genie"
         >
           Genie
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Gherkin"
         >
           Gherkin
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Glyph"
         >
           Glyph
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Gnuplot"
         >
           Gnuplot
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Go"
         >
           Go
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Golo"
         >
           Golo
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Gosu"
         >
           Gosu
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Grammatical Framework"
         >
           Grammatical Framework
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Groovy"
         >
           Groovy
         </option>
         <option
-          className="c5"
+          class="c5"
           value="HTML"
         >
           HTML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Hack"
         >
           Hack
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Harbour"
         >
           Harbour
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Haskell"
         >
           Haskell
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Haxe"
         >
           Haxe
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Hy"
         >
           Hy
         </option>
         <option
-          className="c5"
+          class="c5"
           value="IDL"
         >
           IDL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Idris"
         >
           Idris
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Io"
         >
           Io
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ioke"
         >
           Ioke
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Isabelle"
         >
           Isabelle
         </option>
         <option
-          className="c5"
+          class="c5"
           value="J"
         >
           J
         </option>
         <option
-          className="c5"
+          class="c5"
           value="JSONiq"
         >
           JSONiq
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Java"
         >
           Java
         </option>
         <option
-          className="c5"
+          class="c5"
           value="JavaScript"
         >
           JavaScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Jolie"
         >
           Jolie
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Julia"
         >
           Julia
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Jupyter Notebook"
         >
           Jupyter Notebook
         </option>
         <option
-          className="c5"
+          class="c5"
           value="KRL"
         >
           KRL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Kotlin"
         >
           Kotlin
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LFE"
         >
           LFE
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LLVM"
         >
           LLVM
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LOLCODE"
         >
           LOLCODE
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LSL"
         >
           LSL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Lasso"
         >
           Lasso
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Lex"
         >
           Lex
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LiveScript"
         >
           LiveScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="LookML"
         >
           LookML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Lua"
         >
           Lua
         </option>
         <option
-          className="c5"
+          class="c5"
           value="MAXScript"
         >
           MAXScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="MQL4"
         >
           MQL4
         </option>
         <option
-          className="c5"
+          class="c5"
           value="MQL5"
         >
           MQL5
         </option>
         <option
-          className="c5"
+          class="c5"
           value="MTML"
         >
           MTML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Makefile"
         >
           Makefile
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Mask"
         >
           Mask
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Matlab"
         >
           Matlab
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Max"
         >
           Max
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Mercury"
         >
           Mercury
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Meson"
         >
           Meson
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Metal"
         >
           Metal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Mirah"
         >
           Mirah
         </option>
         <option
-          className="c5"
+          class="c5"
           value="NCL"
         >
           NCL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nearley"
         >
           Nearley
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nemerle"
         >
           Nemerle
         </option>
         <option
-          className="c5"
+          class="c5"
           value="NetLinx"
         >
           NetLinx
         </option>
         <option
-          className="c5"
+          class="c5"
           value="NetLinx+ERB"
         >
           NetLinx+ERB
         </option>
         <option
-          className="c5"
+          class="c5"
           value="NetLogo"
         >
           NetLogo
         </option>
         <option
-          className="c5"
+          class="c5"
           value="NewLisp"
         >
           NewLisp
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nextflow"
         >
           Nextflow
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nim"
         >
           Nim
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nit"
         >
           Nit
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nix"
         >
           Nix
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Nu"
         >
           Nu
         </option>
         <option
-          className="c5"
+          class="c5"
           value="OCaml"
         >
           OCaml
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Objective-C"
         >
           Objective-C
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Objective-C++"
         >
           Objective-C++
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Objective-J"
         >
           Objective-J
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Omgrofl"
         >
           Omgrofl
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Opal"
         >
           Opal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Oxygene"
         >
           Oxygene
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Oz"
         >
           Oz
         </option>
         <option
-          className="c5"
+          class="c5"
           value="P4"
         >
           P4
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PAWN"
         >
           PAWN
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PHP"
         >
           PHP
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PLSQL"
         >
           PLSQL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Pan"
         >
           Pan
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Papyrus"
         >
           Papyrus
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Parrot"
         >
           Parrot
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Pascal"
         >
           Pascal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Pep8"
         >
           Pep8
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Perl"
         >
           Perl
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Perl 6"
         >
           Perl 6
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PigLatin"
         >
           PigLatin
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Pike"
         >
           Pike
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PogoScript"
         >
           PogoScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PostScript"
         >
           PostScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PowerBuilder"
         >
           PowerBuilder
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PowerShell"
         >
           PowerShell
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Processing"
         >
           Processing
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Prolog"
         >
           Prolog
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Propeller Spin"
         >
           Propeller Spin
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Puppet"
         >
           Puppet
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PureBasic"
         >
           PureBasic
         </option>
         <option
-          className="c5"
+          class="c5"
           value="PureScript"
         >
           PureScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Python"
         >
           Python
         </option>
         <option
-          className="c5"
+          class="c5"
           value="QML"
         >
           QML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="R"
         >
           R
         </option>
         <option
-          className="c5"
+          class="c5"
           value="RAML"
         >
           RAML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="RUNOFF"
         >
           RUNOFF
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Racket"
         >
           Racket
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ragel"
         >
           Ragel
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Rascal"
         >
           Rascal
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Rebol"
         >
           Rebol
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Red"
         >
           Red
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ren'Py"
         >
           Ren'Py
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ring"
         >
           Ring
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Roff"
         >
           Roff
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Rouge"
         >
           Rouge
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Ruby"
         >
           Ruby
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Rust"
         >
           Rust
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SAS"
         >
           SAS
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SQF"
         >
           SQF
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SRecode Template"
         >
           SRecode Template
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SaltStack"
         >
           SaltStack
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Scala"
         >
           Scala
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Scheme"
         >
           Scheme
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Self"
         >
           Self
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Shell"
         >
           Shell
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Shen"
         >
           Shen
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Slash"
         >
           Slash
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Smalltalk"
         >
           Smalltalk
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Solidity"
         >
           Solidity
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SourcePawn"
         >
           SourcePawn
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Squirrel"
         >
           Squirrel
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Stan"
         >
           Stan
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Standard ML"
         >
           Standard ML
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SuperCollider"
         >
           SuperCollider
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Swift"
         >
           Swift
         </option>
         <option
-          className="c5"
+          class="c5"
           value="SystemVerilog"
         >
           SystemVerilog
         </option>
         <option
-          className="c5"
+          class="c5"
           value="TI Program"
         >
           TI Program
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Tcl"
         >
           Tcl
         </option>
         <option
-          className="c5"
+          class="c5"
           value="TeX"
         >
           TeX
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Terra"
         >
           Terra
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Turing"
         >
           Turing
         </option>
         <option
-          className="c5"
+          class="c5"
           value="TypeScript"
         >
           TypeScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="UnrealScript"
         >
           UnrealScript
         </option>
         <option
-          className="c5"
+          class="c5"
           value="VCL"
         >
           VCL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="VHDL"
         >
           VHDL
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Vala"
         >
           Vala
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Verilog"
         >
           Verilog
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Vim script"
         >
           Vim script
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Visual Basic"
         >
           Visual Basic
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Volt"
         >
           Volt
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Vue"
         >
           Vue
         </option>
         <option
-          className="c5"
+          class="c5"
           value="WebAssembly"
         >
           WebAssembly
         </option>
         <option
-          className="c5"
+          class="c5"
           value="X10"
         >
           X10
         </option>
         <option
-          className="c5"
+          class="c5"
           value="XC"
         >
           XC
         </option>
         <option
-          className="c5"
+          class="c5"
           value="XQuery"
         >
           XQuery
         </option>
         <option
-          className="c5"
+          class="c5"
           value="XSLT"
         >
           XSLT
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Yacc"
         >
           Yacc
         </option>
         <option
-          className="c5"
+          class="c5"
           value="Zephir"
         >
           Zephir
         </option>
         <option
-          className="c5"
+          class="c5"
           value="cpp"
         >
           cpp
         </option>
         <option
-          className="c5"
+          class="c5"
           value="eC"
         >
           eC
         </option>
         <option
-          className="c5"
+          class="c5"
           value="nesC"
         >
           nesC
         </option>
         <option
-          className="c5"
+          class="c5"
           value="ooc"
         >
           ooc
         </option>
         <option
-          className="c5"
+          class="c5"
           value="wdl"
         >
           wdl
         </option>
         <option
-          className="c5"
+          class="c5"
           value="wisp"
         >
           wisp
         </option>
         <option
-          className="c5"
+          class="c5"
           value="xBase"
         >
           xBase
@@ -1700,24 +1697,22 @@ exports[`<App /> renders default view 1`] = `
       </select>
       <select
         aria-label="Periods of time"
-        className="c4"
-        onChange={[Function]}
-        value="This Week"
+        class="c4"
       >
         <option
-          className="c5"
+          class="c5"
           value="This Week"
         >
           This Week
         </option>
         <option
-          className="c5"
+          class="c5"
           value="This Month"
         >
           This Month
         </option>
         <option
-          className="c5"
+          class="c5"
           value="All Time"
         >
           All Time
@@ -1725,16 +1720,16 @@ exports[`<App /> renders default view 1`] = `
       </select>
     </form>
     <div
-      className="c6"
+      class="c6"
     />
     <footer>
       <img
         alt="Loading items"
-        className="c7 c8"
+        class="c7 c8"
         src="test-file-stub"
       />
     </footer>
-  </main>,
+  </main>
   .c0 {
   margin: 1rem;
   padding: 0.5rem;
@@ -1766,11 +1761,11 @@ exports[`<App /> renders default view 1`] = `
 }
 
 <footer
-    className="c0"
+    class="c0"
   >
     <p>
       Copyright © 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.
     </p>
-  </footer>,
-]
+  </footer>
+</DocumentFragment>
 `;

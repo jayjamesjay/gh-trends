@@ -1,31 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Img /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   width: 100%;
   height: auto;
   filter: invert(0%);
 }
 
 <img
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Img /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   width: 100%;
   height: auto;
   filter: invert(100%);
 }
 
 <img
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ImgInline /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
@@ -33,12 +38,14 @@ exports[`<ImgInline /> renders default 1`] = `
 }
 
 <img
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ImgInline /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
@@ -46,12 +53,14 @@ exports[`<ImgInline /> renders with theme 1`] = `
 }
 
 <img
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <ImgIcon /> 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   width: 100%;
   height: auto;
   filter: invert(0%);
@@ -62,6 +71,7 @@ exports[`renders default <ImgIcon /> 1`] = `
 }
 
 <img
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;

@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Select /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   max-width: 80%;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -9,6 +10,7 @@ exports[`<Select /> renders with default style 1`] = `
   border: none;
   border-radius: 0.5rem;
   box-shadow: 0px 3px 5px 1px rgba(217,217,217,0.82);
+  font-family: 'Noto Sans HK',sans-serif;
   font-size: 1.3rem;
   color: #000;
   text-align: center;
@@ -17,12 +19,14 @@ exports[`<Select /> renders with default style 1`] = `
 }
 
 <select
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Select /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   max-width: 80%;
   margin: 0.5rem;
   padding: 0.5rem;
@@ -30,6 +34,7 @@ exports[`<Select /> renders with theme 1`] = `
   border: none;
   border-radius: 0.5rem;
   box-shadow: none;
+  font-family: 'Noto Sans HK',sans-serif;
   font-size: 1.3rem;
   color: #fff;
   text-align: center;
@@ -38,6 +43,7 @@ exports[`<Select /> renders with theme 1`] = `
 }
 
 <select
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

@@ -1,23 +1,18 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Nav from '../../styles/Nav';
 import { dark } from '../../styles/Theme';
 
 describe('<Nav />', () => {
   it('renders default', () => {
-    const component = renderer.create(<Nav />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Nav />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const component = renderer.create(<Nav theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Nav theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders hidden', () => {

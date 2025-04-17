@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 import Category from '../../components/Category';
 
@@ -10,10 +9,8 @@ describe('<Category />', () => {
   const func = () => {};
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<Category checked={checked} label={label} onClick={func} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Category checked={checked} label={label} onClick={func} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`is checked/unchecked`, () => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import 'jest-styled-components';
 import { BrowserRouter as Router } from 'react-router-dom';
-import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import Nav, { ListItemLink, MenuToggle } from '../../components/Nav';
 
@@ -18,14 +17,12 @@ describe('<ListItemLink />', () => {
     );
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
+    const { asFragment } = render(
       <Router>
         <ListItemLink click={func} link={url} title={title} />
       </Router>,
     );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('contains title', () => {
@@ -41,7 +38,7 @@ describe('<ListItemLink />', () => {
 
 describe('<Nav />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(
+    const { asFragment } = render(
       <Router>
         <Nav
           $hide={false}
@@ -53,9 +50,7 @@ describe('<Nav />', () => {
         />
       </Router>,
     );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`contains links`, () => {
@@ -78,10 +73,8 @@ describe('<Nav />', () => {
 
 describe('<MenuToggle />', () => {
   it(`renders with default style`, () => {
-    const component = renderer.create(<MenuToggle toggle={func} $open />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<MenuToggle toggle={func} $open />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`has aria-label`, () => {

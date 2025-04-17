@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> renders with default style 1`] = `
-.c3 {
+<DocumentFragment>
+  .c3 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -98,43 +99,42 @@ exports[`<Header /> renders with default style 1`] = `
 }
 
 <header
-  className="c0"
->
-  <a
-    className="c1 c2"
-    fontSize="1.3rem"
-    href="/"
-    onClick={[Function]}
+    class="c0"
   >
-    GH Trends
-  </a>
-  <button
-    className="c3 c4"
-    onClick={[Function]}
-  >
-    <img
-      alt="Toggle dark/light mode"
-      className="c5"
-      src="test-file-stub"
-    />
-  </button>
-  <button
-    aria-label="Open menu"
-    className="c3 c6"
-    onClick={[Function]}
-  >
-    <span
-      className="c7"
-      open={true}
-    />
-    <span
-      className="c7"
-      open={true}
-    />
-    <span
-      className="c7"
-      open={true}
-    />
-  </button>
-</header>
+    <a
+      class="c1 c2"
+      data-discover="true"
+      font-size="1.3rem"
+      href="/"
+    >
+      GH Trends
+    </a>
+    <button
+      class="c3 c4"
+    >
+      <img
+        alt="Toggle dark/light mode"
+        class="c5"
+        src="test-file-stub"
+      />
+    </button>
+    <button
+      aria-label="Open menu"
+      class="c3 c6"
+    >
+      <span
+        class="c7"
+        open=""
+      />
+      <span
+        class="c7"
+        open=""
+      />
+      <span
+        class="c7"
+        open=""
+      />
+    </button>
+  </header>
+</DocumentFragment>
 `;

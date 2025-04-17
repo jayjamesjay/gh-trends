@@ -1,21 +1,17 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Select from '../../styles/Select';
 import { dark } from '../../styles/Theme';
 
 describe('<Select />', () => {
   it('renders with default style', () => {
-    const component = renderer.create(<Select />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Select />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders with theme', () => {
-    const component = renderer.create(<Select theme={dark} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<Select theme={dark} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

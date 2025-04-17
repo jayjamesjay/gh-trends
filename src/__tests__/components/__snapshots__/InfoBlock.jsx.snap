@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InfoBlock /> renders with default style 1`] = `
-.c2 {
+<DocumentFragment>
+  .c2 {
   display: block;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -94,72 +95,72 @@ exports[`<InfoBlock /> renders with default style 1`] = `
 }
 
 <article
-  className="c0"
->
-  <h2
-    className="c1"
+    class="c0"
   >
-    <a
-      className="c2"
-      href=""
+    <h2
+      class="c1"
     >
-      <span
-        className="c3"
+      <a
+        class="c2"
+        href=""
       >
-        jayjamesjay
-      </span>
-       /
-      gh-trends
-    </a>
-  </h2>
-  <p>
-    Loading content for this website...
-  </p>
-  <div
-    className="c4 c5"
-  >
-    <button
-      className="c6 c7"
-      onClick={[Function]}
-    >
-      <img
-        alt="Add to saved"
-        className="c8"
-        src="test-file-stub"
-        title="Add to saved"
-      />
-    </button>
-    <p
-      className="c9"
-    >
-      Forks: 321
+        <span
+          class="c3"
+        >
+          jayjamesjay
+        </span>
+         /gh-trends
+      </a>
+    </h2>
+    <p>
+      Loading content for this website...
     </p>
-    <p
-      className="c9"
+    <div
+      class="c4 c5"
     >
-      License: MIT
-    </p>
-    <p
-      className="c10"
-    >
-      123
-      <img
-        alt="Stars"
-        className="c11"
-        src="test-file-stub"
-      />
-    </p>
-    <p
-      className="c9"
-    >
-      Language: JavaScript
-    </p>
-  </div>
-</article>
+      <button
+        class="c6 c7"
+      >
+        <img
+          alt="Add to saved"
+          class="c8"
+          src="test-file-stub"
+          title="Add to saved"
+        />
+      </button>
+      <p
+        class="c9"
+      >
+        Forks: 321
+      </p>
+      <p
+        class="c9"
+      >
+        License: MIT
+      </p>
+      <p
+        class="c10"
+      >
+        123
+        <img
+          alt="Stars"
+          class="c11"
+          src="test-file-stub"
+        />
+      </p>
+      <p
+        class="c9"
+      >
+        Language: JavaScript
+      </p>
+    </div>
+  </article>
+</DocumentFragment>
 `;
 
 exports[`<RepoLink /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   font-size: 1.2rem;
   font-family: 'Noto Sans HK',sans-serif;
@@ -175,21 +176,22 @@ exports[`<RepoLink /> renders with default style 1`] = `
 }
 
 <a
-  className="c0"
-  href="https://github.com/jayjamesjay/gh-trends"
->
-  <span
-    className="c1"
+    class="c0"
+    href="https://github.com/jayjamesjay/gh-trends"
   >
-    jayjamesjay
-  </span>
-   /
-  gh-trends
-</a>
+    <span
+      class="c1"
+    >
+      jayjamesjay
+    </span>
+     /gh-trends
+  </a>
+</DocumentFragment>
 `;
 
 exports[`<SaveRepo /> renders with default style 1`] = `
-.c2 {
+<DocumentFragment>
+  .c2 {
   width: 100%;
   height: auto;
   filter: invert(0%);
@@ -208,14 +210,14 @@ exports[`<SaveRepo /> renders with default style 1`] = `
 }
 
 <button
-  className="c0 c1"
-  onClick={[Function]}
->
-  <img
-    alt="Remove from saved"
-    className="c2"
-    src="test-file-stub"
-    title="Remove from saved"
-  />
-</button>
+    class="c0 c1"
+  >
+    <img
+      alt="Remove from saved"
+      class="c2"
+      src="test-file-stub"
+      title="Remove from saved"
+    />
+  </button>
+</DocumentFragment>
 `;

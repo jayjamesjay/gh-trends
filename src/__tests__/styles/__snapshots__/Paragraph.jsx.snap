@@ -1,18 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PClean /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   margin: 0 0.5rem;
   padding: 0;
 }
 
 <p
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<PFlex /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: flex;
   align-content: center;
   align-items: center;
@@ -21,6 +24,7 @@ exports[`<PFlex /> renders default 1`] = `
 }
 
 <p
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

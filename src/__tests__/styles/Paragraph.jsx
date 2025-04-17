@@ -1,22 +1,18 @@
 import React from 'react';
+import { render } from '@testing-library/react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { PClean, PFlex } from '../../styles/Paragraph';
 
 describe('<PClean />', () => {
   it('renders default', () => {
-    const component = renderer.create(<PClean />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<PClean />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
 
 describe('<PFlex />', () => {
   it('renders default', () => {
-    const component = renderer.create(<PFlex />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<PFlex />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

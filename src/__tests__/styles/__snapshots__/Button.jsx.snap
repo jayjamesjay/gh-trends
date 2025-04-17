@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -12,12 +13,14 @@ exports[`<Button /> renders with default style 1`] = `
 }
 
 <button
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<Button /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #202124;
   border: 0;
@@ -28,12 +31,14 @@ exports[`<Button /> renders with theme 1`] = `
 }
 
 <button
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ButtonMain /> renders hidden 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -53,13 +58,15 @@ exports[`<ButtonMain /> renders hidden 1`] = `
 }
 
 <button
-  className="c0 c1"
-  visible={false}
-/>
+    class="c0 c1"
+    visible="false"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ButtonMain /> renders visible 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -79,13 +86,15 @@ exports[`<ButtonMain /> renders visible 1`] = `
 }
 
 <button
-  className="c0 c1"
-  visible={true}
-/>
+    class="c0 c1"
+    visible="true"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ButtonMain /> renders with default style 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -105,12 +114,14 @@ exports[`<ButtonMain /> renders with default style 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ButtonMain /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #202124;
   border: 0;
@@ -130,12 +141,14 @@ exports[`<ButtonMain /> renders with theme 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ToggleSpan /> open/close 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   width: 1.8rem;
   height: 0.2rem;
@@ -145,13 +158,14 @@ exports[`<ToggleSpan /> open/close 1`] = `
 }
 
 <span
-  className="c0"
-  open={false}
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<ToggleSpan /> renders with default style - dark theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   width: 1.8rem;
   height: 0.2rem;
@@ -161,13 +175,15 @@ exports[`<ToggleSpan /> renders with default style - dark theme 1`] = `
 }
 
 <span
-  className="c0"
-  open={true}
-/>
+    class="c0"
+    open=""
+  />
+</DocumentFragment>
 `;
 
 exports[`<ToggleSpan /> renders with default style - light theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: block;
   width: 1.8rem;
   height: 0.2rem;
@@ -177,13 +193,15 @@ exports[`<ToggleSpan /> renders with default style - light theme 1`] = `
 }
 
 <span
-  className="c0"
-  open={true}
-/>
+    class="c0"
+    open=""
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <ButtonAdd />' 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -196,12 +214,14 @@ exports[`renders default <ButtonAdd />' 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <ButtonIcon />' 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -210,12 +230,14 @@ exports[`renders default <ButtonIcon />' 1`] = `
 }
 
 <button
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <ButtonRemove />' 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
@@ -228,12 +250,14 @@ exports[`renders default <ButtonRemove />' 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <ButtonTheme />' 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -257,12 +281,14 @@ exports[`renders default <ButtonTheme />' 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;
 
 exports[`renders default <MenuToggle />' 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   cursor: pointer;
   background: #fff;
   border: 0;
@@ -286,6 +312,7 @@ exports[`renders default <MenuToggle />' 1`] = `
 }
 
 <button
-  className="c0 c1"
-/>
+    class="c0 c1"
+  />
+</DocumentFragment>
 `;

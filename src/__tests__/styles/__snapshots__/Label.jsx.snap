@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<LabelCategory /> renders default 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: inherit;
   padding: 1rem 1.5rem;
   position: relative;
@@ -27,12 +28,14 @@ exports[`<LabelCategory /> renders default 1`] = `
 }
 
 <label
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;
 
 exports[`<LabelCategory /> renders with theme 1`] = `
-.c0 {
+<DocumentFragment>
+  .c0 {
   display: inherit;
   padding: 1rem 1.5rem;
   position: relative;
@@ -58,6 +61,7 @@ exports[`<LabelCategory /> renders with theme 1`] = `
 }
 
 <label
-  className="c0"
-/>
+    class="c0"
+  />
+</DocumentFragment>
 `;

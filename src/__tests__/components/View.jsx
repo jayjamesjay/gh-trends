@@ -1,6 +1,5 @@
 import React from 'react';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import View, { ViewSingle } from '../../components/View';
@@ -28,10 +27,8 @@ describe('<View />', () => {
   const license = 'License: MIT';
 
   it(`renders with default style`, () => {
-    const component = renderer.create(<View data={[]} saved={[]} save={func} />);
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    const { asFragment } = render(<View data={[]} saved={[]} save={func} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it('renders empty', () => {
@@ -60,12 +57,10 @@ describe('<ViewSingle />', () => {
   };
 
   it(`renders with default style`, () => {
-    const component = renderer.create(
+    const { asFragment } = render(
       <ViewSingle data={initData} saved={[]} save={func} loadData={func} loading={loading} />,
     );
-    const tree = component.toJSON();
-
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 
   it(`renders empty and does not display Button`, () => {
