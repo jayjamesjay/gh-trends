@@ -1,6 +1,6 @@
 # GH Trends
 
-[![Build Status](https://travis-ci.org/jayjamesjay/gh-trends.svg?branch=master)](https://travis-ci.org/jayjamesjay/gh-trends)
+[![Node CI](https://github.com/jayjamesjay/gh-trends/actions/workflows/nodejs.yml/badge.svg)](https://github.com/jayjamesjay/gh-trends/actions/workflows/nodejs.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/20e8befd-4c09-4f63-b1a6-f0b13c4f5b21/deploy-status)](https://app.netlify.com/sites/gh-trends/deploys)
 
 Unofficial website showing trends at Github.
@@ -14,11 +14,10 @@ Unofficial website showing trends at Github.
 
 ## Technologies
 
-- React (Hooks) 
+- React (Hooks)
 - Redux
 - styled components
-- Jest 
-- Enzyme
+- Jest
 - prop-types
 - Webpack
 
