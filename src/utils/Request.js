@@ -69,6 +69,7 @@ export default class Request {
 
       dataContainerController(newList);
       loadingController(loadingState.LOADED);
+      // eslint-disable-next-line
     } catch (error) {
       loadingController(loadingState.ERORR);
     }

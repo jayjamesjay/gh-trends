@@ -22,7 +22,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = { save };
 
-// eslint-disable-next-line no-shadow
 export function Home({ saved, save }) {
   const [lang, setLang] = React.useState('All Languages');
   const [time, setTime] = React.useState('This Week');
@@ -54,7 +53,7 @@ export function Home({ saved, save }) {
     request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, query);
 
     return () => {};
-  }, [query]); // eslint-disable-line
+  }, [query]);
 
   return (
     <>

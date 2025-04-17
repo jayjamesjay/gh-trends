@@ -20,7 +20,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = { removeAllSaved, save };
 
-// eslint-disable-next-line no-shadow
 export function Saved({ saved, save, removeAllSaved }) {
   const [active, setActive] = React.useState('JSON');
   const imgDownload = <ImgIcon src={DownloadImg} alt="Download saved items" />;

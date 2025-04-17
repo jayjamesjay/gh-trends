@@ -70,7 +70,6 @@ export function ViewSingle(props) {
           </PFlex>
         );
       default:
-        // eslint-disable-next-line react/jsx-no-useless-fragment
         return <></>;
     }
   }, [loading, data, loadData]);

@@ -9,6 +9,7 @@ const Select = styled.select`
   border: none;
   border-radius: 0.5rem;
   box-shadow: ${(props) => props.theme.shadow};
+  font-family: 'Noto Sans HK', sans-serif;
   font-size: 1.3rem;
   color: ${(props) => props.theme.color};
   text-align: center;

@@ -1,4 +1,3 @@
-// eslint-disable-next-line default-param-last
 const saved = (state = [], action) => {
   switch (action.type) {
     case 'SAVED_ADD_REMOVE':

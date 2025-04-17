@@ -1,5 +1,3 @@
-/* eslint-disable no-restricted-globals */
-/* eslint-disable func-names */
 (function () {
   const staticCache = 's-cache-v0.1.8';
   const dynamicCache = 'd-cache-v0.1.8';

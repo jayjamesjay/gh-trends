@@ -25,7 +25,6 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = { save };
 
-// eslint-disable-next-line no-shadow
 export function Search({ saved, save }) {
   const [lang, setLang] = React.useState('all');
   const [search, setSearch] = React.useState('');
@@ -39,7 +38,7 @@ export function Search({ saved, save }) {
       event.key === 'Enter'
         ? request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, search)
         : {},
-    [repoInfo, search], // eslint-disable-line
+    [repoInfo, search],
   );
 
   const onInput = useCallback((event) => {

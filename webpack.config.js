@@ -4,16 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     main: './src/index.jsx',
-    worker: './src/service-worker.js'
+    worker: './src/service-worker.js',
   },
   output: {
     filename: '[name].js',
-    path: __dirname + '/dist'
+    path: __dirname + '/dist',
   },
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
+      chunks: 'all',
+    },
   },
   module: {
     rules: [
@@ -21,26 +21,26 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
         resolve: {
-          extensions: ['.js', '.jsx']
-        }
+          extensions: ['.js', '.jsx'],
+        },
       },
       {
         test: /\.(jpe?g|gif|png|svg)$/i,
         use: {
-          loader: 'file-loader'
-        }
-      }
-    ]
+          loader: 'file-loader',
+        },
+      },
+    ],
   },
   plugins: [
     new CopyPlugin({
-      patterns: [{ from: './public', to: './' }]
+      patterns: [{ from: './public', to: './' }],
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: './src/index.html',
+    }),
+  ],
 };
