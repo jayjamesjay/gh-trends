@@ -54,7 +54,9 @@ exports[`<SelectLang /> renders with default style 1`] = `
 }
 
 .c1 {
-  width: 3rem;
+  margin-top: 0.5rem;
+  width: auto;
+  height: 3rem;
 }
 
 <img

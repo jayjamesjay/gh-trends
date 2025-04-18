@@ -13,7 +13,7 @@ import StyledFooter from '../styles/Footer';
 export default function Footer() {
   return (
     <StyledFooter>
-      <p>Copyright &copy; 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.</p>
+      <p>Copyright &copy; 2025 jayjamesjay. All Rights Reserved. Project under MIT licence.</p>
     </StyledFooter>
   );
 }

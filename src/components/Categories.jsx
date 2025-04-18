@@ -12,8 +12,8 @@ import Category from './Category';
  * Menu to hadle category selection
  *
  * @property {array} labels - names of categories
- * @property {string} active - name of label which is currently active
- * @property {function} onClick - function called whenever label is clicked
+ * @property {string} active - name of the category, which is currently selected
+ * @property {function} onClick - function called when category is selected
  * @returns {Categories}
  */
 export default function Categories({ labels, active, onClick }) {

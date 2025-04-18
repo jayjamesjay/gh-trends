@@ -10,7 +10,9 @@ export const Img = styled.img`
 `;
 
 export const ImgIcon = styled(Img)`
-  width: 3rem;
+  margin-top: 0.5rem;
+  width: auto;
+  height: 3rem;
 `;
 
 export const ImgLoader = styled(Img)`

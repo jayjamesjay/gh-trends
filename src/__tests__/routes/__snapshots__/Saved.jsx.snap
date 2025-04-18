@@ -44,7 +44,11 @@ exports[`<Saved /> renders with default style 1`] = `
 }
 
 .c5 {
-  margin-top: -0.6rem;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin: -1.2rem 0 0 0;
+  padding: 0;
 }
 
 .c16 {
@@ -97,7 +101,9 @@ exports[`<Saved /> renders with default style 1`] = `
 }
 
 .c3 {
-  width: 3rem;
+  margin-top: 0.5rem;
+  width: auto;
+  height: 3rem;
 }
 
 .c19 {

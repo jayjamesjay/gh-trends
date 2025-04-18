@@ -15,11 +15,11 @@ import SwitchThemeImg from '../assets/img/dark-mode.svg';
 /**
  * Header of the website
  *
- * @property {string} link - url pointing to Home Page
+ * @property {string} link - URL pointing to Home Page
  * @property {string} title - displayed text
  * @property {function} switchTheme - switches theme (dark/light)
  * @property {boolean} hide - is nav hidden
- * @property {function} toggle - function fired when MenuToggle is clicked
+ * @property {function} toggle - function called when MenuToggle is clicked
  * @returns {Header}
  */
 export default function Header({ link, title, switchTheme, $hide, toggle }) {

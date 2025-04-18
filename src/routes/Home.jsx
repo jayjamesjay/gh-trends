@@ -35,19 +35,8 @@ export function Home({ saved, save }) {
     callback(val);
   }, []);
 
-  const selectLang = useCallback(
-    (event) => {
-      onSelect(event, setLang);
-    },
-    [onSelect, setLang],
-  );
-
-  const selectTime = useCallback(
-    (event) => {
-      onSelect(event, setTime);
-    },
-    [onSelect, setTime],
-  );
+  const selectLang = useCallback((event) => onSelect(event, setLang), [onSelect, setLang]);
+  const selectTime = useCallback((event) => onSelect(event, setTime), [onSelect, setTime]);
 
   useEffect(() => {
     request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, query);

@@ -63,7 +63,7 @@ export function ViewSingle(props) {
             Show more
           </ButtonMain>
         );
-      case loadingState.ERORR:
+      case loadingState.ERROR:
         return (
           <PFlex>
             Something went wrong during loading repositories. Please try to refresh the website.

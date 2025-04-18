@@ -3,15 +3,14 @@
  */
 
 /**
- * Adds language to query
+ * Adds language to query if not already present, with special handling for "All Languages".
  *
- * @param {string} base - current query
- * @param {string} lang - language which will be added
+ * @param {string} base - current query string
+ * @param {string} lang - programming language to be added
  * @returns {string}
  */
 export function addLang(base, lang) {
   let result = base;
-  let currLang = lang;
 
   if (lang === 'All Languages') {
     const langIdx = base.indexOf(' language:');
@@ -20,25 +19,22 @@ export function addLang(base, lang) {
       result = base.slice(0, langIdx);
     }
   } else if (!base.includes(`language:"${lang}"`)) {
-    if (lang === 'C++') {
-      currLang = 'cpp';
-    }
-
-    result = `${base} language:"${currLang}"`;
+    const normalizedLang = lang === 'C++' ? 'cpp' : lang;
+    result = `${base} language:"${normalizedLang}"`;
   }
 
-  return result;
+  return result.trim();
 }
 
 /**
- * Representaion of Url
+ * Representation of a URL with configurable query parameters.
  * @class
  */
 export default class Url {
   /**
-   * Creates a Url
+   * Creates a new instance of the Url class.
    *
-   * @param {string} api - base url
+   * @param {string} api - base URL
    * @returns {Url}
    */
   constructor(api) {
@@ -48,9 +44,9 @@ export default class Url {
   }
 
   /**
-   * Adds more parameters to this Url
+   * Adds more parameters to this URL's query string.
    *
-   * @param {string} elem - part of Url
+   * @param {...string} elem - parts of the URL
    * @returns {Url}
    */
   parts(...elem) {
@@ -59,9 +55,9 @@ export default class Url {
   }
 
   /**
-   * Adds query string to this Url
+   * Sets the full query string, replacing any existing one.
    *
-   * @param {string} params - space separated list of parameters
+   * @param {string} params - space-separated list of parameters
    * @returns {Url}
    */
   query(params) {
@@ -74,15 +70,20 @@ export default class Url {
   }
 
   /**
-   * Adds programming language to query
+   * Adds programming language to the query.
    *
-   * @param {string} lang - programming language
+   * @param {string} lang - name of the programming language
    * @returns {Url}
    */
   lang(lang) {
     return this.query(addLang(this.queryStr, lang));
   }
 
+  /**
+   * Converts the URL to its string representation.
+   *
+   * @returns {string} - constructed URL
+   */
   toString() {
     const query = `?q=${this.queryStr}`;
     return this.api + [query, ...this.params].join('&');

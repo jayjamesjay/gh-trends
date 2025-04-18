@@ -12,7 +12,7 @@ exports[`<Footer /> renders with default style 1`] = `
     class="c0"
   >
     <p>
-      Copyright © 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.
+      Copyright © 2025 jayjamesjay. All Rights Reserved. Project under MIT licence.
     </p>
   </footer>
 </DocumentFragment>

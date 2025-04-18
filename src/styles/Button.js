@@ -16,13 +16,15 @@ Button.defaultProps = {
 };
 
 export const ButtonTheme = styled(Button)`
+  display: flex;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   margin: 0 auto;
   background: transparent;
 
   @media screen and (min-width: 40rem) {
-    margin: 0 1rem;
+    margin: 0;
   }
 `;
 
@@ -48,7 +50,11 @@ export const ButtonIcon = styled.button`
 `;
 
 export const ButtonRemove = styled(ButtonIcon)`
-  margin-top: -0.6rem;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  margin: -1.2rem 0 0 0;
+  padding: 0;
 `;
 
 export const ButtonAdd = styled(ButtonIcon)`

@@ -13,6 +13,8 @@ exports[`<App /> renders default view 1`] = `
 }
 
 .c4 {
+  display: flex;
+  align-items: center;
   width: 3rem;
   height: 3rem;
   margin: 0 auto;
@@ -70,7 +72,7 @@ exports[`<App /> renders default view 1`] = `
 
 @media screen and (min-width:40rem) {
   .c4 {
-    margin: 0 1rem;
+    margin: 0;
   }
 }
 
@@ -1764,7 +1766,7 @@ exports[`<App /> renders default view 1`] = `
     class="c0"
   >
     <p>
-      Copyright © 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.
+      Copyright © 2025 jayjamesjay. All Rights Reserved. Project under MIT licence.
     </p>
   </footer>
 </DocumentFragment>

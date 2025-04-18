@@ -13,15 +13,15 @@ import LabelCategory from '../styles/Label';
  * Single category selector
  *
  * @property {string} label - name of the category
- * @property {boolean} checked - determinates if category is active
- * @property {function} onClick - function fired when category is clicked
+ * @property {boolean} checked - is category selected
+ * @property {function} onClick - function called when category is selected
  * @returns {Category}
  */
 export default function Category({ label, checked, onClick }) {
   const click = useCallback(() => onClick(label), [label, onClick]);
 
   return (
-    <div onClick={click} role="radio" aria-checked={checked} onKeyPress={click} tabIndex="0">
+    <div onClick={click} role="radio" aria-checked={checked} onKeyUp={click} tabIndex="0">
       <LabelCategory $active={checked} htmlFor={label}>
         <LabelSpan>{label}</LabelSpan>
       </LabelCategory>

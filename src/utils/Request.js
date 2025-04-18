@@ -27,7 +27,7 @@ export async function getJSON(url) {
 export const loadingState = {
   LOADED: 'loaded',
   INPROGRESS: 'in-progress',
-  ERORR: 'error',
+  ERROR: 'error',
 };
 
 /**
@@ -57,13 +57,13 @@ export default class Request {
    * @param {string} query - space separated list of query parameters
    */
   async loadData(loadingController, dataContainer, dataContainerController, query) {
-    const url = new Url(this.api).query(query).parts(this.perPage, `page=${dataContainer.page}`);
     loadingController(loadingState.INPROGRESS);
 
-    const newList = new RepoInfoList(dataContainer.data, dataContainer.page);
-    dataContainerController(newList);
-
     try {
+      const url = new Url(this.api).query(query).parts(this.perPage, `page=${dataContainer.page}`);
+      const newList = new RepoInfoList(dataContainer.data, dataContainer.page);
+      dataContainerController(newList);
+
       const { items } = await getJSON(url);
       newList.update(items);
 
@@ -71,7 +71,7 @@ export default class Request {
       loadingController(loadingState.LOADED);
       // eslint-disable-next-line
     } catch (error) {
-      loadingController(loadingState.ERORR);
+      loadingController(loadingState.ERROR);
     }
   }
 }

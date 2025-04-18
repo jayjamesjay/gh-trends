@@ -72,7 +72,7 @@ InfoBlock.propTypes = {
  * Link to repository
  *
  * @property {string} url - link to this repository
- * @property {string} nameWithOwner - auth and name of this repository
+ * @property {string} nameWithOwner - author and name of this repository
  * @returns {RepoLink}
  */
 export function RepoLink({ url, nameWithOwner }) {
@@ -95,8 +95,8 @@ RepoLink.propTypes = {
 /**
  * Button to add/remove repository from saved
  *
- * @property {function} save - saves repository
- * @property {boolean} saved - is this repository saved
+ * @property {function} save - function called to save/remove repository
+ * @property {boolean} saved - is this repository already saved
  * @returns {SaveRepo}
  */
 export function SaveRepo({ save, saved }) {

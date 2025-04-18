@@ -14,7 +14,7 @@ import FilterImg from '../assets/img/filter-list.svg';
  * Language selection
  *
  * @property {string} curr - currently selected language
- * @property {function} onSelect - action fired when language is selected
+ * @property {function} onSelect - function called when language is selected
  * @property {array} languages - list of languages to select from
  * @property {string} label - description of this language selection
  * @returns {SelectLang}
@@ -42,7 +42,7 @@ SelectLang.propTypes = {
  * General selection
  *
  * @property {string} curr - currently selected option
- * @property {function} onSelect - action fired when option is selected
+ * @property {function} onSelect - function called when option is selected
  * @property {array} options - list of options to select from
  * @property {string} label - description of this language selection
  * @returns {Select}

@@ -34,7 +34,9 @@ exports[`<Search /> renders with default style 1`] = `
 }
 
 .c3 {
-  width: 3rem;
+  margin-top: 0.5rem;
+  width: auto;
+  height: 3rem;
 }
 
 .c0 {

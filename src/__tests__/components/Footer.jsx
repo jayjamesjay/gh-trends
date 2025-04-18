@@ -3,7 +3,7 @@ import 'jest-styled-components';
 import { render, screen } from '@testing-library/react';
 import Footer from '../../components/Footer';
 
-const text = 'Copyright © 2022 jayjamesjay. All Rights Reserved. Project under MIT licence.';
+const text = 'Copyright © 2025 jayjamesjay. All Rights Reserved. Project under MIT licence.';
 
 describe('<Footer />', () => {
   it(`renders with default style`, () => {

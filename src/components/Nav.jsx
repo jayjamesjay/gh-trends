@@ -11,9 +11,9 @@ import StyledNav from '../styles/Nav';
  */
 
 /**
- * Hamburger displayed on mobile devies to open/close menu
+ * Hamburger displayed on mobile devices to open/close menu.
  *
- * @property {function} toggle - function fired when the button is clicked
+ * @property {function} toggle - function called when the button is clicked
  * @property {boolean} open - is menu open
  * @returns {MenuToggle}
  */
@@ -33,11 +33,11 @@ MenuToggle.propTypes = {
 };
 
 /**
- * Main navigation of website
+ * Main navigation of the website.
  *
  * @property {boolean} hide - is nav hidden
- * @property {array} links - navigation options
- * @property {function} linkClick - function fired when link is clicked
+ * @property {array} links - array of arrays containing link details (title, URL)
+ * @property {function} linkClick - function called when link is clicked
  * @returns {Nav}
  */
 export default function Nav({ $hide, links, linkClick }) {
@@ -59,10 +59,10 @@ Nav.propTypes = {
 };
 
 /**
- * List item with link inside
+ * List item with a link inside.
  *
- * @property {function} click - function fired when link is clicked
- * @property {string} link - address url points to
+ * @property {function} click - function called when link is clicked
+ * @property {string} link - URL address
  * @property {string} title - displayed text
  * @returns {ListItemLink}
  */

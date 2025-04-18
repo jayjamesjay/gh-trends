@@ -33,7 +33,7 @@ export function Search({ saved, save }) {
   const request = new Request();
 
   const onSubmit = useCallback((event) => event.preventDefault(), []);
-  const onKeyPress = useCallback(
+  const onKeyUp = useCallback(
     (event) =>
       event.key === 'Enter'
         ? request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, search)
@@ -70,7 +70,7 @@ export function Search({ saved, save }) {
           type="text"
           onChange={onInput}
           value={search}
-          onKeyPress={onKeyPress}
+          onKeyUp={onKeyUp}
         />
         <ButtonIcon
           onClick={() => request.loadData(setLoading, new RepoInfoList([], 1), setRepoInfo, search)}
