@@ -6,17 +6,17 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.26.10",
-    "@babel/eslint-parser": "^7.27.0",
-    "@babel/preset-env": "^7.26.9",
-    "@babel/preset-react": "^7.26.3",
+    "@babel/core": "^7.27.1",
+    "@babel/eslint-parser": "^7.27.1",
+    "@babel/preset-env": "^7.27.1",
+    "@babel/preset-react": "^7.27.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.3.0",
     "babel-jest": "^29.7.0",
     "babel-loader": "^10.0.0",
     "babel-plugin-styled-components": "^2.1.4",
     "copy-webpack-plugin": "^13.0.0",
-    "eslint": "^9.25.0",
+    "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jest": "^28.11.0",
@@ -42,7 +42,7 @@
     "lint": "eslint ./src/**/*.jsx ./src/**/*.js",
     "lintfix": "yarn lint --fix",
     "doc": "jsdoc ./src/components -d ./docs",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
@@ -50,10 +50,10 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.5.1",
+    "react-router-dom": "^7.5.3",
     "redux": "^5.0.1",
     "styled-components": "^6.1.17",
-    "webpack": "^5.99.6",
+    "webpack": "^5.99.7",
     "webpack-cli": "^6.0.1"
   },
   "jest": {
