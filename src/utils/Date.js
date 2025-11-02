@@ -3,7 +3,7 @@
  */
 
 /**
- * Adds zero to digits
+ * Adds leading zero for numbers less than 10
  *
  * @param {number} val - value to which zero will be added
  * @returns {string}

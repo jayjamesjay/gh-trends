@@ -9,7 +9,7 @@ import Category from './Category';
  */
 
 /**
- * Menu to hadle category selection
+ * Menu to handle category selection
  *
  * @property {array} labels - names of categories
  * @property {string} active - name of the category, which is currently selected

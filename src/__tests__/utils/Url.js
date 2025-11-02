@@ -2,6 +2,7 @@ import Url, { addLang } from '../../utils/Url';
 
 describe('addLang', () => {
   const query = 'react';
+  const queryAlt = 'react language:"JavaScript"';
 
   it('Any', () => {
     const lang = 'JavaScript';
@@ -17,6 +18,11 @@ describe('addLang', () => {
     const lang = 'All Languages';
     expect(addLang(query, lang)).toBe('react');
   });
+
+  it('All languages - Existing Query', () => {
+    const lang = 'All Languages';
+    expect(addLang(queryAlt, lang)).toBe('react');
+  });
 });
 
 describe('<Url />', () => {
@@ -26,45 +32,45 @@ describe('<Url />', () => {
     const url = new Url(api);
 
     expect(url.api).toEqual(api);
-    expect(url.params).toEqual([]);
-    expect(url.queryStr).toEqual('');
+    expect(url.queryParams).toEqual([]);
+    expect(url.search).toEqual('');
   });
 
-  it('adds parts', () => {
+  it('adds query parameters', () => {
     const params = ['sort=stars', 'perper_page=10'];
-    const url = new Url(api).parts(params);
+    const url = new Url(api).params(params);
 
-    expect(url.params).toEqual(params);
+    expect(url.queryParams).toEqual(params);
   });
 
-  it('adds query', () => {
+  it('adds search string', () => {
     const expected = 'react+language:JavaScript';
 
     {
-      const url = new Url(api).query('react     language:JavaScript   ');
-      expect(url.queryStr).toEqual(expected);
+      const url = new Url(api).searchFor('react     language:JavaScript   ');
+      expect(url.search).toEqual(expected);
     }
     {
-      const url = new Url(api).query('react language:JavaScript');
-      expect(url.queryStr).toEqual(expected);
+      const url = new Url(api).searchFor('react language:JavaScript');
+      expect(url.search).toEqual(expected);
     }
   });
 
   it('adds language to query', () => {
-    const query = 'react';
+    const searchStr = 'react';
     const lang = 'JavaScript';
-    const expected = `${query}+language:"${lang}"`;
-    const url = new Url(api).query(query).lang(lang);
+    const expected = `${searchStr}+language:"${lang}"`;
+    const url = new Url(api).searchFor(searchStr).lang(lang);
 
-    expect(url.queryStr).toEqual(expected);
+    expect(url.search).toEqual(expected);
   });
 
   it('full toString', () => {
-    const query = 'react';
+    const searchStr = 'react';
     const lang = 'JavaScript';
     const sort = 'sort=stars';
 
-    const url = new Url(api).query(query).lang(lang).parts(sort).toString();
+    const url = new Url(api).searchFor(searchStr).lang(lang).params(sort).toString();
 
     expect(url).toBe(
       'https://api.github.com/search/repositories?q=react+language:"JavaScript"&sort=stars',

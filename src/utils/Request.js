@@ -31,7 +31,7 @@ export const loadingState = {
 };
 
 /**
- * Representaion of API request
+ * Representation of API request
  * @class
  */
 export default class Request {
@@ -60,7 +60,9 @@ export default class Request {
     loadingController(loadingState.INPROGRESS);
 
     try {
-      const url = new Url(this.api).query(query).parts(this.perPage, `page=${dataContainer.page}`);
+      const url = new Url(this.api)
+        .searchFor(query)
+        .params(this.perPage, `page=${dataContainer.page}`);
       const newList = new RepoInfoList(dataContainer.data, dataContainer.page);
       dataContainerController(newList);
 

@@ -39,29 +39,29 @@ export default class Url {
    */
   constructor(api) {
     this.api = api;
-    this.queryStr = '';
-    this.params = [];
+    this.search = '';
+    this.queryParams = [];
   }
 
   /**
-   * Adds more parameters to this URL's query string.
+   * Adds more parameters to this URL's query.
    *
    * @param {...string} elem - parts of the URL
    * @returns {Url}
    */
-  parts(...elem) {
-    this.params = this.params.concat(...elem);
+  params(...elem) {
+    this.queryParams = this.queryParams.concat(...elem);
     return this;
   }
 
   /**
-   * Sets the full query string, replacing any existing one.
+   * Sets the search string, replacing any existing one.
    *
-   * @param {string} params - space-separated list of parameters
+   * @param {string} searchStr - space-separated list of parameters
    * @returns {Url}
    */
-  query(params) {
-    this.queryStr = params
+  searchFor(searchStr) {
+    this.search = searchStr
       .split(' ')
       .map((elem) => elem.trim())
       .filter((elem) => elem !== '')
@@ -70,13 +70,15 @@ export default class Url {
   }
 
   /**
-   * Adds programming language to the query.
+   * Adds programming language to the search string.
    *
    * @param {string} lang - name of the programming language
    * @returns {Url}
    */
   lang(lang) {
-    return this.query(addLang(this.queryStr, lang));
+    let currentSearchStr = this.search.split('+').join(' ');
+    let expandedSearchStr = addLang(currentSearchStr, lang);
+    return this.searchFor(expandedSearchStr);
   }
 
   /**
@@ -85,7 +87,7 @@ export default class Url {
    * @returns {string} - constructed URL
    */
   toString() {
-    const query = `?q=${this.queryStr}`;
-    return this.api + [query, ...this.params].join('&');
+    const query = `?q=${this.search}`;
+    return this.api + [query, ...this.queryParams].join('&');
   }
 }
