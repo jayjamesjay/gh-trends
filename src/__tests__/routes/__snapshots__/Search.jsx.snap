@@ -8,10 +8,6 @@ exports[`<Search /> renders with default style 1`] = `
   text-transform: uppercase;
 }
 
-@media screen and (min-width:40rem) {
-
-}
-
 <header>
     <h1
       class="c0"
@@ -86,10 +82,6 @@ exports[`<Search /> renders with default style 1`] = `
   line-break: loose;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 <form
@@ -1509,10 +1501,6 @@ exports[`<Search /> renders with default style 1`] = `
   width: 0;
   height: 0;
   overflow: hidden;
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 <footer>

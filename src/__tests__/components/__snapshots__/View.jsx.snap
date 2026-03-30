@@ -508,14 +508,6 @@ exports[`<ViewSingle /> renders with default style 1`] = `
   height: auto;
 }
 
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
 <footer>
     <button
       class="c0 c1"

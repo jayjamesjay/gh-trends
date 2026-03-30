@@ -83,21 +83,9 @@ exports[`<App /> renders default view 1`] = `
 }
 
 @media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
   .c0 {
     justify-content: flex-start;
   }
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 <header
@@ -175,14 +163,6 @@ exports[`<App /> renders default view 1`] = `
 }
 
 @media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
   .c2 {
     justify-content: flex-end;
   }
@@ -196,14 +176,6 @@ exports[`<App /> renders default view 1`] = `
     box-shadow: none;
     opacity: 1;
   }
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 <nav
@@ -292,26 +264,6 @@ exports[`<App /> renders default view 1`] = `
   line-break: loose;
   text-align: center;
   text-transform: uppercase;
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 @media screen and (min-width:40rem) {
@@ -1736,30 +1688,6 @@ exports[`<App /> renders default view 1`] = `
   margin: 1rem;
   padding: 0.5rem;
   text-align: center;
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
-}
-
-@media screen and (min-width:40rem) {
-
 }
 
 <footer
