@@ -109,7 +109,7 @@ exports[`<InfoBlock /> renders with default style 1`] = `
         >
           jayjamesjay
         </span>
-         /gh-trends
+         / gh-trends
       </a>
     </h2>
     <p>
@@ -184,7 +184,7 @@ exports[`<RepoLink /> renders with default style 1`] = `
     >
       jayjamesjay
     </span>
-     /gh-trends
+     / gh-trends
   </a>
 </DocumentFragment>
 `;

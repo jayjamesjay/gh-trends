@@ -53,7 +53,7 @@ describe('<RepoLink />', () => {
 
   it('displays name', () => {
     render(<RepoLink nameWithOwner={title} url={url} />);
-    expect(screen.queryByText(`/${name}`).textContent).not.toBeNull();
+    expect(screen.queryByText(`/ ${name}`).textContent).not.toBeNull();
   });
 });
 

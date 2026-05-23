@@ -81,7 +81,7 @@ export function RepoLink({ url, nameWithOwner }) {
   return (
     <LinkA href={url}>
       <Span>{author}</Span>
-      {' /'}
+      {' / '}
       {name}
     </LinkA>
   );
