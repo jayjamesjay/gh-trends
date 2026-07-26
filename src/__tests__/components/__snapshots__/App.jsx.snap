@@ -94,7 +94,6 @@ exports[`<App /> renders default view 1`] = `
     <a
       class="c1 c2"
       data-discover="true"
-      font-size="1.3rem"
       href="/"
     >
       GH Trends
@@ -188,7 +187,6 @@ exports[`<App /> renders default view 1`] = `
         <a
           class="c3"
           data-discover="true"
-          font-size="1.3rem"
           href="/search"
         >
           Search
@@ -198,7 +196,6 @@ exports[`<App /> renders default view 1`] = `
         <a
           class="c3"
           data-discover="true"
-          font-size="1.3rem"
           href="/saved"
         >
           Saved

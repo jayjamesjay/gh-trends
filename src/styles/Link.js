@@ -4,7 +4,7 @@ import { light } from './Theme';
 
 export const Link = styled(RouterLink)`
   padding: 0.5rem;
-  font-size: ${(props) => props.fontSize};
+  font-size: 1.3rem;
   font-family: 'Noto Sans HK', sans-serif;
   color: ${(props) => props.theme.color};
   text-decoration: none;
@@ -12,7 +12,6 @@ export const Link = styled(RouterLink)`
 
 Link.defaultProps = {
   theme: light,
-  fontSize: '1.3rem',
 };
 
 export const HeaderLink = styled(Link)`

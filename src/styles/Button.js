@@ -85,7 +85,7 @@ export const ToggleSpan = styled.span`
   transition: transform 0.2s linear;
 
   &:first-child {
-    transform: ${(props) => (props.$open ? 'translateY(0.45rem) rotate(-45deg)' : '')};
+    transform: ${(props) => (props.$open ? 'translateY(0.5rem) rotate(-45deg)' : '')};
   }
 
   &:nth-child(2) {
@@ -93,7 +93,7 @@ export const ToggleSpan = styled.span`
   }
 
   &:last-child {
-    transform: ${(props) => (props.$open ? 'translateY(-0.45rem) rotate(45deg)' : '')};
+    transform: ${(props) => (props.$open ? 'translateY(-0.5rem) rotate(45deg)' : '')};
   }
 `;
 

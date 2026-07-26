@@ -276,8 +276,13 @@ export const languages = {
  * @property {node} display - visual representation of link
  * @returns {DownloadLink}
  */
-export function DownloadLink({ filename, content, dataType, display }) {
-  const link = `data:${dataType}/plain;charset=utf-8,${encodeURIComponent(content)}`;
+export function DownloadLink({
+  filename,
+  content,
+  dataType = 'text/plain;charset=utf-8',
+  display,
+}) {
+  const link = `data:${dataType},${encodeURIComponent(content)}`;
   return (
     <LinkA href={link} download={filename}>
       {display}

@@ -38,7 +38,7 @@ exports[`<Header /> renders with default style 1`] = `
 }
 
 .c7:first-child {
-  transform: translateY(0.45rem) rotate(-45deg);
+  transform: translateY(0.5rem) rotate(-45deg);
 }
 
 .c7:nth-child(2) {
@@ -46,7 +46,7 @@ exports[`<Header /> renders with default style 1`] = `
 }
 
 .c7:last-child {
-  transform: translateY(-0.45rem) rotate(45deg);
+  transform: translateY(-0.5rem) rotate(45deg);
 }
 
 .c1 {
@@ -106,7 +106,6 @@ exports[`<Header /> renders with default style 1`] = `
     <a
       class="c1 c2"
       data-discover="true"
-      font-size="1.3rem"
       href="/"
     >
       GH Trends

@@ -14,7 +14,7 @@ exports[`<DownloadLink /> renders with default style 1`] = `
 <a
     class="c0"
     download="msg.txt"
-    href="data:plain/plain;charset=utf-8,You've%20just%20downloaded%20this%20text%20%3B)"
+    href="data:plain,You've%20just%20downloaded%20this%20text%20%3B)"
   >
     Download message
   </a>

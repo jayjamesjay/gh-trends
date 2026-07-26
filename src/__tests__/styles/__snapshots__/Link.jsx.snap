@@ -13,7 +13,6 @@ exports[`<Link /> renders default 1`] = `
 <a
     class="c0"
     data-discover="true"
-    font-size="1.3rem"
     href="/"
   />
 </DocumentFragment>
@@ -32,7 +31,6 @@ exports[`<Link /> renders with theme 1`] = `
 <a
     class="c0"
     data-discover="true"
-    font-size="1.3rem"
     href="/"
   />
 </DocumentFragment>
@@ -91,7 +89,6 @@ exports[`renders default <HeaderLink /> 1`] = `
 <a
     class="c0 c1"
     data-discover="true"
-    font-size="1.3rem"
     href="/"
   />
 </DocumentFragment>

@@ -145,8 +145,15 @@ describe('<DownloadLink />', () => {
   });
 
   it('points to content', () => {
-    const data = `data:plain/plain;charset=utf-8,${encodeURIComponent(text)}`;
-    render(<DownloadLink filename={name} content={text} display={title} />);
+    const data = `data:text/plain;charset=utf-8,${encodeURIComponent(text)}`;
+    render(
+      <DownloadLink
+        filename={name}
+        content={text}
+        display={title}
+        dataType="text/plain;charset=utf-8"
+      />,
+    );
 
     expect(screen.getByRole('link').href).toEqual(data);
   });
