@@ -176,7 +176,6 @@ exports[`<ToggleSpan /> renders with default style - dark theme 1`] = `
 
 <span
     class="c0"
-    open=""
   />
 </DocumentFragment>
 `;
@@ -194,7 +193,6 @@ exports[`<ToggleSpan /> renders with default style - light theme 1`] = `
 
 <span
     class="c0"
-    open=""
   />
 </DocumentFragment>
 `;

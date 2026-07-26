@@ -11,7 +11,7 @@ exports[`<Nav /> renders default 1`] = `
   z-index: 200;
   background: #fff;
   box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
-  opacity: 0;
+  opacity: 1.0;
   transition: opacity 0.2s linear;
 }
 
@@ -42,7 +42,7 @@ exports[`<Nav /> renders with theme 1`] = `
   z-index: 200;
   background: #202124;
   box-shadow: 0 3px 6px 0 rgba(104,104,104,0.5);
-  opacity: 0;
+  opacity: 1.0;
   transition: opacity 0.2s linear;
 }
 

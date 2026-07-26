@@ -16,7 +16,7 @@ describe('<Nav />', () => {
   });
 
   it('renders hidden', () => {
-    render(<Nav />);
+    render(<Nav $hide={true} />);
     expect(screen.getByRole('navigation')).toHaveStyleRule('opacity', '0');
   });
 

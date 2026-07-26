@@ -14,7 +14,6 @@ exports[`<ListItemLink /> renders with default style 1`] = `
     <a
       class="c0"
       data-discover="true"
-      font-size="1.3rem"
       href="/saved"
     >
       Go to saved
@@ -52,7 +51,7 @@ exports[`<MenuToggle /> renders with default style 1`] = `
 }
 
 .c2:first-child {
-  transform: translateY(0.45rem) rotate(-45deg);
+  transform: translateY(0.5rem) rotate(-45deg);
 }
 
 .c2:nth-child(2) {
@@ -60,7 +59,7 @@ exports[`<MenuToggle /> renders with default style 1`] = `
 }
 
 .c2:last-child {
-  transform: translateY(-0.45rem) rotate(45deg);
+  transform: translateY(-0.5rem) rotate(45deg);
 }
 
 @media screen and (min-width:40rem) {
@@ -75,15 +74,12 @@ exports[`<MenuToggle /> renders with default style 1`] = `
   >
     <span
       class="c2"
-      open=""
     />
     <span
       class="c2"
-      open=""
     />
     <span
       class="c2"
-      open=""
     />
   </button>
 </DocumentFragment>
@@ -153,7 +149,6 @@ exports[`<Nav /> renders with default style 1`] = `
         <a
           class="c3"
           data-discover="true"
-          font-size="1.3rem"
           href="/saved"
         >
           Saved
@@ -163,7 +158,6 @@ exports[`<Nav /> renders with default style 1`] = `
         <a
           class="c3"
           data-discover="true"
-          font-size="1.3rem"
           href="/"
         >
           Home

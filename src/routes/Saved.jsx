@@ -31,7 +31,7 @@ export function Saved({ saved, save, removeAllSaved }) {
         <DownloadLink
           filename="saved.json"
           content={JSON.stringify(saved)}
-          dataType="json"
+          dataType="application/json"
           display={imgDownload}
         />
       ) : (
